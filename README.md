@@ -59,9 +59,11 @@ Train the initial GATv2 model:
 ```
 
 The model uses a 128-dimensional projection, one residual GATv2 layer with cosine
-edge features on a complete graph, and a permutation-invariant quartet scorer.
-Each update uses one puzzle, its four positive groups, and 32 sampled negatives,
-with balanced binary cross-entropy. Validation uses all 1,820 quartets and exact
+edge features on a complete graph, and a permutation-invariant quartet scorer
+using the mean and variance of transformed node features.
+Each update uses one puzzle, its four positive groups, and 32 sampled negatives
+(half share three words with an official group), with balanced binary
+cross-entropy. Validation uses all 1,820 quartets and exact
 partition decoding. The test split is never loaded. Best weights, configuration,
 training history, and metrics are saved under `runs/gnn/` (ignored by Git).
 
@@ -78,5 +80,6 @@ To check whether the model can memorize a small training subset:
 ```
 
 Overfit mode evaluates on those same training puzzles; its scores are debugging
-results, not held-out performance. Other options include `--device`, `--lr`,
+results, not held-out performance. It trains against all 1,816 incorrect quartets
+per puzzle instead of sampling negatives. Other options include `--device`, `--lr`,
 `--hidden`, `--seed`, and `--negatives`. Use a different output directory for each run.

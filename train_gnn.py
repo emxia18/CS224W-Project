@@ -74,7 +74,7 @@ class QuartetGNN(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.phi = nn.Sequential(nn.Linear(hidden, hidden), nn.ReLU())
         self.rho = nn.Sequential(
-            nn.Linear(hidden, hidden), nn.ReLU(), nn.Dropout(dropout),
+            nn.Linear(hidden * 2, hidden), nn.GELU(), nn.Dropout(dropout),
             nn.Linear(hidden, 1),
         )
         self.register_buffer("edge_index", EDGE_INDEX.clone())
@@ -87,7 +87,10 @@ class QuartetGNN(nn.Module):
         h = F.relu(self.project(x))
         h = self.norm(h + self.dropout(F.elu(self.gat(h, self.edge_index, edge_attr))))
         groups = self.quartets if quartet_ids is None else self.quartets[quartet_ids]
-        pooled = self.phi(h)[groups].sum(dim=1)
+        members = self.phi(h)[groups]
+        # Variance supplies explicit within-group interactions. A nearly linear
+        # sum-only scorer can assign similar total scores to every partition.
+        pooled = torch.cat((members.mean(dim=1), members.var(dim=1, unbiased=False)), dim=-1)
         return self.rho(pooled).squeeze(-1)
 
 
@@ -106,6 +109,12 @@ def load_puzzles(path, vectors, word_to_row, device):
             "x": torch.tensor(vectors[[word_to_row[word] for word in words]], device=device),
             "positives": positives,
             "negatives": sorted(set(range(1820)) - positives),
+            "hard_negatives": [
+                index for index, group in enumerate(QUARTETS)
+                if index not in positives and any(
+                    len(set(group) & set(QUARTETS[pos])) == 3 for pos in positives
+                )
+            ],
         })
     return puzzles
 
@@ -186,7 +195,14 @@ def main():
         model.train()
         losses = []
         for puzzle in rng.sample(train, len(train)):
-            ids = sorted(puzzle["positives"]) + rng.sample(puzzle["negatives"], args.negatives)
+            if args.overfit:
+                negatives = puzzle["negatives"]
+            else:
+                hard_count = min(args.negatives // 2, len(puzzle["hard_negatives"]))
+                hard = rng.sample(puzzle["hard_negatives"], hard_count)
+                remaining = sorted(set(puzzle["negatives"]) - set(hard))
+                negatives = hard + rng.sample(remaining, args.negatives - hard_count)
+            ids = sorted(puzzle["positives"]) + negatives
             logits = model(puzzle["x"], torch.tensor(ids, device=args.device))
             # Give the four positives and the sampled negatives equal total weight.
             loss = 0.5 * (F.softplus(-logits[:4]).mean() + F.softplus(logits[4:]).mean())
