@@ -114,3 +114,72 @@ All runs report both metrics. This changes validation-based model selection;
 training still uses the same balanced quartet BCE and decoding still uses logits.
 Overlap gives partial credit and has a nonzero chance level; it does not replace
 exact puzzle accuracy when reporting solving performance.
+
+### Partial-membership curriculum
+
+```sh
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features \
+  --curriculum progressive \
+  --epochs 50 --patience 15 \
+  --output-dir runs/gnn_curriculum
+```
+
+This adds a second GAT edge feature: 1 means a revealed same-group membership;
+0 means unknown. Hidden words have no revealed membership edges. Hints are sampled
+fresh from training answers on each visit. Triplet tasks reveal three members of
+each group; pair tasks reveal two; sparse tasks reveal one or two pairs total.
+The cosine graph remains fully connected. Candidates cannot split a revealed
+cluster or combine distinct revealed clusters. Training uses balanced BCE over
+all locally compatible quartets; it remains a quartet classification loss, not
+a differentiable global assignment loss. Exact decoding enforces global use of
+each word once and supports hint constraints for completion tasks.
+
+The progressive task probabilities are:
+
+| Portion of training | Triplets | Pairs | Sparse pairs | Unassisted |
+|---|---:|---:|---:|---:|
+| First 25% | 65% | 15% | 5% | 15% |
+| Next 25% | 20% | 45% | 15% | 20% |
+| Next 30% | 5% | 15% | 40% | 40% |
+| Final 20% | 0% | 0% | 0% | 100% |
+
+Validation and checkpoint selection always use zero hints. Progressive mode
+starts counting early-stopping patience only in the final unassisted stage;
+best-checkpoint selection still considers every epoch. History records task
+counts, probabilities, and losses; losses across changing tasks are not directly
+comparable. No test puzzles are loaded.
+
+For the fixed-mixture comparison, replace `--curriculum progressive` with
+`--curriculum fixed` and choose another output directory. It uses 25% of each
+task throughout. For the architecture-matched unassisted comparison, use
+`--curriculum none --hint-features`; the hint channel stays zero throughout.
+Use the same epochs, seeds, hyperparameters, and a patience at least as large as
+the epoch budget for fixed-budget comparisons, since early stopping can give
+different numbers of updates. Hinted tasks score fewer candidate quartets, so
+equal update counts do not imply equal wall-clock time. This initial curriculum
+reduces hints; it does not yet mine increasingly ambiguous completion choices.
+
+Check hint isolation and global completion constraints with:
+
+```sh
+.venv/bin/python -m unittest test_curriculum.py
+```
+
+Every epoch also evaluates a fixed random subset of 16 training puzzles under
+three conditions: no hints (`full`), triplet hints, and pair hints. Hints stay
+identical across epochs, evaluation disables dropout, and hinted conditions use
+exact decoding with membership constraints. These are training diagnostics, not
+held-out scores; they do not affect checkpoint selection or optimizer updates.
+When the hint edge channel is disabled, hinted diagnostics still enforce decoder
+constraints but do not supply hints to GAT attention. Hinted scores benefit from
+the supplied memberships, so compare trends within each condition rather than
+treating them as directly comparable to unassisted scores.
+
+Use `--diagnostic-puzzles 32` to increase the subset or `--diagnostic-puzzles 0`
+to disable these checks. The chosen dates and seeds are saved in
+`diagnostic_subset.json`; each epoch's metrics are in `history.json` under
+`training_diagnostics`. `training_diagnostics.json` contains diagnostics for the
+restored best checkpoint. Rising training `full` recovery with falling validation
+suggests overfitting; rising hinted recovery with flat training `full` recovery
+suggests poor transfer from completion to discovery.
