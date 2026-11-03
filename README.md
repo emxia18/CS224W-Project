@@ -83,3 +83,25 @@ Overfit mode evaluates on those same training puzzles; its scores are debugging
 results, not held-out performance. It trains against all 1,816 incorrect quartets
 per puzzle instead of sampling negatives. Other options include `--device`, `--lr`,
 `--hidden`, `--seed`, and `--negatives`. Use a different output directory for each run.
+
+To add explicit pairwise relationship features to the quartet readout:
+
+```sh
+.venv/bin/python train_gnn.py --pairwise-features --epochs 100 --patience 15 --output-dir runs/gnn_pairwise
+```
+
+This appends the mean, minimum, maximum, and population standard deviation of
+the six distinct pairwise cosine similarities from the frozen embeddings.
+The default 256-dimensional readout input becomes 260 dimensions. Omit the flag
+to keep the previous readout for comparison, using the same seed and settings.
+
+Train on all 1,820 quartets per puzzle rather than sampling negatives:
+
+```sh
+.venv/bin/python train_gnn.py --all-quartets --epochs 100 --patience 15 --output-dir runs/gnn_all_quartets
+```
+
+The loss averages the four positive losses and 1,816 negative losses separately,
+then combines those averages with equal weight. Each update still uses one
+puzzle. `--negatives` is unused in this mode. Add `--pairwise-features` to also
+enable the explicit cosine statistics; omit it to isolate the loss change.

@@ -62,9 +62,21 @@ def decode(scores):
     return groups
 
 
+def quartet_cosine_stats(x, groups):
+    """Mean, minimum, maximum, and population std of six distinct pairs."""
+    members = x[groups]
+    pairs = torch.triu_indices(4, 4, offset=1, device=x.device)
+    similarities = (members[:, pairs[0]] * members[:, pairs[1]]).sum(dim=-1)
+    return torch.stack((
+        similarities.mean(dim=1), similarities.amin(dim=1),
+        similarities.amax(dim=1), similarities.std(dim=1, unbiased=False),
+    ), dim=-1)
+
+
 class QuartetGNN(nn.Module):
-    def __init__(self, hidden=128, dropout=0.1):
+    def __init__(self, hidden=128, dropout=0.1, pairwise_features=False):
         super().__init__()
+        self.pairwise_features = pairwise_features
         self.project = nn.Linear(768, hidden)
         self.gat = GATv2Conv(
             hidden, hidden, heads=1, edge_dim=1, dropout=dropout,
@@ -74,7 +86,8 @@ class QuartetGNN(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.phi = nn.Sequential(nn.Linear(hidden, hidden), nn.ReLU())
         self.rho = nn.Sequential(
-            nn.Linear(hidden * 2, hidden), nn.GELU(), nn.Dropout(dropout),
+            nn.Linear(hidden * 2 + (4 if pairwise_features else 0), hidden),
+            nn.GELU(), nn.Dropout(dropout),
             nn.Linear(hidden, 1),
         )
         self.register_buffer("edge_index", EDGE_INDEX.clone())
@@ -91,6 +104,8 @@ class QuartetGNN(nn.Module):
         # Variance supplies explicit within-group interactions. A nearly linear
         # sum-only scorer can assign similar total scores to every partition.
         pooled = torch.cat((members.mean(dim=1), members.var(dim=1, unbiased=False)), dim=-1)
+        if self.pairwise_features:
+            pooled = torch.cat((pooled, quartet_cosine_stats(x, groups)), dim=-1)
         return self.rho(pooled).squeeze(-1)
 
 
@@ -144,9 +159,13 @@ def main():
     parser.add_argument("--patience", type=int, default=8)
     parser.add_argument("--hidden", type=int, default=128)
     parser.add_argument("--dropout", type=float, default=0.1)
+    parser.add_argument("--pairwise-features", action="store_true",
+                        help="Append mean/min/max/std of quartet cosine similarities")
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--negatives", type=int, default=32)
+    parser.add_argument("--all-quartets", action="store_true",
+                        help="Train on all 4 positives and 1,816 negatives per puzzle")
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--threads", type=int, default=1, help="CPU threads; small graphs favor few threads")
@@ -184,18 +203,22 @@ def main():
     if not train or not validation:
         parser.error("Training and evaluation sets must be nonempty")
 
-    model = QuartetGNN(args.hidden, args.dropout).to(args.device)
+    model = QuartetGNN(args.hidden, args.dropout, args.pairwise_features).to(args.device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     args.output_dir.mkdir(parents=True, exist_ok=True)
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
     (args.output_dir / "config.json").write_text(json.dumps(config, indent=2) + "\n")
     print(f"Training on {len(train)} puzzles; evaluating on {len(validation)}; device={args.device}", flush=True)
+    print("Training quartets per puzzle: " + (
+        "1820 (4 positives + 1816 negatives)" if args.all_quartets or args.overfit
+        else f"{4 + args.negatives} (4 positives + {args.negatives} sampled negatives)"
+    ), flush=True)
     best, stale, history = (-1.0, -1.0), 0, []
     for epoch in range(1, args.epochs + 1):
         model.train()
         losses = []
         for puzzle in rng.sample(train, len(train)):
-            if args.overfit:
+            if args.all_quartets or args.overfit:
                 negatives = puzzle["negatives"]
             else:
                 hard_count = min(args.negatives // 2, len(puzzle["hard_negatives"]))
@@ -204,7 +227,7 @@ def main():
                 negatives = hard + rng.sample(remaining, args.negatives - hard_count)
             ids = sorted(puzzle["positives"]) + negatives
             logits = model(puzzle["x"], torch.tensor(ids, device=args.device))
-            # Give the four positives and the sampled negatives equal total weight.
+            # Average each class separately so negatives cannot dominate the loss.
             loss = 0.5 * (F.softplus(-logits[:4]).mean() + F.softplus(logits[4:]).mean())
             if not torch.isfinite(loss):
                 raise RuntimeError("Non-finite training loss")
