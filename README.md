@@ -183,3 +183,14 @@ to disable these checks. The chosen dates and seeds are saved in
 restored best checkpoint. Rising training `full` recovery with falling validation
 suggests overfitting; rising hinted recovery with flat training `full` recovery
 suggests poor transfer from completion to discovery.
+
+Plot the saved learning curves (PNG and PDF) at any point during training:
+
+```sh
+.venv/bin/python plot_training.py runs/gnn_curriculum_diagnostics
+```
+
+This reads `history.json` and `config.json` and writes `learning_curves.png` and
+`learning_curves.pdf` in the run directory. Panels show correct groups, exact
+puzzle accuracy, matched-word overlap, and per-task training loss. Curriculum
+stages are shaded; only completed epochs are plotted. Re-run to update the plots.
