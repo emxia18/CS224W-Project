@@ -23,3 +23,30 @@ labels stay valid. All original fields are retained. Use only `words` as model
 input; answers, category descriptions, and other metadata are for supervision or
 evaluation. The script prints split date ranges and one training example.
 Optional arguments: `--input`, `--output-dir`, and `--seed`.
+
+Generate frozen word embeddings (the first run downloads the MPNet model):
+
+```sh
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python embed_data.py
+```
+
+Each unique word or complete phrase is encoded once, without answers or metadata.
+The script saves normalized float32 vectors in `data/embeddings/embeddings.npy`,
+a `word_to_row.json` mapping, and model/input metadata. Model downloads are cached
+in `data/model_cache/`. CPU is the default; optionally pass `--device mps` or
+`--device cuda` for supported hardware. Re-running regenerates the embedding files.
+
+Retrieve a puzzle's matrix in its shuffled word order:
+
+```python
+import json
+import numpy as np
+
+vectors = np.load("data/embeddings/embeddings.npy")
+word_to_row = json.load(open("data/embeddings/word_to_row.json"))
+puzzle = json.load(open("data/processed/train.json"))[0]
+X = vectors[[word_to_row[word] for word in puzzle["words"]]]
+print(X.shape)  # (16, 768)
+```
