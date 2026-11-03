@@ -105,3 +105,12 @@ The loss averages the four positive losses and 1,816 negative losses separately,
 then combines those averages with equal weight. Each update still uses one
 puzzle. `--negatives` is unused in this mode. Add `--pairwise-features` to also
 enable the explicit cosine statistics; omit it to isolate the loss change.
+
+Use `--selection-metric overlap` to select the best checkpoint and apply early
+stopping based on matched word overlap instead of exact group recovery (the
+default `--selection-metric groups`). Overlap tries all 24 one-to-one matchings
+of predicted and official groups and counts shared words, out of 16 per puzzle.
+All runs report both metrics. This changes validation-based model selection;
+training still uses the same balanced quartet BCE and decoding still uses logits.
+Overlap gives partial credit and has a nonzero chance level; it does not replace
+exact puzzle accuracy when reporting solving performance.

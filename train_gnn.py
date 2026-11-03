@@ -2,7 +2,7 @@
 
 import argparse
 from functools import lru_cache
-from itertools import combinations
+from itertools import combinations, permutations
 import json
 from pathlib import Path
 import random
@@ -134,18 +134,31 @@ def load_puzzles(path, vectors, word_to_row, device):
     return puzzles
 
 
+def matched_word_overlap(predicted, official):
+    """Maximum word overlap under a one-to-one matching of four groups (0–16)."""
+    predicted = [set(QUARTETS[index]) for index in predicted]
+    official = [set(QUARTETS[index]) for index in sorted(official)]
+    return max(
+        sum(len(predicted[i] & official[j]) for i, j in enumerate(order))
+        for order in permutations(range(4))
+    )
+
+
 @torch.no_grad()
 def evaluate(model, puzzles):
     model.eval()
-    correct_counts, predictions = [], []
+    correct_counts, overlaps, predictions = [], [], []
     start = time.perf_counter()
     for puzzle in puzzles:
         predicted = decode(model(puzzle["x"]).cpu().numpy())
         correct_counts.append(len(set(predicted) & puzzle["positives"]))
+        overlaps.append(matched_word_overlap(predicted, puzzle["positives"]))
         predictions.append(predicted)
     return {
         "mean_correct_groups": float(np.mean(correct_counts)),
         "exact_accuracy": float(np.mean(np.array(correct_counts) == 4)),
+        "mean_matched_words": float(np.mean(overlaps)),
+        "word_overlap_accuracy": float(np.mean(overlaps) / 16),
         "seconds_per_puzzle": (time.perf_counter() - start) / len(puzzles),
     }, predictions
 
@@ -157,6 +170,8 @@ def main():
     parser.add_argument("--output-dir", type=Path, default=ROOT / "runs/gnn")
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--patience", type=int, default=8)
+    parser.add_argument("--selection-metric", choices=("groups", "overlap"), default="groups",
+                        help="Validation metric for checkpoint selection and early stopping")
     parser.add_argument("--hidden", type=int, default=128)
     parser.add_argument("--dropout", type=float, default=0.1)
     parser.add_argument("--pairwise-features", action="store_true",
@@ -239,8 +254,10 @@ def main():
         metrics, _ = evaluate(model, validation)
         history.append({"epoch": epoch, "loss": float(np.mean(losses)), **metrics})
         print(f"Epoch {epoch:03d} loss={np.mean(losses):.4f} groups={metrics['mean_correct_groups']:.3f}/4 "
+              f"overlap={metrics['mean_matched_words']:.2f}/16 "
               f"exact={metrics['exact_accuracy']:.1%}", flush=True)
-        key = (metrics["mean_correct_groups"], metrics["exact_accuracy"])
+        primary = "mean_matched_words" if args.selection_metric == "overlap" else "mean_correct_groups"
+        key = (metrics[primary], metrics["exact_accuracy"])
         if key > best:
             best, stale = key, 0
             torch.save({"model_state": model.state_dict(), "config": config,
