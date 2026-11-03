@@ -4,3 +4,4 @@ data/processed/
 data/embeddings/
 data/model_cache/
 .venv/
+runs/

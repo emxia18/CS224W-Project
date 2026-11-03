@@ -1,2 +1,4 @@
 numpy>=1.26,<3
 sentence-transformers>=3,<6
+torch>=2.2,<3
+torch-geometric>=2.5,<3

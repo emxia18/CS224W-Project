@@ -50,3 +50,33 @@ puzzle = json.load(open("data/processed/train.json"))[0]
 X = vectors[[word_to_row[word] for word in puzzle["words"]]]
 print(X.shape)  # (16, 768)
 ```
+
+Train the initial GATv2 model:
+
+```sh
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python train_gnn.py
+```
+
+The model uses a 128-dimensional projection, one residual GATv2 layer with cosine
+edge features on a complete graph, and a permutation-invariant quartet scorer.
+Each update uses one puzzle, its four positive groups, and 32 sampled negatives,
+with balanced binary cross-entropy. Validation uses all 1,820 quartets and exact
+partition decoding. The test split is never loaded. Best weights, configuration,
+training history, and metrics are saved under `runs/gnn/` (ignored by Git).
+
+For a quick execution check:
+
+```sh
+.venv/bin/python train_gnn.py --epochs 1 --train-limit 5 --val-limit 2 --output-dir runs/smoke
+```
+
+To check whether the model can memorize a small training subset:
+
+```sh
+.venv/bin/python train_gnn.py --overfit 5 --dropout 0 --weight-decay 0 --epochs 200 --patience 200 --output-dir runs/overfit
+```
+
+Overfit mode evaluates on those same training puzzles; its scores are debugging
+results, not held-out performance. Other options include `--device`, `--lr`,
+`--hidden`, `--seed`, and `--negatives`. Use a different output directory for each run.
