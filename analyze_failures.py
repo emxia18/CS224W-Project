@@ -83,7 +83,13 @@ def score_run(run_dir):
             raise ValueError('Homophone cache differs from the checkpoint metadata')
     vectors = np.load(Path(config['embedding_dir']) / 'embeddings.npy', allow_pickle=False)
     mapping = json.loads((Path(config['embedding_dir']) / 'word_to_row.json').read_text())
-    puzzles = load_puzzles(Path(config['data_dir']) / 'val.json', vectors, mapping, 'cpu', tokenizer)
+    contextual = None
+    if config.get('contextual_dir'):
+        from contextual_embeddings import ContextualCache
+        contextual = ContextualCache(config['contextual_dir'])
+        if contextual.metadata != config.get('contextual_metadata'):
+            raise ValueError('Contextual cache differs from checkpoint metadata')
+    puzzles = load_puzzles(Path(config['data_dir']) / 'val.json', vectors, mapping, 'cpu', tokenizer, contextual)
     results = []
     for puzzle in puzzles:
         scores = model(puzzle['x'], word_inputs=puzzle['word_inputs']).numpy()

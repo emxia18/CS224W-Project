@@ -170,7 +170,9 @@ class QuartetGNN(nn.Module):
         return self.rho(pooled).squeeze(-1)
 
 
-def load_puzzles(path, vectors, word_to_row, device, tokenizer=None):
+def load_puzzles(path, vectors, word_to_row, device, tokenizer=None, contextual=None):
+    if contextual is not None:
+        contextual.validate_split(path)
     records = json.loads(path.read_text(encoding="utf-8"))
     puzzles = []
     for record in records:
@@ -183,7 +185,8 @@ def load_puzzles(path, vectors, word_to_row, device, tokenizer=None):
         puzzles.append({
             "record": record,
             "word_inputs": tokenizer.encode(words, device) if tokenizer is not None else None,
-            "x": torch.tensor(vectors[[word_to_row[word] for word in words]], device=device),
+            "x": torch.tensor(contextual.lookup(words) if contextual is not None else
+                              vectors[[word_to_row[word] for word in words]], device=device),
             "positives": positives,
             "negatives": sorted(set(range(1820)) - positives),
             "hard_negatives": [
@@ -244,6 +247,8 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data-dir", type=Path, default=ROOT / "data/processed")
     parser.add_argument("--embedding-dir", type=Path, default=ROOT / "data/embeddings")
+    parser.add_argument("--contextual-dir", type=Path,
+                        help="Use cached puzzle-contextual node embeddings")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "runs/gnn")
     parser.add_argument("--epochs", type=int, default=50)
     parser.add_argument("--patience", type=int, default=8)
@@ -308,6 +313,10 @@ def main():
     if not np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5):
         parser.error("Cached embeddings must be normalized")
     mapping = json.loads((args.embedding_dir / "word_to_row.json").read_text())
+    contextual = None
+    if args.contextual_dir is not None:
+        from contextual_embeddings import ContextualCache
+        contextual = ContextualCache(args.contextual_dir)
     if args.homophone_features and args.keep_pronunciation_qualifiers:
         parser.error("Homophone cache requires qualifier-stripping pronunciation preprocessing")
     homophones = HomophoneCache(args.homophone_cache) if args.homophone_features else None
@@ -318,14 +327,14 @@ def main():
                               orthographic_features=args.orthographic_features, homophone_cache=homophones)
                  if args.spelling_features or args.pronunciation_features or args.orthographic_features
                  or args.homophone_features else None)
-    train = load_puzzles(args.data_dir / "train.json", vectors, mapping, args.device, tokenizer)
+    train = load_puzzles(args.data_dir / "train.json", vectors, mapping, args.device, tokenizer, contextual)
     if args.overfit:
         train = train[:args.overfit]
         validation = train
         print("OVERFIT CHECK: evaluation uses training puzzles, not held-out validation.")
     else:
         train = train[:args.train_limit]
-        validation = load_puzzles(args.data_dir / "val.json", vectors, mapping, args.device, tokenizer)[:args.val_limit]
+        validation = load_puzzles(args.data_dir / "val.json", vectors, mapping, args.device, tokenizer, contextual)[:args.val_limit]
     if not train or not validation:
         parser.error("Training and evaluation sets must be nonempty")
     diagnostic_subset = random.Random(args.seed + 2).sample(
@@ -338,6 +347,8 @@ def main():
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     args.output_dir.mkdir(parents=True, exist_ok=True)
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
+    if contextual is not None:
+        config["contextual_metadata"] = contextual.metadata
     if tokenizer is not None:
         config["word_channel_tokenization"] = ("lowercase-utf8-cmudict-stressless-v1"
             if args.keep_pronunciation_qualifiers else "strip-parenthetical-stressless-v2")

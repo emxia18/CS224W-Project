@@ -479,3 +479,34 @@ This reads `history.json` and `config.json` and writes `learning_curves.png` and
 `learning_curves.pdf` in the run directory. Panels show correct groups, exact
 puzzle accuracy, matched-word overlap, and per-task training loss. Curriculum
 stages are shaded; only completed epochs are plotted. Re-run to update the plots.
+
+### Puzzle-contextual node embeddings
+
+Encode all sixteen input words jointly with the frozen, locally cached MPNet
+transformer, then mean-pool each word's own final-layer tokens and normalize.
+This differs from sentence pooling: every node keeps its own representation,
+conditioned on the other puzzle words. Words are alphabetically ordered before
+encoding for reproducibility; cache lookup restores the puzzle's node order.
+Emoji presentation selectors are removed from encoder text. Answers and category
+labels are never encoded. Only train and validation splits are cached by default.
+
+```sh
+.venv/bin/python contextual_embeddings.py
+.venv/bin/python train_gnn.py \
+  --contextual-dir data/embeddings/contextual \
+  --all-quartets --pairwise-features \
+  --epochs 8 --patience 8 --diagnostic-puzzles 16 \
+  --output-dir runs/contextual_seed42
+```
+
+The GAT and quartet decoder remain in use. Both semantic node features and cosine
+edge/readout features now use contextual vectors. Optional spelling and homophone
+branches remain available. Input hashes reject stale caches, and training saves
+encoder metadata in its configuration. This is an experimental use of MPNet token
+states: its sentence-embedding training does not guarantee that these word-level
+vectors improve solving. Compare with the existing static-embedding baseline
+under matching settings. Check cache alignment and pooling with:
+
+```sh
+.venv/bin/python -m unittest test_contextual_embeddings.py test_curriculum.py test_word_channels.py
+```
