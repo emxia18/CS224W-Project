@@ -95,6 +95,57 @@ the six distinct pairwise cosine similarities from the frozen embeddings.
 The default 256-dimensional readout input becomes 260 dimensions. Omit the flag
 to keep the previous readout for comparison, using the same seed and settings.
 
+### Learned relationships, spelling, and pronunciation
+
+Install the updated requirements, then run:
+
+```sh
+.venv/bin/python -m pip install -r requirements.txt
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features --learned-relations 4 \
+  --spelling-features --pronunciation-features \
+  --epochs 100 --patience 15 --output-dir runs/gnn_word_channels
+```
+
+Each learned relationship is a separate trainable 768-to-32 projection followed
+by normalization and cosine similarity. Its edge feature supplements the original
+frozen cosine. Character and phoneme CNNs each produce a hidden-dimensional node
+representation, added to the semantic projection before the GAT. Their normalized
+cosines also become edge features. The quartet readout receives mean/min/max/std
+similarities for every new relationship and channel, even without
+`--pairwise-features` (that flag controls only the original semantic statistics).
+All projections and CNNs train jointly under the existing quartet loss; MPNet
+remains frozen. The hint channel and exact partition decoder work as before.
+
+Spelling uses lowercase UTF-8 byte tokens with trainable embeddings and width-3
+and width-5 convolutions, masked max pooling, and first/last token features.
+No vocabulary is fitted on validation or test data. Pronunciation uses the
+[CMU Pronouncing Dictionary](https://github.com/cmusphinx/cmudict), bundled in the
+`cmudict` Python dependency; no pronunciation API calls or runtime model downloads
+are needed. Stress digits are removed. Alternate pronunciations are encoded
+separately and averaged; phrase components are combined when there is no direct
+phrase entry (up to four variants per component and sixteen combinations).
+Unknown pronunciations contribute zero node and similarity features rather than
+being inferred from spelling. Coverage by word occurrence is printed per split.
+These features use only input words and the external dictionary, never categories
+or answer groups. Test puzzles are not loaded by training.
+
+The dictionary is English-focused and incomplete for names, puns, and invented
+words. Averaging alternatives can blur a particular sense; this is an initial
+pronunciation channel, not puzzle-conditioned pronunciation selection.
+[g2p_en](https://github.com/Kyubyong/g2p) is an existing neural grapheme-to-phoneme
+model that could supply an out-of-dictionary fallback; it is not enabled here.
+
+For ablations, enable `--learned-relations 4`, `--spelling-features`, and
+`--pronunciation-features` independently, keeping the seed, loss, curriculum,
+epoch budget, and other settings identical. Omitting all three preserves the
+original architecture and checkpoint parameter shapes. New runs need their own
+output directory. Check the new channels and existing curriculum with:
+
+```sh
+.venv/bin/python -m unittest test_curriculum.py test_word_channels.py
+```
+
 Train on all 1,820 quartets per puzzle rather than sampling negatives:
 
 ```sh

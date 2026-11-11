@@ -2,6 +2,7 @@
 
 import argparse
 from functools import lru_cache
+from importlib.metadata import version
 from itertools import combinations, permutations
 import json
 from pathlib import Path
@@ -15,6 +16,7 @@ from torch.nn import functional as F
 from torch_geometric.nn import GATv2Conv
 
 from curriculum import TASKS, compatible_quartets, sample_hints, task_probabilities
+from word_channels import WordChannels, WordTokenizer
 
 
 ROOT = Path(__file__).resolve().parent
@@ -79,34 +81,48 @@ def quartet_cosine_stats(x, groups):
 
 
 class QuartetGNN(nn.Module):
-    def __init__(self, hidden=128, dropout=0.1, pairwise_features=False, hint_features=False):
+    def __init__(self, hidden=128, dropout=0.1, pairwise_features=False, hint_features=False,
+                 learned_relations=0, spelling_features=False, pronunciation_features=False):
         super().__init__()
         self.pairwise_features = pairwise_features
         self.hint_features = hint_features
         self.project = nn.Linear(768, hidden)
+        self.channels = WordChannels(hidden, spelling_features, pronunciation_features)
+        channel_count = int(spelling_features) + int(pronunciation_features)
+        self.relations = nn.ModuleList(nn.Linear(768, 32) for _ in range(learned_relations))
+        extra_edges = learned_relations + channel_count
         self.gat = GATv2Conv(
-            hidden, hidden, heads=1, edge_dim=2 if hint_features else 1, dropout=dropout,
+            hidden, hidden, heads=1, edge_dim=1 + int(hint_features) + extra_edges, dropout=dropout,
             add_self_loops=False,
         )
         self.norm = nn.LayerNorm(hidden)
         self.dropout = nn.Dropout(dropout)
         self.phi = nn.Sequential(nn.Linear(hidden, hidden), nn.ReLU())
         self.rho = nn.Sequential(
-            nn.Linear(hidden * 2 + (4 if pairwise_features else 0), hidden),
+            nn.Linear(hidden * 2 + (4 if pairwise_features else 0) + extra_edges * 4, hidden),
             nn.GELU(), nn.Dropout(dropout),
             nn.Linear(hidden, 1),
         )
         self.register_buffer("edge_index", EDGE_INDEX.clone())
         self.register_buffer("quartets", torch.tensor(QUARTETS, dtype=torch.long))
 
-    def forward(self, x, quartet_ids=None, hints=None):
+    def forward(self, x, quartet_ids=None, hints=None, word_inputs=None):
         # Cached embeddings are unit length, so dot products are cosine similarities.
         source, target = self.edge_index
         edge_attr = (x[source] * x[target]).sum(dim=-1, keepdim=True)
+        if (self.channels.spelling is not None or self.channels.pronunciation is not None) and word_inputs is None:
+            raise ValueError("Enabled word channels require tokenized word_inputs")
+        channels = self.channels(word_inputs) if word_inputs is not None else []
+        relationship_vectors = [F.normalize(layer(x), dim=-1) for layer in self.relations]
+        relationship_vectors += [F.normalize(channel, dim=-1) for channel in channels]
+        if relationship_vectors:
+            edge_attr = torch.cat([edge_attr] + [
+                (z[source] * z[target]).sum(-1, keepdim=True) for z in relationship_vectors
+            ], dim=-1)
         if self.hint_features:
-            membership = torch.zeros_like(edge_attr) if hints is None else hints[source, target, None]
+            membership = torch.zeros_like(edge_attr[:, :1]) if hints is None else hints[source, target, None]
             edge_attr = torch.cat((edge_attr, membership), dim=-1)
-        h = F.relu(self.project(x))
+        h = F.relu(self.project(x) + sum(channels))
         h = self.norm(h + self.dropout(F.elu(self.gat(h, self.edge_index, edge_attr))))
         groups = self.quartets if quartet_ids is None else self.quartets[quartet_ids]
         members = self.phi(h)[groups]
@@ -115,10 +131,13 @@ class QuartetGNN(nn.Module):
         pooled = torch.cat((members.mean(dim=1), members.var(dim=1, unbiased=False)), dim=-1)
         if self.pairwise_features:
             pooled = torch.cat((pooled, quartet_cosine_stats(x, groups)), dim=-1)
+        if relationship_vectors:
+            pooled = torch.cat([pooled] + [quartet_cosine_stats(z, groups)
+                                          for z in relationship_vectors], dim=-1)
         return self.rho(pooled).squeeze(-1)
 
 
-def load_puzzles(path, vectors, word_to_row, device):
+def load_puzzles(path, vectors, word_to_row, device, tokenizer=None):
     records = json.loads(path.read_text(encoding="utf-8"))
     puzzles = []
     for record in records:
@@ -130,6 +149,7 @@ def load_puzzles(path, vectors, word_to_row, device):
         }
         puzzles.append({
             "record": record,
+            "word_inputs": tokenizer.encode(words, device) if tokenizer is not None else None,
             "x": torch.tensor(vectors[[word_to_row[word] for word in words]], device=device),
             "positives": positives,
             "negatives": sorted(set(range(1820)) - positives),
@@ -166,7 +186,7 @@ def evaluate(model, puzzles, hint_task="full", hint_seed=12345):
             official = [QUARTETS[index] for index in sorted(puzzle["positives"])]
             hints, revealed = sample_hints(official, hint_task, hint_rng, puzzle["x"].device)
             allowed = compatible_quartets(QUARTETS, revealed)
-        predicted = decode(model(puzzle["x"], hints=hints).cpu().numpy(), allowed)
+        predicted = decode(model(puzzle["x"], hints=hints, word_inputs=puzzle.get("word_inputs")).cpu().numpy(), allowed)
         correct_counts.append(len(set(predicted) & puzzle["positives"]))
         overlaps.append(matched_word_overlap(predicted, puzzle["positives"]))
         predictions.append(predicted)
@@ -200,6 +220,10 @@ def main():
     parser.add_argument("--dropout", type=float, default=0.1)
     parser.add_argument("--pairwise-features", action="store_true",
                         help="Append mean/min/max/std of quartet cosine similarities")
+    parser.add_argument("--learned-relations", type=int, default=0,
+                        help="Number of trainable semantic similarity projections (try 4)")
+    parser.add_argument("--spelling-features", action="store_true", help="Train a character CNN")
+    parser.add_argument("--pronunciation-features", action="store_true", help="Train a CMUdict phoneme CNN")
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--negatives", type=int, default=32)
@@ -228,6 +252,8 @@ def main():
             or not 1 <= args.negatives <= 1816 or not 0 <= args.dropout < 1
             or args.lr <= 0 or args.weight_decay < 0):
         parser.error("Invalid training hyperparameters")
+    if args.learned_relations < 0:
+        parser.error("--learned-relations must be nonnegative")
     if args.diagnostic_puzzles < 0:
         parser.error("--diagnostic-puzzles must be nonnegative")
     for limit in (args.train_limit, args.val_limit, args.overfit):
@@ -245,30 +271,41 @@ def main():
     if not np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5):
         parser.error("Cached embeddings must be normalized")
     mapping = json.loads((args.embedding_dir / "word_to_row.json").read_text())
-    train = load_puzzles(args.data_dir / "train.json", vectors, mapping, args.device)
+    tokenizer = (WordTokenizer(pronunciation=args.pronunciation_features)
+                 if args.spelling_features or args.pronunciation_features else None)
+    train = load_puzzles(args.data_dir / "train.json", vectors, mapping, args.device, tokenizer)
     if args.overfit:
         train = train[:args.overfit]
         validation = train
         print("OVERFIT CHECK: evaluation uses training puzzles, not held-out validation.")
     else:
         train = train[:args.train_limit]
-        validation = load_puzzles(args.data_dir / "val.json", vectors, mapping, args.device)[:args.val_limit]
+        validation = load_puzzles(args.data_dir / "val.json", vectors, mapping, args.device, tokenizer)[:args.val_limit]
     if not train or not validation:
         parser.error("Training and evaluation sets must be nonempty")
     diagnostic_subset = random.Random(args.seed + 2).sample(
         train, min(args.diagnostic_puzzles, len(train))
     )
 
-    model = QuartetGNN(args.hidden, args.dropout, args.pairwise_features, args.hint_features).to(args.device)
+    model = QuartetGNN(args.hidden, args.dropout, args.pairwise_features, args.hint_features,
+                       args.learned_relations, args.spelling_features, args.pronunciation_features).to(args.device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     args.output_dir.mkdir(parents=True, exist_ok=True)
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
+    if args.spelling_features or args.pronunciation_features:
+        config["word_channel_tokenization"] = "lowercase-utf8-cmudict-stressless-v1"
+    if args.pronunciation_features:
+        config["cmudict_version"] = version("cmudict")
     (args.output_dir / "config.json").write_text(json.dumps(config, indent=2) + "\n")
     (args.output_dir / "diagnostic_subset.json").write_text(json.dumps({
         "dates": [puzzle["record"]["date"] for puzzle in diagnostic_subset],
         "subset_seed": args.seed + 2, "hint_seed": args.seed + 3,
     }, indent=2) + "\n")
     print(f"Training on {len(train)} puzzles; evaluating on {len(validation)}; device={args.device}", flush=True)
+    if args.pronunciation_features:
+        for name, puzzles in (("train", train), ("evaluation", validation)):
+            known = sum(int(p["word_inputs"]["phonemes"].ne(0).any(-1).any(-1).sum()) for p in puzzles)
+            print(f"CMUdict coverage [{name}]: {known}/{16 * len(puzzles)} word occurrences", flush=True)
     print("Training quartets per puzzle: " + (
         "all hint-compatible quartets" if args.curriculum != "none" else
         "1820 (4 positives + 1816 negatives)" if args.all_quartets or args.overfit
@@ -304,7 +341,8 @@ def main():
                 remaining = sorted(set(puzzle["negatives"]) - set(hard))
                 negatives = hard + rng.sample(remaining, args.negatives - hard_count)
             ids = sorted(puzzle["positives"]) + negatives
-            logits = model(puzzle["x"], torch.tensor(ids, device=args.device), hints=hints)
+            logits = model(puzzle["x"], torch.tensor(ids, device=args.device), hints=hints,
+                           word_inputs=puzzle.get("word_inputs"))
             # Average each class separately so negatives cannot dominate the loss.
             loss = 0.5 * (F.softplus(-logits[:4]).mean() + F.softplus(logits[4:]).mean())
             if not torch.isfinite(loss):
