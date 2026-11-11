@@ -1,0 +1,73 @@
+{
+  "trees": 30,
+  "methods": {
+    "false_connection": 15,
+    "intentional_overlap": 15
+  },
+  "generated_variant_slots": 720,
+  "exported_distinct_partitions": 688,
+  "main_puzzles": 30,
+  "representatives": 30,
+  "quarantined": 32,
+  "all_quartets_scored": 8400,
+  "structural_checks": "passed",
+  "max_category_words": 3,
+  "historical_board_matches": [],
+  "prior_batch_board_matches": [],
+  "historical_group_matches": [
+    {
+      "id": "fc-01-v01",
+      "group": "fc-01-g1"
+    },
+    {
+      "id": "fc-01-v02",
+      "group": "fc-01-g1"
+    },
+    {
+      "id": "fc-01-v03",
+      "group": "fc-01-g2"
+    },
+    {
+      "id": "fc-01-v05",
+      "group": "fc-01-g2"
+    },
+    {
+      "id": "fc-01-v13",
+      "group": "fc-01-g2"
+    },
+    {
+      "id": "fc-01-v15",
+      "group": "fc-01-g1"
+    },
+    {
+      "id": "fc-01-v16",
+      "group": "fc-01-g1"
+    },
+    {
+      "id": "fc-01-v18",
+      "group": "fc-01-g2"
+    },
+    {
+      "id": "fc-01-v19",
+      "group": "fc-01-g2"
+    },
+    {
+      "id": "fc-01-v21",
+      "group": "fc-01-g1"
+    },
+    {
+      "id": "fc-01-v22",
+      "group": "fc-01-g1"
+    },
+    {
+      "id": "fc-01-v24",
+      "group": "fc-01-g2"
+    }
+  ],
+  "representative_historical_group_matches": [],
+  "semantic_uniqueness": "not proven; human review required",
+  "documented_category_catalogue_partition_counts": {
+    "1": 688
+  },
+  "human_evaluation": "not performed"
+}

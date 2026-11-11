@@ -1,0 +1,3631 @@
+[
+  {
+    "id": "io-01",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "LINING",
+      "ROOT",
+      "BLEW",
+      "DONALD"
+    ],
+    "story": [
+      "DONALD checked the LINING of his coat beside a giant tree.",
+      "A ROOT caught his boot.",
+      "He BLEW a whistle for help.",
+      "A gardener climbed down from the branches."
+    ],
+    "root_proposals": [
+      {
+        "category": "PARTS OF TREES",
+        "words": [
+          "ROOT",
+          "BARK",
+          "LEAF",
+          "TRUNK",
+          "BRANCH",
+          "LIMB",
+          "CROWN",
+          "SHOOT"
+        ],
+        "connection": "Each is an anatomical part of a tree."
+      },
+      {
+        "category": "COAT FEATURES",
+        "words": [
+          "BUTTON",
+          "POCKET",
+          "COLLAR",
+          "CUFF",
+          "LAPEL",
+          "LINING",
+          "HOOD",
+          "BELT"
+        ],
+        "connection": "Each can be a part or feature of a coat."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-01-g0",
+        "category": "PARTS OF TREES",
+        "style": "types",
+        "connection": "Each is an anatomical part of a tree.",
+        "words": [
+          "ROOT",
+          "BARK",
+          "LEAF",
+          "TRUNK",
+          "BRANCH",
+          "LIMB",
+          "CROWN",
+          "SHOOT"
+        ],
+        "required": [
+          "TRUNK"
+        ],
+        "word_fits": {
+          "ROOT": "Root fits parts of trees.",
+          "BARK": "Bark fits parts of trees.",
+          "LEAF": "Leaf fits parts of trees.",
+          "TRUNK": "Trunk fits parts of trees.",
+          "BRANCH": "Branch fits parts of trees.",
+          "LIMB": "Limb fits parts of trees.",
+          "CROWN": "Crown fits parts of trees.",
+          "SHOOT": "Shoot fits parts of trees."
+        }
+      },
+      {
+        "id": "io-01-g1",
+        "category": "BODY REGIONS",
+        "style": "types",
+        "connection": "Each word is an example of body regions.",
+        "words": [
+          "HEAD",
+          "NECK",
+          "CHEST",
+          "BACK",
+          "WAIST",
+          "HIP",
+          "GROIN",
+          "ABDOMEN"
+        ],
+        "required": [
+          "CHEST"
+        ],
+        "word_fits": {
+          "HEAD": "Head is an example of body regions",
+          "NECK": "Neck is an example of body regions",
+          "CHEST": "Chest is an example of body regions",
+          "BACK": "Back is an example of body regions",
+          "WAIST": "Waist is an example of body regions",
+          "HIP": "Hip is an example of body regions",
+          "GROIN": "Groin is an example of body regions",
+          "ABDOMEN": "Abdomen is an example of body regions"
+        }
+      },
+      {
+        "id": "io-01-g2",
+        "category": "STORAGE CONTAINERS",
+        "style": "types",
+        "connection": "Each word is an example of storage containers.",
+        "words": [
+          "BOX",
+          "BIN",
+          "CAN",
+          "JAR",
+          "TIN",
+          "CRATE",
+          "CASK",
+          "VAT"
+        ],
+        "required": [
+          "BOX"
+        ],
+        "word_fits": {
+          "BOX": "Box is an example of storage containers",
+          "BIN": "Bin is an example of storage containers",
+          "CAN": "Can is an example of storage containers",
+          "JAR": "Jar is an example of storage containers",
+          "TIN": "Tin is an example of storage containers",
+          "CRATE": "Crate is an example of storage containers",
+          "CASK": "Cask is an example of storage containers",
+          "VAT": "Vat is an example of storage containers"
+        }
+      },
+      {
+        "id": "io-01-g3",
+        "category": "STRIKING ACTIONS",
+        "style": "synonyms",
+        "connection": "Each verb can describe striking someone.",
+        "words": [
+          "PUNCH",
+          "STRIKE",
+          "SLUG",
+          "SMACK",
+          "BELT",
+          "SOCK",
+          "WALLOP",
+          "CLOUT"
+        ],
+        "required": [],
+        "word_fits": {
+          "PUNCH": "Punch is an example of hit with fist",
+          "STRIKE": "Strike is an example of hit with fist",
+          "SLUG": "Slug is an example of hit with fist",
+          "SMACK": "Smack is an example of hit with fist",
+          "BELT": "Belt is an example of hit with fist",
+          "SOCK": "Sock is an example of hit with fist",
+          "WALLOP": "Wallop is an example of hit with fist",
+          "CLOUT": "Clout is an example of hit with fist"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "TRUNK",
+        "alternate_meaning": "Trunk also means the central region of the human body."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "CHEST",
+        "alternate_meaning": "A chest is also a storage container."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "BOX",
+        "alternate_meaning": "To box is to fight with one's fists."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "LEAF",
+          "TRUNK",
+          "BRANCH",
+          "LIMB"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "TRUNK",
+            "category": "BODY REGIONS",
+            "meaning": "Trunk also means the central region of the human body."
+          }
+        ],
+        "selected_category": "BODY REGIONS"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "CHEST",
+          "WAIST",
+          "GROIN",
+          "ABDOMEN"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "CHEST",
+            "category": "STORAGE CONTAINERS",
+            "meaning": "A chest is also a storage container."
+          }
+        ],
+        "selected_category": "STORAGE CONTAINERS"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "BOX",
+          "BIN",
+          "JAR",
+          "CRATE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "BOX",
+            "category": "STRIKING ACTIONS",
+            "meaning": "To box is to fight with one's fists."
+          }
+        ],
+        "selected_category": "STRIKING ACTIONS"
+      }
+    ]
+  },
+  {
+    "id": "io-02",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "FLUKE",
+      "PLACED",
+      "CRACKERJACK",
+      "NUCLEUS"
+    ],
+    "story": [
+      "A FLUKE won the first round.",
+      "The coach PLACED a medal around the winner.",
+      "Her CRACKERJACK team formed a cheerful NUCLEUS.",
+      "Everyone called the performance excellent."
+    ],
+    "root_proposals": [
+      {
+        "category": "EXCELLENT",
+        "words": [
+          "ACE",
+          "SUPER",
+          "FINE",
+          "GRAND",
+          "PRIME",
+          "TOP",
+          "CHOICE",
+          "STELLAR"
+        ],
+        "connection": "Each word fits the category excellent."
+      },
+      {
+        "category": "WINNER AWARDS",
+        "words": [
+          "MEDAL",
+          "TROPHY",
+          "CUP",
+          "RIBBON",
+          "CROWN",
+          "TITLE",
+          "PRIZE",
+          "CERTIFICATE"
+        ],
+        "connection": "Each can be awarded to a winner."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-02-g0",
+        "category": "EXCELLENT",
+        "style": "synonyms",
+        "connection": "Each word fits the category excellent.",
+        "words": [
+          "ACE",
+          "SUPER",
+          "FINE",
+          "GRAND",
+          "PRIME",
+          "TOP",
+          "CHOICE",
+          "STELLAR"
+        ],
+        "required": [
+          "GRAND"
+        ],
+        "word_fits": {
+          "ACE": "Ace fits excellent.",
+          "SUPER": "Super fits excellent.",
+          "FINE": "Fine fits excellent.",
+          "GRAND": "Grand fits excellent.",
+          "PRIME": "Prime fits excellent.",
+          "TOP": "Top fits excellent.",
+          "CHOICE": "Choice fits excellent.",
+          "STELLAR": "Stellar fits excellent."
+        }
+      },
+      {
+        "id": "io-02-g1",
+        "category": "___ PIANO",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ PIANO.",
+        "words": [
+          "UPRIGHT",
+          "ELECTRIC",
+          "DIGITAL",
+          "PLAYER",
+          "TOY",
+          "PREPARED",
+          "CONCERT",
+          "ACOUSTIC"
+        ],
+        "required": [
+          "UPRIGHT"
+        ],
+        "word_fits": {
+          "UPRIGHT": "UPRIGHT PIANO",
+          "ELECTRIC": "ELECTRIC PIANO",
+          "DIGITAL": "DIGITAL PIANO",
+          "PLAYER": "PLAYER PIANO",
+          "TOY": "TOY PIANO",
+          "CONCERT": "CONCERT PIANO",
+          "ACOUSTIC": "ACOUSTIC PIANO",
+          "PREPARED": "PREPARED PIANO"
+        },
+        "editor_revisions": [
+          {
+            "removed": "BABY",
+            "added": "PREPARED",
+            "reason": "Correct exact phrase fit; construction context retained from pre-edit scored pool."
+          }
+        ]
+      },
+      {
+        "id": "io-02-g2",
+        "category": "HONORABLE",
+        "style": "synonyms",
+        "connection": "Each word is an example of honorable.",
+        "words": [
+          "HONEST",
+          "MORAL",
+          "ETHICAL",
+          "DECENT",
+          "JUST",
+          "NOBLE",
+          "GOOD",
+          "VIRTUOUS"
+        ],
+        "required": [
+          "NOBLE"
+        ],
+        "word_fits": {
+          "HONEST": "Honest is an example of honorable",
+          "MORAL": "Moral is an example of honorable",
+          "ETHICAL": "Ethical is an example of honorable",
+          "DECENT": "Decent is an example of honorable",
+          "JUST": "Just is an example of honorable",
+          "NOBLE": "Noble is an example of honorable",
+          "GOOD": "Good is an example of honorable",
+          "VIRTUOUS": "Virtuous is an example of honorable"
+        }
+      },
+      {
+        "id": "io-02-g3",
+        "category": "ARISTOCRATS",
+        "style": "types",
+        "connection": "Each title denotes a member of the aristocracy.",
+        "words": [
+          "BARON",
+          "DUKE",
+          "EARL",
+          "COUNT",
+          "LORD",
+          "PRINCE",
+          "MARQUIS",
+          "VISCOUNT"
+        ],
+        "required": [],
+        "word_fits": {
+          "BARON": "Baron is an example of aristocratic titles",
+          "DUKE": "Duke is an example of aristocratic titles",
+          "EARL": "Earl is an example of aristocratic titles",
+          "COUNT": "Count is an example of aristocratic titles",
+          "LORD": "Lord is an example of aristocratic titles",
+          "PRINCE": "Prince is an example of aristocratic titles",
+          "MARQUIS": "Marquis is an example of aristocratic titles",
+          "VISCOUNT": "Viscount is an example of aristocratic titles"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "GRAND",
+        "alternate_meaning": "A grand piano is an instrument, rather than grand meaning excellent."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "UPRIGHT",
+        "alternate_meaning": "Upright also describes honorable conduct."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "NOBLE",
+        "alternate_meaning": "A noble is a member of the aristocracy."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "SUPER",
+          "GRAND",
+          "PRIME",
+          "STELLAR"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "GRAND",
+            "category": "___ PIANO",
+            "meaning": "A grand piano is an instrument, rather than grand meaning excellent."
+          }
+        ],
+        "selected_category": "___ PIANO"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "UPRIGHT",
+          "ELECTRIC",
+          "DIGITAL",
+          "ACOUSTIC"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "UPRIGHT",
+            "category": "HONORABLE",
+            "meaning": "Upright also describes honorable conduct."
+          }
+        ],
+        "selected_category": "HONORABLE"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "MORAL",
+          "ETHICAL",
+          "NOBLE",
+          "VIRTUOUS"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "NOBLE",
+            "category": "ARISTOCRATS",
+            "meaning": "A noble is a member of the aristocracy."
+          }
+        ],
+        "selected_category": "ARISTOCRATS"
+      }
+    ]
+  },
+  {
+    "id": "io-03",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "STOOGE",
+      "MU",
+      "TIMER",
+      "NERVE"
+    ],
+    "story": [
+      "The STOOGE rang a bell marked MU.",
+      "A TIMER began ticking.",
+      "She gathered her NERVE and stepped onto the stage.",
+      "Her courage earned applause."
+    ],
+    "root_proposals": [
+      {
+        "category": "COURAGE",
+        "words": [
+          "NERVE",
+          "GUTS",
+          "GRIT",
+          "SPIRIT",
+          "HEART",
+          "METTLE",
+          "PLUCK",
+          "BACKBONE"
+        ],
+        "connection": "Each word fits the category courage."
+      },
+      {
+        "category": "STAGE PERFORMERS",
+        "words": [
+          "ACTOR",
+          "SINGER",
+          "DANCER",
+          "COMIC",
+          "MAGICIAN",
+          "MIME",
+          "JUGGLER",
+          "ACROBAT"
+        ],
+        "connection": "Each can perform onstage."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-03-g0",
+        "category": "COURAGE",
+        "style": "synonyms",
+        "connection": "Each word fits the category courage.",
+        "words": [
+          "NERVE",
+          "GUTS",
+          "GRIT",
+          "SPIRIT",
+          "HEART",
+          "METTLE",
+          "PLUCK",
+          "BACKBONE"
+        ],
+        "required": [
+          "NERVE"
+        ],
+        "word_fits": {
+          "NERVE": "Nerve fits courage.",
+          "GUTS": "Guts fits courage.",
+          "GRIT": "Grit fits courage.",
+          "SPIRIT": "Spirit fits courage.",
+          "HEART": "Heart fits courage.",
+          "METTLE": "Mettle fits courage.",
+          "PLUCK": "Pluck fits courage.",
+          "BACKBONE": "Backbone fits courage."
+        }
+      },
+      {
+        "id": "io-03-g1",
+        "category": "___ CELL",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ CELL.",
+        "words": [
+          "BRAIN",
+          "BLOOD",
+          "STEM",
+          "FUEL",
+          "SOLAR",
+          "PRISON",
+          "JAIL",
+          "DRY"
+        ],
+        "required": [
+          "STEM"
+        ],
+        "word_fits": {
+          "BRAIN": "BRAIN CELL",
+          "BLOOD": "BLOOD CELL",
+          "STEM": "STEM CELL",
+          "FUEL": "FUEL CELL",
+          "SOLAR": "SOLAR CELL",
+          "PRISON": "PRISON CELL",
+          "JAIL": "JAIL CELL",
+          "DRY": "DRY CELL"
+        }
+      },
+      {
+        "id": "io-03-g2",
+        "category": "FLOWER PARTS",
+        "style": "types",
+        "connection": "Each word is an example of flower parts.",
+        "words": [
+          "PETAL",
+          "SEPAL",
+          "STAMEN",
+          "PISTIL",
+          "ANTHER",
+          "OVARY",
+          "FILAMENT",
+          "RECEPTACLE"
+        ],
+        "required": [
+          "PISTIL"
+        ],
+        "word_fits": {
+          "PETAL": "Petal is an example of flower parts",
+          "SEPAL": "Sepal is an example of flower parts",
+          "STAMEN": "Stamen is an example of flower parts",
+          "PISTIL": "Pistil is an example of flower parts",
+          "ANTHER": "Anther is an example of flower parts",
+          "OVARY": "Ovary is an example of flower parts",
+          "FILAMENT": "Filament is an example of flower parts",
+          "RECEPTACLE": "Receptacle is an example of flower parts"
+        }
+      },
+      {
+        "id": "io-03-g3",
+        "category": "HAVE HOMOPHONES",
+        "style": "wordplay",
+        "connection": "Each word is an example of have homophones.",
+        "words": [
+          "RIGHT",
+          "SEA",
+          "PAIR",
+          "KNIGHT",
+          "FLOUR",
+          "SUN",
+          "SON",
+          "WRITE"
+        ],
+        "required": [],
+        "word_fits": {
+          "RIGHT": "Right is an example of have homophones",
+          "SEA": "Sea is an example of have homophones",
+          "PAIR": "Pair is an example of have homophones",
+          "KNIGHT": "Knight is an example of have homophones",
+          "FLOUR": "Flour is an example of have homophones",
+          "SUN": "Sun is an example of have homophones",
+          "SON": "Son is an example of have homophones",
+          "WRITE": "Write is an example of have homophones"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "NERVE",
+        "alternate_meaning": "A nerve cell is a neuron."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "STEM",
+        "alternate_meaning": "A stem is the supporting part of a flower."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "PISTIL",
+        "alternate_meaning": "Pistil sounds like pistol."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "NERVE",
+          "GUTS",
+          "HEART",
+          "BACKBONE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "NERVE",
+            "category": "___ CELL",
+            "meaning": "A nerve cell is a neuron."
+          }
+        ],
+        "selected_category": "___ CELL"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "BRAIN",
+          "STEM",
+          "PRISON",
+          "JAIL"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "STEM",
+            "category": "FLOWER PARTS",
+            "meaning": "A stem is the supporting part of a flower."
+          }
+        ],
+        "selected_category": "FLOWER PARTS"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "PETAL",
+          "SEPAL",
+          "STAMEN",
+          "PISTIL"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "PISTIL",
+            "category": "HAVE HOMOPHONES",
+            "meaning": "Pistil sounds like pistol."
+          }
+        ],
+        "selected_category": "HAVE HOMOPHONES"
+      }
+    ]
+  },
+  {
+    "id": "io-04",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "SOY",
+      "TOP",
+      "CHEST",
+      "TOTE"
+    ],
+    "story": [
+      "A bottle of SOY sauce balanced on TOP of a CHEST.",
+      "I packed it into a TOTE.",
+      "Other containers waited by the door.",
+      "Each would carry supplies to the picnic."
+    ],
+    "root_proposals": [
+      {
+        "category": "CONTAINERS",
+        "words": [
+          "CHEST",
+          "TOTE",
+          "CASE",
+          "BOX",
+          "CAN",
+          "JAR",
+          "BIN",
+          "TIN"
+        ],
+        "connection": "Each word fits the category containers."
+      },
+      {
+        "category": "PICNIC FOODS",
+        "words": [
+          "SANDWICH",
+          "SALAD",
+          "CHIPS",
+          "FRUIT",
+          "CHEESE",
+          "CRACKERS",
+          "PICKLES",
+          "COOKIES"
+        ],
+        "connection": "Each is commonly served at a picnic."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-04-g0",
+        "category": "CONTAINERS",
+        "style": "types",
+        "connection": "Each word fits the category containers.",
+        "words": [
+          "CHEST",
+          "TOTE",
+          "CASE",
+          "BOX",
+          "CAN",
+          "JAR",
+          "BIN",
+          "TIN"
+        ],
+        "required": [
+          "BOX"
+        ],
+        "word_fits": {
+          "CHEST": "Chest fits containers.",
+          "TOTE": "Tote fits containers.",
+          "CASE": "Case fits containers.",
+          "BOX": "Box fits containers.",
+          "CAN": "Can fits containers.",
+          "JAR": "Jar fits containers.",
+          "BIN": "Bin fits containers.",
+          "TIN": "Tin fits containers."
+        }
+      },
+      {
+        "id": "io-04-g1",
+        "category": "___ OFFICE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ OFFICE.",
+        "words": [
+          "POST",
+          "HOME",
+          "FRONT",
+          "BACK",
+          "OVAL",
+          "HEAD",
+          "TICKET",
+          "FOREIGN"
+        ],
+        "required": [
+          "HEAD"
+        ],
+        "word_fits": {
+          "POST": "POST OFFICE",
+          "HOME": "HOME OFFICE",
+          "FRONT": "FRONT OFFICE",
+          "BACK": "BACK OFFICE",
+          "OVAL": "OVAL OFFICE",
+          "HEAD": "HEAD OFFICE",
+          "TICKET": "TICKET OFFICE",
+          "FOREIGN": "FOREIGN OFFICE"
+        }
+      },
+      {
+        "id": "io-04-g2",
+        "category": "___ ACHE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ ACHE.",
+        "words": [
+          "TOOTH",
+          "EAR",
+          "STOMACH",
+          "HEART",
+          "MUSCLE",
+          "NECK",
+          "BELLY",
+          "BODY"
+        ],
+        "required": [
+          "NECK"
+        ],
+        "word_fits": {
+          "TOOTH": "TOOTH ACHE",
+          "EAR": "EAR ACHE",
+          "STOMACH": "STOMACH ACHE",
+          "HEART": "HEART ACHE",
+          "MUSCLE": "MUSCLE ACHE",
+          "NECK": "NECK ACHE",
+          "BELLY": "BELLY ACHE",
+          "BODY": "BODY ACHE"
+        }
+      },
+      {
+        "id": "io-04-g3",
+        "category": "___ TIE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ TIE.",
+        "words": [
+          "BOW",
+          "BLACK",
+          "WHITE",
+          "SCHOOL",
+          "BOLO",
+          "STRING",
+          "CABLE",
+          "ZIP"
+        ],
+        "required": [],
+        "word_fits": {
+          "BOW": "BOW TIE",
+          "BLACK": "BLACK TIE",
+          "WHITE": "WHITE TIE",
+          "SCHOOL": "SCHOOL TIE",
+          "BOLO": "BOLO TIE",
+          "STRING": "STRING TIE",
+          "CABLE": "CABLE TIE",
+          "ZIP": "ZIP TIE"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "BOX",
+        "alternate_meaning": "A box office sells admission tickets."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "HEAD",
+        "alternate_meaning": "A headache is a pain; closed compounds are allowed."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "NECK",
+        "alternate_meaning": "A necktie is worn around the neck; closed compounds are allowed."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "CHEST",
+          "BOX",
+          "JAR",
+          "BIN"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "BOX",
+            "category": "___ OFFICE",
+            "meaning": "A box office sells admission tickets."
+          }
+        ],
+        "selected_category": "___ OFFICE"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "HOME",
+          "FRONT",
+          "BACK",
+          "HEAD"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "HEAD",
+            "category": "___ ACHE",
+            "meaning": "A headache is a pain; closed compounds are allowed."
+          }
+        ],
+        "selected_category": "___ ACHE"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "STOMACH",
+          "NECK",
+          "BELLY",
+          "BODY"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "NECK",
+            "category": "___ TIE",
+            "meaning": "A necktie is worn around the neck; closed compounds are allowed."
+          }
+        ],
+        "selected_category": "___ TIE"
+      }
+    ]
+  },
+  {
+    "id": "io-05",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "NICKS",
+      "CASTLE",
+      "ANCHOR",
+      "HOAGIE"
+    ],
+    "story": [
+      "NICKS in the CASTLE table needed repair.",
+      "The cook weighed the cloth down with an ANCHOR.",
+      "A HOAGIE supplied lunch during the work.",
+      "Everyone argued about the best bread."
+    ],
+    "root_proposals": [
+      {
+        "category": "SANDWICH BREADS",
+        "words": [
+          "ROLL",
+          "BUN",
+          "RYE",
+          "WHITE",
+          "WHEAT",
+          "SOURDOUGH",
+          "PITA",
+          "WRAP"
+        ],
+        "connection": "Each names bread or a bread format used for sandwiches."
+      },
+      {
+        "category": "REPAIR ACTIONS",
+        "words": [
+          "PATCH",
+          "MEND",
+          "FIX",
+          "SEAL",
+          "FILL",
+          "SAND",
+          "PAINT",
+          "POLISH"
+        ],
+        "connection": "Each is an action used to repair or restore an object."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-05-g0",
+        "category": "SANDWICH BREADS",
+        "style": "types",
+        "connection": "Each names bread or a bread format used for sandwiches.",
+        "words": [
+          "ROLL",
+          "BUN",
+          "RYE",
+          "WHITE",
+          "WHEAT",
+          "SOURDOUGH",
+          "PITA",
+          "WRAP"
+        ],
+        "required": [
+          "RYE"
+        ],
+        "word_fits": {
+          "ROLL": "Roll fits sandwich breads.",
+          "BUN": "Bun fits sandwich breads.",
+          "RYE": "Rye fits sandwich breads.",
+          "WHITE": "White fits sandwich breads.",
+          "WHEAT": "Wheat fits sandwich breads.",
+          "SOURDOUGH": "Sourdough fits sandwich breads.",
+          "PITA": "Pita fits sandwich breads.",
+          "WRAP": "Wrap fits sandwich breads."
+        }
+      },
+      {
+        "id": "io-05-g1",
+        "category": "CEREAL GRAINS",
+        "style": "types",
+        "connection": "Each word is an example of cereal grains.",
+        "words": [
+          "BARLEY",
+          "CORN",
+          "OATS",
+          "RICE",
+          "MILLET",
+          "SORGHUM",
+          "SPELT",
+          "TEFF"
+        ],
+        "required": [
+          "CORN"
+        ],
+        "word_fits": {
+          "BARLEY": "Barley is an example of cereal grains",
+          "CORN": "Corn is an example of cereal grains",
+          "OATS": "Oats is an example of cereal grains",
+          "RICE": "Rice is an example of cereal grains",
+          "MILLET": "Millet is an example of cereal grains",
+          "SORGHUM": "Sorghum is an example of cereal grains",
+          "SPELT": "Spelt is an example of cereal grains",
+          "TEFF": "Teff is an example of cereal grains"
+        }
+      },
+      {
+        "id": "io-05-g2",
+        "category": "___ FLAKES",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ FLAKES.",
+        "words": [
+          "BRAN",
+          "COCONUT",
+          "CHILI",
+          "POTATO",
+          "SOAP",
+          "SNOW",
+          "GARLIC",
+          "ALMOND"
+        ],
+        "required": [
+          "POTATO"
+        ],
+        "word_fits": {
+          "BRAN": "BRAN FLAKES",
+          "COCONUT": "COCONUT FLAKES",
+          "CHILI": "CHILI FLAKES",
+          "POTATO": "POTATO FLAKES",
+          "SOAP": "SOAP FLAKES",
+          "SNOW": "SNOW FLAKES",
+          "GARLIC": "GARLIC FLAKES",
+          "ALMOND": "ALMOND FLAKES"
+        }
+      },
+      {
+        "id": "io-05-g3",
+        "category": "___ CHIP",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ CHIP.",
+        "words": [
+          "BLUE",
+          "POKER",
+          "WOOD",
+          "SILICON",
+          "COMPUTER",
+          "CHOCOLATE",
+          "TORTILLA",
+          "MEMORY"
+        ],
+        "required": [],
+        "word_fits": {
+          "BLUE": "BLUE CHIP",
+          "POKER": "POKER CHIP",
+          "WOOD": "WOOD CHIP",
+          "SILICON": "SILICON CHIP",
+          "COMPUTER": "COMPUTER CHIP",
+          "CHOCOLATE": "CHOCOLATE CHIP",
+          "TORTILLA": "TORTILLA CHIP",
+          "MEMORY": "MEMORY CHIP"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "RYE",
+        "alternate_meaning": "Rye is a cereal grain as well as a bread name."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "CORN",
+        "alternate_meaning": "Cornflakes are a breakfast cereal."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "POTATO",
+        "alternate_meaning": "A potato chip is a thin fried snack."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "RYE",
+          "WHEAT",
+          "SOURDOUGH",
+          "PITA"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "RYE",
+            "category": "CEREAL GRAINS",
+            "meaning": "Rye is a cereal grain as well as a bread name."
+          }
+        ],
+        "selected_category": "CEREAL GRAINS"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "BARLEY",
+          "CORN",
+          "OATS",
+          "SORGHUM"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "CORN",
+            "category": "___ FLAKES",
+            "meaning": "Cornflakes are a breakfast cereal."
+          }
+        ],
+        "selected_category": "___ FLAKES"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "COCONUT",
+          "POTATO",
+          "GARLIC",
+          "ALMOND"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "POTATO",
+            "category": "___ CHIP",
+            "meaning": "A potato chip is a thin fried snack."
+          }
+        ],
+        "selected_category": "___ CHIP"
+      }
+    ]
+  },
+  {
+    "id": "io-06",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "ATM",
+      "BOWLINE",
+      "FEAST",
+      "PRELIMINARY"
+    ],
+    "story": [
+      "An ATM stood beside the dock.",
+      "I tied a BOWLINE before the FEAST.",
+      "The PRELIMINARY inspection found several loose fastenings.",
+      "We secured everything before sailing."
+    ],
+    "root_proposals": [
+      {
+        "category": "FASTENING METHODS",
+        "words": [
+          "TIE",
+          "CLIP",
+          "PIN",
+          "SNAP",
+          "BUTTON",
+          "HOOK",
+          "LACE",
+          "BUCKLE"
+        ],
+        "connection": "Each word fits the category fastening methods."
+      },
+      {
+        "category": "BOATING EQUIPMENT",
+        "words": [
+          "ANCHOR",
+          "ROPE",
+          "SAIL",
+          "OAR",
+          "RUDDER",
+          "COMPASS",
+          "LIFEJACKET",
+          "FENDER"
+        ],
+        "connection": "Each is equipment used aboard a boat."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-06-g0",
+        "category": "FASTENING METHODS",
+        "style": "types",
+        "connection": "Each word fits the category fastening methods.",
+        "words": [
+          "TIE",
+          "CLIP",
+          "PIN",
+          "SNAP",
+          "BUTTON",
+          "HOOK",
+          "LACE",
+          "BUCKLE"
+        ],
+        "required": [
+          "PIN"
+        ],
+        "word_fits": {
+          "TIE": "Tie fits fastening methods.",
+          "CLIP": "Clip fits fastening methods.",
+          "PIN": "Pin fits fastening methods.",
+          "SNAP": "Snap fits fastening methods.",
+          "BUTTON": "Button fits fastening methods.",
+          "HOOK": "Hook fits fastening methods.",
+          "LACE": "Lace fits fastening methods.",
+          "BUCKLE": "Buckle fits fastening methods."
+        }
+      },
+      {
+        "id": "io-06-g1",
+        "category": "___ POINT",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ POINT.",
+        "words": [
+          "HIGH",
+          "LOW",
+          "MATCH",
+          "SET",
+          "BREAK",
+          "CHECK",
+          "POWER",
+          "VIEW"
+        ],
+        "required": [
+          "BREAK"
+        ],
+        "word_fits": {
+          "HIGH": "HIGH POINT",
+          "LOW": "LOW POINT",
+          "MATCH": "MATCH POINT",
+          "SET": "SET POINT",
+          "BREAK": "BREAK POINT",
+          "CHECK": "CHECK POINT",
+          "VIEW": "VIEW POINT",
+          "POWER": "POWER POINT"
+        },
+        "editor_revisions": [
+          {
+            "removed": "TURN",
+            "added": "POWER",
+            "reason": "Correct exact phrase fit; construction context retained from pre-edit scored pool."
+          }
+        ]
+      },
+      {
+        "id": "io-06-g2",
+        "category": "___ WATER",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ WATER.",
+        "words": [
+          "RAIN",
+          "SPRING",
+          "TAP",
+          "SALT",
+          "FRESH",
+          "STILL",
+          "MINERAL",
+          "ROSE"
+        ],
+        "required": [
+          "TAP"
+        ],
+        "word_fits": {
+          "RAIN": "RAIN WATER",
+          "SPRING": "SPRING WATER",
+          "TAP": "TAP WATER",
+          "SALT": "SALT WATER",
+          "FRESH": "FRESH WATER",
+          "STILL": "STILL WATER",
+          "MINERAL": "MINERAL WATER",
+          "ROSE": "ROSE WATER"
+        }
+      },
+      {
+        "id": "io-06-g3",
+        "category": "DANCES",
+        "style": "types",
+        "connection": "Each word is an example of dances.",
+        "words": [
+          "WALTZ",
+          "TANGO",
+          "SALSA",
+          "SWING",
+          "REEL",
+          "JIG",
+          "FOXTROT",
+          "POLKA"
+        ],
+        "required": [],
+        "word_fits": {
+          "WALTZ": "Waltz is an example of dances",
+          "TANGO": "Tango is an example of dances",
+          "SALSA": "Salsa is an example of dances",
+          "SWING": "Swing is an example of dances",
+          "REEL": "Reel is an example of dances",
+          "JIG": "Jig is an example of dances",
+          "FOXTROT": "Foxtrot is an example of dances",
+          "POLKA": "Polka is an example of dances"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "PIN",
+        "alternate_meaning": "Pinpoint is an exact position; the blank may form a closed compound."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "BREAK",
+        "alternate_meaning": "A breakwater protects a harbor; closed compounds are allowed."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "TAP",
+        "alternate_meaning": "Tap is a dance style, rather than a water faucet."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "TIE",
+          "PIN",
+          "LACE",
+          "BUCKLE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "PIN",
+            "category": "___ POINT",
+            "meaning": "Pinpoint is an exact position; the blank may form a closed compound."
+          }
+        ],
+        "selected_category": "___ POINT"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "HIGH",
+          "LOW",
+          "SET",
+          "BREAK"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "BREAK",
+            "category": "___ WATER",
+            "meaning": "A breakwater protects a harbor; closed compounds are allowed."
+          }
+        ],
+        "selected_category": "___ WATER"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "RAIN",
+          "TAP",
+          "SALT",
+          "MINERAL"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "TAP",
+            "category": "DANCES",
+            "meaning": "Tap is a dance style, rather than a water faucet."
+          }
+        ],
+        "selected_category": "DANCES"
+      }
+    ]
+  },
+  {
+    "id": "io-07",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "FAT",
+      "KELLY",
+      "AMUSE",
+      "JAYS"
+    ],
+    "story": [
+      "FAT raindrops splashed KELLY as she tried to AMUSE the JAYS.",
+      "The birds darted into green foliage.",
+      "She painted its many shades.",
+      "The finished picture brightened the wall."
+    ],
+    "root_proposals": [
+      {
+        "category": "SHADES OF GREEN",
+        "words": [
+          "KELLY",
+          "OLIVE",
+          "JADE",
+          "MINT",
+          "SAGE",
+          "EMERALD",
+          "LIME",
+          "FOREST"
+        ],
+        "connection": "Each word fits the category shades of green."
+      },
+      {
+        "category": "BIRDS",
+        "words": [
+          "JAY",
+          "CROW",
+          "ROBIN",
+          "SWALLOW",
+          "SWIFT",
+          "MARTIN",
+          "KITE",
+          "CRANE"
+        ],
+        "connection": "Each names a bird."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-07-g0",
+        "category": "SHADES OF GREEN",
+        "style": "types",
+        "connection": "Each word fits the category shades of green.",
+        "words": [
+          "KELLY",
+          "OLIVE",
+          "JADE",
+          "MINT",
+          "SAGE",
+          "EMERALD",
+          "LIME",
+          "FOREST"
+        ],
+        "required": [
+          "OLIVE"
+        ],
+        "word_fits": {
+          "KELLY": "Kelly fits shades of green.",
+          "OLIVE": "Olive fits shades of green.",
+          "JADE": "Jade fits shades of green.",
+          "MINT": "Mint fits shades of green.",
+          "SAGE": "Sage fits shades of green.",
+          "EMERALD": "Emerald fits shades of green.",
+          "LIME": "Lime fits shades of green.",
+          "FOREST": "Forest fits shades of green."
+        }
+      },
+      {
+        "id": "io-07-g1",
+        "category": "___ OIL",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ OIL.",
+        "words": [
+          "MOTOR",
+          "BABY",
+          "MINERAL",
+          "PALM",
+          "CASTOR",
+          "CANOLA",
+          "CORN",
+          "SESAME"
+        ],
+        "required": [
+          "PALM"
+        ],
+        "word_fits": {
+          "MOTOR": "MOTOR OIL",
+          "BABY": "BABY OIL",
+          "MINERAL": "MINERAL OIL",
+          "PALM": "PALM OIL",
+          "CASTOR": "CASTOR OIL",
+          "CANOLA": "CANOLA OIL",
+          "CORN": "CORN OIL",
+          "SESAME": "SESAME OIL"
+        }
+      },
+      {
+        "id": "io-07-g2",
+        "category": "TREES",
+        "style": "types",
+        "connection": "Each word is an example of trees.",
+        "words": [
+          "OAK",
+          "ELM",
+          "ASH",
+          "PINE",
+          "FIR",
+          "MAPLE",
+          "BIRCH",
+          "WILLOW"
+        ],
+        "required": [
+          "PINE"
+        ],
+        "word_fits": {
+          "OAK": "Oak is an example of trees",
+          "ELM": "Elm is an example of trees",
+          "ASH": "Ash is an example of trees",
+          "PINE": "Pine is an example of trees",
+          "FIR": "Fir is an example of trees",
+          "MAPLE": "Maple is an example of trees",
+          "BIRCH": "Birch is an example of trees",
+          "WILLOW": "Willow is an example of trees"
+        }
+      },
+      {
+        "id": "io-07-g3",
+        "category": "LONG FOR",
+        "style": "synonyms",
+        "connection": "Each word is an example of long for.",
+        "words": [
+          "YEARN",
+          "LONG",
+          "CRAVE",
+          "ACHE",
+          "DESIRE",
+          "HUNGER",
+          "THIRST",
+          "ITCH"
+        ],
+        "required": [],
+        "word_fits": {
+          "YEARN": "Yearn is an example of long for",
+          "LONG": "Long is an example of long for",
+          "CRAVE": "Crave is an example of long for",
+          "ACHE": "Ache is an example of long for",
+          "DESIRE": "Desire is an example of long for",
+          "HUNGER": "Hunger is an example of long for",
+          "THIRST": "Thirst is an example of long for",
+          "ITCH": "Itch is an example of long for"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "OLIVE",
+        "alternate_meaning": "Olive oil is a cooking oil."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "PALM",
+        "alternate_meaning": "A palm is a tree as well as part of the hand."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "PINE",
+        "alternate_meaning": "To pine is to long for something."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "OLIVE",
+          "JADE",
+          "EMERALD",
+          "LIME"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "OLIVE",
+            "category": "___ OIL",
+            "meaning": "Olive oil is a cooking oil."
+          }
+        ],
+        "selected_category": "___ OIL"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "PALM",
+          "CANOLA",
+          "CORN",
+          "SESAME"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "PALM",
+            "category": "TREES",
+            "meaning": "A palm is a tree as well as part of the hand."
+          }
+        ],
+        "selected_category": "TREES"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "OAK",
+          "PINE",
+          "MAPLE",
+          "BIRCH"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "PINE",
+            "category": "LONG FOR",
+            "meaning": "To pine is to long for something."
+          }
+        ],
+        "selected_category": "LONG FOR"
+      }
+    ]
+  },
+  {
+    "id": "io-08",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "MEAN",
+      "SAME",
+      "TOOLBOX",
+      "SCARLET"
+    ],
+    "story": [
+      "The MEAN carpenter demanded the SAME TOOLBOX.",
+      "A SCARLET cloth covered it.",
+      "Inside lay tools for every repair.",
+      "We spent the afternoon fixing a chair."
+    ],
+    "root_proposals": [
+      {
+        "category": "HAND TOOLS",
+        "words": [
+          "HAMMER",
+          "SAW",
+          "FILE",
+          "PLANE",
+          "LEVEL",
+          "DRILL",
+          "PUNCH",
+          "VISE"
+        ],
+        "connection": "Each word fits the category hand tools."
+      },
+      {
+        "category": "FURNITURE",
+        "words": [
+          "CHAIR",
+          "TABLE",
+          "DESK",
+          "BED",
+          "STOOL",
+          "BENCH",
+          "CHEST",
+          "CABINET"
+        ],
+        "connection": "Each is a piece of furniture."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-08-g0",
+        "category": "HAND TOOLS",
+        "style": "types",
+        "connection": "Each word fits the category hand tools.",
+        "words": [
+          "HAMMER",
+          "SAW",
+          "FILE",
+          "PLANE",
+          "LEVEL",
+          "DRILL",
+          "PUNCH",
+          "VISE"
+        ],
+        "required": [
+          "PUNCH"
+        ],
+        "word_fits": {
+          "HAMMER": "Hammer fits hand tools.",
+          "SAW": "Saw fits hand tools.",
+          "FILE": "File fits hand tools.",
+          "PLANE": "Plane fits hand tools.",
+          "LEVEL": "Level fits hand tools.",
+          "DRILL": "Drill fits hand tools.",
+          "PUNCH": "Punch fits hand tools.",
+          "VISE": "Vise fits hand tools."
+        }
+      },
+      {
+        "id": "io-08-g1",
+        "category": "PARTY DRINKS",
+        "style": "types",
+        "connection": "Each word is an example of party drinks.",
+        "words": [
+          "LEMONADE",
+          "TEA",
+          "COFFEE",
+          "CIDER",
+          "SODA",
+          "COCOA",
+          "JUICE",
+          "SHAKE"
+        ],
+        "required": [
+          "SODA"
+        ],
+        "word_fits": {
+          "LEMONADE": "Lemonade is an example of party drinks",
+          "TEA": "Tea is an example of party drinks",
+          "COFFEE": "Coffee is an example of party drinks",
+          "CIDER": "Cider is an example of party drinks",
+          "SODA": "Soda is an example of party drinks",
+          "COCOA": "Cocoa is an example of party drinks",
+          "JUICE": "Juice is an example of party drinks",
+          "SHAKE": "Shake is an example of party drinks"
+        }
+      },
+      {
+        "id": "io-08-g2",
+        "category": "___ FOUNTAIN",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ FOUNTAIN.",
+        "words": [
+          "WATER",
+          "CHOCOLATE",
+          "DRINKING",
+          "TREVI",
+          "WALL",
+          "GARDEN",
+          "INDOOR",
+          "OUTDOOR"
+        ],
+        "required": [
+          "GARDEN"
+        ],
+        "word_fits": {
+          "WATER": "WATER FOUNTAIN",
+          "CHOCOLATE": "CHOCOLATE FOUNTAIN",
+          "DRINKING": "DRINKING FOUNTAIN",
+          "TREVI": "TREVI FOUNTAIN",
+          "WALL": "WALL FOUNTAIN",
+          "GARDEN": "GARDEN FOUNTAIN",
+          "INDOOR": "INDOOR FOUNTAIN",
+          "OUTDOOR": "OUTDOOR FOUNTAIN"
+        }
+      },
+      {
+        "id": "io-08-g3",
+        "category": "___ PARTY",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ PARTY.",
+        "words": [
+          "BIRTHDAY",
+          "DINNER",
+          "COCKTAIL",
+          "SEARCH",
+          "THIRD",
+          "POLITICAL",
+          "SLUMBER",
+          "SURPRISE"
+        ],
+        "required": [],
+        "word_fits": {
+          "BIRTHDAY": "BIRTHDAY PARTY",
+          "DINNER": "DINNER PARTY",
+          "COCKTAIL": "COCKTAIL PARTY",
+          "SEARCH": "SEARCH PARTY",
+          "THIRD": "THIRD PARTY",
+          "POLITICAL": "POLITICAL PARTY",
+          "SLUMBER": "SLUMBER PARTY",
+          "SURPRISE": "SURPRISE PARTY"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "PUNCH",
+        "alternate_meaning": "Punch also means a mixed drink served at parties."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "SODA",
+        "alternate_meaning": "A soda fountain dispenses carbonated drinks."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "GARDEN",
+        "alternate_meaning": "A garden party is an outdoor social event."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "HAMMER",
+          "DRILL",
+          "PUNCH",
+          "VISE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "PUNCH",
+            "category": "PARTY DRINKS",
+            "meaning": "Punch also means a mixed drink served at parties."
+          }
+        ],
+        "selected_category": "PARTY DRINKS"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "LEMONADE",
+          "CIDER",
+          "SODA",
+          "JUICE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "SODA",
+            "category": "___ FOUNTAIN",
+            "meaning": "A soda fountain dispenses carbonated drinks."
+          }
+        ],
+        "selected_category": "___ FOUNTAIN"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "WALL",
+          "GARDEN",
+          "INDOOR",
+          "OUTDOOR"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "GARDEN",
+            "category": "___ PARTY",
+            "meaning": "A garden party is an outdoor social event."
+          }
+        ],
+        "selected_category": "___ PARTY"
+      }
+    ]
+  },
+  {
+    "id": "io-09",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "TICK",
+      "FLOATIE",
+      "LISTEN",
+      "REACH"
+    ],
+    "story": [
+      "A TICK came from the clock beside my FLOATIE.",
+      "I stopped to LISTEN.",
+      "I could REACH its face from the pool.",
+      "The repairer showed me its inner parts."
+    ],
+    "root_proposals": [
+      {
+        "category": "CLOCK PARTS",
+        "words": [
+          "HAND",
+          "FACE",
+          "DIAL",
+          "SPRING",
+          "CASE",
+          "WEIGHT",
+          "PENDULUM",
+          "GEAR"
+        ],
+        "connection": "Each word fits the category clock parts."
+      },
+      {
+        "category": "SWIMMING EQUIPMENT",
+        "words": [
+          "GOGGLES",
+          "FINS",
+          "CAP",
+          "FLOAT",
+          "BOARD",
+          "NOODLE",
+          "MASK",
+          "SNORKEL"
+        ],
+        "connection": "Each is equipment used for swimming or pool recreation."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-09-g0",
+        "category": "CLOCK PARTS",
+        "style": "types",
+        "connection": "Each word fits the category clock parts.",
+        "words": [
+          "HAND",
+          "FACE",
+          "DIAL",
+          "SPRING",
+          "CASE",
+          "WEIGHT",
+          "PENDULUM",
+          "GEAR"
+        ],
+        "required": [
+          "CASE"
+        ],
+        "word_fits": {
+          "HAND": "Hand fits clock parts.",
+          "FACE": "Face fits clock parts.",
+          "DIAL": "Dial fits clock parts.",
+          "SPRING": "Spring fits clock parts.",
+          "CASE": "Case fits clock parts.",
+          "WEIGHT": "Weight fits clock parts.",
+          "PENDULUM": "Pendulum fits clock parts.",
+          "GEAR": "Gear fits clock parts."
+        }
+      },
+      {
+        "id": "io-09-g1",
+        "category": "___ STUDY",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ STUDY.",
+        "words": [
+          "FIELD",
+          "PILOT",
+          "SLEEP",
+          "TIME",
+          "MOTION",
+          "FEASIBILITY",
+          "BIBLE",
+          "WORK"
+        ],
+        "required": [
+          "TIME"
+        ],
+        "word_fits": {
+          "FIELD": "FIELD STUDY",
+          "PILOT": "PILOT STUDY",
+          "SLEEP": "SLEEP STUDY",
+          "TIME": "TIME STUDY",
+          "MOTION": "MOTION STUDY",
+          "FEASIBILITY": "FEASIBILITY STUDY",
+          "BIBLE": "BIBLE STUDY",
+          "WORK": "WORK STUDY"
+        }
+      },
+      {
+        "id": "io-09-g2",
+        "category": "___ TABLE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ TABLE.",
+        "words": [
+          "DINING",
+          "COFFEE",
+          "END",
+          "PERIODIC",
+          "POOL",
+          "CARD",
+          "DRAFTING",
+          "OPERATING"
+        ],
+        "required": [
+          "CARD"
+        ],
+        "word_fits": {
+          "DINING": "DINING TABLE",
+          "COFFEE": "COFFEE TABLE",
+          "END": "END TABLE",
+          "PERIODIC": "PERIODIC TABLE",
+          "POOL": "POOL TABLE",
+          "CARD": "CARD TABLE",
+          "DRAFTING": "DRAFTING TABLE",
+          "OPERATING": "OPERATING TABLE"
+        }
+      },
+      {
+        "id": "io-09-g3",
+        "category": "___ SHARK",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ SHARK.",
+        "words": [
+          "LOAN",
+          "BLACKTIP",
+          "TIGER",
+          "NURSE",
+          "WHALE",
+          "BULL",
+          "REEF",
+          "SAND"
+        ],
+        "required": [],
+        "word_fits": {
+          "LOAN": "LOAN SHARK",
+          "TIGER": "TIGER SHARK",
+          "NURSE": "NURSE SHARK",
+          "WHALE": "WHALE SHARK",
+          "BULL": "BULL SHARK",
+          "REEF": "REEF SHARK",
+          "SAND": "SAND SHARK",
+          "BLACKTIP": "BLACKTIP SHARK"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "CASE",
+        "alternate_meaning": "A case study examines a particular instance."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "TIME",
+        "alternate_meaning": "A timetable lists scheduled times."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "CARD",
+        "alternate_meaning": "A card shark is a skilled or dishonest card player."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "HAND",
+          "FACE",
+          "CASE",
+          "WEIGHT"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "CASE",
+            "category": "___ STUDY",
+            "meaning": "A case study examines a particular instance."
+          }
+        ],
+        "selected_category": "___ STUDY"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "SLEEP",
+          "TIME",
+          "MOTION",
+          "WORK"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "TIME",
+            "category": "___ TABLE",
+            "meaning": "A timetable lists scheduled times."
+          }
+        ],
+        "selected_category": "___ TABLE"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "DINING",
+          "COFFEE",
+          "CARD",
+          "OPERATING"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "CARD",
+            "category": "___ SHARK",
+            "meaning": "A card shark is a skilled or dishonest card player."
+          }
+        ],
+        "selected_category": "___ SHARK"
+      }
+    ]
+  },
+  {
+    "id": "io-10",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "BASSOON",
+      "POLO",
+      "SKIM",
+      "JAMS"
+    ],
+    "story": [
+      "A BASSOON player wore a POLO shirt.",
+      "She paused to SKIM the music.",
+      "Her JAMS always drew a crowd.",
+      "Today she explained the symbols on the page."
+    ],
+    "root_proposals": [
+      {
+        "category": "MUSICAL TERMS",
+        "words": [
+          "KEY",
+          "SCALE",
+          "NOTE",
+          "REST",
+          "FLAT",
+          "SHARP",
+          "STAFF",
+          "BAR"
+        ],
+        "connection": "Each word fits the category musical terms."
+      },
+      {
+        "category": "MUSICAL INSTRUMENTS",
+        "words": [
+          "BASSOON",
+          "FLUTE",
+          "HORN",
+          "DRUM",
+          "TRIANGLE",
+          "BASS",
+          "RECORDER",
+          "ORGAN"
+        ],
+        "connection": "Each names a musical instrument."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-10-g0",
+        "category": "MUSICAL TERMS",
+        "style": "types",
+        "connection": "Each word fits the category musical terms.",
+        "words": [
+          "KEY",
+          "SCALE",
+          "NOTE",
+          "REST",
+          "FLAT",
+          "SHARP",
+          "STAFF",
+          "BAR"
+        ],
+        "required": [
+          "FLAT"
+        ],
+        "word_fits": {
+          "KEY": "Key fits musical terms.",
+          "SCALE": "Scale fits musical terms.",
+          "NOTE": "Note fits musical terms.",
+          "REST": "Rest fits musical terms.",
+          "FLAT": "Flat fits musical terms.",
+          "SHARP": "Sharp fits musical terms.",
+          "STAFF": "Staff fits musical terms.",
+          "BAR": "Bar fits musical terms."
+        }
+      },
+      {
+        "id": "io-10-g1",
+        "category": "___ TIRE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ TIRE.",
+        "words": [
+          "SPARE",
+          "SNOW",
+          "WINTER",
+          "SUMMER",
+          "RADIAL",
+          "TUBELESS",
+          "BALD",
+          "FRONT"
+        ],
+        "required": [
+          "FRONT"
+        ],
+        "word_fits": {
+          "SPARE": "SPARE TIRE",
+          "SNOW": "SNOW TIRE",
+          "WINTER": "WINTER TIRE",
+          "SUMMER": "SUMMER TIRE",
+          "RADIAL": "RADIAL TIRE",
+          "TUBELESS": "TUBELESS TIRE",
+          "BALD": "BALD TIRE",
+          "FRONT": "FRONT TIRE"
+        }
+      },
+      {
+        "id": "io-10-g2",
+        "category": "___ PAGE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ PAGE.",
+        "words": [
+          "HOME",
+          "WEB",
+          "TITLE",
+          "COVER",
+          "SPORTS",
+          "BACK",
+          "SOCIETY",
+          "EDITORIAL"
+        ],
+        "required": [
+          "BACK"
+        ],
+        "word_fits": {
+          "HOME": "HOME PAGE",
+          "WEB": "WEB PAGE",
+          "TITLE": "TITLE PAGE",
+          "COVER": "COVER PAGE",
+          "SPORTS": "SPORTS PAGE",
+          "BACK": "BACK PAGE",
+          "SOCIETY": "SOCIETY PAGE",
+          "EDITORIAL": "EDITORIAL PAGE"
+        }
+      },
+      {
+        "id": "io-10-g3",
+        "category": "___ STAGE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ STAGE.",
+        "words": [
+          "CENTER",
+          "SOUND",
+          "OFF",
+          "UP",
+          "DOWN",
+          "EARLY",
+          "LATE",
+          "MAIN"
+        ],
+        "required": [],
+        "word_fits": {
+          "CENTER": "CENTER STAGE",
+          "SOUND": "SOUND STAGE",
+          "OFF": "OFF STAGE",
+          "UP": "UP STAGE",
+          "DOWN": "DOWN STAGE",
+          "EARLY": "EARLY STAGE",
+          "LATE": "LATE STAGE",
+          "MAIN": "MAIN STAGE"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "FLAT",
+        "alternate_meaning": "A flat tire has lost its air."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "FRONT",
+        "alternate_meaning": "A front page is the first page of a newspaper."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "BACK",
+        "alternate_meaning": "Backstage is the area behind a theater stage; closed compounds are allowed."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "KEY",
+          "NOTE",
+          "FLAT",
+          "SHARP"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "FLAT",
+            "category": "___ TIRE",
+            "meaning": "A flat tire has lost its air."
+          }
+        ],
+        "selected_category": "___ TIRE"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "SNOW",
+          "WINTER",
+          "SUMMER",
+          "FRONT"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "FRONT",
+            "category": "___ PAGE",
+            "meaning": "A front page is the first page of a newspaper."
+          }
+        ],
+        "selected_category": "___ PAGE"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "HOME",
+          "SPORTS",
+          "BACK",
+          "SOCIETY"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "BACK",
+            "category": "___ STAGE",
+            "meaning": "Backstage is the area behind a theater stage; closed compounds are allowed."
+          }
+        ],
+        "selected_category": "___ STAGE"
+      }
+    ]
+  },
+  {
+    "id": "io-11",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "STRONG",
+      "MAGIC",
+      "SQUID",
+      "WOK"
+    ],
+    "story": [
+      "A STRONG smell rose from the WOK.",
+      "The cook worked his MAGIC on a SQUID.",
+      "He demonstrated several cooking methods.",
+      "Each gave the meal a different texture."
+    ],
+    "root_proposals": [
+      {
+        "category": "COOKING ACTIONS",
+        "words": [
+          "FRY",
+          "STEAM",
+          "ROAST",
+          "BAKE",
+          "BROIL",
+          "SEAR",
+          "POACH",
+          "GRILL"
+        ],
+        "connection": "Each word fits the category cooking actions."
+      },
+      {
+        "category": "SEAFOOD",
+        "words": [
+          "SQUID",
+          "COD",
+          "SOLE",
+          "SKATE",
+          "SHRIMP",
+          "CRAB",
+          "CLAM",
+          "MUSSEL"
+        ],
+        "connection": "Each is an aquatic animal eaten as seafood."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-11-g0",
+        "category": "COOKING ACTIONS",
+        "style": "types",
+        "connection": "Each word fits the category cooking actions.",
+        "words": [
+          "FRY",
+          "STEAM",
+          "ROAST",
+          "BAKE",
+          "BROIL",
+          "SEAR",
+          "POACH",
+          "GRILL"
+        ],
+        "required": [
+          "ROAST"
+        ],
+        "word_fits": {
+          "FRY": "Fry fits cooking actions.",
+          "STEAM": "Steam fits cooking actions.",
+          "ROAST": "Roast fits cooking actions.",
+          "BAKE": "Bake fits cooking actions.",
+          "BROIL": "Broil fits cooking actions.",
+          "SEAR": "Sear fits cooking actions.",
+          "POACH": "Poach fits cooking actions.",
+          "GRILL": "Grill fits cooking actions."
+        }
+      },
+      {
+        "id": "io-11-g1",
+        "category": "MOCK",
+        "style": "synonyms",
+        "connection": "Each word is an example of mock.",
+        "words": [
+          "TAUNT",
+          "TEASE",
+          "RIB",
+          "RAG",
+          "NEEDLE",
+          "RIDICULE",
+          "DERIDE",
+          "JEER"
+        ],
+        "required": [
+          "JEER"
+        ],
+        "word_fits": {
+          "TAUNT": "Taunt is an example of mock",
+          "TEASE": "Tease is an example of mock",
+          "RIB": "Rib is an example of mock",
+          "RAG": "Rag is an example of mock",
+          "NEEDLE": "Needle is an example of mock",
+          "RIDICULE": "Ridicule is an example of mock",
+          "DERIDE": "Deride is an example of mock",
+          "JEER": "Jeer is an example of mock"
+        }
+      },
+      {
+        "id": "io-11-g2",
+        "category": "VOCAL SOUNDS",
+        "style": "types",
+        "connection": "Each word is an example of vocal sounds.",
+        "words": [
+          "BOO",
+          "HISS",
+          "LAUGH",
+          "SOB",
+          "CRY",
+          "GROAN",
+          "MOAN",
+          "SCREAM"
+        ],
+        "required": [
+          "SCREAM"
+        ],
+        "word_fits": {
+          "BOO": "Boo is an example of vocal sounds",
+          "HISS": "Hiss is an example of vocal sounds",
+          "LAUGH": "Laugh is an example of vocal sounds",
+          "SOB": "Sob is an example of vocal sounds",
+          "CRY": "Cry is an example of vocal sounds",
+          "GROAN": "Groan is an example of vocal sounds",
+          "MOAN": "Moan is an example of vocal sounds",
+          "SCREAM": "Scream is an example of vocal sounds"
+        }
+      },
+      {
+        "id": "io-11-g3",
+        "category": "HORROR FILMS",
+        "style": "media",
+        "connection": "Each word is an example of horror films.",
+        "words": [
+          "JAWS",
+          "PSYCHO",
+          "ALIEN",
+          "CARRIE",
+          "HALLOWEEN",
+          "SAW",
+          "US",
+          "IT"
+        ],
+        "required": [],
+        "word_fits": {
+          "JAWS": "Jaws is an example of horror films",
+          "PSYCHO": "Psycho is an example of horror films",
+          "ALIEN": "Alien is an example of horror films",
+          "CARRIE": "Carrie is an example of horror films",
+          "HALLOWEEN": "Halloween is an example of horror films",
+          "SAW": "Saw is an example of horror films",
+          "US": "Us is an example of horror films",
+          "IT": "It is an example of horror films"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "ROAST",
+        "alternate_meaning": "To roast someone is to mock them."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "JEER",
+        "alternate_meaning": "A jeer is a vocal expression of mockery."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "SCREAM",
+        "alternate_meaning": "Scream is the exact title of a horror film."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "ROAST",
+          "BAKE",
+          "BROIL",
+          "SEAR"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "ROAST",
+            "category": "MOCK",
+            "meaning": "To roast someone is to mock them."
+          }
+        ],
+        "selected_category": "MOCK"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "TAUNT",
+          "RIDICULE",
+          "DERIDE",
+          "JEER"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "JEER",
+            "category": "VOCAL SOUNDS",
+            "meaning": "A jeer is a vocal expression of mockery."
+          }
+        ],
+        "selected_category": "VOCAL SOUNDS"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "LAUGH",
+          "CRY",
+          "MOAN",
+          "SCREAM"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "SCREAM",
+            "category": "HORROR FILMS",
+            "meaning": "Scream is the exact title of a horror film."
+          }
+        ],
+        "selected_category": "HORROR FILMS"
+      }
+    ]
+  },
+  {
+    "id": "io-12",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "PIECE",
+      "CANS",
+      "DESERT",
+      "BOSTON"
+    ],
+    "story": [
+      "A PIECE of music played through tin CANS.",
+      "We crossed the DESERT toward BOSTON.",
+      "The radio introduced a series of bands.",
+      "Their names made the journey memorable."
+    ],
+    "root_proposals": [
+      {
+        "category": "MUSIC GROUPS",
+        "words": [
+          "BOSTON",
+          "CHICAGO",
+          "QUEEN",
+          "KISS",
+          "HEART",
+          "CREAM",
+          "TRAFFIC",
+          "YES"
+        ],
+        "connection": "Each is an exact name of a well-known music group."
+      },
+      {
+        "category": "ROAD VEHICLES",
+        "words": [
+          "CAR",
+          "BUS",
+          "TRUCK",
+          "VAN",
+          "COACH",
+          "TAXI",
+          "MOTORCYCLE",
+          "SCOOTER"
+        ],
+        "connection": "Each is a vehicle used on roads."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-12-g0",
+        "category": "MUSIC GROUPS",
+        "style": "types",
+        "connection": "Each is an exact name of a well-known music group.",
+        "words": [
+          "BOSTON",
+          "CHICAGO",
+          "QUEEN",
+          "KISS",
+          "HEART",
+          "CREAM",
+          "TRAFFIC",
+          "YES"
+        ],
+        "required": [
+          "BOSTON"
+        ],
+        "word_fits": {
+          "BOSTON": "Boston fits music groups.",
+          "CHICAGO": "Chicago fits music groups.",
+          "QUEEN": "Queen fits music groups.",
+          "KISS": "Kiss fits music groups.",
+          "HEART": "Heart fits music groups.",
+          "CREAM": "Cream fits music groups.",
+          "TRAFFIC": "Traffic fits music groups.",
+          "YES": "Yes fits music groups."
+        }
+      },
+      {
+        "id": "io-12-g1",
+        "category": "___ TERRIER",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ TERRIER.",
+        "words": [
+          "SCOTTISH",
+          "BULL",
+          "RAT",
+          "FOX",
+          "BORDER",
+          "CAIRN",
+          "SILKY",
+          "WELSH"
+        ],
+        "required": [
+          "BORDER"
+        ],
+        "word_fits": {
+          "SCOTTISH": "SCOTTISH TERRIER",
+          "BULL": "BULL TERRIER",
+          "RAT": "RAT TERRIER",
+          "FOX": "FOX TERRIER",
+          "BORDER": "BORDER TERRIER",
+          "CAIRN": "CAIRN TERRIER",
+          "SILKY": "SILKY TERRIER",
+          "WELSH": "WELSH TERRIER"
+        }
+      },
+      {
+        "id": "io-12-g2",
+        "category": "OUTER LIMIT",
+        "style": "synonyms",
+        "connection": "Each word is an example of outer limit.",
+        "words": [
+          "RIM",
+          "EDGE",
+          "VERGE",
+          "MARGIN",
+          "BRINK",
+          "PERIMETER",
+          "BOUNDARY",
+          "FRINGE"
+        ],
+        "required": [
+          "FRINGE"
+        ],
+        "word_fits": {
+          "RIM": "Rim is an example of outer limit",
+          "EDGE": "Edge is an example of outer limit",
+          "VERGE": "Verge is an example of outer limit",
+          "MARGIN": "Margin is an example of outer limit",
+          "BRINK": "Brink is an example of outer limit",
+          "PERIMETER": "Perimeter is an example of outer limit",
+          "BOUNDARY": "Boundary is an example of outer limit",
+          "FRINGE": "Fringe is an example of outer limit"
+        }
+      },
+      {
+        "id": "io-12-g3",
+        "category": "DECORATIVE TRIMMINGS",
+        "style": "types",
+        "connection": "Each is a decorative trimming used on fabric or furnishings.",
+        "words": [
+          "LACE",
+          "BRAID",
+          "CORD",
+          "RIBBON",
+          "PIPING",
+          "BINDING",
+          "RUFFLE",
+          "TASSEL"
+        ],
+        "required": [],
+        "word_fits": {
+          "LACE": "Lace is a decorative trimming.",
+          "BRAID": "Braid is a decorative trimming.",
+          "CORD": "Cord is a decorative trimming.",
+          "RIBBON": "Ribbon is a decorative trimming.",
+          "PIPING": "Piping is a decorative trimming.",
+          "BINDING": "Binding is a decorative trimming.",
+          "RUFFLE": "Ruffle is a decorative trimming.",
+          "TASSEL": "Tassel is a decorative trimming."
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "BOSTON",
+        "alternate_meaning": "Boston terrier names a dog breed."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "BORDER",
+        "alternate_meaning": "A border can mean an outer limit."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "FRINGE",
+        "alternate_meaning": "Fringe is a decorative trimming of dangling threads."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "BOSTON",
+          "CHICAGO",
+          "HEART",
+          "TRAFFIC"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "BOSTON",
+            "category": "___ TERRIER",
+            "meaning": "Boston terrier names a dog breed."
+          }
+        ],
+        "selected_category": "___ TERRIER"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "SCOTTISH",
+          "BORDER",
+          "CAIRN",
+          "WELSH"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "BORDER",
+            "category": "OUTER LIMIT",
+            "meaning": "A border can mean an outer limit."
+          }
+        ],
+        "selected_category": "OUTER LIMIT"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "EDGE",
+          "VERGE",
+          "BRINK",
+          "FRINGE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "FRINGE",
+            "category": "DECORATIVE TRIMMINGS",
+            "meaning": "Fringe is a decorative trimming of dangling threads."
+          }
+        ],
+        "selected_category": "DECORATIVE TRIMMINGS"
+      }
+    ]
+  },
+  {
+    "id": "io-13",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "THIRST",
+      "CHIME",
+      "SUMMER",
+      "HACK"
+    ],
+    "story": [
+      "THIRST drove us indoors during SUMMER.",
+      "A CHIME announced a visitor.",
+      "A HACK had broken the old bell controls.",
+      "We compared the sounds while fixing them."
+    ],
+    "root_proposals": [
+      {
+        "category": "BELL SOUNDS",
+        "words": [
+          "CHIME",
+          "RING",
+          "TOLL",
+          "PEAL",
+          "DING",
+          "CLANG",
+          "TINKLE",
+          "JINGLE"
+        ],
+        "connection": "Each word fits the category bell sounds."
+      },
+      {
+        "category": "HOUSEHOLD APPLIANCES",
+        "words": [
+          "CLOCK",
+          "TIMER",
+          "TOASTER",
+          "OVEN",
+          "RANGE",
+          "FREEZER",
+          "WASHER",
+          "DRYER"
+        ],
+        "connection": "Each is a household appliance or powered device."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-13-g0",
+        "category": "BELL SOUNDS",
+        "style": "types",
+        "connection": "Each word fits the category bell sounds.",
+        "words": [
+          "CHIME",
+          "RING",
+          "TOLL",
+          "PEAL",
+          "DING",
+          "CLANG",
+          "TINKLE",
+          "JINGLE"
+        ],
+        "required": [
+          "JINGLE"
+        ],
+        "word_fits": {
+          "CHIME": "Chime fits bell sounds.",
+          "RING": "Ring fits bell sounds.",
+          "TOLL": "Toll fits bell sounds.",
+          "PEAL": "Peal fits bell sounds.",
+          "DING": "Ding fits bell sounds.",
+          "CLANG": "Clang fits bell sounds.",
+          "TINKLE": "Tinkle fits bell sounds.",
+          "JINGLE": "Jingle fits bell sounds."
+        }
+      },
+      {
+        "id": "io-13-g1",
+        "category": "ADVERTISING FORMATS",
+        "style": "types",
+        "connection": "Each word is an example of advertising formats.",
+        "words": [
+          "POSTER",
+          "BANNER",
+          "FLYER",
+          "BILLBOARD",
+          "COMMERCIAL",
+          "SPOT",
+          "CIRCULAR",
+          "INSERT"
+        ],
+        "required": [
+          "FLYER"
+        ],
+        "word_fits": {
+          "POSTER": "Poster is an example of advertising formats",
+          "BANNER": "Banner is an example of advertising formats",
+          "FLYER": "Flyer is an example of advertising formats",
+          "BILLBOARD": "Billboard is an example of advertising formats",
+          "COMMERCIAL": "Commercial is an example of advertising formats",
+          "SPOT": "Spot is an example of advertising formats",
+          "CIRCULAR": "Circular is an example of advertising formats",
+          "INSERT": "Insert is an example of advertising formats"
+        }
+      },
+      {
+        "id": "io-13-g2",
+        "category": "FLYING ANIMALS",
+        "style": "types",
+        "connection": "Each word is an example of flying animals.",
+        "words": [
+          "BAT",
+          "BEE",
+          "WASP",
+          "MOTH",
+          "BUTTERFLY",
+          "MOSQUITO",
+          "EAGLE",
+          "OWL"
+        ],
+        "required": [
+          "BUTTERFLY"
+        ],
+        "word_fits": {
+          "BAT": "Bat is an example of flying animals",
+          "BEE": "Bee is an example of flying animals",
+          "WASP": "Wasp is an example of flying animals",
+          "MOTH": "Moth is an example of flying animals",
+          "BUTTERFLY": "Butterfly is an example of flying animals",
+          "MOSQUITO": "Mosquito is an example of flying animals",
+          "EAGLE": "Eagle is an example of flying animals",
+          "OWL": "Owl is an example of flying animals"
+        }
+      },
+      {
+        "id": "io-13-g3",
+        "category": "___ EFFECT",
+        "style": "fill_blank",
+        "connection": "Each word completes the name of an effect.",
+        "words": [
+          "DOMINO",
+          "RIPPLE",
+          "HALO",
+          "PLACEBO",
+          "SIDE",
+          "SOUND",
+          "SPECIAL",
+          "GREENHOUSE"
+        ],
+        "required": [],
+        "word_fits": {
+          "DOMINO": "DOMINO EFFECT",
+          "RIPPLE": "RIPPLE EFFECT",
+          "HALO": "HALO EFFECT",
+          "PLACEBO": "PLACEBO EFFECT",
+          "SIDE": "SIDE EFFECT",
+          "SOUND": "SOUND EFFECT",
+          "SPECIAL": "SPECIAL EFFECT",
+          "GREENHOUSE": "GREENHOUSE EFFECT"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "JINGLE",
+        "alternate_meaning": "A jingle is a short musical advertisement."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "FLYER",
+        "alternate_meaning": "A flyer can be an animal capable of flight."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "BUTTERFLY",
+        "alternate_meaning": "The butterfly effect describes sensitivity to initial conditions."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "CHIME",
+          "DING",
+          "TINKLE",
+          "JINGLE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "JINGLE",
+            "category": "ADVERTISING FORMATS",
+            "meaning": "A jingle is a short musical advertisement."
+          }
+        ],
+        "selected_category": "ADVERTISING FORMATS"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "POSTER",
+          "BANNER",
+          "FLYER",
+          "BILLBOARD"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "FLYER",
+            "category": "FLYING ANIMALS",
+            "meaning": "A flyer can be an animal capable of flight."
+          }
+        ],
+        "selected_category": "FLYING ANIMALS"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "BEE",
+          "WASP",
+          "MOTH",
+          "BUTTERFLY"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "BUTTERFLY",
+            "category": "___ EFFECT",
+            "meaning": "The butterfly effect describes sensitivity to initial conditions."
+          }
+        ],
+        "selected_category": "___ EFFECT"
+      }
+    ]
+  },
+  {
+    "id": "io-14",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "MADNESS",
+      "ROAM",
+      "TRASH",
+      "BUSINESS"
+    ],
+    "story": [
+      "MADNESS swept the office as goats began to ROAM.",
+      "They scattered TRASH through the BUSINESS.",
+      "We decided to discard the damaged furniture.",
+      "A clean room emerged by sunset."
+    ],
+    "root_proposals": [
+      {
+        "category": "DISCARD",
+        "words": [
+          "TRASH",
+          "DUMP",
+          "JUNK",
+          "SCRAP",
+          "DITCH",
+          "TOSS",
+          "SHED",
+          "ABANDON"
+        ],
+        "connection": "Each word fits the category discard."
+      },
+      {
+        "category": "FARM ANIMALS",
+        "words": [
+          "GOAT",
+          "SHEEP",
+          "PIG",
+          "COW",
+          "HORSE",
+          "DONKEY",
+          "DUCK",
+          "CHICKEN"
+        ],
+        "connection": "Each is commonly kept on a farm."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-14-g0",
+        "category": "DISCARD",
+        "style": "synonyms",
+        "connection": "Each word fits the category discard.",
+        "words": [
+          "TRASH",
+          "DUMP",
+          "JUNK",
+          "SCRAP",
+          "DITCH",
+          "TOSS",
+          "SHED",
+          "ABANDON"
+        ],
+        "required": [
+          "JUNK"
+        ],
+        "word_fits": {
+          "TRASH": "Trash fits discard.",
+          "DUMP": "Dump fits discard.",
+          "JUNK": "Junk fits discard.",
+          "SCRAP": "Scrap fits discard.",
+          "DITCH": "Ditch fits discard.",
+          "TOSS": "Toss fits discard.",
+          "SHED": "Shed fits discard.",
+          "ABANDON": "Abandon fits discard."
+        }
+      },
+      {
+        "id": "io-14-g1",
+        "category": "___ FOOD",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ FOOD.",
+        "words": [
+          "FAST",
+          "SOUL",
+          "COMFORT",
+          "HEALTH",
+          "BABY",
+          "SEA",
+          "DOG",
+          "STREET"
+        ],
+        "required": [
+          "SOUL"
+        ],
+        "word_fits": {
+          "FAST": "FAST FOOD",
+          "SOUL": "SOUL FOOD",
+          "COMFORT": "COMFORT FOOD",
+          "HEALTH": "HEALTH FOOD",
+          "BABY": "BABY FOOD",
+          "SEA": "SEA FOOD",
+          "DOG": "DOG FOOD",
+          "STREET": "STREET FOOD"
+        }
+      },
+      {
+        "id": "io-14-g2",
+        "category": "___ MATE",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ MATE.",
+        "words": [
+          "CLASS",
+          "ROOM",
+          "TEAM",
+          "CHECK",
+          "PLAY",
+          "SHIP",
+          "STALE",
+          "RUNNING"
+        ],
+        "required": [
+          "SHIP"
+        ],
+        "word_fits": {
+          "CLASS": "CLASS MATE",
+          "ROOM": "ROOM MATE",
+          "TEAM": "TEAM MATE",
+          "CHECK": "CHECK MATE",
+          "PLAY": "PLAY MATE",
+          "SHIP": "SHIP MATE",
+          "STALE": "STALE MATE",
+          "RUNNING": "RUNNING MATE"
+        }
+      },
+      {
+        "id": "io-14-g3",
+        "category": "SEND",
+        "style": "synonyms",
+        "connection": "Each word is an example of send.",
+        "words": [
+          "MAIL",
+          "POST",
+          "DISPATCH",
+          "FORWARD",
+          "DELIVER",
+          "TRANSMIT",
+          "ROUTE",
+          "CONSIGN"
+        ],
+        "required": [],
+        "word_fits": {
+          "MAIL": "Mail is an example of send",
+          "POST": "Post is an example of send",
+          "DISPATCH": "Dispatch is an example of send",
+          "FORWARD": "Forward is an example of send",
+          "DELIVER": "Deliver is an example of send",
+          "TRANSMIT": "Transmit is an example of send",
+          "ROUTE": "Route is an example of send",
+          "CONSIGN": "Consign is an example of send"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "JUNK",
+        "alternate_meaning": "Junk food is food with little nutritional value."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "SOUL",
+        "alternate_meaning": "A soulmate is a close companion; closed compounds are allowed."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "SHIP",
+        "alternate_meaning": "To ship is to send goods."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "TRASH",
+          "DUMP",
+          "JUNK",
+          "DITCH"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "JUNK",
+            "category": "___ FOOD",
+            "meaning": "Junk food is food with little nutritional value."
+          }
+        ],
+        "selected_category": "___ FOOD"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "SOUL",
+          "COMFORT",
+          "HEALTH",
+          "SEA"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "SOUL",
+            "category": "___ MATE",
+            "meaning": "A soulmate is a close companion; closed compounds are allowed."
+          }
+        ],
+        "selected_category": "___ MATE"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "CLASS",
+          "ROOM",
+          "TEAM",
+          "SHIP"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "SHIP",
+            "category": "SEND",
+            "meaning": "To ship is to send goods."
+          }
+        ],
+        "selected_category": "SEND"
+      }
+    ]
+  },
+  {
+    "id": "io-15",
+    "method": "intentional_overlap",
+    "seed_words": [
+      "BRIEF",
+      "REALLY",
+      "LITERALLY",
+      "JONAS"
+    ],
+    "story": [
+      "JONAS promised a BRIEF speech.",
+      "He REALLY meant it this time.",
+      "He LITERALLY used a single index card.",
+      "The audience welcomed his concise remarks."
+    ],
+    "root_proposals": [
+      {
+        "category": "CONCISE",
+        "words": [
+          "BRIEF",
+          "SHORT",
+          "TERSE",
+          "PITHY",
+          "CRISP",
+          "COMPACT",
+          "SUCCINCT",
+          "LACONIC"
+        ],
+        "connection": "Each word fits the category concise."
+      },
+      {
+        "category": "WRITING MATERIALS",
+        "words": [
+          "CARD",
+          "PAPER",
+          "INK",
+          "CHALK",
+          "LEAD",
+          "PENCIL",
+          "PEN",
+          "CRAYON"
+        ],
+        "connection": "Each is a material or implement used for writing."
+      }
+    ],
+    "groups": [
+      {
+        "id": "io-15-g0",
+        "category": "CONCISE",
+        "style": "synonyms",
+        "connection": "Each word fits the category concise.",
+        "words": [
+          "BRIEF",
+          "SHORT",
+          "TERSE",
+          "PITHY",
+          "CRISP",
+          "COMPACT",
+          "SUCCINCT",
+          "LACONIC"
+        ],
+        "required": [
+          "SHORT"
+        ],
+        "word_fits": {
+          "BRIEF": "Brief fits concise.",
+          "SHORT": "Short fits concise.",
+          "TERSE": "Terse fits concise.",
+          "PITHY": "Pithy fits concise.",
+          "CRISP": "Crisp fits concise.",
+          "COMPACT": "Compact fits concise.",
+          "SUCCINCT": "Succinct fits concise.",
+          "LACONIC": "Laconic fits concise."
+        }
+      },
+      {
+        "id": "io-15-g1",
+        "category": "___ CIRCUIT",
+        "style": "fill_blank",
+        "connection": "Each word completes ___ CIRCUIT.",
+        "words": [
+          "SERIES",
+          "PARALLEL",
+          "INTEGRATED",
+          "CLOSED",
+          "OPEN",
+          "PRINTED",
+          "ELECTRIC",
+          "RACING"
+        ],
+        "required": [
+          "OPEN"
+        ],
+        "word_fits": {
+          "SERIES": "SERIES CIRCUIT",
+          "PARALLEL": "PARALLEL CIRCUIT",
+          "INTEGRATED": "INTEGRATED CIRCUIT",
+          "CLOSED": "CLOSED CIRCUIT",
+          "OPEN": "OPEN CIRCUIT",
+          "PRINTED": "PRINTED CIRCUIT",
+          "ELECTRIC": "ELECTRIC CIRCUIT",
+          "RACING": "RACING CIRCUIT"
+        }
+      },
+      {
+        "id": "io-15-g2",
+        "category": "ACCESSIBLE",
+        "style": "synonyms",
+        "connection": "Each word is an example of accessible.",
+        "words": [
+          "AVAILABLE",
+          "REACHABLE",
+          "APPROACHABLE",
+          "ATTAINABLE",
+          "OBTAINABLE",
+          "USABLE",
+          "ENTERABLE",
+          "PASSABLE"
+        ],
+        "required": [
+          "PASSABLE"
+        ],
+        "word_fits": {
+          "AVAILABLE": "Available is an example of accessible",
+          "REACHABLE": "Reachable is an example of accessible",
+          "APPROACHABLE": "Approachable is an example of accessible",
+          "ATTAINABLE": "Attainable is an example of accessible",
+          "OBTAINABLE": "Obtainable is an example of accessible",
+          "USABLE": "Usable is an example of accessible",
+          "ENTERABLE": "Enterable is an example of accessible",
+          "PASSABLE": "Passable is an example of accessible"
+        }
+      },
+      {
+        "id": "io-15-g3",
+        "category": "ADEQUATE",
+        "style": "synonyms",
+        "connection": "Each word is an example of adequate.",
+        "words": [
+          "FAIR",
+          "DECENT",
+          "ACCEPTABLE",
+          "SATISFACTORY",
+          "SUFFICIENT",
+          "TOLERABLE",
+          "REASONABLE",
+          "RESPECTABLE"
+        ],
+        "required": [],
+        "word_fits": {
+          "FAIR": "Fair is an example of adequate",
+          "DECENT": "Decent is an example of adequate",
+          "ACCEPTABLE": "Acceptable is an example of adequate",
+          "SATISFACTORY": "Satisfactory is an example of adequate",
+          "SUFFICIENT": "Sufficient is an example of adequate",
+          "TOLERABLE": "Tolerable is an example of adequate",
+          "REASONABLE": "Reasonable is an example of adequate",
+          "RESPECTABLE": "Respectable is an example of adequate"
+        }
+      }
+    ],
+    "links": [
+      {
+        "from_group": 0,
+        "to_group": 1,
+        "word": "SHORT",
+        "alternate_meaning": "A short circuit is an unintended electrical path."
+      },
+      {
+        "from_group": 1,
+        "to_group": 2,
+        "word": "OPEN",
+        "alternate_meaning": "Open can mean accessible or available for use."
+      },
+      {
+        "from_group": 2,
+        "to_group": 3,
+        "word": "PASSABLE",
+        "alternate_meaning": "Passable can mean adequate rather than navigable."
+      }
+    ],
+    "construction_contexts": [
+      {
+        "from_group": 0,
+        "selected_color": "yellow",
+        "words": [
+          "BRIEF",
+          "SHORT",
+          "TERSE",
+          "SUCCINCT"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "SHORT",
+            "category": "___ CIRCUIT",
+            "meaning": "A short circuit is an unintended electrical path."
+          }
+        ],
+        "selected_category": "___ CIRCUIT"
+      },
+      {
+        "from_group": 1,
+        "selected_color": "yellow",
+        "words": [
+          "INTEGRATED",
+          "CLOSED",
+          "OPEN",
+          "PRINTED"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "OPEN",
+            "category": "ACCESSIBLE",
+            "meaning": "Open can mean accessible or available for use."
+          }
+        ],
+        "selected_category": "ACCESSIBLE"
+      },
+      {
+        "from_group": 2,
+        "selected_color": "yellow",
+        "words": [
+          "REACHABLE",
+          "ATTAINABLE",
+          "OBTAINABLE",
+          "PASSABLE"
+        ],
+        "selected_before_later_anchor_constraints": true,
+        "alternate_proposals": [
+          {
+            "word": "PASSABLE",
+            "category": "ADEQUATE",
+            "meaning": "Passable can mean adequate rather than navigable."
+          }
+        ],
+        "selected_category": "ADEQUATE"
+      }
+    ]
+  }
+]

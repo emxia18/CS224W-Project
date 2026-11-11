@@ -1,0 +1,529 @@
+{
+  "reviewer": "independent difficulty ranker agent",
+  "scope": "all 30 full-puzzle families and their selected quartet alternatives",
+  "assessment": "LLM-estimated relative difficulty; no human difficulty evaluation or embedding-based rank assignment. Family defaults cover every variant unless overridden.",
+  "trees": {
+    "fc-01": {
+      "order": [
+        "fc-01-g3",
+        "fc-01-g0",
+        "fc-01-g1",
+        "fc-01-g2"
+      ],
+      "note": "BODY PARTS remains direct across ARM/LEG and TORSO alternatives. Luggage is concrete, but VALISE/HOLDALL adds vocabulary demand. DIVERGE moves from SPLIT/SEPARATE to BIFURCATE. LEAF/THUMB/RIFFLE requires the reading-through sense and competes with the tree-parts lure.",
+      "variant_overrides": {
+        "fc-01-v19": [
+          "fc-01-g3",
+          "fc-01-g1",
+          "fc-01-g0",
+          "fc-01-g2"
+        ],
+        "fc-01-v20": [
+          "fc-01-g3",
+          "fc-01-g1",
+          "fc-01-g0",
+          "fc-01-g2"
+        ]
+      }
+    },
+    "fc-02": {
+      "order": [
+        "fc-02-g1",
+        "fc-02-g0",
+        "fc-02-g2",
+        "fc-02-g3"
+      ],
+      "note": "COVER/WRAP makes covering direct; SHEATHE/OVERLAY is less common. MARINATE/BRINE identifies food more readily than DRESS/RUB/STUFF. SUIT/ACTION needs the legal sense. VEST with EXERCISE/FORFEIT/CONVERT requires equity terminology, while clothing anchors distract.",
+      "variant_overrides": {}
+    },
+    "fc-03": {
+      "order": [
+        "fc-03-g1",
+        "fc-03-g0",
+        "fc-03-g2",
+        "fc-03-g3"
+      ],
+      "note": "Greek-letter names are conspicuous in every alternative. CAPE/CLOAK/SHAWL is concrete, with TIPPET a substantial exception. PLAIN/BARE identifies unadorned more readily than SPARE/SEVERE. GULF/SCHISM/BREACH requires figurative separation rather than the geographical lure.",
+      "variant_overrides": {
+        "fc-03-v19": [
+          "fc-03-g1",
+          "fc-03-g2",
+          "fc-03-g3",
+          "fc-03-g0"
+        ],
+        "fc-03-v20": [
+          "fc-03-g1",
+          "fc-03-g2",
+          "fc-03-g3",
+          "fc-03-g0"
+        ],
+        "fc-03-v21": [
+          "fc-03-g1",
+          "fc-03-g2",
+          "fc-03-g3",
+          "fc-03-g0"
+        ],
+        "fc-03-v22": [
+          "fc-03-g1",
+          "fc-03-g2",
+          "fc-03-g3",
+          "fc-03-g0"
+        ],
+        "fc-03-v23": [
+          "fc-03-g1",
+          "fc-03-g2",
+          "fc-03-g3",
+          "fc-03-g0"
+        ],
+        "fc-03-v24": [
+          "fc-03-g1",
+          "fc-03-g2",
+          "fc-03-g3",
+          "fc-03-g0"
+        ]
+      }
+    },
+    "fc-04": {
+      "order": [
+        "fc-04-g1",
+        "fc-04-g0",
+        "fc-04-g2",
+        "fc-04-g3"
+      ],
+      "note": "OAK/ELM/FIR makes trees direct in all alternatives. FLAME/PAN/ROAST requires criticism slang. COAL/JET/INK/NIGHT needs the shared BLACK phrase, with EBONY/SOOT more color suggestive. SMOKE with TURN/RADIO/START needs SIGNAL and crosses several domains.",
+      "variant_overrides": {}
+    },
+    "fc-05": {
+      "order": [
+        "fc-05-g0",
+        "fc-05-g3",
+        "fc-05-g1",
+        "fc-05-g2"
+      ],
+      "note": "HURL/TOSS/LOB makes throwing direct. EXHAUST/SAP/DEBILITATE supports depletion, although BEAT is ambiguous. NOTE/TEXT/PHONE or SCRAP/PASS requires BOOK completion. KEY/PEEP/ARM/POT requires HOLE and mixes anatomical and ordinary compound senses.",
+      "variant_overrides": {}
+    },
+    "fc-06": {
+      "order": [
+        "fc-06-g0",
+        "fc-06-g1",
+        "fc-06-g3",
+        "fc-06-g2"
+      ],
+      "note": "TAIL/FIN/FLIPPER makes appendages concrete even with ANTENNA/TENTACLE. BOUNTIFUL/PLENTIFUL supports abundance but BUMPER is figurative. TIRE/TAX/ENERVATE requires the exhausting sense. WHEEL/WARE/POWER needs HOUSE completion despite the vehicle lure.",
+      "variant_overrides": {}
+    },
+    "fc-07": {
+      "order": [
+        "fc-07-g3",
+        "fc-07-g0",
+        "fc-07-g1",
+        "fc-07-g2"
+      ],
+      "note": "SPADE/RAKE/SHOVEL makes garden tools concrete; DIBBER adds vocabulary demand. ACE/THRIVE/EXCEL uses familiar success senses. KING/SWIFT/HARDY must be authors rather than ordinary words. QUEEN/CHIC/CREAM/BLUR requires band-name knowledge and the playing-card anchors distract.",
+      "variant_overrides": {}
+    },
+    "fc-08": {
+      "order": [
+        "fc-08-g0",
+        "fc-08-g3",
+        "fc-08-g2",
+        "fc-08-g1"
+      ],
+      "note": "FLOCK/SWARM/TROOP makes collective groups recognizable, though BEVY is less familiar. FASCINATE/MESMERIZE identifies attention while ENTRANCE shifts pronunciation/sense. ROCK/LODE/NORTH needs STAR completion. PEARL/TOE/PAPER/TRAFFIC requires JAM across music, body slang, machinery, and roads.",
+      "variant_overrides": {}
+    },
+    "fc-09": {
+      "order": [
+        "fc-09-g0",
+        "fc-09-g1",
+        "fc-09-g2",
+        "fc-09-g3"
+      ],
+      "note": "JOY/ELATION/BLISS supports happiness and FRIENDS/BUDDIES/CRONIES supports associates. LOST/STRAY/GONE requires a broader absence sense. FARGO/MOBILE/LINCOLN requires city readings, obscured by the television-title lure and ordinary meanings.",
+      "variant_overrides": {}
+    },
+    "fc-10": {
+      "order": [
+        "fc-10-g1",
+        "fc-10-g0",
+        "fc-10-g3",
+        "fc-10-g2"
+      ],
+      "note": "SILVER with SILK/COTTON/THERMAL suggests LINING through clothing. GOLD/SUGAR/HEAD/ADRENALINE requires RUSH across senses. CREAM/DRUB/CLOBBER needs defeat slang. The repaired animal-anagram alternatives TAN/ACT/GOD/FLOW, TAN/ACT/LOW/SHORE, TAN/TAR/BARE/FLOW, and TAN/TAR/LOW/BARE require letter rearrangement to ANT/CAT/DOG/WOLF, ANT/CAT/OWL/HORSE, ANT/RAT/BEAR/WOLF, and ANT/RAT/OWL/BEAR respectively, making g2 the trickiest despite familiar source words.",
+      "variant_overrides": {}
+    },
+    "fc-11": {
+      "order": [
+        "fc-11-g3",
+        "fc-11-g0",
+        "fc-11-g1",
+        "fc-11-g2"
+      ],
+      "note": "AUDI/HONDA/BUICK makes cars direct; MINI/SMART needs brand senses. TIGER/NURSE/BASKING requires shark species. LION/BRAVE/HEAVY needs HEART with varied compound forms. LEOPARD/NEWS/SCREEN/SMALL needs PRINT across patterns, processes, and text.",
+      "variant_overrides": {}
+    },
+    "fc-12": {
+      "order": [
+        "fc-12-g1",
+        "fc-12-g0",
+        "fc-12-g2",
+        "fc-12-g3"
+      ],
+      "note": "ANNOY/IRK/PESTER makes irritation direct. GAMBLE/WAGER helps gambling, while HAZARD/SPECULATE is less direct. FINGERPRINT/FIBER/RECORDING needs an evidence context rather than one tight object class. LIFE/ROW/STEAM/HOUSE needs BOAT completion; board-game anchors compete.",
+      "variant_overrides": {}
+    },
+    "fc-13": {
+      "order": [
+        "fc-13-g0",
+        "fc-13-g1",
+        "fc-13-g2",
+        "fc-13-g3"
+      ],
+      "note": "CRANE/EXCAVATOR/BACKHOE identifies machines, with SCRAPER/GRADER less obvious. DUCK/EVADE/DODGE uses avoidance meanings. HAWK/PURVEY needs selling senses. KITE is geometrical and DELTOID is technical; ordinary SQUARE/RECTANGLE alternatives make geometry substantially easier.",
+      "variant_overrides": {
+        "fc-13-v04": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v06": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v10": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v12": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v14": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v16": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v17": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v18": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v20": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v22": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v23": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ],
+        "fc-13-v24": [
+          "fc-13-g0",
+          "fc-13-g3",
+          "fc-13-g1",
+          "fc-13-g2"
+        ]
+      }
+    },
+    "fc-14": {
+      "order": [
+        "fc-14-g2",
+        "fc-14-g0",
+        "fc-14-g3",
+        "fc-14-g1"
+      ],
+      "note": "CHARM/BRACELET/LOCKET makes jewelry concrete. CAST/TOSS/LOB uses familiar throwing senses. CURSE/RAIL/RAVE/FUME requires anger senses. SPELL/BETOKEN/HERALD needs the signify sense despite the magic-word lure.",
+      "variant_overrides": {}
+    },
+    "fc-15": {
+      "order": [
+        "fc-15-g1",
+        "fc-15-g2",
+        "fc-15-g3",
+        "fc-15-g0"
+      ],
+      "note": "CLOG/BLOCK/PLUG gives obstruction, with OCCLUDE less familiar. BOOT/FIRE/SACK uses dismissal senses. LOAFER/IDLER/SLUGGARD uses person labels rather than footwear. PUMP/BOLT/BREAK/SINGLE/STOP requires ACTION across firearm mechanisms and other compounds.",
+      "variant_overrides": {}
+    },
+    "io-01": {
+      "order": [
+        "io-01-g1",
+        "io-01-g0",
+        "io-01-g2",
+        "io-01-g3"
+      ],
+      "note": "CHEST/WAIST/HIP or HEAD/BACK are direct body regions. TRUNK/BRANCH/SHOOT requires tree senses amid body distractors. BOX/JAR/CRATE/VAT is a concrete container class. SLUG/BELT/CLOUT needs striking senses rather than animals or clothing.",
+      "variant_overrides": {}
+    },
+    "io-02": {
+      "order": [
+        "io-02-g3",
+        "io-02-g2",
+        "io-02-g0",
+        "io-02-g1"
+      ],
+      "note": "DUKE/COUNT/PRINCE identifies aristocrats; MARQUIS/VISCOUNT adds vocabulary. HONEST/MORAL/JUST is direct ethical meaning. GRAND/CHOICE/ACE needs complimentary senses amid NOBLE-style overlap. UPRIGHT/PLAYER/PREPARED/CONCERT needs PIANO, with PREPARED especially specialized.",
+      "variant_overrides": {}
+    },
+    "io-03": {
+      "order": [
+        "io-03-g0",
+        "io-03-g2",
+        "io-03-g1",
+        "io-03-g3"
+      ],
+      "note": "NERVE/GUTS/BACKBONE uses familiar courage idioms. PETAL/STAMEN/PISTIL indicates flowers, but FILAMENT/RECEPTACLE is technical. STEM/FUEL/PRISON/DRY needs CELL across domains. RIGHT/WRITE/SEA/FLOUR requires spelling-to-sound attention rather than meanings; the homophone label is broad.",
+      "variant_overrides": {
+        "io-03-v02": [
+          "io-03-g0",
+          "io-03-g1",
+          "io-03-g2",
+          "io-03-g3"
+        ],
+        "io-03-v04": [
+          "io-03-g0",
+          "io-03-g1",
+          "io-03-g2",
+          "io-03-g3"
+        ],
+        "io-03-v08": [
+          "io-03-g0",
+          "io-03-g1",
+          "io-03-g2",
+          "io-03-g3"
+        ],
+        "io-03-v10": [
+          "io-03-g0",
+          "io-03-g1",
+          "io-03-g2",
+          "io-03-g3"
+        ],
+        "io-03-v14": [
+          "io-03-g0",
+          "io-03-g1",
+          "io-03-g2",
+          "io-03-g3"
+        ],
+        "io-03-v16": [
+          "io-03-g0",
+          "io-03-g1",
+          "io-03-g2",
+          "io-03-g3"
+        ]
+      }
+    },
+    "io-04": {
+      "order": [
+        "io-04-g0",
+        "io-04-g2",
+        "io-04-g3",
+        "io-04-g1"
+      ],
+      "note": "BOX/JAR/BIN makes containers direct even with CASE/TOTE. TOOTH/STOMACH/HEART or MUSCLE/NECK needs ACHE completion. BOLO/BLACK/ZIP/CABLE needs TIE with mixed objects and dress codes. FRONT/HEAD/FOREIGN/POST needs OFFICE with ambiguous spatial and institutional readings.",
+      "variant_overrides": {}
+    },
+    "io-05": {
+      "order": [
+        "io-05-g0",
+        "io-05-g1",
+        "io-05-g2",
+        "io-05-g3"
+      ],
+      "note": "RYE/WHEAT/SOURDOUGH makes sandwich breads direct, though WRAP/ROLL broadens forms. CORN/OATS/MILLET identifies grains, with SPELT/TEFF less familiar. BRAN/COCONUT/SOAP/SNOW requires FLAKES across food and nonfood. BLUE/POKER/MEMORY/WOOD requires CHIP across several senses.",
+      "variant_overrides": {
+        "io-05-v05": [
+          "io-05-g0",
+          "io-05-g2",
+          "io-05-g3",
+          "io-05-g1"
+        ],
+        "io-05-v06": [
+          "io-05-g0",
+          "io-05-g2",
+          "io-05-g3",
+          "io-05-g1"
+        ],
+        "io-05-v11": [
+          "io-05-g0",
+          "io-05-g2",
+          "io-05-g3",
+          "io-05-g1"
+        ],
+        "io-05-v12": [
+          "io-05-g0",
+          "io-05-g2",
+          "io-05-g3",
+          "io-05-g1"
+        ],
+        "io-05-v17": [
+          "io-05-g0",
+          "io-05-g2",
+          "io-05-g3",
+          "io-05-g1"
+        ],
+        "io-05-v18": [
+          "io-05-g0",
+          "io-05-g2",
+          "io-05-g3",
+          "io-05-g1"
+        ]
+      }
+    },
+    "io-06": {
+      "order": [
+        "io-06-g0",
+        "io-06-g3",
+        "io-06-g2",
+        "io-06-g1"
+      ],
+      "note": "PIN/BUTTON/BUCKLE are concrete fastening methods. WALTZ/TANGO/POLKA or REEL/JIG identifies dances. RAIN/TAP/SALT/ROSE needs WATER across types and compounds. BREAK/VIEW/CHECK/POWER needs POINT with multiple readings, competing with SET and MATCH.",
+      "variant_overrides": {}
+    },
+    "io-07": {
+      "order": [
+        "io-07-g2",
+        "io-07-g0",
+        "io-07-g3",
+        "io-07-g1"
+      ],
+      "note": "OAK/PINE/ELM/FIR identifies trees. OLIVE/JADE/LIME or KELLY requires green-shade senses, with KELLY less obvious. CRAVE/DESIRE helps longing while ITCH/THIRST/ACHE is figurative. PALM/BABY/MOTOR/MINERAL needs OIL and overlaps the tree and plant readings.",
+      "variant_overrides": {}
+    },
+    "io-08": {
+      "order": [
+        "io-08-g1",
+        "io-08-g0",
+        "io-08-g3",
+        "io-08-g2"
+      ],
+      "note": "TEA/SODA/JUICE/SHAKE directly identifies beverages under the edited label. HAMMER/DRILL makes tools easier than FILE/PLANE/PUNCH. BIRTHDAY/SEARCH/THIRD requires PARTY across event and non-event senses. TREVI/CHOCOLATE/WALL/INDOOR requires FOUNTAIN, with generic descriptors weakening specificity.",
+      "variant_overrides": {}
+    },
+    "io-09": {
+      "order": [
+        "io-09-g0",
+        "io-09-g2",
+        "io-09-g3",
+        "io-09-g1"
+      ],
+      "note": "HAND/FACE/SPRING/WEIGHT requires clock parts but a coherent physical device. DINING/COFFEE/PERIODIC/DRAFTING needs TABLE across furniture and reference arrangements. BLACKTIP/NURSE/LOAN needs SHARK, with species knowledge or figurative LOAN. FEASIBILITY/BIBLE/TIME/MOTION needs STUDY across research and activities.",
+      "variant_overrides": {}
+    },
+    "io-10": {
+      "order": [
+        "io-10-g0",
+        "io-10-g1",
+        "io-10-g2",
+        "io-10-g3"
+      ],
+      "note": "NOTE/FLAT/SHARP/STAFF makes music recognizable. SNOW/WINTER/TUBELESS/FRONT requires TIRE and mixes season, design, and position. HOME/SOCIETY/BACK/COVER needs PAGE across web and print. UP/DOWN/SOUND/EARLY needs STAGE with joined forms and temporal senses.",
+      "variant_overrides": {}
+    },
+    "io-11": {
+      "order": [
+        "io-11-g0",
+        "io-11-g2",
+        "io-11-g1",
+        "io-11-g3"
+      ],
+      "note": "ROAST/BAKE/POACH makes cooking direct. SOB/CRY/SCREAM identifies vocal sounds. TAUNT/DERIDE/NEEDLE/RAG needs ridicule senses. PSYCHO/ALIEN/US/IT requires film-title readings; the ordinary short-word titles make some alternatives particularly deceptive.",
+      "variant_overrides": {}
+    },
+    "io-12": {
+      "order": [
+        "io-12-g2",
+        "io-12-g3",
+        "io-12-g1",
+        "io-12-g0"
+      ],
+      "note": "EDGE/RIM/PERIMETER makes outer limits direct. LACE/RIBBON or PIPING/BINDING needs textile-trim meanings. SCOTTISH/CAIRN/RAT/BORDER requires terrier breeds. BOSTON/CHICAGO/HEART/YES requires band names and competes with place and common-word readings.",
+      "variant_overrides": {}
+    },
+    "io-13": {
+      "order": [
+        "io-13-g0",
+        "io-13-g2",
+        "io-13-g1",
+        "io-13-g3"
+      ],
+      "note": "CHIME/DING/TOLL directly evokes bells. BEE/WASP/MOTH is especially direct; EAGLE/OWL/BUTTERFLY broadens to flying animals. POSTER/BILLBOARD identifies advertising, while SPOT/INSERT/CIRCULAR needs specialized senses. DOMINO/PLACEBO/GREENHOUSE requires EFFECT across domains.",
+      "variant_overrides": {
+        "io-13-v07": [
+          "io-13-g0",
+          "io-13-g1",
+          "io-13-g2",
+          "io-13-g3"
+        ],
+        "io-13-v08": [
+          "io-13-g0",
+          "io-13-g1",
+          "io-13-g2",
+          "io-13-g3"
+        ],
+        "io-13-v14": [
+          "io-13-g0",
+          "io-13-g1",
+          "io-13-g2",
+          "io-13-g3"
+        ],
+        "io-13-v20": [
+          "io-13-g0",
+          "io-13-g1",
+          "io-13-g2",
+          "io-13-g3"
+        ]
+      }
+    },
+    "io-14": {
+      "order": [
+        "io-14-g0",
+        "io-14-g3",
+        "io-14-g1",
+        "io-14-g2"
+      ],
+      "note": "TRASH/DUMP/JUNK directly means discard. MAIL/POST/TRANSMIT helps sending, with ROUTE/CONSIGN less direct. SOUL/COMFORT/DOG/SEA requires FOOD across compound forms. CHECK/STALE/RUNNING/SHIP requires MATE across chess, compounds, and companions.",
+      "variant_overrides": {}
+    },
+    "io-15": {
+      "order": [
+        "io-15-g0",
+        "io-15-g3",
+        "io-15-g2",
+        "io-15-g1"
+      ],
+      "note": "BRIEF/SHORT/TERSE makes concision direct, with LACONIC less familiar. DECENT/SUFFICIENT/TOLERABLE gives adequacy. AVAILABLE/APPROACHABLE/PASSABLE spans obtainable, approachable, and traversable senses. SERIES/OPEN/PRINTED/RACING requires CIRCUIT across electronics and routes.",
+      "variant_overrides": {}
+    }
+  }
+}

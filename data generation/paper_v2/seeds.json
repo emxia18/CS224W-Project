@@ -1,0 +1,306 @@
+{
+  "seed": 224,
+  "source": "Published puzzles in local train.json only; uniform sampling from sorted distinct alphabetic words",
+  "trees": [
+    {
+      "id": "fc-01",
+      "method": "false_connection",
+      "seed_words": [
+        "CANVASS",
+        "GOOBER",
+        "TOPKNOT",
+        "CHESTNUT"
+      ]
+    },
+    {
+      "id": "fc-02",
+      "method": "false_connection",
+      "seed_words": [
+        "ITCHY",
+        "COUSIN",
+        "STAKE",
+        "DRESS"
+      ]
+    },
+    {
+      "id": "fc-03",
+      "method": "false_connection",
+      "seed_words": [
+        "BANKS",
+        "PIC",
+        "LEVEL",
+        "LAND"
+      ]
+    },
+    {
+      "id": "fc-04",
+      "method": "false_connection",
+      "seed_words": [
+        "CREST",
+        "DOJA",
+        "SPARKS",
+        "QUADRANT"
+      ]
+    },
+    {
+      "id": "fc-05",
+      "method": "false_connection",
+      "seed_words": [
+        "GRINCH",
+        "SPIKE",
+        "LEGEND",
+        "SABBATH"
+      ]
+    },
+    {
+      "id": "fc-06",
+      "method": "false_connection",
+      "seed_words": [
+        "SHALLOW",
+        "MOTOR",
+        "COULD",
+        "FOOL"
+      ]
+    },
+    {
+      "id": "fc-07",
+      "method": "false_connection",
+      "seed_words": [
+        "SOLID",
+        "SHUFFLE",
+        "MUSTACHE",
+        "COMMON"
+      ]
+    },
+    {
+      "id": "fc-08",
+      "method": "false_connection",
+      "seed_words": [
+        "BULB",
+        "BROOCH",
+        "BUDGET",
+        "TENDER"
+      ]
+    },
+    {
+      "id": "fc-09",
+      "method": "false_connection",
+      "seed_words": [
+        "SI",
+        "MICHELLE",
+        "COBWEB",
+        "GLEE"
+      ]
+    },
+    {
+      "id": "fc-10",
+      "method": "false_connection",
+      "seed_words": [
+        "YELLOW",
+        "SUNFLOWER",
+        "WHITE",
+        "CENTER"
+      ]
+    },
+    {
+      "id": "fc-11",
+      "method": "false_connection",
+      "seed_words": [
+        "TABBY",
+        "ROT",
+        "BATON",
+        "SHARE"
+      ]
+    },
+    {
+      "id": "fc-12",
+      "method": "false_connection",
+      "seed_words": [
+        "JOHN",
+        "RUBY",
+        "BEANS",
+        "SWIMMING"
+      ]
+    },
+    {
+      "id": "fc-13",
+      "method": "false_connection",
+      "seed_words": [
+        "PERCH",
+        "JIFFY",
+        "WAVE",
+        "ATTACK"
+      ]
+    },
+    {
+      "id": "fc-14",
+      "method": "false_connection",
+      "seed_words": [
+        "THIRST",
+        "MAGICIAN",
+        "CREATION",
+        "CONNECTION"
+      ]
+    },
+    {
+      "id": "fc-15",
+      "method": "false_connection",
+      "seed_words": [
+        "SOUP",
+        "FINAL",
+        "GUCCI",
+        "LEGGINGS"
+      ]
+    },
+    {
+      "id": "io-01",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "LINING",
+        "ROOT",
+        "BLEW",
+        "DONALD"
+      ]
+    },
+    {
+      "id": "io-02",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "FLUKE",
+        "PLACED",
+        "CRACKERJACK",
+        "NUCLEUS"
+      ]
+    },
+    {
+      "id": "io-03",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "STOOGE",
+        "MU",
+        "TIMER",
+        "NERVE"
+      ]
+    },
+    {
+      "id": "io-04",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "SOY",
+        "TOP",
+        "CHEST",
+        "TOTE"
+      ]
+    },
+    {
+      "id": "io-05",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "NICKS",
+        "CASTLE",
+        "ANCHOR",
+        "HOAGIE"
+      ]
+    },
+    {
+      "id": "io-06",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "ATM",
+        "BOWLINE",
+        "FEAST",
+        "PRELIMINARY"
+      ]
+    },
+    {
+      "id": "io-07",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "FAT",
+        "KELLY",
+        "AMUSE",
+        "JAYS"
+      ]
+    },
+    {
+      "id": "io-08",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "MEAN",
+        "SAME",
+        "TOOLBOX",
+        "SCARLET"
+      ]
+    },
+    {
+      "id": "io-09",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "TICK",
+        "FLOATIE",
+        "LISTEN",
+        "REACH"
+      ]
+    },
+    {
+      "id": "io-10",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "BASSOON",
+        "POLO",
+        "SKIM",
+        "JAMS"
+      ]
+    },
+    {
+      "id": "io-11",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "STRONG",
+        "MAGIC",
+        "SQUID",
+        "WOK"
+      ]
+    },
+    {
+      "id": "io-12",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "PIECE",
+        "CANS",
+        "DESERT",
+        "BOSTON"
+      ]
+    },
+    {
+      "id": "io-13",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "THIRST",
+        "CHIME",
+        "SUMMER",
+        "HACK"
+      ]
+    },
+    {
+      "id": "io-14",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "MADNESS",
+        "ROAM",
+        "TRASH",
+        "BUSINESS"
+      ]
+    },
+    {
+      "id": "io-15",
+      "method": "intentional_overlap",
+      "seed_words": [
+        "BRIEF",
+        "REALLY",
+        "LITERALLY",
+        "JONAS"
+      ]
+    }
+  ]
+}

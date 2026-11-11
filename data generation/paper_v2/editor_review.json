@@ -1,0 +1,891 @@
+{
+  "reviewer": "independent editor agent",
+  "scope": "all families, pools and selected quartets in full-puzzle context",
+  "groups": {
+    "fc-01-g0": {
+      "category": "LUGGAGE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are luggage containers; trunk uses its travel sense.",
+      "additional_members": []
+    },
+    "fc-01-g1": {
+      "category": "DIVERGE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can describe diverging or separating.",
+      "additional_members": []
+    },
+    "fc-01-g2": {
+      "category": "___ THROUGH",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form reading/browsing expressions with THROUGH.",
+      "additional_members": []
+    },
+    "fc-01-g3": {
+      "category": "BODY PARTS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name anatomical parts; tree anchors create a credible false group.",
+      "additional_members": [
+        "TRUNK"
+      ]
+    },
+    "fc-02-g0": {
+      "category": "FOOD PREPARATION VERBS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are actions applied during food preparation.",
+      "additional_members": []
+    },
+    "fc-02-g1": {
+      "category": "PROVIDE A COVERING",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight mean supplying or forming a covering.",
+      "additional_members": [
+        "DRESS"
+      ]
+    },
+    "fc-02-g2": {
+      "category": "LEGAL PROCEEDINGS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name legal actions or adjudicative processes.",
+      "additional_members": []
+    },
+    "fc-02-g3": {
+      "category": "EQUITY AWARD VERBS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are verbs used for equity awards; specialist finance vocabulary and mixed grammatical roles make this less elegant.",
+      "additional_members": []
+    },
+    "fc-03-g0": {
+      "category": "SHOULDER COVERINGS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are garments worn over the shoulders.",
+      "additional_members": []
+    },
+    "fc-03-g1": {
+      "category": "GREEK LETTERS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are exact Greek-letter names.",
+      "additional_members": []
+    },
+    "fc-03-g2": {
+      "category": "UNADORNED",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight describe a plain or austere appearance.",
+      "additional_members": []
+    },
+    "fc-03-g3": {
+      "category": "SEPARATION",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can denote physical or figurative separation.",
+      "additional_members": []
+    },
+    "fc-04-g0": {
+      "category": "CRITICIZE HARSHLY",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight mean criticizing harshly; flame has its online sense.",
+      "additional_members": []
+    },
+    "fc-04-g1": {
+      "category": "TREES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name trees.",
+      "additional_members": []
+    },
+    "fc-04-g2": {
+      "category": "___ BLACK",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form recognizable black-color expressions; ink/night/raven/soot are less fixed than coal/jet/pitch.",
+      "additional_members": []
+    },
+    "fc-04-g3": {
+      "category": "___ SIGNAL",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form recognizable expressions ending SIGNAL.",
+      "additional_members": []
+    },
+    "fc-05-g0": {
+      "category": "THROW",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean throwing.",
+      "additional_members": []
+    },
+    "fc-05-g1": {
+      "category": "___ BOOK",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight produce familiar BOOK compounds.",
+      "additional_members": []
+    },
+    "fc-05-g2": {
+      "category": "___ HOLE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight produce familiar HOLE compounds.",
+      "additional_members": []
+    },
+    "fc-05-g3": {
+      "category": "DEPLETE ENERGY",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean tiring or draining someone; BEAT uses its exhaust sense.",
+      "additional_members": []
+    },
+    "fc-06-g0": {
+      "category": "ANIMAL APPENDAGES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are animal appendages.",
+      "additional_members": []
+    },
+    "fc-06-g1": {
+      "category": "LARGE IN QUANTITY",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can describe a large or generous quantity; bumper is chiefly used of crops or output.",
+      "additional_members": []
+    },
+    "fc-06-g2": {
+      "category": "___ HOUSE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight produce established HOUSE compounds.",
+      "additional_members": []
+    },
+    "fc-06-g3": {
+      "category": "WEAR OUT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean exhausting or overtaxing.",
+      "additional_members": []
+    },
+    "fc-07-g0": {
+      "category": "DO WELL",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean performing successfully; ACE is informal.",
+      "additional_members": []
+    },
+    "fc-07-g1": {
+      "category": "NOVELISTS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight surnames identify established novelists.",
+      "additional_members": [
+        "RUSH"
+      ]
+    },
+    "fc-07-g2": {
+      "category": "BANDS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are exact band names.",
+      "additional_members": [
+        "KING",
+        "ACE"
+      ]
+    },
+    "fc-07-g3": {
+      "category": "GARDEN TOOLS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name implements used in gardening.",
+      "additional_members": []
+    },
+    "fc-08-g0": {
+      "category": "COLLECTIVE GROUPS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are collective nouns for groups.",
+      "additional_members": []
+    },
+    "fc-08-g1": {
+      "category": "___ JAM",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established JAM expressions; PEARL JAM is the band and TOE JAM is slang.",
+      "additional_members": []
+    },
+    "fc-08-g2": {
+      "category": "___ STAR",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established STAR expressions or compounds.",
+      "additional_members": []
+    },
+    "fc-08-g3": {
+      "category": "HOLD ATTENTION",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean captivating or enchanting.",
+      "additional_members": []
+    },
+    "fc-09-g0": {
+      "category": "HAPPINESS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name joyful feelings.",
+      "additional_members": []
+    },
+    "fc-09-g1": {
+      "category": "CLOSE ASSOCIATES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name friendly or close associates.",
+      "additional_members": []
+    },
+    "fc-09-g2": {
+      "category": "UNLOCATED",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight describe someone or something missing or not located; ABSENT/GONE are broader than LOST.",
+      "additional_members": []
+    },
+    "fc-09-g3": {
+      "category": "AMERICAN CITIES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are established US city names.",
+      "additional_members": []
+    },
+    "fc-10-g0": {
+      "category": "___ RUSH",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar RUSH expressions.",
+      "additional_members": []
+    },
+    "fc-10-g1": {
+      "category": "___ LINING",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form LINING expressions; SILVER is figurative while the others chiefly describe material or insulation.",
+      "additional_members": []
+    },
+    "fc-10-g2": {
+      "category": "ANAGRAMMED ANIMALS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight rearrange exactly to animals: ANT, CAT, DOG, RAT, OWL, BEAR, WOLF, HORSE. TAN retains the false-color anchor.",
+      "additional_members": []
+    },
+    "fc-10-g3": {
+      "category": "BEAT DECISIVELY",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean defeating soundly; the repaired anagram group removes the earlier physical-striking overlap.",
+      "additional_members": []
+    },
+    "fc-11-g0": {
+      "category": "___ SHARK",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established SHARK names.",
+      "additional_members": []
+    },
+    "fc-11-g1": {
+      "category": "___ HEART",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form HEART expressions or compounds; BRAVEHEART and LIONHEART are established epithets.",
+      "additional_members": []
+    },
+    "fc-11-g2": {
+      "category": "___ PRINT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar PRINT expressions or compounds.",
+      "additional_members": []
+    },
+    "fc-11-g3": {
+      "category": "CAR BRANDS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are exact automobile-brand names.",
+      "additional_members": []
+    },
+    "fc-12-g0": {
+      "category": "TAKE RISKS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean taking a risk or chance.",
+      "additional_members": []
+    },
+    "fc-12-g1": {
+      "category": "IRRITATE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight mean bothering or irritating.",
+      "additional_members": []
+    },
+    "fc-12-g2": {
+      "category": "DETECTIVE EVIDENCE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can be clues or evidence used by investigators; this is a broad feature category.",
+      "additional_members": []
+    },
+    "fc-12-g3": {
+      "category": "___ BOAT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar BOAT compounds.",
+      "additional_members": []
+    },
+    "fc-13-g0": {
+      "category": "CONSTRUCTION MACHINES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are machines used in construction.",
+      "additional_members": []
+    },
+    "fc-13-g1": {
+      "category": "AVOID",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean avoiding or evading.",
+      "additional_members": []
+    },
+    "fc-13-g2": {
+      "category": "OFFER FOR SALE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean selling or offering goods for sale.",
+      "additional_members": []
+    },
+    "fc-13-g3": {
+      "category": "QUADRILATERALS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are quadrilateral names; DELTOID is a technical alternative name for a kite, and TRAPEZIUM varies by dialect.",
+      "additional_members": []
+    },
+    "fc-14-g0": {
+      "category": "THROW",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean throwing.",
+      "additional_members": []
+    },
+    "fc-14-g1": {
+      "category": "BE A SIGN",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean signifying or foreshadowing.",
+      "additional_members": []
+    },
+    "fc-14-g2": {
+      "category": "JEWELRY ITEMS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name items of jewelry.",
+      "additional_members": []
+    },
+    "fc-14-g3": {
+      "category": "ANGRY REACTIONS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can describe angry responses; FUME and SEETHE need not be verbal.",
+      "additional_members": []
+    },
+    "fc-15-g0": {
+      "category": "___ ACTION",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established ACTION compounds or phrases; firearm, film and animation senses mix fairly.",
+      "additional_members": []
+    },
+    "fc-15-g1": {
+      "category": "IMPEDE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean obstructing.",
+      "additional_members": []
+    },
+    "fc-15-g2": {
+      "category": "REMOVE FROM POSITION",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean removing or dismissing someone.",
+      "additional_members": []
+    },
+    "fc-15-g3": {
+      "category": "WORK AVOIDERS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can name an idle or work-avoiding person.",
+      "additional_members": []
+    },
+    "io-01-g0": {
+      "category": "PARTS OF TREES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are tree parts; TRUNK also fits the next anatomical category.",
+      "additional_members": []
+    },
+    "io-01-g1": {
+      "category": "BODY REGIONS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are body regions; CHEST also names a container.",
+      "additional_members": [
+        "LIMB",
+        "CROWN"
+      ]
+    },
+    "io-01-g2": {
+      "category": "STORAGE CONTAINERS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are storage containers; BOX links to fighting with fists.",
+      "additional_members": [
+        "TRUNK"
+      ]
+    },
+    "io-01-g3": {
+      "category": "STRIKING ACTIONS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are striking verbs; BOX is a related fighting verb rather than an exact single-blow synonym.",
+      "additional_members": []
+    },
+    "io-02-g0": {
+      "category": "EXCELLENT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can describe something excellent.",
+      "additional_members": [
+        "GOOD"
+      ]
+    },
+    "io-02-g1": {
+      "category": "___ PIANO",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established PIANO expressions; PREPARED is a real piano technique, not an incomplete BABY GRAND phrase.",
+      "additional_members": []
+    },
+    "io-02-g2": {
+      "category": "HONORABLE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can describe morally upright conduct; NOBLE also names an aristocrat.",
+      "additional_members": []
+    },
+    "io-02-g3": {
+      "category": "ARISTOCRATS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name aristocrats; this label also admits the NOBLE distractor.",
+      "additional_members": []
+    },
+    "io-03-g0": {
+      "category": "COURAGE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean courage or resolve.",
+      "additional_members": []
+    },
+    "io-03-g1": {
+      "category": "___ CELL",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar CELL expressions.",
+      "additional_members": []
+    },
+    "io-03-g2": {
+      "category": "FLOWER PARTS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name flower structures; STEM is the source distractor.",
+      "additional_members": []
+    },
+    "io-03-g3": {
+      "category": "WORDS WITH HOMOPHONES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight have familiar differently spelled homophones. This broad property also applies to HEART, METTLE and JAIL elsewhere in the family.",
+      "additional_members": [
+        "HEART",
+        "METTLE",
+        "JAIL"
+      ]
+    },
+    "io-04-g0": {
+      "category": "CONTAINERS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name containers.",
+      "additional_members": []
+    },
+    "io-04-g1": {
+      "category": "___ OFFICE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar OFFICE expressions.",
+      "additional_members": []
+    },
+    "io-04-g2": {
+      "category": "___ ACHE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar ACHE expressions or compounds; muscle/neck/body are ordinary descriptions rather than fixed closed compounds.",
+      "additional_members": [
+        "BACK"
+      ]
+    },
+    "io-04-g3": {
+      "category": "___ TIE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar TIE expressions or compounds.",
+      "additional_members": []
+    },
+    "io-05-g0": {
+      "category": "SANDWICH BREADS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name common sandwich breads or bread forms.",
+      "additional_members": []
+    },
+    "io-05-g1": {
+      "category": "CEREAL GRAINS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are cereal grains; WHEAT also fits.",
+      "additional_members": [
+        "WHEAT"
+      ]
+    },
+    "io-05-g2": {
+      "category": "___ FLAKES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar FLAKES expressions or compounds; several other cereal names also fit.",
+      "additional_members": [
+        "WHEAT",
+        "BARLEY",
+        "RICE",
+        "MILLET",
+        "SPELT"
+      ]
+    },
+    "io-05-g3": {
+      "category": "___ CHIP",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established CHIP expressions or compounds.",
+      "additional_members": []
+    },
+    "io-06-g0": {
+      "category": "FASTENING METHODS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can name fastening actions or means.",
+      "additional_members": []
+    },
+    "io-06-g1": {
+      "category": "___ POINT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established POINT expressions or compounds, including POWERPOINT.",
+      "additional_members": []
+    },
+    "io-06-g2": {
+      "category": "___ WATER",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established WATER expressions or compounds.",
+      "additional_members": [
+        "HIGH",
+        "LOW"
+      ]
+    },
+    "io-06-g3": {
+      "category": "DANCES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are dance names; TAP supplies a credible alternate sense.",
+      "additional_members": []
+    },
+    "io-07-g0": {
+      "category": "SHADES OF GREEN",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are established green shades.",
+      "additional_members": []
+    },
+    "io-07-g1": {
+      "category": "___ OIL",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar OIL expressions; essential-oil readings create further cross-memberships.",
+      "additional_members": [
+        "MINT",
+        "SAGE",
+        "LIME"
+      ]
+    },
+    "io-07-g2": {
+      "category": "TREES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name trees; PALM supplies the alternate sense.",
+      "additional_members": []
+    },
+    "io-07-g3": {
+      "category": "FEEL A CRAVING",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can express craving or longing; PINE supplies the alternate sense.",
+      "additional_members": []
+    },
+    "io-08-g0": {
+      "category": "HAND TOOLS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are tools used by hand, including VISe as a holding tool.",
+      "additional_members": []
+    },
+    "io-08-g1": {
+      "category": "BEVERAGES",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are beverages; the original PARTY qualifier was weak because these drinks are not distinctive to parties.",
+      "additional_members": [
+        "WATER",
+        "COCKTAIL",
+        "CHOCOLATE"
+      ]
+    },
+    "io-08-g2": {
+      "category": "___ FOUNTAIN",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form ordinary FOUNTAIN expressions; WALL/GARDEN/INDOOR/OUTDOOR are broad descriptors, making some variants less distinctive.",
+      "additional_members": []
+    },
+    "io-08-g3": {
+      "category": "___ PARTY",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established PARTY expressions; TEA also fits from the beverage group.",
+      "additional_members": [
+        "TEA"
+      ]
+    },
+    "io-09-g0": {
+      "category": "CLOCK PARTS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are clock components, including parts specific to mechanical clocks.",
+      "additional_members": []
+    },
+    "io-09-g1": {
+      "category": "___ STUDY",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established STUDY expressions.",
+      "additional_members": []
+    },
+    "io-09-g2": {
+      "category": "___ TABLE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established TABLE expressions or compounds.",
+      "additional_members": []
+    },
+    "io-09-g3": {
+      "category": "___ SHARK",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established SHARK names or expressions; BLACKTIP is complete, unlike HAMMER.",
+      "additional_members": []
+    },
+    "io-10-g0": {
+      "category": "MUSICAL TERMS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are musical notation or theory terms.",
+      "additional_members": []
+    },
+    "io-10-g1": {
+      "category": "___ TIRE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar TIRE expressions.",
+      "additional_members": []
+    },
+    "io-10-g2": {
+      "category": "___ PAGE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar PAGE expressions.",
+      "additional_members": []
+    },
+    "io-10-g3": {
+      "category": "___ STAGE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar STAGE expressions or compounds.",
+      "additional_members": []
+    },
+    "io-11-g0": {
+      "category": "COOKING ACTIONS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name cooking actions.",
+      "additional_members": []
+    },
+    "io-11-g1": {
+      "category": "MAKE FUN OF",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight describe mocking or teasing; JEER can take AT rather than a direct object.",
+      "additional_members": []
+    },
+    "io-11-g2": {
+      "category": "VOCAL SOUNDS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name human vocal sounds; JEER also fits.",
+      "additional_members": [
+        "TAUNT"
+      ]
+    },
+    "io-11-g3": {
+      "category": "HORROR FILMS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are exact horror-film titles.",
+      "additional_members": []
+    },
+    "io-12-g0": {
+      "category": "BANDS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are exact band names.",
+      "additional_members": []
+    },
+    "io-12-g1": {
+      "category": "___ TERRIER",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established TERRIER breed names.",
+      "additional_members": []
+    },
+    "io-12-g2": {
+      "category": "OUTER LIMIT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name an outer edge or limit.",
+      "additional_members": []
+    },
+    "io-12-g3": {
+      "category": "DECORATIVE TRIMMINGS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are decorative fabric trimmings; FRINGE is a credible alternate-sense distractor.",
+      "additional_members": []
+    },
+    "io-13-g0": {
+      "category": "BELL SOUNDS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can name bell sounds.",
+      "additional_members": []
+    },
+    "io-13-g1": {
+      "category": "ADVERTISING FORMATS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are advertising media or formats; JINGLE also fits.",
+      "additional_members": []
+    },
+    "io-13-g2": {
+      "category": "FLYING ANIMALS",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name animals that fly; FLYER is the generic source distractor.",
+      "additional_members": []
+    },
+    "io-13-g3": {
+      "category": "___ EFFECT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established EFFECT expressions; BUTTERFLY supplies the alternate meaning.",
+      "additional_members": []
+    },
+    "io-14-g0": {
+      "category": "DISCARD",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean discarding something.",
+      "additional_members": []
+    },
+    "io-14-g1": {
+      "category": "___ FOOD",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established FOOD expressions or compounds.",
+      "additional_members": []
+    },
+    "io-14-g2": {
+      "category": "___ MATE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established MATE expressions or compounds; STALE gives STALEMATE.",
+      "additional_members": []
+    },
+    "io-14-g3": {
+      "category": "SEND",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean sending or routing something; SHIP supplies the alternate sense.",
+      "additional_members": []
+    },
+    "io-15-g0": {
+      "category": "CONCISE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can describe concise expression.",
+      "additional_members": []
+    },
+    "io-15-g1": {
+      "category": "___ CIRCUIT",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established CIRCUIT expressions.",
+      "additional_members": []
+    },
+    "io-15-g2": {
+      "category": "ACCESSIBLE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean accessible or available in a relevant sense; ATTAINABLE/OBTAINABLE concern access to acquisition rather than entry.",
+      "additional_members": []
+    },
+    "io-15-g3": {
+      "category": "ADEQUATE",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean adequate or acceptable; PASSABLE supplies the alternate sense.",
+      "additional_members": []
+    }
+  }
+}

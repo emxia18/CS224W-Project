@@ -1,0 +1,883 @@
+{
+  "framework": "Merino et al., arXiv:2407.11240v1 (provided text)",
+  "implementation": "LLM subagent editorial adaptation; no API model replication, MPNet ranking, exhaustive tree expansion, or human evaluation performed.",
+  "novelty": "New candidate combinations; uniqueness against all historical puzzles is not guaranteed.",
+  "puzzles": [
+    {
+      "id": "synthetic-001",
+      "seed_words": [
+        "LANTERN",
+        "VIOLIN",
+        "MEADOW",
+        "MIRROR"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "A violinist crossed a meadow carrying a lantern and a mirror.",
+      "groups": [
+        {
+          "category": "FISH SOLD AT A SEAFOOD COUNTER",
+          "candidate_pool": [
+            "BASS",
+            "COD",
+            "HAKE",
+            "PERCH",
+            "HADDOCK",
+            "HALIBUT",
+            "POLLOCK",
+            "SOLE"
+          ],
+          "selected_words": [
+            "BASS",
+            "COD",
+            "HAKE",
+            "PERCH"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "INTERNAL BODY PARTS",
+          "candidate_pool": [
+            "ORGAN",
+            "LIVER",
+            "KIDNEY",
+            "LUNG",
+            "HEART",
+            "STOMACH",
+            "PANCREAS",
+            "SPLEEN"
+          ],
+          "selected_words": [
+            "ORGAN",
+            "LIVER",
+            "KIDNEY",
+            "LUNG"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "POINTED ANIMAL STRUCTURES",
+          "candidate_pool": [
+            "HORN",
+            "TUSK",
+            "ANTLER",
+            "FANG",
+            "CLAW",
+            "TALON",
+            "QUILL",
+            "SPINE"
+          ],
+          "selected_words": [
+            "HORN",
+            "TUSK",
+            "ANTLER",
+            "FANG"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "LOVE ___",
+          "candidate_pool": [
+            "TRIANGLE",
+            "POTION",
+            "LETTER",
+            "AFFAIR",
+            "STORY",
+            "SONG",
+            "SEAT",
+            "BIRD"
+          ],
+          "selected_words": [
+            "TRIANGLE",
+            "POTION",
+            "LETTER",
+            "AFFAIR"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "false_group": {
+        "category": "MUSICAL INSTRUMENTS",
+        "words": [
+          "BASS",
+          "ORGAN",
+          "HORN",
+          "TRIANGLE"
+        ]
+      },
+      "design_summary": "Each false-group anchor is assigned to a different true group using another sense or association. Removing the apparent fifth group leaves no intended full partition."
+    },
+    {
+      "id": "synthetic-002",
+      "seed_words": [
+        "SUITCASE",
+        "FOREST",
+        "LIBRARY",
+        "ENGINE"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "A traveler carried a suitcase from a forest to a library beside a rumbling engine.",
+      "groups": [
+        {
+          "category": "SOUNDS A DOG MAKES",
+          "candidate_pool": [
+            "BARK",
+            "YIP",
+            "GROWL",
+            "WHINE",
+            "HOWL",
+            "YELP",
+            "WOOF",
+            "WHIMPER"
+          ],
+          "selected_words": [
+            "BARK",
+            "YIP",
+            "GROWL",
+            "WHINE"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "OUTLYING BUSINESS OR ORGANIZATIONAL LOCATIONS",
+          "candidate_pool": [
+            "BRANCH",
+            "OUTPOST",
+            "DEPOT",
+            "SATELLITE",
+            "OFFICE",
+            "AGENCY",
+            "BUREAU",
+            "STATION"
+          ],
+          "selected_words": [
+            "BRANCH",
+            "OUTPOST",
+            "DEPOT",
+            "SATELLITE"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "LOOK THROUGH READING MATERIAL QUICKLY",
+          "candidate_pool": [
+            "LEAF",
+            "SKIM",
+            "SCAN",
+            "BROWSE",
+            "FLIP",
+            "THUMB",
+            "RIFFLE",
+            "PERUSE"
+          ],
+          "selected_words": [
+            "LEAF",
+            "SKIM",
+            "SCAN",
+            "BROWSE"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "CAR STORAGE SPACES",
+          "candidate_pool": [
+            "TRUNK",
+            "GLOVEBOX",
+            "CONSOLE",
+            "BOOT",
+            "FRUNK",
+            "POCKET",
+            "BIN",
+            "COMPARTMENT"
+          ],
+          "selected_words": [
+            "TRUNK",
+            "GLOVEBOX",
+            "CONSOLE",
+            "BOOT"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "false_group": {
+        "category": "PARTS OF A TREE",
+        "words": [
+          "BARK",
+          "BRANCH",
+          "LEAF",
+          "TRUNK"
+        ]
+      },
+      "design_summary": "Each false-group anchor is assigned to a different true group using another sense or association. Removing the apparent fifth group leaves no intended full partition."
+    },
+    {
+      "id": "synthetic-003",
+      "seed_words": [
+        "MARACA",
+        "PLAYGROUND",
+        "RADIO",
+        "AVOCADO"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "A playground radio played beside a maraca and an avocado picnic.",
+      "groups": [
+        {
+          "category": "PROCEED EFFORTLESSLY, FIGURATIVELY",
+          "candidate_pool": [
+            "WALTZ",
+            "GLIDE",
+            "COAST",
+            "BREEZE",
+            "CRUISE",
+            "SAIL",
+            "SKATE",
+            "FLOAT"
+          ],
+          "selected_words": [
+            "WALTZ",
+            "GLIDE",
+            "COAST",
+            "BREEZE"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "NATO PHONETIC ALPHABET WORDS",
+          "candidate_pool": [
+            "TANGO",
+            "SIERRA",
+            "QUEBEC",
+            "NOVEMBER",
+            "ALFA",
+            "BRAVO",
+            "DELTA",
+            "ECHO"
+          ],
+          "selected_words": [
+            "TANGO",
+            "SIERRA",
+            "QUEBEC",
+            "NOVEMBER"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "DIPS",
+          "candidate_pool": [
+            "SALSA",
+            "HUMMUS",
+            "GUACAMOLE",
+            "TZATZIKI",
+            "QUESO",
+            "BABA GANOUSH",
+            "AIOLI",
+            "SKORDALIA"
+          ],
+          "selected_words": [
+            "SALSA",
+            "HUMMUS",
+            "GUACAMOLE",
+            "TZATZIKI"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "PLAYGROUND FIXTURES",
+          "candidate_pool": [
+            "SWING",
+            "SLIDE",
+            "SEESAW",
+            "SANDBOX",
+            "CLIMBER",
+            "CAROUSEL",
+            "ROUNDABOUT",
+            "SPRING RIDER"
+          ],
+          "selected_words": [
+            "SWING",
+            "SLIDE",
+            "SEESAW",
+            "CLIMBER"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "false_group": {
+        "category": "DANCES",
+        "words": [
+          "WALTZ",
+          "TANGO",
+          "SALSA",
+          "SWING"
+        ]
+      },
+      "design_summary": "Each false-group anchor is assigned to a different true group using another sense or association. Removing the apparent fifth group leaves no intended full partition."
+    },
+    {
+      "id": "synthetic-004",
+      "seed_words": [
+        "FEATHER",
+        "NOVEL",
+        "GUITAR",
+        "HARDHAT"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "A feather marked a novel beside a guitar and a hardhat.",
+      "groups": [
+        {
+          "category": "HEAVY CONSTRUCTION MACHINES",
+          "candidate_pool": [
+            "CRANE",
+            "EXCAVATOR",
+            "BULLDOZER",
+            "GRADER",
+            "BACKHOE",
+            "LOADER",
+            "COMPACTOR",
+            "SCRAPER"
+          ],
+          "selected_words": [
+            "CRANE",
+            "EXCAVATOR",
+            "BULLDOZER",
+            "GRADER"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "GUITAR MAKERS",
+          "candidate_pool": [
+            "MARTIN",
+            "GIBSON",
+            "FENDER",
+            "YAMAHA",
+            "GRETSCH",
+            "IBANEZ",
+            "TAYLOR",
+            "RICKENBACKER"
+          ],
+          "selected_words": [
+            "MARTIN",
+            "GIBSON",
+            "FENDER",
+            "YAMAHA"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "AVOID",
+          "candidate_pool": [
+            "DUCK",
+            "EVADE",
+            "DODGE",
+            "ELUDE",
+            "SHUN",
+            "ESCHEW",
+            "SIDESTEP",
+            "CIRCUMVENT"
+          ],
+          "selected_words": [
+            "DUCK",
+            "EVADE",
+            "DODGE",
+            "ELUDE"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "NOVELISTS BY SURNAME",
+          "candidate_pool": [
+            "SWIFT",
+            "AUSTEN",
+            "DICKENS",
+            "ORWELL",
+            "WOOLF",
+            "TOLSTOY",
+            "ELIOT",
+            "HARDY"
+          ],
+          "selected_words": [
+            "SWIFT",
+            "AUSTEN",
+            "DICKENS",
+            "ORWELL"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "false_group": {
+        "category": "BIRDS",
+        "words": [
+          "CRANE",
+          "MARTIN",
+          "DUCK",
+          "SWIFT"
+        ]
+      },
+      "design_summary": "Each false-group anchor is assigned to a different true group using another sense or association. Removing the apparent fifth group leaves no intended full partition."
+    },
+    {
+      "id": "synthetic-005",
+      "seed_words": [
+        "OVEN",
+        "BARREL",
+        "FORTRESS",
+        "CONFETTI"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "An oven warmed bread near a barrel while confetti drifted over a fortress.",
+      "groups": [
+        {
+          "category": "BREAD VARIETIES",
+          "candidate_pool": [
+            "BAGUETTE",
+            "BRIOCHE",
+            "RYE",
+            "SOURDOUGH",
+            "CHALLAH",
+            "CIABATTA",
+            "FOCACCIA",
+            "PUMPERNICKEL"
+          ],
+          "selected_words": [
+            "BAGUETTE",
+            "BRIOCHE",
+            "RYE",
+            "SOURDOUGH"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "___ WHISKEY",
+          "candidate_pool": [
+            "BOURBON",
+            "SCOTCH",
+            "IRISH",
+            "TENNESSEE",
+            "RYE",
+            "CANADIAN",
+            "JAPANESE",
+            "CORN"
+          ],
+          "selected_words": [
+            "BOURBON",
+            "SCOTCH",
+            "IRISH",
+            "TENNESSEE"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "PREVENT FROM SUCCEEDING",
+          "candidate_pool": [
+            "BLOCK",
+            "FOIL",
+            "THWART",
+            "QUASH",
+            "SCOTCH",
+            "FRUSTRATE",
+            "STYMIE",
+            "DEFEAT"
+          ],
+          "selected_words": [
+            "BLOCK",
+            "FOIL",
+            "THWART",
+            "QUASH"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "___ PARTY",
+          "candidate_pool": [
+            "DINNER",
+            "SEARCH",
+            "SURPRISE",
+            "SLUMBER",
+            "BLOCK",
+            "BIRTHDAY",
+            "GARDEN",
+            "HOUSE"
+          ],
+          "selected_words": [
+            "DINNER",
+            "SEARCH",
+            "SURPRISE",
+            "SLUMBER"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "overlap_links": [
+        {
+          "earlier_group": 0,
+          "later_group": 1,
+          "anchor": "RYE",
+          "connection": "Rye whiskey"
+        },
+        {
+          "earlier_group": 1,
+          "later_group": 2,
+          "anchor": "SCOTCH",
+          "connection": "To scotch a plan is to thwart it"
+        },
+        {
+          "earlier_group": 2,
+          "later_group": 3,
+          "anchor": "BLOCK",
+          "connection": "Block party"
+        }
+      ],
+      "design_summary": "Each later pool is inspired by an earlier word; that anchor remains in its original group and is excluded from the later selected quartet."
+    },
+    {
+      "id": "synthetic-006",
+      "seed_words": [
+        "CLIFF",
+        "CARNIVAL",
+        "INK",
+        "ICE CREAM"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "A carnival on a cliff offered ink portraits and ice cream.",
+      "groups": [
+        {
+          "category": "SEABIRDS",
+          "candidate_pool": [
+            "GULL",
+            "TERN",
+            "PUFFIN",
+            "GANNET",
+            "ALBATROSS",
+            "PETREL",
+            "SHEARWATER",
+            "KITTIWAKE"
+          ],
+          "selected_words": [
+            "GULL",
+            "TERN",
+            "PUFFIN",
+            "GANNET"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "DECEIVE",
+          "candidate_pool": [
+            "DUPE",
+            "HOODWINK",
+            "FOOL",
+            "CON",
+            "GULL",
+            "BAMBOOZLE",
+            "TRICK",
+            "SWINDLE"
+          ],
+          "selected_words": [
+            "DUPE",
+            "HOODWINK",
+            "FOOL",
+            "CON"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "___ ARTIST",
+          "candidate_pool": [
+            "ESCAPE",
+            "TRAPEZE",
+            "TATTOO",
+            "RECORDING",
+            "CON",
+            "MAKEUP",
+            "COMIC",
+            "SKETCH"
+          ],
+          "selected_words": [
+            "ESCAPE",
+            "TRAPEZE",
+            "TATTOO",
+            "RECORDING"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "___ PARLOR",
+          "candidate_pool": [
+            "ICE CREAM",
+            "BEAUTY",
+            "MASSAGE",
+            "FUNERAL",
+            "TATTOO",
+            "PIZZA",
+            "BILLIARD",
+            "BETTING"
+          ],
+          "selected_words": [
+            "ICE CREAM",
+            "BEAUTY",
+            "MASSAGE",
+            "FUNERAL"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "overlap_links": [
+        {
+          "earlier_group": 0,
+          "later_group": 1,
+          "anchor": "GULL",
+          "connection": "To gull someone is to deceive them"
+        },
+        {
+          "earlier_group": 1,
+          "later_group": 2,
+          "anchor": "CON",
+          "connection": "Con artist"
+        },
+        {
+          "earlier_group": 2,
+          "later_group": 3,
+          "anchor": "TATTOO",
+          "connection": "Tattoo parlor"
+        }
+      ],
+      "design_summary": "Each later pool is inspired by an earlier word; that anchor remains in its original group and is excluded from the later selected quartet."
+    },
+    {
+      "id": "synthetic-007",
+      "seed_words": [
+        "UMBRELLA",
+        "DOORMAT",
+        "TEDDY",
+        "CHIMNEY"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "A teddy under an umbrella waited on a doormat beside a chimney.",
+      "groups": [
+        {
+          "category": "PRECIPITATION",
+          "candidate_pool": [
+            "HAIL",
+            "SLEET",
+            "DRIZZLE",
+            "SNOW",
+            "RAIN",
+            "GRAUPEL",
+            "MIST",
+            "FREEZING RAIN"
+          ],
+          "selected_words": [
+            "HAIL",
+            "SLEET",
+            "DRIZZLE",
+            "SNOW"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "VERBALLY HONOR OR GREET",
+          "candidate_pool": [
+            "SALUTE",
+            "GREET",
+            "WELCOME",
+            "TOAST",
+            "HAIL",
+            "CHEER",
+            "APPLAUD",
+            "ACCLAIM"
+          ],
+          "selected_words": [
+            "SALUTE",
+            "GREET",
+            "WELCOME",
+            "TOAST"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "FRENCH ___",
+          "candidate_pool": [
+            "FRIES",
+            "PRESS",
+            "HORN",
+            "KISS",
+            "TOAST",
+            "DOOR",
+            "BRAID",
+            "DRESSING"
+          ],
+          "selected_words": [
+            "FRIES",
+            "PRESS",
+            "HORN",
+            "KISS"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "POTATO DISHES",
+          "candidate_pool": [
+            "MASH",
+            "GNOCCHI",
+            "LATKES",
+            "ROSTI",
+            "FRIES",
+            "GRATIN",
+            "HASH",
+            "CHIPS"
+          ],
+          "selected_words": [
+            "MASH",
+            "GNOCCHI",
+            "LATKES",
+            "ROSTI"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "overlap_links": [
+        {
+          "earlier_group": 0,
+          "later_group": 1,
+          "anchor": "HAIL",
+          "connection": "To hail someone is to greet or acclaim them"
+        },
+        {
+          "earlier_group": 1,
+          "later_group": 2,
+          "anchor": "TOAST",
+          "connection": "French toast"
+        },
+        {
+          "earlier_group": 2,
+          "later_group": 3,
+          "anchor": "FRIES",
+          "connection": "Fries are a potato dish"
+        }
+      ],
+      "design_summary": "Each later pool is inspired by an earlier word; that anchor remains in its original group and is excluded from the later selected quartet."
+    },
+    {
+      "id": "synthetic-008",
+      "seed_words": [
+        "GARDEN",
+        "BOOT",
+        "ROGUE",
+        "RIDDLE"
+      ],
+      "seed_provenance": "Original illustrative vocabulary selected editorially; not randomly sampled from historical puzzles.",
+      "inspiration_story": "A rogue left a boot in a garden with a riddle tucked inside.",
+      "groups": [
+        {
+          "category": "HAND TOOLS FOR GARDENING",
+          "candidate_pool": [
+            "RAKE",
+            "HOE",
+            "SPADE",
+            "TROWEL",
+            "DIBBER",
+            "WEEDER",
+            "SECATEURS",
+            "CULTIVATOR"
+          ],
+          "selected_words": [
+            "RAKE",
+            "HOE",
+            "SPADE",
+            "TROWEL"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "DISHONORABLE MEN",
+          "candidate_pool": [
+            "ROUE",
+            "CAD",
+            "HEEL",
+            "SCOUNDREL",
+            "RAKE",
+            "ROGUE",
+            "BOUNDER",
+            "VILLAIN"
+          ],
+          "selected_words": [
+            "ROUE",
+            "CAD",
+            "HEEL",
+            "SCOUNDREL"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "PARTS OF A SHOE",
+          "candidate_pool": [
+            "TOE",
+            "SOLE",
+            "TONGUE",
+            "UPPER",
+            "HEEL",
+            "VAMP",
+            "WELT",
+            "QUARTER"
+          ],
+          "selected_words": [
+            "TOE",
+            "SOLE",
+            "TONGUE",
+            "UPPER"
+          ],
+          "selection": "editorial; MPNet not run"
+        },
+        {
+          "category": "TONGUE ___",
+          "candidate_pool": [
+            "TIED",
+            "TWISTER",
+            "LASHING",
+            "DEPRESSOR",
+            "SCRAPER",
+            "PIERCING",
+            "STUD",
+            "TIP"
+          ],
+          "selected_words": [
+            "TIED",
+            "TWISTER",
+            "LASHING",
+            "DEPRESSOR"
+          ],
+          "selection": "editorial; MPNet not run"
+        }
+      ],
+      "editor_summary": "Category labels checked for literal fit; colors remain provisional. Human fairness review and independent solve testing remain pending.",
+      "overlap_links": [
+        {
+          "earlier_group": 0,
+          "later_group": 1,
+          "anchor": "RAKE",
+          "connection": "A rake is a dissolute man"
+        },
+        {
+          "earlier_group": 1,
+          "later_group": 2,
+          "anchor": "HEEL",
+          "connection": "Heel of a shoe"
+        },
+        {
+          "earlier_group": 2,
+          "later_group": 3,
+          "anchor": "TONGUE",
+          "connection": "Tongue twister, tongue tied, tongue lashing, tongue depressor"
+        }
+      ],
+      "design_summary": "Each later pool is inspired by an earlier word; that anchor remains in its original group and is excluded from the later selected quartet."
+    }
+  ]
+}

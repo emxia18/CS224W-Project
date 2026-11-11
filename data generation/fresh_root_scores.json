@@ -1,0 +1,6041 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "input_case": "lowercase",
+  "normalized": true,
+  "input_sha256": "0dc71993da7ecf0fe822838a65e7d4fec887b79ddf5df232d3fea47486097e0e",
+  "pools": {
+    "new-01": {
+      "quartets": [
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "SOLE",
+            "CARP"
+          ],
+          "similarity": 0.3496681749820709,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "SOLE",
+            "PIKE"
+          ],
+          "similarity": 0.33823060989379883,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "SOLE",
+            "SKATE"
+          ],
+          "similarity": 0.257561057806015,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "SOLE",
+            "RAY"
+          ],
+          "similarity": 0.2869788110256195,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "SOLE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3119443953037262,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "CARP",
+            "PIKE"
+          ],
+          "similarity": 0.4467044770717621,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "CARP",
+            "SKATE"
+          ],
+          "similarity": 0.317375510931015,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "CARP",
+            "RAY"
+          ],
+          "similarity": 0.3776383101940155,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "CARP",
+            "FLOUNDER"
+          ],
+          "similarity": 0.44423577189445496,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "PIKE",
+            "SKATE"
+          ],
+          "similarity": 0.3210945427417755,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "PIKE",
+            "RAY"
+          ],
+          "similarity": 0.3654155731201172,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "PIKE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.39248284697532654,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.255443274974823,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.27911731600761414,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PERCH",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3424806594848633,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "CARP",
+            "PIKE"
+          ],
+          "similarity": 0.33047062158584595,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "CARP",
+            "SKATE"
+          ],
+          "similarity": 0.27004796266555786,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "CARP",
+            "RAY"
+          ],
+          "similarity": 0.2879013121128082,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "CARP",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3316819667816162,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "PIKE",
+            "SKATE"
+          ],
+          "similarity": 0.2771265506744385,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "PIKE",
+            "RAY"
+          ],
+          "similarity": 0.2790381610393524,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "PIKE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2832886278629303,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.23797215521335602,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2388293743133545,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SOLE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2597832977771759,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "CARP",
+            "PIKE",
+            "SKATE"
+          ],
+          "similarity": 0.3305080831050873,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "CARP",
+            "PIKE",
+            "RAY"
+          ],
+          "similarity": 0.36326470971107483,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "CARP",
+            "PIKE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.4091470539569855,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "CARP",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.27353930473327637,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "CARP",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3160283863544464,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "CARP",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.36782732605934143,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PIKE",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.27983272075653076,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PIKE",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.28279170393943787,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "PIKE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3186488449573517,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASS",
+            "SKATE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2448868304491043,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "CARP",
+            "PIKE"
+          ],
+          "similarity": 0.3651103675365448,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "CARP",
+            "SKATE"
+          ],
+          "similarity": 0.28899529576301575,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "CARP",
+            "RAY"
+          ],
+          "similarity": 0.31270548701286316,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "CARP",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3608388602733612,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "PIKE",
+            "SKATE"
+          ],
+          "similarity": 0.30073094367980957,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "PIKE",
+            "RAY"
+          ],
+          "similarity": 0.3084993362426758,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "PIKE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3171026110649109,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.251740962266922,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2569509446620941,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2837616801261902,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "CARP",
+            "PIKE",
+            "SKATE"
+          ],
+          "similarity": 0.3611656725406647,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "CARP",
+            "PIKE",
+            "RAY"
+          ],
+          "similarity": 0.39977917075157166,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "CARP",
+            "PIKE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.45001426339149475,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "CARP",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.2943613529205322,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "CARP",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3412032127380371,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "CARP",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3988589346408844,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "PIKE",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.30531182885169983,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "PIKE",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.312623530626297,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "PIKE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.35433754324913025,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERCH",
+            "SKATE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2648831307888031,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "CARP",
+            "PIKE",
+            "SKATE"
+          ],
+          "similarity": 0.2891916334629059,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "CARP",
+            "PIKE",
+            "RAY"
+          ],
+          "similarity": 0.28539568185806274,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "CARP",
+            "PIKE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.31281399726867676,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "CARP",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.2488841414451599,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "CARP",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2729091942310333,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "CARP",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.28815552592277527,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "PIKE",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.26319417357444763,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "PIKE",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.24768908321857452,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "PIKE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.24699366092681885,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOLE",
+            "SKATE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2264455109834671,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CARP",
+            "PIKE",
+            "SKATE",
+            "RAY"
+          ],
+          "similarity": 0.29938164353370667,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CARP",
+            "PIKE",
+            "SKATE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.3255084455013275,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CARP",
+            "PIKE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.35565805435180664,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CARP",
+            "SKATE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.28645050525665283,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PIKE",
+            "SKATE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.260445237159729,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.2264455109834671,
+      "max_similarity": 0.45001426339149475,
+      "selections": {
+        "yellow": {
+          "words": [
+            "PERCH",
+            "CARP",
+            "PIKE",
+            "FLOUNDER"
+          ],
+          "similarity": 0.45001426339149475,
+          "eligible": true,
+          "target": 0.45001426339149475
+        },
+        "green": {
+          "words": [
+            "BASS",
+            "PERCH",
+            "CARP",
+            "RAY"
+          ],
+          "similarity": 0.3776383101940155,
+          "eligible": true,
+          "target": 0.37549134592215216
+        },
+        "blue": {
+          "words": [
+            "PERCH",
+            "SOLE",
+            "PIKE",
+            "SKATE"
+          ],
+          "similarity": 0.30073094367980957,
+          "eligible": true,
+          "target": 0.30096842845280963
+        },
+        "purple": {
+          "words": [
+            "SOLE",
+            "SKATE",
+            "RAY",
+            "FLOUNDER"
+          ],
+          "similarity": 0.2264455109834671,
+          "eligible": true,
+          "target": 0.2264455109834671
+        }
+      }
+    },
+    "new-02": {
+      "quartets": [
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "CACHE",
+            "COOKIE"
+          ],
+          "similarity": 0.32786765694618225,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "CACHE",
+            "THREAD"
+          ],
+          "similarity": 0.27211934328079224,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "CACHE",
+            "PROCESS"
+          ],
+          "similarity": 0.2696880102157593,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "CACHE",
+            "TOKEN"
+          ],
+          "similarity": 0.2743271291255951,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "CACHE",
+            "SERVER"
+          ],
+          "similarity": 0.30197402834892273,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "COOKIE",
+            "THREAD"
+          ],
+          "similarity": 0.3246852457523346,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "COOKIE",
+            "PROCESS"
+          ],
+          "similarity": 0.30229124426841736,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "COOKIE",
+            "TOKEN"
+          ],
+          "similarity": 0.35501718521118164,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "COOKIE",
+            "SERVER"
+          ],
+          "similarity": 0.3375121057033539,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "THREAD",
+            "PROCESS"
+          ],
+          "similarity": 0.3094620406627655,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "THREAD",
+            "TOKEN"
+          ],
+          "similarity": 0.30834758281707764,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "THREAD",
+            "SERVER"
+          ],
+          "similarity": 0.30837225914001465,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.2870704233646393,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.2944714426994324,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.317515105009079,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "COOKIE",
+            "THREAD"
+          ],
+          "similarity": 0.3095943033695221,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "COOKIE",
+            "PROCESS"
+          ],
+          "similarity": 0.29524436593055725,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "COOKIE",
+            "TOKEN"
+          ],
+          "similarity": 0.34529387950897217,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "COOKIE",
+            "SERVER"
+          ],
+          "similarity": 0.347409725189209,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "THREAD",
+            "PROCESS"
+          ],
+          "similarity": 0.26795363426208496,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "THREAD",
+            "TOKEN"
+          ],
+          "similarity": 0.26416274905204773,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "THREAD",
+            "SERVER"
+          ],
+          "similarity": 0.2838083803653717,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.25092971324920654,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.2779516875743866,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.29831886291503906,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "COOKIE",
+            "THREAD",
+            "PROCESS"
+          ],
+          "similarity": 0.3004659116268158,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "COOKIE",
+            "THREAD",
+            "TOKEN"
+          ],
+          "similarity": 0.34476184844970703,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "COOKIE",
+            "THREAD",
+            "SERVER"
+          ],
+          "similarity": 0.31925544142723083,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "COOKIE",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.31156614422798157,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "COOKIE",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.29343608021736145,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "COOKIE",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.36189010739326477,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "THREAD",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.2933541238307953,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "THREAD",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.29275384545326233,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "THREAD",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.3073674738407135,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MOUSE",
+            "PROCESS",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.2826649844646454,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "COOKIE",
+            "THREAD"
+          ],
+          "similarity": 0.3136672079563141,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "COOKIE",
+            "PROCESS"
+          ],
+          "similarity": 0.31679263710975647,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "COOKIE",
+            "TOKEN"
+          ],
+          "similarity": 0.3290390074253082,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "COOKIE",
+            "SERVER"
+          ],
+          "similarity": 0.33049607276916504,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "THREAD",
+            "PROCESS"
+          ],
+          "similarity": 0.3153781592845917,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "THREAD",
+            "TOKEN"
+          ],
+          "similarity": 0.2737840712070465,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "THREAD",
+            "SERVER"
+          ],
+          "similarity": 0.2927709221839905,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.27802643179893494,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.3043895959854126,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "CACHE",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.2869536578655243,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "COOKIE",
+            "THREAD",
+            "PROCESS"
+          ],
+          "similarity": 0.3265886604785919,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "COOKIE",
+            "THREAD",
+            "TOKEN"
+          ],
+          "similarity": 0.33308145403862,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "COOKIE",
+            "THREAD",
+            "SERVER"
+          ],
+          "similarity": 0.3069162964820862,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "COOKIE",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.31736111640930176,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "COOKIE",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.29857227206230164,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "COOKIE",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.3292231559753418,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "THREAD",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.3250253200531006,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "THREAD",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.3237662613391876,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "THREAD",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.300576776266098,
+          "eligible": true
+        },
+        {
+          "words": [
+            "WINDOW",
+            "PROCESS",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.29334962368011475,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "COOKIE",
+            "THREAD",
+            "PROCESS"
+          ],
+          "similarity": 0.3303477466106415,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "COOKIE",
+            "THREAD",
+            "TOKEN"
+          ],
+          "similarity": 0.334164023399353,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "COOKIE",
+            "THREAD",
+            "SERVER"
+          ],
+          "similarity": 0.32761985063552856,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "COOKIE",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.32648780941963196,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "COOKIE",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.3273199498653412,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "COOKIE",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.3552943468093872,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "THREAD",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.29969048500061035,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "THREAD",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.31805238127708435,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "THREAD",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.2921864092350006,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CACHE",
+            "PROCESS",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.2930033504962921,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COOKIE",
+            "THREAD",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.33893418312072754,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COOKIE",
+            "THREAD",
+            "PROCESS",
+            "SERVER"
+          ],
+          "similarity": 0.31214407086372375,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COOKIE",
+            "THREAD",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.33436498045921326,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COOKIE",
+            "PROCESS",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.3152192533016205,
+          "eligible": true
+        },
+        {
+          "words": [
+            "THREAD",
+            "PROCESS",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.31503042578697205,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.25092971324920654,
+      "max_similarity": 0.36189010739326477,
+      "selections": {
+        "yellow": {
+          "words": [
+            "MOUSE",
+            "COOKIE",
+            "TOKEN",
+            "SERVER"
+          ],
+          "similarity": 0.36189010739326477,
+          "eligible": true,
+          "target": 0.36189010739326477
+        },
+        "green": {
+          "words": [
+            "WINDOW",
+            "THREAD",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.3250253200531006,
+          "eligible": true,
+          "target": 0.32490330934524536
+        },
+        "blue": {
+          "words": [
+            "MOUSE",
+            "WINDOW",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.2870704233646393,
+          "eligible": true,
+          "target": 0.28791651129722595
+        },
+        "purple": {
+          "words": [
+            "MOUSE",
+            "CACHE",
+            "PROCESS",
+            "TOKEN"
+          ],
+          "similarity": 0.25092971324920654,
+          "eligible": true,
+          "target": 0.25092971324920654
+        }
+      }
+    },
+    "new-03": {
+      "quartets": [
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "EMERALD",
+            "GARNET"
+          ],
+          "similarity": 0.43618401885032654,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "EMERALD",
+            "AMBER"
+          ],
+          "similarity": 0.4476965367794037,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "EMERALD",
+            "JADE"
+          ],
+          "similarity": 0.41361913084983826,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "EMERALD",
+            "ONYX"
+          ],
+          "similarity": 0.3606431484222412,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "EMERALD",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4574553072452545,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "GARNET",
+            "AMBER"
+          ],
+          "similarity": 0.42131900787353516,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "GARNET",
+            "JADE"
+          ],
+          "similarity": 0.39633414149284363,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "GARNET",
+            "ONYX"
+          ],
+          "similarity": 0.33164605498313904,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "GARNET",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4341526925563812,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "AMBER",
+            "JADE"
+          ],
+          "similarity": 0.39995089173316956,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "AMBER",
+            "ONYX"
+          ],
+          "similarity": 0.3415612280368805,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "AMBER",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4482530653476715,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3215886652469635,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.42236825823783875,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.3709750175476074,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "GARNET",
+            "AMBER"
+          ],
+          "similarity": 0.4936251938343048,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "GARNET",
+            "JADE"
+          ],
+          "similarity": 0.4872634708881378,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "GARNET",
+            "ONYX"
+          ],
+          "similarity": 0.42215871810913086,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "GARNET",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.5301792025566101,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "AMBER",
+            "JADE"
+          ],
+          "similarity": 0.46674859523773193,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "AMBER",
+            "ONYX"
+          ],
+          "similarity": 0.4079422056674957,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "AMBER",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.520147979259491,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.40659284591674805,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.5128863453865051,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.46107637882232666,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "GARNET",
+            "AMBER",
+            "JADE"
+          ],
+          "similarity": 0.4360002279281616,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "GARNET",
+            "AMBER",
+            "ONYX"
+          ],
+          "similarity": 0.36548176407814026,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "GARNET",
+            "AMBER",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.483381986618042,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "GARNET",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3732248544692993,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "GARNET",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4852128326892853,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "GARNET",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.42169079184532166,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "AMBER",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3511126935482025,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "AMBER",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4672858417034149,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "AMBER",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.41006219387054443,
+          "eligible": true
+        },
+        {
+          "words": [
+            "RUBY",
+            "JADE",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.41690537333488464,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "GARNET",
+            "AMBER"
+          ],
+          "similarity": 0.45577165484428406,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "GARNET",
+            "JADE"
+          ],
+          "similarity": 0.41484197974205017,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "GARNET",
+            "ONYX"
+          ],
+          "similarity": 0.3904242515563965,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "GARNET",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4737051725387573,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "AMBER",
+            "JADE"
+          ],
+          "similarity": 0.4219188988208771,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "AMBER",
+            "ONYX"
+          ],
+          "similarity": 0.40379956364631653,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "AMBER",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.49126574397087097,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3678821623325348,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.44943615794181824,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "EMERALD",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.43831321597099304,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "GARNET",
+            "AMBER",
+            "JADE"
+          ],
+          "similarity": 0.3910156488418579,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "GARNET",
+            "AMBER",
+            "ONYX"
+          ],
+          "similarity": 0.3611842393875122,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "GARNET",
+            "AMBER",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.45434489846229553,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "GARNET",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3343593180179596,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "GARNET",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.42160776257514954,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "GARNET",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.3987727165222168,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "AMBER",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3398389518260956,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "AMBER",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.43127259612083435,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "AMBER",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4147360026836395,
+          "eligible": true
+        },
+        {
+          "words": [
+            "OPAL",
+            "JADE",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.3870111405849457,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "GARNET",
+            "AMBER",
+            "JADE"
+          ],
+          "similarity": 0.45694395899772644,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "GARNET",
+            "AMBER",
+            "ONYX"
+          ],
+          "similarity": 0.4266957938671112,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "GARNET",
+            "AMBER",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.5253703594207764,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "GARNET",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.4184941053390503,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "GARNET",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.5112564563751221,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "GARNET",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4880046844482422,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "AMBER",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3998420536518097,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "AMBER",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4967895746231079,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "AMBER",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.47983625531196594,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EMERALD",
+            "JADE",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4707346260547638,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GARNET",
+            "AMBER",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3528558313846588,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GARNET",
+            "AMBER",
+            "JADE",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4554978609085083,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GARNET",
+            "AMBER",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4268324375152588,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GARNET",
+            "JADE",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.42682328820228577,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AMBER",
+            "JADE",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.4107591211795807,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.3215886652469635,
+      "max_similarity": 0.5301792025566101,
+      "selections": {
+        "yellow": {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "GARNET",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.5301792025566101,
+          "eligible": true,
+          "target": 0.5301792025566101
+        },
+        "green": {
+          "words": [
+            "RUBY",
+            "EMERALD",
+            "ONYX",
+            "SAPPHIRE"
+          ],
+          "similarity": 0.46107637882232666,
+          "eligible": true,
+          "target": 0.46064902345339453
+        },
+        "blue": {
+          "words": [
+            "OPAL",
+            "GARNET",
+            "AMBER",
+            "JADE"
+          ],
+          "similarity": 0.3910156488418579,
+          "eligible": true,
+          "target": 0.391118844350179
+        },
+        "purple": {
+          "words": [
+            "RUBY",
+            "OPAL",
+            "JADE",
+            "ONYX"
+          ],
+          "similarity": 0.3215886652469635,
+          "eligible": true,
+          "target": 0.3215886652469635
+        }
+      }
+    },
+    "new-04": {
+      "quartets": [
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "DIAMOND",
+            "BASE"
+          ],
+          "similarity": 0.3329017162322998,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "DIAMOND",
+            "MITT"
+          ],
+          "similarity": 0.3086259365081787,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "DIAMOND",
+            "STRIKE"
+          ],
+          "similarity": 0.30630549788475037,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "DIAMOND",
+            "WALK"
+          ],
+          "similarity": 0.2728099822998047,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "DIAMOND",
+            "RUN"
+          ],
+          "similarity": 0.2720474898815155,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "BASE",
+            "MITT"
+          ],
+          "similarity": 0.3068762719631195,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "BASE",
+            "STRIKE"
+          ],
+          "similarity": 0.30566465854644775,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "BASE",
+            "WALK"
+          ],
+          "similarity": 0.2800499200820923,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "BASE",
+            "RUN"
+          ],
+          "similarity": 0.2884921133518219,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "MITT",
+            "STRIKE"
+          ],
+          "similarity": 0.293505996465683,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "MITT",
+            "WALK"
+          ],
+          "similarity": 0.26180875301361084,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "MITT",
+            "RUN"
+          ],
+          "similarity": 0.27332445979118347,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.28426504135131836,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.27345678210258484,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BALL",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.30093348026275635,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "BASE",
+            "MITT"
+          ],
+          "similarity": 0.28650858998298645,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "BASE",
+            "STRIKE"
+          ],
+          "similarity": 0.2931254804134369,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "BASE",
+            "WALK"
+          ],
+          "similarity": 0.2507034242153168,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "BASE",
+            "RUN"
+          ],
+          "similarity": 0.25543102622032166,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "MITT",
+            "STRIKE"
+          ],
+          "similarity": 0.2770150899887085,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "MITT",
+            "WALK"
+          ],
+          "similarity": 0.22851049900054932,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "MITT",
+            "RUN"
+          ],
+          "similarity": 0.23631161451339722,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.25879529118537903,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.24427247047424316,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "DIAMOND",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.25494179129600525,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BASE",
+            "MITT",
+            "STRIKE"
+          ],
+          "similarity": 0.29206568002700806,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BASE",
+            "MITT",
+            "WALK"
+          ],
+          "similarity": 0.2514418959617615,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BASE",
+            "MITT",
+            "RUN"
+          ],
+          "similarity": 0.2684476673603058,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BASE",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.2828355133533478,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BASE",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.2775173485279083,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "BASE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.2960675060749054,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "MITT",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.27275973558425903,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "MITT",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.2705150842666626,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "MITT",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.2829826772212982,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BAT",
+            "STRIKE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.3157202899456024,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "BASE",
+            "MITT"
+          ],
+          "similarity": 0.2734570801258087,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "BASE",
+            "STRIKE"
+          ],
+          "similarity": 0.30990442633628845,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "BASE",
+            "WALK"
+          ],
+          "similarity": 0.2798464596271515,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "BASE",
+            "RUN"
+          ],
+          "similarity": 0.27809998393058777,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "MITT",
+            "STRIKE"
+          ],
+          "similarity": 0.27257081866264343,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "MITT",
+            "WALK"
+          ],
+          "similarity": 0.2364303320646286,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "MITT",
+            "RUN"
+          ],
+          "similarity": 0.2377573698759079,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.2965455949306488,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.27554869651794434,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "DIAMOND",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.2985821068286896,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "BASE",
+            "MITT",
+            "STRIKE"
+          ],
+          "similarity": 0.24708156287670135,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "BASE",
+            "MITT",
+            "WALK"
+          ],
+          "similarity": 0.21882186830043793,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "BASE",
+            "MITT",
+            "RUN"
+          ],
+          "similarity": 0.22935356199741364,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "BASE",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.2800459563732147,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "BASE",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.26825374364852905,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "BASE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.2991679608821869,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "MITT",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.24874694645404816,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "MITT",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.24002821743488312,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "MITT",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.2648599445819855,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BALL",
+            "STRIKE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.32742801308631897,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "BASE",
+            "MITT",
+            "STRIKE"
+          ],
+          "similarity": 0.2528776228427887,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "BASE",
+            "MITT",
+            "WALK"
+          ],
+          "similarity": 0.20781059563159943,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "BASE",
+            "MITT",
+            "RUN"
+          ],
+          "similarity": 0.2146277278661728,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "BASE",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.2768631875514984,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "BASE",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.261356383562088,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "BASE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.2754632830619812,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "MITT",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.24161243438720703,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "MITT",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.22917912900447845,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "MITT",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.23720349371433258,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIAMOND",
+            "STRIKE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.3076000511646271,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASE",
+            "MITT",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.2408042550086975,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASE",
+            "MITT",
+            "STRIKE",
+            "RUN"
+          ],
+          "similarity": 0.23757560551166534,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASE",
+            "MITT",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.2534807622432709,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BASE",
+            "STRIKE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.32498618960380554,
+          "eligible": true
+        },
+        {
+          "words": [
+            "MITT",
+            "STRIKE",
+            "WALK",
+            "RUN"
+          ],
+          "similarity": 0.29884353280067444,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.20781059563159943,
+      "max_similarity": 0.3329017162322998,
+      "selections": {
+        "yellow": {
+          "words": [
+            "BAT",
+            "BALL",
+            "DIAMOND",
+            "BASE"
+          ],
+          "similarity": 0.3329017162322998,
+          "eligible": true,
+          "target": 0.3329017162322998
+        },
+        "green": {
+          "words": [
+            "BAT",
+            "BASE",
+            "MITT",
+            "STRIKE"
+          ],
+          "similarity": 0.29206568002700806,
+          "eligible": true,
+          "target": 0.29120467603206635
+        },
+        "blue": {
+          "words": [
+            "BALL",
+            "MITT",
+            "STRIKE",
+            "WALK"
+          ],
+          "similarity": 0.24874694645404816,
+          "eligible": true,
+          "target": 0.24950763583183289
+        },
+        "purple": {
+          "words": [
+            "DIAMOND",
+            "BASE",
+            "MITT",
+            "WALK"
+          ],
+          "similarity": 0.20781059563159943,
+          "eligible": true,
+          "target": 0.20781059563159943
+        }
+      }
+    },
+    "new-05": {
+      "quartets": [
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "COLON",
+            "DASH"
+          ],
+          "similarity": 0.26621782779693604,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "COLON",
+            "HYPHEN"
+          ],
+          "similarity": 0.3005867600440979,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "COLON",
+            "BRACKET"
+          ],
+          "similarity": 0.3134327232837677,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "COLON",
+            "QUOTE"
+          ],
+          "similarity": 0.3060246407985687,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "COLON",
+            "SLASH"
+          ],
+          "similarity": 0.2678101360797882,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "DASH",
+            "HYPHEN"
+          ],
+          "similarity": 0.26216378808021545,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "DASH",
+            "BRACKET"
+          ],
+          "similarity": 0.26967766880989075,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "DASH",
+            "QUOTE"
+          ],
+          "similarity": 0.2418832778930664,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "DASH",
+            "SLASH"
+          ],
+          "similarity": 0.2650744318962097,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "HYPHEN",
+            "BRACKET"
+          ],
+          "similarity": 0.3059445321559906,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "HYPHEN",
+            "QUOTE"
+          ],
+          "similarity": 0.26553505659103394,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "HYPHEN",
+            "SLASH"
+          ],
+          "similarity": 0.26650816202163696,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.3023613393306732,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.2758350670337677,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COMMA",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.2553633451461792,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "DASH",
+            "HYPHEN"
+          ],
+          "similarity": 0.24823172390460968,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "DASH",
+            "BRACKET"
+          ],
+          "similarity": 0.2556919455528259,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "DASH",
+            "QUOTE"
+          ],
+          "similarity": 0.2331968992948532,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "DASH",
+            "SLASH"
+          ],
+          "similarity": 0.28266486525535583,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "HYPHEN",
+            "BRACKET"
+          ],
+          "similarity": 0.25759419798851013,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "HYPHEN",
+            "QUOTE"
+          ],
+          "similarity": 0.2224840521812439,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "HYPHEN",
+            "SLASH"
+          ],
+          "similarity": 0.24973399937152863,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.2592567205429077,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.2590072453022003,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "COLON",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.24383485317230225,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "DASH",
+            "HYPHEN",
+            "BRACKET"
+          ],
+          "similarity": 0.24015986919403076,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "DASH",
+            "HYPHEN",
+            "QUOTE"
+          ],
+          "similarity": 0.18466340005397797,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "DASH",
+            "HYPHEN",
+            "SLASH"
+          ],
+          "similarity": 0.27331897616386414,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "DASH",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.21610398590564728,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "DASH",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.2772601842880249,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "DASH",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.24170148372650146,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "HYPHEN",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.20728909969329834,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "HYPHEN",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.2462272197008133,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "HYPHEN",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.19805343449115753,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PERIOD",
+            "BRACKET",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.23130707442760468,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "DASH",
+            "HYPHEN"
+          ],
+          "similarity": 0.2749572694301605,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "DASH",
+            "BRACKET"
+          ],
+          "similarity": 0.2663842439651489,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "DASH",
+            "QUOTE"
+          ],
+          "similarity": 0.2313482016324997,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "DASH",
+            "SLASH"
+          ],
+          "similarity": 0.27263033390045166,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "HYPHEN",
+            "BRACKET"
+          ],
+          "similarity": 0.2906550467014313,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "HYPHEN",
+            "QUOTE"
+          ],
+          "similarity": 0.2430039644241333,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "HYPHEN",
+            "SLASH"
+          ],
+          "similarity": 0.2620680630207062,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.26374340057373047,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.25530803203582764,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "COLON",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.22759468853473663,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "DASH",
+            "HYPHEN",
+            "BRACKET"
+          ],
+          "similarity": 0.30147233605384827,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "DASH",
+            "HYPHEN",
+            "QUOTE"
+          ],
+          "similarity": 0.23343493044376373,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "DASH",
+            "HYPHEN",
+            "SLASH"
+          ],
+          "similarity": 0.31390464305877686,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "DASH",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.2488422840833664,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "DASH",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.3018125593662262,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "DASH",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.253712922334671,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "HYPHEN",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.2623959481716156,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "HYPHEN",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.2931481897830963,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "HYPHEN",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.23243343830108643,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COMMA",
+            "BRACKET",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.2496538609266281,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "DASH",
+            "HYPHEN",
+            "BRACKET"
+          ],
+          "similarity": 0.2553935945034027,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "DASH",
+            "HYPHEN",
+            "QUOTE"
+          ],
+          "similarity": 0.1926555037498474,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "DASH",
+            "HYPHEN",
+            "SLASH"
+          ],
+          "similarity": 0.29940205812454224,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "DASH",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.20800919830799103,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "DASH",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.2872563302516937,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "DASH",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.24445600807666779,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "HYPHEN",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.18719828128814697,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "HYPHEN",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.2442273646593094,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "HYPHEN",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.18881194293498993,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COLON",
+            "BRACKET",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.20597867667675018,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DASH",
+            "HYPHEN",
+            "BRACKET",
+            "QUOTE"
+          ],
+          "similarity": 0.1986178606748581,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DASH",
+            "HYPHEN",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.31705260276794434,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DASH",
+            "HYPHEN",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.2412508726119995,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DASH",
+            "BRACKET",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.25308558344841003,
+          "eligible": true
+        },
+        {
+          "words": [
+            "HYPHEN",
+            "BRACKET",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.1993393898010254,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.18466340005397797,
+      "max_similarity": 0.31705260276794434,
+      "selections": {
+        "yellow": {
+          "words": [
+            "DASH",
+            "HYPHEN",
+            "BRACKET",
+            "SLASH"
+          ],
+          "similarity": 0.31705260276794434,
+          "eligible": true,
+          "target": 0.31705260276794434
+        },
+        "green": {
+          "words": [
+            "COMMA",
+            "COLON",
+            "DASH",
+            "SLASH"
+          ],
+          "similarity": 0.27263033390045166,
+          "eligible": true,
+          "target": 0.27292286852995556
+        },
+        "blue": {
+          "words": [
+            "COMMA",
+            "COLON",
+            "QUOTE",
+            "SLASH"
+          ],
+          "similarity": 0.22759468853473663,
+          "eligible": true,
+          "target": 0.22879313429196677
+        },
+        "purple": {
+          "words": [
+            "PERIOD",
+            "DASH",
+            "HYPHEN",
+            "QUOTE"
+          ],
+          "similarity": 0.18466340005397797,
+          "eligible": true,
+          "target": 0.18466340005397797
+        }
+      }
+    },
+    "new-06": {
+      "quartets": [
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "PAWN",
+            "BISHOP"
+          ],
+          "similarity": 0.45161089301109314,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "PAWN",
+            "CHECK"
+          ],
+          "similarity": 0.33463048934936523,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "PAWN",
+            "MATE"
+          ],
+          "similarity": 0.330359548330307,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "PAWN",
+            "FILE"
+          ],
+          "similarity": 0.35861286520957947,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "PAWN",
+            "RANK"
+          ],
+          "similarity": 0.39326417446136475,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "BISHOP",
+            "CHECK"
+          ],
+          "similarity": 0.33483293652534485,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "BISHOP",
+            "MATE"
+          ],
+          "similarity": 0.3434102237224579,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "BISHOP",
+            "FILE"
+          ],
+          "similarity": 0.3567941188812256,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "BISHOP",
+            "RANK"
+          ],
+          "similarity": 0.38626328110694885,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "CHECK",
+            "MATE"
+          ],
+          "similarity": 0.2505838871002197,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "CHECK",
+            "FILE"
+          ],
+          "similarity": 0.27850908041000366,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "CHECK",
+            "RANK"
+          ],
+          "similarity": 0.28937649726867676,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.2621660530567169,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.29792943596839905,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "ROOK",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.3101010024547577,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "BISHOP",
+            "CHECK"
+          ],
+          "similarity": 0.31411486864089966,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "BISHOP",
+            "MATE"
+          ],
+          "similarity": 0.3085877597332001,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "BISHOP",
+            "FILE"
+          ],
+          "similarity": 0.3323480188846588,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "BISHOP",
+            "RANK"
+          ],
+          "similarity": 0.3682038486003876,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "CHECK",
+            "MATE"
+          ],
+          "similarity": 0.23147983849048615,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "CHECK",
+            "FILE"
+          ],
+          "similarity": 0.2697813808917999,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "CHECK",
+            "RANK"
+          ],
+          "similarity": 0.2870354950428009,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.23933398723602295,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.28148406744003296,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "PAWN",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.30403196811676025,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "BISHOP",
+            "CHECK",
+            "MATE"
+          ],
+          "similarity": 0.2513757050037384,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "BISHOP",
+            "CHECK",
+            "FILE"
+          ],
+          "similarity": 0.2748078405857086,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "BISHOP",
+            "CHECK",
+            "RANK"
+          ],
+          "similarity": 0.2868797481060028,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "BISHOP",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.2572086453437805,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "BISHOP",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.29417654871940613,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "BISHOP",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.3018549978733063,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "CHECK",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.21879607439041138,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "CHECK",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.237162247300148,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "CHECK",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.259382039308548,
+          "eligible": true
+        },
+        {
+          "words": [
+            "KING",
+            "MATE",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.24175848066806793,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "BISHOP",
+            "CHECK"
+          ],
+          "similarity": 0.33992037177085876,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "BISHOP",
+            "MATE"
+          ],
+          "similarity": 0.34524521231651306,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "BISHOP",
+            "FILE"
+          ],
+          "similarity": 0.3618873357772827,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "BISHOP",
+            "RANK"
+          ],
+          "similarity": 0.3803733289241791,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "CHECK",
+            "MATE"
+          ],
+          "similarity": 0.2698826491832733,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "CHECK",
+            "FILE"
+          ],
+          "similarity": 0.3010660707950592,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "CHECK",
+            "RANK"
+          ],
+          "similarity": 0.3009503483772278,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.2814705967903137,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.30625084042549133,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "PAWN",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.32168063521385193,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "BISHOP",
+            "CHECK",
+            "MATE"
+          ],
+          "similarity": 0.2531457543373108,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "BISHOP",
+            "CHECK",
+            "FILE"
+          ],
+          "similarity": 0.2694597840309143,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "BISHOP",
+            "CHECK",
+            "RANK"
+          ],
+          "similarity": 0.2641618847846985,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "BISHOP",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.2627125382423401,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "BISHOP",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.2823105752468109,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "BISHOP",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.28287097811698914,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "CHECK",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.22604532539844513,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "CHECK",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.22704166173934937,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "CHECK",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.24214333295822144,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ROOK",
+            "MATE",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.23537170886993408,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "BISHOP",
+            "CHECK",
+            "MATE"
+          ],
+          "similarity": 0.24058623611927032,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "BISHOP",
+            "CHECK",
+            "FILE"
+          ],
+          "similarity": 0.2672765851020813,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "BISHOP",
+            "CHECK",
+            "RANK"
+          ],
+          "similarity": 0.26836538314819336,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "BISHOP",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.24642497301101685,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "BISHOP",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.27240970730781555,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "BISHOP",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.28334641456604004,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "CHECK",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.2254761904478073,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "CHECK",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.23285920917987823,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "CHECK",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.25833719968795776,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PAWN",
+            "MATE",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.23746122419834137,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BISHOP",
+            "CHECK",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.21356330811977386,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BISHOP",
+            "CHECK",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.215764120221138,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BISHOP",
+            "CHECK",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.22637271881103516,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BISHOP",
+            "MATE",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.21834494173526764,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CHECK",
+            "MATE",
+            "FILE",
+            "RANK"
+          ],
+          "similarity": 0.2174898236989975,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.21356330811977386,
+      "max_similarity": 0.45161089301109314,
+      "selections": {
+        "yellow": {
+          "words": [
+            "KING",
+            "ROOK",
+            "PAWN",
+            "BISHOP"
+          ],
+          "similarity": 0.45161089301109314,
+          "eligible": true,
+          "target": 0.45161089301109314
+        },
+        "green": {
+          "words": [
+            "KING",
+            "PAWN",
+            "BISHOP",
+            "RANK"
+          ],
+          "similarity": 0.3682038486003876,
+          "eligible": true,
+          "target": 0.37226169804732
+        },
+        "blue": {
+          "words": [
+            "KING",
+            "BISHOP",
+            "MATE",
+            "RANK"
+          ],
+          "similarity": 0.29417654871940613,
+          "eligible": true,
+          "target": 0.29291250308354694
+        },
+        "purple": {
+          "words": [
+            "BISHOP",
+            "CHECK",
+            "MATE",
+            "FILE"
+          ],
+          "similarity": 0.21356330811977386,
+          "eligible": true,
+          "target": 0.21356330811977386
+        }
+      }
+    },
+    "new-07": {
+      "quartets": [
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "GLOVE",
+            "BELT"
+          ],
+          "similarity": 0.3513668477535248,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "GLOVE",
+            "CUFF"
+          ],
+          "similarity": 0.39097046852111816,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "GLOVE",
+            "COLLAR"
+          ],
+          "similarity": 0.3834780752658844,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "GLOVE",
+            "POCKET"
+          ],
+          "similarity": 0.3480719029903412,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "GLOVE",
+            "HEM"
+          ],
+          "similarity": 0.29581117630004883,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "BELT",
+            "CUFF"
+          ],
+          "similarity": 0.3425511419773102,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "BELT",
+            "COLLAR"
+          ],
+          "similarity": 0.3470400869846344,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "BELT",
+            "POCKET"
+          ],
+          "similarity": 0.3116264045238495,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "BELT",
+            "HEM"
+          ],
+          "similarity": 0.2683456242084503,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "CUFF",
+            "COLLAR"
+          ],
+          "similarity": 0.39162591099739075,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "CUFF",
+            "POCKET"
+          ],
+          "similarity": 0.3481864035129547,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "CUFF",
+            "HEM"
+          ],
+          "similarity": 0.3023863434791565,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.33616843819618225,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.29101860523223877,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "SOCK",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.27733322978019714,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "BELT",
+            "CUFF"
+          ],
+          "similarity": 0.3468196392059326,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "BELT",
+            "COLLAR"
+          ],
+          "similarity": 0.354909211397171,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "BELT",
+            "POCKET"
+          ],
+          "similarity": 0.3077414333820343,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "BELT",
+            "HEM"
+          ],
+          "similarity": 0.25834229588508606,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "CUFF",
+            "COLLAR"
+          ],
+          "similarity": 0.3879817724227905,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "CUFF",
+            "POCKET"
+          ],
+          "similarity": 0.3327881991863251,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "CUFF",
+            "HEM"
+          ],
+          "similarity": 0.2808697521686554,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.3243708312511444,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.27310261130332947,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "GLOVE",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.2476631999015808,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "BELT",
+            "CUFF",
+            "COLLAR"
+          ],
+          "similarity": 0.36696353554725647,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "BELT",
+            "CUFF",
+            "POCKET"
+          ],
+          "similarity": 0.3117624819278717,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "BELT",
+            "CUFF",
+            "HEM"
+          ],
+          "similarity": 0.2688239514827728,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "BELT",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.3153264820575714,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "BELT",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.2730381488800049,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "BELT",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.24759124219417572,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "CUFF",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.34535548090934753,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "CUFF",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.3005478084087372,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "CUFF",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.2670750916004181,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAP",
+            "COLLAR",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.25478240847587585,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "BELT",
+            "CUFF"
+          ],
+          "similarity": 0.41180288791656494,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "BELT",
+            "COLLAR"
+          ],
+          "similarity": 0.40700671076774597,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "BELT",
+            "POCKET"
+          ],
+          "similarity": 0.37421825528144836,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "BELT",
+            "HEM"
+          ],
+          "similarity": 0.3101046681404114,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "CUFF",
+            "COLLAR"
+          ],
+          "similarity": 0.4607905447483063,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "CUFF",
+            "POCKET"
+          ],
+          "similarity": 0.4199763238430023,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "CUFF",
+            "HEM"
+          ],
+          "similarity": 0.3533434569835663,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.39867326617240906,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.332690566778183,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.32163047790527344,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "BELT",
+            "CUFF",
+            "COLLAR"
+          ],
+          "similarity": 0.4118352234363556,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "BELT",
+            "CUFF",
+            "POCKET"
+          ],
+          "similarity": 0.37101349234580994,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "BELT",
+            "CUFF",
+            "HEM"
+          ],
+          "similarity": 0.3133604824542999,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "BELT",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.36169174313545227,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "BELT",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.304688960313797,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "BELT",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.29362139105796814,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "CUFF",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.4124319851398468,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "CUFF",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.35290995240211487,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "CUFF",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.3338165581226349,
+          "eligible": true
+        },
+        {
+          "words": [
+            "SOCK",
+            "COLLAR",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.3086381256580353,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "BELT",
+            "CUFF",
+            "COLLAR"
+          ],
+          "similarity": 0.43428608775138855,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "BELT",
+            "CUFF",
+            "POCKET"
+          ],
+          "similarity": 0.3817102015018463,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "BELT",
+            "CUFF",
+            "HEM"
+          ],
+          "similarity": 0.317938894033432,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "BELT",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.3759891092777252,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "BELT",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.3128679692745209,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "BELT",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.2900463044643402,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "CUFF",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.4152161777019501,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "CUFF",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.3495756685733795,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "CUFF",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.3187282383441925,
+          "eligible": true
+        },
+        {
+          "words": [
+            "GLOVE",
+            "COLLAR",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.2971504032611847,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BELT",
+            "CUFF",
+            "COLLAR",
+            "POCKET"
+          ],
+          "similarity": 0.39365437626838684,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BELT",
+            "CUFF",
+            "COLLAR",
+            "HEM"
+          ],
+          "similarity": 0.33699384331703186,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BELT",
+            "CUFF",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.30613890290260315,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BELT",
+            "COLLAR",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.2965424060821533,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CUFF",
+            "COLLAR",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.3302065432071686,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.24759124219417572,
+      "max_similarity": 0.4607905447483063,
+      "selections": {
+        "yellow": {
+          "words": [
+            "SOCK",
+            "GLOVE",
+            "CUFF",
+            "COLLAR"
+          ],
+          "similarity": 0.4607905447483063,
+          "eligible": true,
+          "target": 0.4607905447483063
+        },
+        "green": {
+          "words": [
+            "CAP",
+            "SOCK",
+            "GLOVE",
+            "CUFF"
+          ],
+          "similarity": 0.39097046852111816,
+          "eligible": true,
+          "target": 0.3897241105635961
+        },
+        "blue": {
+          "words": [
+            "GLOVE",
+            "CUFF",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.3187282383441925,
+          "eligible": true,
+          "target": 0.3186576763788859
+        },
+        "purple": {
+          "words": [
+            "CAP",
+            "BELT",
+            "POCKET",
+            "HEM"
+          ],
+          "similarity": 0.24759124219417572,
+          "eligible": true,
+          "target": 0.24759124219417572
+        }
+      }
+    },
+    "new-08": {
+      "quartets": [
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CANVAS",
+            "EASEL"
+          ],
+          "similarity": 0.39447131752967834,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CANVAS",
+            "CHARCOAL"
+          ],
+          "similarity": 0.38940462470054626,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CANVAS",
+            "INK"
+          ],
+          "similarity": 0.3814784586429596,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CANVAS",
+            "PENCIL"
+          ],
+          "similarity": 0.4258807599544525,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CANVAS",
+            "PASTEL"
+          ],
+          "similarity": 0.3994457423686981,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "EASEL",
+            "CHARCOAL"
+          ],
+          "similarity": 0.3342038094997406,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "EASEL",
+            "INK"
+          ],
+          "similarity": 0.3348264694213867,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "EASEL",
+            "PENCIL"
+          ],
+          "similarity": 0.41269293427467346,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "EASEL",
+            "PASTEL"
+          ],
+          "similarity": 0.37493953108787537,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CHARCOAL",
+            "INK"
+          ],
+          "similarity": 0.34616079926490784,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CHARCOAL",
+            "PENCIL"
+          ],
+          "similarity": 0.38806280493736267,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CHARCOAL",
+            "PASTEL"
+          ],
+          "similarity": 0.3585043251514435,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.40108707547187805,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.3618852198123932,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.4037501811981201,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "EASEL",
+            "CHARCOAL"
+          ],
+          "similarity": 0.3525709807872772,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "EASEL",
+            "INK"
+          ],
+          "similarity": 0.3562454879283905,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "EASEL",
+            "PENCIL"
+          ],
+          "similarity": 0.4191392958164215,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "EASEL",
+            "PASTEL"
+          ],
+          "similarity": 0.35951733589172363,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "CHARCOAL",
+            "INK"
+          ],
+          "similarity": 0.3886694014072418,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "CHARCOAL",
+            "PENCIL"
+          ],
+          "similarity": 0.4155987799167633,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "CHARCOAL",
+            "PASTEL"
+          ],
+          "similarity": 0.36417174339294434,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.43167492747306824,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.37060442566871643,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CANVAS",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.3974967896938324,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "EASEL",
+            "CHARCOAL",
+            "INK"
+          ],
+          "similarity": 0.30944332480430603,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "EASEL",
+            "CHARCOAL",
+            "PENCIL"
+          ],
+          "similarity": 0.36983680725097656,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "EASEL",
+            "CHARCOAL",
+            "PASTEL"
+          ],
+          "similarity": 0.30709144473075867,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "EASEL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.3944617509841919,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "EASEL",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.3220728933811188,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "EASEL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.38242945075035095,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CHARCOAL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.4073222875595093,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CHARCOAL",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.34312841296195984,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "CHARCOAL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.36752042174339294,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BRUSH",
+            "INK",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.3949035406112671,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "EASEL",
+            "CHARCOAL"
+          ],
+          "similarity": 0.40891411900520325,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "EASEL",
+            "INK"
+          ],
+          "similarity": 0.4153565466403961,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "EASEL",
+            "PENCIL"
+          ],
+          "similarity": 0.4717157781124115,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "EASEL",
+            "PASTEL"
+          ],
+          "similarity": 0.44034871459007263,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "CHARCOAL",
+            "INK"
+          ],
+          "similarity": 0.43518301844596863,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "CHARCOAL",
+            "PENCIL"
+          ],
+          "similarity": 0.4555777311325073,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "CHARCOAL",
+            "PASTEL"
+          ],
+          "similarity": 0.43240562081336975,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.47442176938056946,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.4416062533855438,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CANVAS",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.4619639813899994,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "EASEL",
+            "CHARCOAL",
+            "INK"
+          ],
+          "similarity": 0.36022821068763733,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "EASEL",
+            "CHARCOAL",
+            "PENCIL"
+          ],
+          "similarity": 0.41408708691596985,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "EASEL",
+            "CHARCOAL",
+            "PASTEL"
+          ],
+          "similarity": 0.3795967102050781,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "EASEL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.44147995114326477,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "EASEL",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.3973461091518402,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "EASEL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.4511679708957672,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CHARCOAL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.44174301624298096,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CHARCOAL",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.4058040678501129,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "CHARCOAL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.423661470413208,
+          "eligible": true
+        },
+        {
+          "words": [
+            "PALETTE",
+            "INK",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.45381250977516174,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "EASEL",
+            "CHARCOAL",
+            "INK"
+          ],
+          "similarity": 0.39848414063453674,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "EASEL",
+            "CHARCOAL",
+            "PENCIL"
+          ],
+          "similarity": 0.4373704493045807,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "EASEL",
+            "CHARCOAL",
+            "PASTEL"
+          ],
+          "similarity": 0.38101139664649963,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "EASEL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.4678151309490204,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "EASEL",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.4018126428127289,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "EASEL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.4406619071960449,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "CHARCOAL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.48916780948638916,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "CHARCOAL",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.43136024475097656,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "CHARCOAL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.4342450201511383,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CANVAS",
+            "INK",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.4674479067325592,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EASEL",
+            "CHARCOAL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.4236518442630768,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EASEL",
+            "CHARCOAL",
+            "INK",
+            "PASTEL"
+          ],
+          "similarity": 0.35452595353126526,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EASEL",
+            "CHARCOAL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.3908749520778656,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EASEL",
+            "INK",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.4326266348361969,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CHARCOAL",
+            "INK",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.44261083006858826,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.30709144473075867,
+      "max_similarity": 0.48916780948638916,
+      "selections": {
+        "yellow": {
+          "words": [
+            "CANVAS",
+            "CHARCOAL",
+            "INK",
+            "PENCIL"
+          ],
+          "similarity": 0.48916780948638916,
+          "eligible": true,
+          "target": 0.48916780948638916
+        },
+        "green": {
+          "words": [
+            "BRUSH",
+            "PALETTE",
+            "CANVAS",
+            "PENCIL"
+          ],
+          "similarity": 0.4258807599544525,
+          "eligible": true,
+          "target": 0.428475687901179
+        },
+        "blue": {
+          "words": [
+            "BRUSH",
+            "CHARCOAL",
+            "PENCIL",
+            "PASTEL"
+          ],
+          "similarity": 0.36752042174339294,
+          "eligible": true,
+          "target": 0.3677835663159688
+        },
+        "purple": {
+          "words": [
+            "BRUSH",
+            "EASEL",
+            "CHARCOAL",
+            "PASTEL"
+          ],
+          "similarity": 0.30709144473075867,
+          "eligible": true,
+          "target": 0.30709144473075867
+        }
+      }
+    }
+  }
+}

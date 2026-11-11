@@ -1,0 +1,283 @@
+{
+  "reviewer": "independent editor agent",
+  "scope": "all eight fresh families, eight-word pools and selected quartet alternatives in full-puzzle context; semantic novelty against retained category registry",
+  "groups": {
+    "new-01-g0": {
+      "category": "ASSUME A POSITION",
+      "category_key": "body_postures",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are verbs for assuming a bodily position.",
+      "additional_members": []
+    },
+    "new-01-g1": {
+      "category": "VOICE DISSATISFACTION",
+      "category_key": "express_discontent",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight mean voicing dissatisfaction; this differs from retained criticism directed at a target.",
+      "additional_members": []
+    },
+    "new-01-g2": {
+      "category": "POLE WEAPONS",
+      "category_key": "pole_weapons",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are long-shafted weapons.",
+      "additional_members": []
+    },
+    "new-01-g3": {
+      "category": "ACT INEPTLY",
+      "category_key": "inept_performance",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight describe struggling or performing clumsily.",
+      "additional_members": []
+    },
+    "new-02-g0": {
+      "category": "MODEL ORGANISMS",
+      "category_key": "model_organisms",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name organisms used in biological research; several are broad classes rather than species.",
+      "additional_members": []
+    },
+    "new-02-g1": {
+      "category": "BAKED SWEETS",
+      "category_key": "baked_sweets",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are sweet baked goods.",
+      "additional_members": []
+    },
+    "new-02-g2": {
+      "category": "SENTIMENTAL OBJECTS",
+      "category_key": "sentimental_objects",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can name keepsakes or objects valued as reminders; TOKEN uses its memento sense rather than its computing sense.",
+      "additional_members": []
+    },
+    "new-02-g3": {
+      "category": "RESTAURANT ROLES",
+      "category_key": "restaurant_roles",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are restaurant job roles.",
+      "additional_members": []
+    },
+    "new-03-g0": {
+      "category": "PROGRAMMING LANGUAGES",
+      "category_key": "programming_languages",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are exact programming-language names.",
+      "additional_members": []
+    },
+    "new-03-g1": {
+      "category": "___ CITY",
+      "category_key": "____city",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established CITY names or nicknames; FORBIDDEN CITY is a palace complex.",
+      "additional_members": []
+    },
+    "new-03-g2": {
+      "category": "REBECCA SUGAR CHARACTERS",
+      "category_key": "steven_universe_characters",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are complete recognizable character names from Rebecca Sugar's Steven Universe; RUBY, EMERALD and SAPPHIRE elsewhere in this family are also characters.",
+      "additional_members": [
+        "RUBY",
+        "EMERALD",
+        "SAPPHIRE"
+      ]
+    },
+    "new-03-g3": {
+      "category": "___ BLUE",
+      "category_key": "____blue",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar BLUE color names.",
+      "additional_members": []
+    },
+    "new-04-g0": {
+      "category": "___MAN CHARACTERS",
+      "category_key": "____man_characters",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight complete exact established comic-character names ending MAN, with conventional hyphenation allowed.",
+      "additional_members": []
+    },
+    "new-04-g1": {
+      "category": "SOCIAL EVENTS",
+      "category_key": "social_events",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name organized social events.",
+      "additional_members": []
+    },
+    "new-04-g2": {
+      "category": "ANNIVERSARY MATERIALS",
+      "category_key": "anniversary_materials",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are traditional wedding-anniversary materials, with customary regional variation.",
+      "additional_members": []
+    },
+    "new-04-g3": {
+      "category": "ALKALINE TERMS",
+      "category_key": "alkaline_terms",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight name basic chemicals or base-related chemical classes.",
+      "additional_members": []
+    },
+    "new-05-g0": {
+      "category": "MOVE HURRIEDLY",
+      "category_key": "move_hurriedly",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean moving or proceeding quickly.",
+      "additional_members": []
+    },
+    "new-05-g1": {
+      "category": "PH PRONOUNCED F",
+      "category_key": "ph_pronounced_f",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight contain PH pronounced as the F sound.",
+      "additional_members": []
+    },
+    "new-05-g2": {
+      "category": "TOURNAMENT TERMS",
+      "category_key": "tournament_structure",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight concern tournament arrangement or progression.",
+      "additional_members": []
+    },
+    "new-05-g3": {
+      "category": "REDUCE",
+      "category_key": "reduce_quantity",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean making or becoming smaller in amount.",
+      "additional_members": []
+    },
+    "new-06-g0": {
+      "category": "___ SIZE",
+      "category_key": "____size",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form established SIZE expressions, with standard hyphenation allowed.",
+      "additional_members": []
+    },
+    "new-06-g1": {
+      "category": "DECEIVE",
+      "category_key": "defraud",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean deceiving or cheating.",
+      "additional_members": []
+    },
+    "new-06-g2": {
+      "category": "LOAN SECURITY",
+      "category_key": "loan_security",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can name property or legal arrangements securing an obligation; PAWN uses its pledged-property noun sense.",
+      "additional_members": []
+    },
+    "new-06-g3": {
+      "category": "CHRISTIAN CLERGY",
+      "category_key": "christian_clergy",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are Christian clergy titles or roles.",
+      "additional_members": []
+    },
+    "new-07-g0": {
+      "category": "___ DRAWER",
+      "category_key": "____drawer",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form ordinary DRAWER expressions; this descriptor category also admits several words from the compartment pool.",
+      "additional_members": [
+        "STORAGE",
+        "BATTERY",
+        "FREEZER",
+        "SECRET",
+        "GLOVE"
+      ]
+    },
+    "new-07-g1": {
+      "category": "___ COMPARTMENT",
+      "category_key": "____compartment",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form ordinary COMPARTMENT expressions; broad container descriptors produce cross-memberships with the drawer pool.",
+      "additional_members": [
+        "CASH",
+        "UTILITY",
+        "KNIFE",
+        "SILVERWARE",
+        "DESK"
+      ]
+    },
+    "new-07-g2": {
+      "category": "DOUBLED FINAL LETTERS",
+      "category_key": "doubled_final_letters",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight end with a doubled consonant; a literal spelling connection distinct from retained phonetic wordplay.",
+      "additional_members": []
+    },
+    "new-07-g3": {
+      "category": "APPREHEND",
+      "category_key": "apprehend",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can mean catching or taking into custody.",
+      "additional_members": []
+    },
+    "new-08-g0": {
+      "category": "WOVEN FABRICS",
+      "category_key": "woven_fabrics",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are woven fabrics.",
+      "additional_members": []
+    },
+    "new-08-g1": {
+      "category": "BARBECUE FUELS",
+      "category_key": "barbecue_fuels",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight are gases, charcoal or woods used to fuel barbecues; wood species here express fuel use rather than the retained tree-name relation.",
+      "additional_members": [
+        "LOG"
+      ]
+    },
+    "new-08-g2": {
+      "category": "WRITE ON DOCUMENTS",
+      "category_key": "document_signing",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight can denote writing on documents, especially signatures or endorsements; this broader label truthfully includes INSCRIBE.",
+      "additional_members": []
+    },
+    "new-08-g3": {
+      "category": "___ IN",
+      "category_key": "____in",
+      "invalid_words": [],
+      "reject": false,
+      "note": "All eight form familiar IN phrasal verbs; SIGN and INK also fit.",
+      "additional_members": [
+        "SIGN",
+        "INK"
+      ]
+    }
+  }
+}

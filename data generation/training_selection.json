@@ -1,0 +1,2309 @@
+{
+  "selection": "Maximum-size disjoint set of existing reviewed candidate partitions",
+  "optimizer": "Optimization terminated successfully. (HiGHS Status 7: Optimal)",
+  "semantic_category_aliases": {
+    "FOOD PREPARATION VERBS": "cooking_verbs",
+    "COOKING ACTIONS": "cooking_verbs",
+    "MAKE FUN OF": "verbal_criticism",
+    "CRITICIZE HARSHLY": "verbal_criticism",
+    "ANGRY REACTIONS": "verbal_criticism",
+    "DEPLETE ENERGY": "exhaust",
+    "WEAR OUT": "exhaust",
+    "GARDEN TOOLS": "hand_tools",
+    "HAND TOOLS": "hand_tools",
+    "BEAT DECISIVELY": "hit_or_beat",
+    "STRIKING ACTIONS": "hit_or_beat",
+    "BODY PARTS": "body_parts",
+    "BODY REGIONS": "body_parts"
+  },
+  "puzzles": [
+    {
+      "id": "fc-01-v04",
+      "tree_id": "fc-01",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-01-v04",
+      "words": [
+        "NECK",
+        "TORSO",
+        "BIFURCATE",
+        "SCAN",
+        "FORK",
+        "BACKPACK",
+        "TRUNK",
+        "VEER",
+        "LIMB",
+        "LEG",
+        "BRANCH",
+        "THUMB",
+        "RIFFLE",
+        "DUFFEL",
+        "LEAF",
+        "SUITCASE"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-01-g3",
+          "answerDescription": "BODY PARTS",
+          "words": [
+            "LIMB",
+            "LEG",
+            "NECK",
+            "TORSO"
+          ],
+          "selection_color": "green",
+          "similarity": 0.5431470274925232,
+          "color": "yellow",
+          "category_key": "body_parts"
+        },
+        {
+          "group_id": "fc-01-g0",
+          "answerDescription": "LUGGAGE",
+          "words": [
+            "TRUNK",
+            "SUITCASE",
+            "DUFFEL",
+            "BACKPACK"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.5529281497001648,
+          "color": "green",
+          "category_key": "luggage"
+        },
+        {
+          "group_id": "fc-01-g1",
+          "answerDescription": "DIVERGE",
+          "words": [
+            "BRANCH",
+            "FORK",
+            "VEER",
+            "BIFURCATE"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.26912763714790344,
+          "color": "blue",
+          "category_key": "diverge"
+        },
+        {
+          "group_id": "fc-01-g2",
+          "answerDescription": "___ THROUGH",
+          "words": [
+            "LEAF",
+            "THUMB",
+            "SCAN",
+            "RIFFLE"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.20986585319042206,
+          "color": "purple",
+          "category_key": "____through"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "CANVASS",
+        "GOOBER",
+        "TOPKNOT",
+        "CHESTNUT"
+      ],
+      "distractors": {
+        "category": "TREE PARTS",
+        "words": [
+          "TRUNK",
+          "BRANCH",
+          "LEAF",
+          "LIMB"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-02-v24",
+      "tree_id": "fc-02",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-02-v24",
+      "words": [
+        "COAT",
+        "SEASON",
+        "TRIAL",
+        "CASE",
+        "CONVERT",
+        "VEST",
+        "BASTE",
+        "GLAZE",
+        "ACTION",
+        "SHEATHE",
+        "ENVELOP",
+        "COVER",
+        "SUIT",
+        "DRESS",
+        "TRANSFER",
+        "SELL"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-02-g1",
+          "answerDescription": "PROVIDE A COVERING",
+          "words": [
+            "COAT",
+            "COVER",
+            "SHEATHE",
+            "ENVELOP"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.35862740874290466,
+          "color": "yellow",
+          "category_key": "provide_a_covering"
+        },
+        {
+          "group_id": "fc-02-g0",
+          "answerDescription": "FOOD PREPARATION VERBS",
+          "words": [
+            "DRESS",
+            "BASTE",
+            "SEASON",
+            "GLAZE"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.17812912166118622,
+          "color": "green",
+          "category_key": "cooking_verbs"
+        },
+        {
+          "group_id": "fc-02-g2",
+          "answerDescription": "LEGAL PROCEEDINGS",
+          "words": [
+            "SUIT",
+            "ACTION",
+            "CASE",
+            "TRIAL"
+          ],
+          "selection_color": "green",
+          "similarity": 0.3234558403491974,
+          "color": "blue",
+          "category_key": "legal_proceedings"
+        },
+        {
+          "group_id": "fc-02-g3",
+          "answerDescription": "EQUITY AWARD VERBS",
+          "words": [
+            "VEST",
+            "SELL",
+            "TRANSFER",
+            "CONVERT"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.32943180203437805,
+          "color": "purple",
+          "category_key": "equity_award_verbs"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "ITCHY",
+        "COUSIN",
+        "STAKE",
+        "DRESS"
+      ],
+      "distractors": {
+        "category": "GARMENTS",
+        "words": [
+          "DRESS",
+          "COAT",
+          "SUIT",
+          "VEST"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-03-v04",
+      "tree_id": "fc-03",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-03-v04",
+      "words": [
+        "SCHISM",
+        "GAMMA",
+        "GULF",
+        "SHAWL",
+        "CLOAK",
+        "SPARE",
+        "BREACH",
+        "THETA",
+        "ETA",
+        "DELTA",
+        "PLAIN",
+        "UNDECORATED",
+        "CAPE",
+        "PONCHO",
+        "SEVERE",
+        "SPLIT"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-03-g1",
+          "answerDescription": "GREEK LETTERS",
+          "words": [
+            "DELTA",
+            "GAMMA",
+            "ETA",
+            "THETA"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.33103838562965393,
+          "color": "yellow",
+          "category_key": "greek_letters"
+        },
+        {
+          "group_id": "fc-03-g0",
+          "answerDescription": "SHOULDER COVERINGS",
+          "words": [
+            "CAPE",
+            "CLOAK",
+            "SHAWL",
+            "PONCHO"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.5209972858428955,
+          "color": "green",
+          "category_key": "shoulder_coverings"
+        },
+        {
+          "group_id": "fc-03-g2",
+          "answerDescription": "UNADORNED",
+          "words": [
+            "PLAIN",
+            "SPARE",
+            "UNDECORATED",
+            "SEVERE"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.22498811781406403,
+          "color": "blue",
+          "category_key": "unadorned"
+        },
+        {
+          "group_id": "fc-03-g3",
+          "answerDescription": "SEPARATION",
+          "words": [
+            "GULF",
+            "BREACH",
+            "SCHISM",
+            "SPLIT"
+          ],
+          "selection_color": "green",
+          "similarity": 0.3214084208011627,
+          "color": "purple",
+          "category_key": "separation"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "BANKS",
+        "PIC",
+        "LEVEL",
+        "LAND"
+      ],
+      "distractors": {
+        "category": "GEOGRAPHIC FEATURES",
+        "words": [
+          "CAPE",
+          "DELTA",
+          "PLAIN",
+          "GULF"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-04-v11",
+      "tree_id": "fc-04",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-04-v11",
+      "words": [
+        "RIP",
+        "WARNING",
+        "BLAST",
+        "RAVEN",
+        "CEDAR",
+        "COAL",
+        "START",
+        "HAND",
+        "EBONY",
+        "TRASH",
+        "SMOKE",
+        "FLAME",
+        "ELM",
+        "FIR",
+        "ASH",
+        "JET"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-04-g1",
+          "answerDescription": "TREES",
+          "words": [
+            "ASH",
+            "ELM",
+            "FIR",
+            "CEDAR"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.3609257936477661,
+          "color": "yellow",
+          "category_key": "trees"
+        },
+        {
+          "group_id": "fc-04-g0",
+          "answerDescription": "CRITICIZE HARSHLY",
+          "words": [
+            "FLAME",
+            "BLAST",
+            "RIP",
+            "TRASH"
+          ],
+          "selection_color": "green",
+          "similarity": 0.2944442331790924,
+          "color": "green",
+          "category_key": "verbal_criticism"
+        },
+        {
+          "group_id": "fc-04-g2",
+          "answerDescription": "___ BLACK",
+          "words": [
+            "COAL",
+            "JET",
+            "RAVEN",
+            "EBONY"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.3253161609172821,
+          "color": "blue",
+          "category_key": "____black"
+        },
+        {
+          "group_id": "fc-04-g3",
+          "answerDescription": "___ SIGNAL",
+          "words": [
+            "SMOKE",
+            "HAND",
+            "WARNING",
+            "START"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.22413019835948944,
+          "color": "purple",
+          "category_key": "____signal"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "CREST",
+        "DOJA",
+        "SPARKS",
+        "QUADRANT"
+      ],
+      "distractors": {
+        "category": "FIRE VOCABULARY",
+        "words": [
+          "FLAME",
+          "ASH",
+          "COAL",
+          "SMOKE"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-05-v24",
+      "tree_id": "fc-05",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-05-v24",
+      "words": [
+        "DEBILITATE",
+        "FATIGUE",
+        "SINK",
+        "CHUCK",
+        "POT",
+        "WEARY",
+        "BEAT",
+        "NOTE",
+        "PASS",
+        "CAST",
+        "COOK",
+        "PITCH",
+        "LOB",
+        "KEY",
+        "PORT",
+        "TEXT"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-05-g0",
+          "answerDescription": "THROW",
+          "words": [
+            "PITCH",
+            "CAST",
+            "CHUCK",
+            "LOB"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.20506899058818817,
+          "color": "yellow",
+          "category_key": "throw"
+        },
+        {
+          "group_id": "fc-05-g3",
+          "answerDescription": "DEPLETE ENERGY",
+          "words": [
+            "BEAT",
+            "FATIGUE",
+            "WEARY",
+            "DEBILITATE"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.3784380853176117,
+          "color": "green",
+          "category_key": "exhaust"
+        },
+        {
+          "group_id": "fc-05-g1",
+          "answerDescription": "___ BOOK",
+          "words": [
+            "NOTE",
+            "COOK",
+            "TEXT",
+            "PASS"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.23308490216732025,
+          "color": "blue",
+          "category_key": "____book"
+        },
+        {
+          "group_id": "fc-05-g2",
+          "answerDescription": "___ HOLE",
+          "words": [
+            "KEY",
+            "PORT",
+            "SINK",
+            "POT"
+          ],
+          "selection_color": "green",
+          "similarity": 0.2752496004104614,
+          "color": "purple",
+          "category_key": "____hole"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "GRINCH",
+        "SPIKE",
+        "LEGEND",
+        "SABBATH"
+      ],
+      "distractors": {
+        "category": "MUSIC TERMS",
+        "words": [
+          "PITCH",
+          "NOTE",
+          "KEY",
+          "BEAT"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-08-v24",
+      "tree_id": "fc-08",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-08-v24",
+      "words": [
+        "ROCK",
+        "PACK",
+        "HERD",
+        "TRAFFIC",
+        "FALLING",
+        "FASCINATE",
+        "MESMERIZE",
+        "CAPTIVATE",
+        "CHARM",
+        "APRICOT",
+        "RASPBERRY",
+        "BEVY",
+        "PEARL",
+        "MOVIE",
+        "BAND",
+        "CHILD"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-08-g0",
+          "answerDescription": "COLLECTIVE GROUPS",
+          "words": [
+            "BAND",
+            "HERD",
+            "PACK",
+            "BEVY"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.24082164466381073,
+          "color": "yellow",
+          "category_key": "collective_groups"
+        },
+        {
+          "group_id": "fc-08-g3",
+          "answerDescription": "HOLD ATTENTION",
+          "words": [
+            "CHARM",
+            "CAPTIVATE",
+            "FASCINATE",
+            "MESMERIZE"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.4331890642642975,
+          "color": "green",
+          "category_key": "hold_attention"
+        },
+        {
+          "group_id": "fc-08-g2",
+          "answerDescription": "___ STAR",
+          "words": [
+            "ROCK",
+            "MOVIE",
+            "CHILD",
+            "FALLING"
+          ],
+          "selection_color": "green",
+          "similarity": 0.2859432101249695,
+          "color": "blue",
+          "category_key": "____star"
+        },
+        {
+          "group_id": "fc-08-g1",
+          "answerDescription": "___ JAM",
+          "words": [
+            "PEARL",
+            "TRAFFIC",
+            "RASPBERRY",
+            "APRICOT"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.25408935546875,
+          "color": "purple",
+          "category_key": "____jam"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "BULB",
+        "BROOCH",
+        "BUDGET",
+        "TENDER"
+      ],
+      "distractors": {
+        "category": "JEWELRY TERMS",
+        "words": [
+          "BAND",
+          "PEARL",
+          "ROCK",
+          "CHARM"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-09-v24",
+      "tree_id": "fc-09",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-09-v24",
+      "words": [
+        "JUBILATION",
+        "BUFFALO",
+        "CHUMS",
+        "AUSTIN",
+        "MIRTH",
+        "MISPLACED",
+        "LOST",
+        "FARGO",
+        "BLISS",
+        "PHOENIX",
+        "ABSENT",
+        "COMPANIONS",
+        "BUDDIES",
+        "VANISHED",
+        "FRIENDS",
+        "GLEE"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-09-g0",
+          "answerDescription": "HAPPINESS",
+          "words": [
+            "GLEE",
+            "BLISS",
+            "MIRTH",
+            "JUBILATION"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.41772961616516113,
+          "color": "yellow",
+          "category_key": "happiness"
+        },
+        {
+          "group_id": "fc-09-g1",
+          "answerDescription": "CLOSE ASSOCIATES",
+          "words": [
+            "FRIENDS",
+            "BUDDIES",
+            "CHUMS",
+            "COMPANIONS"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.4882069528102875,
+          "color": "green",
+          "category_key": "close_associates"
+        },
+        {
+          "group_id": "fc-09-g2",
+          "answerDescription": "UNLOCATED",
+          "words": [
+            "LOST",
+            "ABSENT",
+            "MISPLACED",
+            "VANISHED"
+          ],
+          "selection_color": "green",
+          "similarity": 0.4951775074005127,
+          "color": "blue",
+          "category_key": "unlocated"
+        },
+        {
+          "group_id": "fc-09-g3",
+          "answerDescription": "AMERICAN CITIES",
+          "words": [
+            "FARGO",
+            "PHOENIX",
+            "BUFFALO",
+            "AUSTIN"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.39619457721710205,
+          "color": "purple",
+          "category_key": "american_cities"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "SI",
+        "MICHELLE",
+        "COBWEB",
+        "GLEE"
+      ],
+      "distractors": {
+        "category": "TELEVISION TITLES",
+        "words": [
+          "GLEE",
+          "FRIENDS",
+          "LOST",
+          "FARGO"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-10-v22",
+      "tree_id": "fc-10",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-10-v22",
+      "words": [
+        "TROUNCE",
+        "SILVER",
+        "EVENING",
+        "CREAM",
+        "GOLD",
+        "FLOW",
+        "ADRENALINE",
+        "WALLOP",
+        "TAN",
+        "GOD",
+        "LAND",
+        "ACT",
+        "WOOL",
+        "ROUT",
+        "COTTON",
+        "SATIN"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-10-g1",
+          "answerDescription": "___ LINING",
+          "words": [
+            "SILVER",
+            "COTTON",
+            "SATIN",
+            "WOOL"
+          ],
+          "selection_color": "green",
+          "similarity": 0.44010522961616516,
+          "color": "yellow",
+          "category_key": "____lining"
+        },
+        {
+          "group_id": "fc-10-g0",
+          "answerDescription": "___ RUSH",
+          "words": [
+            "GOLD",
+            "LAND",
+            "ADRENALINE",
+            "EVENING"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.19532912969589233,
+          "color": "green",
+          "category_key": "____rush"
+        },
+        {
+          "group_id": "fc-10-g3",
+          "answerDescription": "BEAT DECISIVELY",
+          "words": [
+            "CREAM",
+            "ROUT",
+            "TROUNCE",
+            "WALLOP"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.3339940011501312,
+          "color": "blue",
+          "category_key": "hit_or_beat"
+        },
+        {
+          "group_id": "fc-10-g2",
+          "answerDescription": "ANAGRAMMED ANIMALS",
+          "words": [
+            "TAN",
+            "ACT",
+            "GOD",
+            "FLOW"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.2079400271177292,
+          "color": "purple",
+          "category_key": "anagrammed_animals"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "YELLOW",
+        "SUNFLOWER",
+        "WHITE",
+        "CENTER"
+      ],
+      "distractors": {
+        "category": "COLOR NAMES",
+        "words": [
+          "GOLD",
+          "SILVER",
+          "TAN",
+          "CREAM"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-11-v23",
+      "tree_id": "fc-11",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-11-v23",
+      "words": [
+        "BRAVE",
+        "LEOPARD",
+        "LION",
+        "SWEET",
+        "BLEEDING",
+        "DODGE",
+        "HAMMERHEAD",
+        "FOOT",
+        "BASKING",
+        "JAGUAR",
+        "ANIMAL",
+        "FORD",
+        "NURSE",
+        "FINGER",
+        "BUICK",
+        "TIGER"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-11-g3",
+          "answerDescription": "CAR BRANDS",
+          "words": [
+            "JAGUAR",
+            "FORD",
+            "BUICK",
+            "DODGE"
+          ],
+          "selection_color": "green",
+          "similarity": 0.3685263395309448,
+          "color": "yellow",
+          "category_key": "car_brands"
+        },
+        {
+          "group_id": "fc-11-g0",
+          "answerDescription": "___ SHARK",
+          "words": [
+            "TIGER",
+            "NURSE",
+            "BASKING",
+            "HAMMERHEAD"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.21482932567596436,
+          "color": "green",
+          "category_key": "____shark"
+        },
+        {
+          "group_id": "fc-11-g1",
+          "answerDescription": "___ HEART",
+          "words": [
+            "LION",
+            "SWEET",
+            "BRAVE",
+            "BLEEDING"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.224955216050148,
+          "color": "blue",
+          "category_key": "____heart"
+        },
+        {
+          "group_id": "fc-11-g2",
+          "answerDescription": "___ PRINT",
+          "words": [
+            "LEOPARD",
+            "ANIMAL",
+            "FINGER",
+            "FOOT"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.34695419669151306,
+          "color": "purple",
+          "category_key": "____print"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "TABBY",
+        "ROT",
+        "BATON",
+        "SHARE"
+      ],
+      "distractors": {
+        "category": "WILD CATS",
+        "words": [
+          "TIGER",
+          "LION",
+          "LEOPARD",
+          "JAGUAR"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-12-v23",
+      "tree_id": "fc-12",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-12-v23",
+      "words": [
+        "MOTOR",
+        "HARASS",
+        "FINGERPRINT",
+        "PESTER",
+        "BET",
+        "HAZARD",
+        "TROUBLE",
+        "RISK",
+        "SPECULATE",
+        "HAIR",
+        "LIFE",
+        "FIBER",
+        "VEX",
+        "STEAM",
+        "CLUE",
+        "SPEED"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-12-g1",
+          "answerDescription": "IRRITATE",
+          "words": [
+            "TROUBLE",
+            "VEX",
+            "PESTER",
+            "HARASS"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.24444735050201416,
+          "color": "yellow",
+          "category_key": "irritate"
+        },
+        {
+          "group_id": "fc-12-g0",
+          "answerDescription": "TAKE RISKS",
+          "words": [
+            "RISK",
+            "BET",
+            "HAZARD",
+            "SPECULATE"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.2689570486545563,
+          "color": "green",
+          "category_key": "take_risks"
+        },
+        {
+          "group_id": "fc-12-g2",
+          "answerDescription": "DETECTIVE EVIDENCE",
+          "words": [
+            "CLUE",
+            "FINGERPRINT",
+            "FIBER",
+            "HAIR"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.33346259593963623,
+          "color": "blue",
+          "category_key": "detective_evidence"
+        },
+        {
+          "group_id": "fc-12-g3",
+          "answerDescription": "___ BOAT",
+          "words": [
+            "LIFE",
+            "SPEED",
+            "STEAM",
+            "MOTOR"
+          ],
+          "selection_color": "green",
+          "similarity": 0.23994080722332,
+          "color": "purple",
+          "category_key": "____boat"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "JOHN",
+        "RUBY",
+        "BEANS",
+        "SWIMMING"
+      ],
+      "distractors": {
+        "category": "BOARD GAMES",
+        "words": [
+          "RISK",
+          "TROUBLE",
+          "CLUE",
+          "LIFE"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-13-v20",
+      "tree_id": "fc-13",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-13-v20",
+      "words": [
+        "RECTANGLE",
+        "COMPACTOR",
+        "BACKHOE",
+        "RETAIL",
+        "EVADE",
+        "ELUDE",
+        "CIRCUMVENT",
+        "GRADER",
+        "DUCK",
+        "PURVEY",
+        "CRANE",
+        "SQUARE",
+        "HAWK",
+        "MARKET",
+        "RHOMBUS",
+        "KITE"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-13-g0",
+          "answerDescription": "CONSTRUCTION MACHINES",
+          "words": [
+            "CRANE",
+            "GRADER",
+            "BACKHOE",
+            "COMPACTOR"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.2424132227897644,
+          "color": "yellow",
+          "category_key": "construction_machines"
+        },
+        {
+          "group_id": "fc-13-g3",
+          "answerDescription": "QUADRILATERALS",
+          "words": [
+            "KITE",
+            "SQUARE",
+            "RECTANGLE",
+            "RHOMBUS"
+          ],
+          "selection_color": "green",
+          "similarity": 0.3831748068332672,
+          "color": "green",
+          "category_key": "quadrilaterals"
+        },
+        {
+          "group_id": "fc-13-g1",
+          "answerDescription": "AVOID",
+          "words": [
+            "DUCK",
+            "EVADE",
+            "ELUDE",
+            "CIRCUMVENT"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.41470590233802795,
+          "color": "blue",
+          "category_key": "avoid"
+        },
+        {
+          "group_id": "fc-13-g2",
+          "answerDescription": "OFFER FOR SALE",
+          "words": [
+            "HAWK",
+            "MARKET",
+            "RETAIL",
+            "PURVEY"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.24713481962680817,
+          "color": "purple",
+          "category_key": "offer_for_sale"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "PERCH",
+        "JIFFY",
+        "WAVE",
+        "ATTACK"
+      ],
+      "distractors": {
+        "category": "BIRDS",
+        "words": [
+          "CRANE",
+          "DUCK",
+          "HAWK",
+          "KITE"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "fc-15-v24",
+      "tree_id": "fc-15",
+      "method": "false_connection",
+      "contest": "Synthetic Connections fc-15-v24",
+      "words": [
+        "IDLER",
+        "SLACKER",
+        "FIRE",
+        "BOLT",
+        "SINGLE",
+        "EJECT",
+        "OCCLUDE",
+        "BOOT",
+        "LOUNGER",
+        "CLOG",
+        "STOPPER",
+        "STOP",
+        "LOAFER",
+        "DISMISS",
+        "JAM",
+        "PUMP"
+      ],
+      "answers": [
+        {
+          "group_id": "fc-15-g1",
+          "answerDescription": "IMPEDE",
+          "words": [
+            "CLOG",
+            "STOPPER",
+            "OCCLUDE",
+            "JAM"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.36608168482780457,
+          "color": "yellow",
+          "category_key": "impede"
+        },
+        {
+          "group_id": "fc-15-g2",
+          "answerDescription": "REMOVE FROM POSITION",
+          "words": [
+            "BOOT",
+            "FIRE",
+            "EJECT",
+            "DISMISS"
+          ],
+          "selection_color": "green",
+          "similarity": 0.37667545676231384,
+          "color": "green",
+          "category_key": "remove_from_position"
+        },
+        {
+          "group_id": "fc-15-g3",
+          "answerDescription": "WORK AVOIDERS",
+          "words": [
+            "LOAFER",
+            "SLACKER",
+            "IDLER",
+            "LOUNGER"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.4920210838317871,
+          "color": "blue",
+          "category_key": "work_avoiders"
+        },
+        {
+          "group_id": "fc-15-g0",
+          "answerDescription": "___ ACTION",
+          "words": [
+            "PUMP",
+            "BOLT",
+            "SINGLE",
+            "STOP"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.1884005218744278,
+          "color": "purple",
+          "category_key": "____action"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "SOUP",
+        "FINAL",
+        "GUCCI",
+        "LEGGINGS"
+      ],
+      "distractors": {
+        "category": "FOOTWEAR",
+        "words": [
+          "PUMP",
+          "CLOG",
+          "BOOT",
+          "LOAFER"
+        ]
+      },
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-02-v21",
+      "tree_id": "io-02",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-02-v21",
+      "words": [
+        "NOBLE",
+        "COUNT",
+        "TOP",
+        "EARL",
+        "VIRTUOUS",
+        "UPRIGHT",
+        "MARQUIS",
+        "MORAL",
+        "DUKE",
+        "PREPARED",
+        "FINE",
+        "CHOICE",
+        "GRAND",
+        "ELECTRIC",
+        "ETHICAL",
+        "ACOUSTIC"
+      ],
+      "answers": [
+        {
+          "group_id": "io-02-g3",
+          "answerDescription": "ARISTOCRATS",
+          "words": [
+            "DUKE",
+            "EARL",
+            "COUNT",
+            "MARQUIS"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.3313502371311188,
+          "color": "yellow",
+          "category_key": "aristocrats"
+        },
+        {
+          "group_id": "io-02-g2",
+          "answerDescription": "HONORABLE",
+          "words": [
+            "MORAL",
+            "ETHICAL",
+            "NOBLE",
+            "VIRTUOUS"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.5116185545921326,
+          "color": "green",
+          "category_key": "honorable"
+        },
+        {
+          "group_id": "io-02-g0",
+          "answerDescription": "EXCELLENT",
+          "words": [
+            "FINE",
+            "GRAND",
+            "TOP",
+            "CHOICE"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.20844893157482147,
+          "color": "blue",
+          "category_key": "excellent"
+        },
+        {
+          "group_id": "io-02-g1",
+          "answerDescription": "___ PIANO",
+          "words": [
+            "UPRIGHT",
+            "ELECTRIC",
+            "PREPARED",
+            "ACOUSTIC"
+          ],
+          "selection_color": "green",
+          "similarity": 0.2799326181411743,
+          "color": "purple",
+          "category_key": "____piano"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "FLUKE",
+        "PLACED",
+        "CRACKERJACK",
+        "NUCLEUS"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "GRAND",
+          "alternate_meaning": "A grand piano is an instrument, rather than grand meaning excellent."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "UPRIGHT",
+          "alternate_meaning": "Upright also describes honorable conduct."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "NOBLE",
+          "alternate_meaning": "A noble is a member of the aristocracy."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-03-v21",
+      "tree_id": "io-03",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-03-v21",
+      "words": [
+        "KNIGHT",
+        "PRISON",
+        "STAMEN",
+        "PISTIL",
+        "STEM",
+        "SPIRIT",
+        "RIGHT",
+        "SUN",
+        "DRY",
+        "JAIL",
+        "PETAL",
+        "BACKBONE",
+        "PLUCK",
+        "SON",
+        "NERVE",
+        "SEPAL"
+      ],
+      "answers": [
+        {
+          "group_id": "io-03-g0",
+          "answerDescription": "COURAGE",
+          "words": [
+            "NERVE",
+            "SPIRIT",
+            "PLUCK",
+            "BACKBONE"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.28144124150276184,
+          "color": "yellow",
+          "category_key": "courage"
+        },
+        {
+          "group_id": "io-03-g2",
+          "answerDescription": "FLOWER PARTS",
+          "words": [
+            "PETAL",
+            "SEPAL",
+            "STAMEN",
+            "PISTIL"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.40398970246315,
+          "color": "green",
+          "category_key": "flower_parts"
+        },
+        {
+          "group_id": "io-03-g1",
+          "answerDescription": "___ CELL",
+          "words": [
+            "STEM",
+            "PRISON",
+            "JAIL",
+            "DRY"
+          ],
+          "selection_color": "green",
+          "similarity": 0.3337562084197998,
+          "color": "blue",
+          "category_key": "____cell"
+        },
+        {
+          "group_id": "io-03-g3",
+          "answerDescription": "WORDS WITH HOMOPHONES",
+          "words": [
+            "RIGHT",
+            "KNIGHT",
+            "SUN",
+            "SON"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.22238071262836456,
+          "color": "purple",
+          "category_key": "words_with_homophones"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "STOOGE",
+        "MU",
+        "TIMER",
+        "NERVE"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "NERVE",
+          "alternate_meaning": "A nerve cell is a neuron."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "STEM",
+          "alternate_meaning": "A stem is the supporting part of a flower."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "PISTIL",
+          "alternate_meaning": "Pistil sounds like pistol."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-05-v22",
+      "tree_id": "io-05",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-05-v22",
+      "words": [
+        "SILICON",
+        "BRAN",
+        "WRAP",
+        "SOAP",
+        "OATS",
+        "CHOCOLATE",
+        "RICE",
+        "COCONUT",
+        "CORN",
+        "RYE",
+        "MILLET",
+        "WHITE",
+        "POTATO",
+        "COMPUTER",
+        "MEMORY",
+        "ROLL"
+      ],
+      "answers": [
+        {
+          "group_id": "io-05-g0",
+          "answerDescription": "SANDWICH BREADS",
+          "words": [
+            "ROLL",
+            "RYE",
+            "WHITE",
+            "WRAP"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.2232782244682312,
+          "color": "yellow",
+          "category_key": "sandwich_breads"
+        },
+        {
+          "group_id": "io-05-g1",
+          "answerDescription": "CEREAL GRAINS",
+          "words": [
+            "CORN",
+            "OATS",
+            "RICE",
+            "MILLET"
+          ],
+          "selection_color": "green",
+          "similarity": 0.5092002153396606,
+          "color": "green",
+          "category_key": "cereal_grains"
+        },
+        {
+          "group_id": "io-05-g2",
+          "answerDescription": "___ FLAKES",
+          "words": [
+            "BRAN",
+            "COCONUT",
+            "POTATO",
+            "SOAP"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.30616089701652527,
+          "color": "blue",
+          "category_key": "____flakes"
+        },
+        {
+          "group_id": "io-05-g3",
+          "answerDescription": "___ CHIP",
+          "words": [
+            "SILICON",
+            "COMPUTER",
+            "CHOCOLATE",
+            "MEMORY"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.370505690574646,
+          "color": "purple",
+          "category_key": "____chip"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "NICKS",
+        "CASTLE",
+        "ANCHOR",
+        "HOAGIE"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "RYE",
+          "alternate_meaning": "Rye is a cereal grain as well as a bread name."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "CORN",
+          "alternate_meaning": "Cornflakes are a breakfast cereal."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "POTATO",
+          "alternate_meaning": "A potato chip is a thin fried snack."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-06-v16",
+      "tree_id": "io-06",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-06-v16",
+      "words": [
+        "TAP",
+        "VIEW",
+        "SALSA",
+        "CLIP",
+        "BREAK",
+        "WALTZ",
+        "TANGO",
+        "SPRING",
+        "POLKA",
+        "STILL",
+        "PIN",
+        "LOW",
+        "HIGH",
+        "SALT",
+        "TIE",
+        "HOOK"
+      ],
+      "answers": [
+        {
+          "group_id": "io-06-g0",
+          "answerDescription": "FASTENING METHODS",
+          "words": [
+            "TIE",
+            "CLIP",
+            "PIN",
+            "HOOK"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.3294863998889923,
+          "color": "yellow",
+          "category_key": "fastening_methods"
+        },
+        {
+          "group_id": "io-06-g3",
+          "answerDescription": "DANCES",
+          "words": [
+            "WALTZ",
+            "TANGO",
+            "SALSA",
+            "POLKA"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.5040240287780762,
+          "color": "green",
+          "category_key": "dances"
+        },
+        {
+          "group_id": "io-06-g2",
+          "answerDescription": "___ WATER",
+          "words": [
+            "SPRING",
+            "TAP",
+            "SALT",
+            "STILL"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.1630600094795227,
+          "color": "blue",
+          "category_key": "____water"
+        },
+        {
+          "group_id": "io-06-g1",
+          "answerDescription": "___ POINT",
+          "words": [
+            "HIGH",
+            "LOW",
+            "BREAK",
+            "VIEW"
+          ],
+          "selection_color": "green",
+          "similarity": 0.2878437042236328,
+          "color": "purple",
+          "category_key": "____point"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "ATM",
+        "BOWLINE",
+        "FEAST",
+        "PRELIMINARY"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "PIN",
+          "alternate_meaning": "Pinpoint is an exact position; the blank may form a closed compound."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "BREAK",
+          "alternate_meaning": "A breakwater protects a harbor; closed compounds are allowed."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "TAP",
+          "alternate_meaning": "Tap is a dance style, rather than a water faucet."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-08-v15",
+      "tree_id": "io-08",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-08-v15",
+      "words": [
+        "GARDEN",
+        "SEARCH",
+        "JUICE",
+        "OUTDOOR",
+        "INDOOR",
+        "CIDER",
+        "PUNCH",
+        "SAW",
+        "PLANE",
+        "DRILL",
+        "POLITICAL",
+        "SLUMBER",
+        "SODA",
+        "TEA",
+        "WALL",
+        "THIRD"
+      ],
+      "answers": [
+        {
+          "group_id": "io-08-g1",
+          "answerDescription": "BEVERAGES",
+          "words": [
+            "TEA",
+            "CIDER",
+            "SODA",
+            "JUICE"
+          ],
+          "selection_color": "green",
+          "similarity": 0.5020381808280945,
+          "color": "yellow",
+          "category_key": "beverages"
+        },
+        {
+          "group_id": "io-08-g0",
+          "answerDescription": "HAND TOOLS",
+          "words": [
+            "SAW",
+            "PLANE",
+            "DRILL",
+            "PUNCH"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.2926044166088104,
+          "color": "green",
+          "category_key": "hand_tools"
+        },
+        {
+          "group_id": "io-08-g3",
+          "answerDescription": "___ PARTY",
+          "words": [
+            "SEARCH",
+            "THIRD",
+            "POLITICAL",
+            "SLUMBER"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.1643029749393463,
+          "color": "blue",
+          "category_key": "____party"
+        },
+        {
+          "group_id": "io-08-g2",
+          "answerDescription": "___ FOUNTAIN",
+          "words": [
+            "WALL",
+            "GARDEN",
+            "INDOOR",
+            "OUTDOOR"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.42870059609413147,
+          "color": "purple",
+          "category_key": "____fountain"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "MEAN",
+        "SAME",
+        "TOOLBOX",
+        "SCARLET"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "PUNCH",
+          "alternate_meaning": "Punch also means a mixed drink served at parties."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "SODA",
+          "alternate_meaning": "A soda fountain dispenses carbonated drinks."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "GARDEN",
+          "alternate_meaning": "A garden party is an outdoor social event."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-10-v15",
+      "tree_id": "io-10",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-10-v15",
+      "words": [
+        "SOUND",
+        "WINTER",
+        "SPORTS",
+        "SNOW",
+        "FRONT",
+        "REST",
+        "MAIN",
+        "UP",
+        "FLAT",
+        "SOCIETY",
+        "STAFF",
+        "BACK",
+        "HOME",
+        "SHARP",
+        "EARLY",
+        "BALD"
+      ],
+      "answers": [
+        {
+          "group_id": "io-10-g0",
+          "answerDescription": "MUSICAL TERMS",
+          "words": [
+            "REST",
+            "FLAT",
+            "SHARP",
+            "STAFF"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.25254783034324646,
+          "color": "yellow",
+          "category_key": "musical_terms"
+        },
+        {
+          "group_id": "io-10-g1",
+          "answerDescription": "___ TIRE",
+          "words": [
+            "SNOW",
+            "WINTER",
+            "BALD",
+            "FRONT"
+          ],
+          "selection_color": "green",
+          "similarity": 0.31205347180366516,
+          "color": "green",
+          "category_key": "____tire"
+        },
+        {
+          "group_id": "io-10-g2",
+          "answerDescription": "___ PAGE",
+          "words": [
+            "HOME",
+            "SPORTS",
+            "BACK",
+            "SOCIETY"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.2806277573108673,
+          "color": "blue",
+          "category_key": "____page"
+        },
+        {
+          "group_id": "io-10-g3",
+          "answerDescription": "___ STAGE",
+          "words": [
+            "SOUND",
+            "UP",
+            "EARLY",
+            "MAIN"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.1831241101026535,
+          "color": "purple",
+          "category_key": "____stage"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "BASSOON",
+        "POLO",
+        "SKIM",
+        "JAMS"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "FLAT",
+          "alternate_meaning": "A flat tire has lost its air."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "FRONT",
+          "alternate_meaning": "A front page is the first page of a newspaper."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "BACK",
+          "alternate_meaning": "Backstage is the area behind a theater stage; closed compounds are allowed."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-12-v12",
+      "tree_id": "io-12",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-12-v12",
+      "words": [
+        "CORD",
+        "BOSTON",
+        "BORDER",
+        "RIBBON",
+        "QUEEN",
+        "FRINGE",
+        "LACE",
+        "RAT",
+        "RIM",
+        "BRAID",
+        "PERIMETER",
+        "HEART",
+        "BULL",
+        "EDGE",
+        "CAIRN",
+        "KISS"
+      ],
+      "answers": [
+        {
+          "group_id": "io-12-g2",
+          "answerDescription": "OUTER LIMIT",
+          "words": [
+            "RIM",
+            "EDGE",
+            "PERIMETER",
+            "FRINGE"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.32662028074264526,
+          "color": "yellow",
+          "category_key": "outer_limit"
+        },
+        {
+          "group_id": "io-12-g3",
+          "answerDescription": "DECORATIVE TRIMMINGS",
+          "words": [
+            "LACE",
+            "BRAID",
+            "CORD",
+            "RIBBON"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.4740116596221924,
+          "color": "green",
+          "category_key": "decorative_trimmings"
+        },
+        {
+          "group_id": "io-12-g1",
+          "answerDescription": "___ TERRIER",
+          "words": [
+            "BULL",
+            "RAT",
+            "BORDER",
+            "CAIRN"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.24310614168643951,
+          "color": "blue",
+          "category_key": "____terrier"
+        },
+        {
+          "group_id": "io-12-g0",
+          "answerDescription": "BANDS",
+          "words": [
+            "BOSTON",
+            "QUEEN",
+            "KISS",
+            "HEART"
+          ],
+          "selection_color": "green",
+          "similarity": 0.2591947913169861,
+          "color": "purple",
+          "category_key": "bands"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "PIECE",
+        "CANS",
+        "DESERT",
+        "BOSTON"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "BOSTON",
+          "alternate_meaning": "Boston terrier names a dog breed."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "BORDER",
+          "alternate_meaning": "A border can mean an outer limit."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "FRINGE",
+          "alternate_meaning": "Fringe is a decorative trimming of dangling threads."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-13-v21",
+      "tree_id": "io-13",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-13-v21",
+      "words": [
+        "POSTER",
+        "JINGLE",
+        "DOMINO",
+        "SPOT",
+        "MOTH",
+        "SIDE",
+        "FLYER",
+        "TINKLE",
+        "BUTTERFLY",
+        "BEE",
+        "GREENHOUSE",
+        "WASP",
+        "BANNER",
+        "CLANG",
+        "TOLL",
+        "SPECIAL"
+      ],
+      "answers": [
+        {
+          "group_id": "io-13-g0",
+          "answerDescription": "BELL SOUNDS",
+          "words": [
+            "TOLL",
+            "CLANG",
+            "TINKLE",
+            "JINGLE"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.24445797502994537,
+          "color": "yellow",
+          "category_key": "bell_sounds"
+        },
+        {
+          "group_id": "io-13-g2",
+          "answerDescription": "FLYING ANIMALS",
+          "words": [
+            "BEE",
+            "WASP",
+            "MOTH",
+            "BUTTERFLY"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.5950596928596497,
+          "color": "green",
+          "category_key": "flying_animals"
+        },
+        {
+          "group_id": "io-13-g1",
+          "answerDescription": "ADVERTISING FORMATS",
+          "words": [
+            "POSTER",
+            "BANNER",
+            "FLYER",
+            "SPOT"
+          ],
+          "selection_color": "green",
+          "similarity": 0.3940025866031647,
+          "color": "blue",
+          "category_key": "advertising_formats"
+        },
+        {
+          "group_id": "io-13-g3",
+          "answerDescription": "___ EFFECT",
+          "words": [
+            "DOMINO",
+            "SIDE",
+            "SPECIAL",
+            "GREENHOUSE"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.18724392354488373,
+          "color": "purple",
+          "category_key": "____effect"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "THIRST",
+        "CHIME",
+        "SUMMER",
+        "HACK"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "JINGLE",
+          "alternate_meaning": "A jingle is a short musical advertisement."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "FLYER",
+          "alternate_meaning": "A flyer can be an animal capable of flight."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "BUTTERFLY",
+          "alternate_meaning": "The butterfly effect describes sensitivity to initial conditions."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-14-v20",
+      "tree_id": "io-14",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-14-v20",
+      "words": [
+        "JUNK",
+        "DELIVER",
+        "POST",
+        "HEALTH",
+        "CONSIGN",
+        "SOUL",
+        "TRANSMIT",
+        "SHIP",
+        "TOSS",
+        "STALE",
+        "COMFORT",
+        "RUNNING",
+        "SCRAP",
+        "SEA",
+        "SHED",
+        "PLAY"
+      ],
+      "answers": [
+        {
+          "group_id": "io-14-g0",
+          "answerDescription": "DISCARD",
+          "words": [
+            "JUNK",
+            "SCRAP",
+            "TOSS",
+            "SHED"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.305004745721817,
+          "color": "yellow",
+          "category_key": "discard"
+        },
+        {
+          "group_id": "io-14-g3",
+          "answerDescription": "SEND",
+          "words": [
+            "POST",
+            "DELIVER",
+            "TRANSMIT",
+            "CONSIGN"
+          ],
+          "selection_color": "green",
+          "similarity": 0.31638339161872864,
+          "color": "green",
+          "category_key": "send"
+        },
+        {
+          "group_id": "io-14-g1",
+          "answerDescription": "___ FOOD",
+          "words": [
+            "SOUL",
+            "COMFORT",
+            "HEALTH",
+            "SEA"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.346761018037796,
+          "color": "blue",
+          "category_key": "____food"
+        },
+        {
+          "group_id": "io-14-g2",
+          "answerDescription": "___ MATE",
+          "words": [
+            "PLAY",
+            "SHIP",
+            "STALE",
+            "RUNNING"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.24757488071918488,
+          "color": "purple",
+          "category_key": "____mate"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "MADNESS",
+        "ROAM",
+        "TRASH",
+        "BUSINESS"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "JUNK",
+          "alternate_meaning": "Junk food is food with little nutritional value."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "SOUL",
+          "alternate_meaning": "A soulmate is a close companion; closed compounds are allowed."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "SHIP",
+          "alternate_meaning": "To ship is to send goods."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    },
+    {
+      "id": "io-15-v22",
+      "tree_id": "io-15",
+      "method": "intentional_overlap",
+      "contest": "Synthetic Connections io-15-v22",
+      "words": [
+        "LACONIC",
+        "USABLE",
+        "SATISFACTORY",
+        "ACCEPTABLE",
+        "DECENT",
+        "CLOSED",
+        "SHORT",
+        "AVAILABLE",
+        "RACING",
+        "OPEN",
+        "OBTAINABLE",
+        "COMPACT",
+        "RESPECTABLE",
+        "PITHY",
+        "PASSABLE",
+        "SERIES"
+      ],
+      "answers": [
+        {
+          "group_id": "io-15-g0",
+          "answerDescription": "CONCISE",
+          "words": [
+            "SHORT",
+            "PITHY",
+            "COMPACT",
+            "LACONIC"
+          ],
+          "selection_color": "purple",
+          "similarity": 0.252536803483963,
+          "color": "yellow",
+          "category_key": "concise"
+        },
+        {
+          "group_id": "io-15-g3",
+          "answerDescription": "ADEQUATE",
+          "words": [
+            "DECENT",
+            "ACCEPTABLE",
+            "SATISFACTORY",
+            "RESPECTABLE"
+          ],
+          "selection_color": "yellow",
+          "similarity": 0.5716968774795532,
+          "color": "green",
+          "category_key": "adequate"
+        },
+        {
+          "group_id": "io-15-g2",
+          "answerDescription": "ACCESSIBLE",
+          "words": [
+            "AVAILABLE",
+            "OBTAINABLE",
+            "USABLE",
+            "PASSABLE"
+          ],
+          "selection_color": "blue",
+          "similarity": 0.49758705496788025,
+          "color": "blue",
+          "category_key": "accessible"
+        },
+        {
+          "group_id": "io-15-g1",
+          "answerDescription": "___ CIRCUIT",
+          "words": [
+            "SERIES",
+            "CLOSED",
+            "OPEN",
+            "RACING"
+          ],
+          "selection_color": "green",
+          "similarity": 0.2581632435321808,
+          "color": "purple",
+          "category_key": "____circuit"
+        }
+      ],
+      "review_status": "llm_edited_and_ranked; human_review_pending",
+      "seed_words": [
+        "BRIEF",
+        "REALLY",
+        "LITERALLY",
+        "JONAS"
+      ],
+      "distractors": [
+        {
+          "from_group": 0,
+          "to_group": 1,
+          "word": "SHORT",
+          "alternate_meaning": "A short circuit is an unintended electrical path."
+        },
+        {
+          "from_group": 1,
+          "to_group": 2,
+          "word": "OPEN",
+          "alternate_meaning": "Open can mean accessible or available for use."
+        },
+        {
+          "from_group": 2,
+          "to_group": 3,
+          "word": "PASSABLE",
+          "alternate_meaning": "Passable can mean adequate rather than navigable."
+        }
+      ],
+      "catalogue_partition_count_capped_at_two": 1
+    }
+  ]
+}

@@ -1,0 +1,1178 @@
+[
+  {
+    "id": "extra-02",
+    "method": "false_connection",
+    "seed_words": [
+      "REVOLUTION",
+      "PRAYER",
+      "SCARF",
+      "THIMBLE"
+    ],
+    "story": [
+      "A traveler wrote REVOLUTION in a notebook before considering fruits.",
+      "A sign reading PRAYER prompted a conversation about those objects.",
+      "A friend offered SCARF as a clue to their setting.",
+      "They remembered THIMBLE and compared the ordinary and alternate meanings of the words."
+    ],
+    "root_proposals": [
+      {
+        "category": "FRUITS",
+        "words": [
+          "APPLE",
+          "ORANGE",
+          "PEACH",
+          "PLUM",
+          "FIG",
+          "DATE",
+          "LEMON",
+          "GRAPE"
+        ],
+        "connection": "Each is a member or term of fruits."
+      },
+      {
+        "category": "FURNITURE",
+        "words": [
+          "TABLE",
+          "CHAIR",
+          "COUCH",
+          "CHEST",
+          "STOOL",
+          "BENCH",
+          "DRESSER",
+          "CABINET"
+        ],
+        "connection": "An alternative concrete theme considered from the story."
+      }
+    ],
+    "root_category": "FRUITS",
+    "root_pool": [
+      "APPLE",
+      "ORANGE",
+      "PEACH",
+      "PLUM",
+      "FIG",
+      "DATE",
+      "LEMON",
+      "GRAPE"
+    ],
+    "false_group": {
+      "category": "FRUITS",
+      "words": [
+        "PEACH",
+        "PLUM",
+        "LEMON",
+        "GRAPE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "extra-02-g0",
+        "category": "DELIGHTFUL PEOPLE",
+        "category_key": "delightful_people",
+        "style": "names_of_things",
+        "connection": "Affectionate nouns for a delightful or valued person.",
+        "words": [
+          "PEACH",
+          "GEM",
+          "JEWEL",
+          "TREASURE",
+          "ANGEL",
+          "DARLING",
+          "SWEETHEART",
+          "DEAR"
+        ],
+        "required": [
+          "PEACH"
+        ],
+        "anchor": "PEACH",
+        "anchor_alternate_meaning": "PEACH: Affectionate nouns for a delightful or valued person.",
+        "word_fits": {
+          "PEACH": "PEACH: Affectionate nouns for a delightful or valued person.",
+          "GEM": "GEM: Affectionate nouns for a delightful or valued person.",
+          "JEWEL": "JEWEL: Affectionate nouns for a delightful or valued person.",
+          "TREASURE": "TREASURE: Affectionate nouns for a delightful or valued person.",
+          "ANGEL": "ANGEL: Affectionate nouns for a delightful or valued person.",
+          "DARLING": "DARLING: Affectionate nouns for a delightful or valued person.",
+          "SWEETHEART": "SWEETHEART: Affectionate nouns for a delightful or valued person.",
+          "DEAR": "DEAR: Affectionate nouns for a delightful or valued person."
+        }
+      },
+      {
+        "id": "extra-02-g1",
+        "category": "___ JOB",
+        "category_key": "____job",
+        "style": "fill_in_the_blank",
+        "connection": "Each precedes JOB in a familiar expression.",
+        "words": [
+          "PLUM",
+          "DREAM",
+          "DAY",
+          "NOSE",
+          "SUMMER",
+          "ODD",
+          "DIRTY",
+          "INSIDE"
+        ],
+        "required": [
+          "PLUM"
+        ],
+        "anchor": "PLUM",
+        "anchor_alternate_meaning": "PLUM: Each precedes JOB in a familiar expression.",
+        "word_fits": {
+          "PLUM": "PLUM: Each precedes JOB in a familiar expression.",
+          "DREAM": "DREAM: Each precedes JOB in a familiar expression.",
+          "DAY": "DAY: Each precedes JOB in a familiar expression.",
+          "NOSE": "NOSE: Each precedes JOB in a familiar expression.",
+          "SUMMER": "SUMMER: Each precedes JOB in a familiar expression.",
+          "ODD": "ODD: Each precedes JOB in a familiar expression.",
+          "DIRTY": "DIRTY: Each precedes JOB in a familiar expression.",
+          "INSIDE": "INSIDE: Each precedes JOB in a familiar expression."
+        }
+      },
+      {
+        "id": "extra-02-g2",
+        "category": "FAILED PRODUCTS",
+        "category_key": "failed_products",
+        "style": "names_of_things",
+        "connection": "Nouns for unsuccessful or defective products or productions.",
+        "words": [
+          "LEMON",
+          "DUD",
+          "CLUNKER",
+          "TURKEY",
+          "FLOP",
+          "FAILURE",
+          "WASHOUT",
+          "BOMB"
+        ],
+        "required": [
+          "LEMON"
+        ],
+        "anchor": "LEMON",
+        "anchor_alternate_meaning": "LEMON: Nouns for unsuccessful or defective products or productions.",
+        "word_fits": {
+          "LEMON": "LEMON: Nouns for unsuccessful or defective products or productions.",
+          "DUD": "DUD: Nouns for unsuccessful or defective products or productions.",
+          "CLUNKER": "CLUNKER: Nouns for unsuccessful or defective products or productions.",
+          "TURKEY": "TURKEY: Nouns for unsuccessful or defective products or productions.",
+          "FLOP": "FLOP: Nouns for unsuccessful or defective products or productions.",
+          "FAILURE": "FAILURE: Nouns for unsuccessful or defective products or productions.",
+          "WASHOUT": "WASHOUT: Nouns for unsuccessful or defective products or productions.",
+          "BOMB": "BOMB: Nouns for unsuccessful or defective products or productions."
+        }
+      },
+      {
+        "id": "extra-02-g3",
+        "category": "___FRUIT",
+        "category_key": "____fruit",
+        "style": "fill_in_the_blank",
+        "connection": "Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+        "words": [
+          "GRAPE",
+          "PASSION",
+          "DRAGON",
+          "JACK",
+          "BREAD",
+          "STAR",
+          "UGLI",
+          "KIWI"
+        ],
+        "required": [
+          "GRAPE"
+        ],
+        "anchor": "GRAPE",
+        "anchor_alternate_meaning": "GRAPE: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+        "word_fits": {
+          "GRAPE": "GRAPE: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+          "PASSION": "PASSION: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+          "DRAGON": "DRAGON: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+          "JACK": "JACK: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+          "BREAD": "BREAD: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+          "STAR": "STAR: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+          "UGLI": "UGLI: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed.",
+          "KIWI": "KIWI: Each forms the name of a fruit when followed by FRUIT; ordinary spaces are allowed."
+        }
+      }
+    ]
+  },
+  {
+    "id": "extra-03",
+    "method": "false_connection",
+    "seed_words": [
+      "PRODUCE",
+      "COLOR",
+      "QUARREL",
+      "AUDITORY"
+    ],
+    "story": [
+      "A traveler wrote PRODUCE in a notebook before considering furniture.",
+      "A sign reading COLOR prompted a conversation about those objects.",
+      "A friend offered QUARREL as a clue to their setting.",
+      "They remembered AUDITORY and compared the ordinary and alternate meanings of the words."
+    ],
+    "root_proposals": [
+      {
+        "category": "FURNITURE",
+        "words": [
+          "TABLE",
+          "CHAIR",
+          "COUCH",
+          "CHEST",
+          "STOOL",
+          "BENCH",
+          "DRESSER",
+          "CABINET"
+        ],
+        "connection": "Each is a member or term of furniture."
+      },
+      {
+        "category": "WEATHER",
+        "words": [
+          "RAIN",
+          "HAIL",
+          "SLEET",
+          "THUNDER",
+          "LIGHTNING",
+          "FROST",
+          "MIST",
+          "CLOUD"
+        ],
+        "connection": "An alternative concrete theme considered from the story."
+      }
+    ],
+    "root_category": "FURNITURE",
+    "root_pool": [
+      "TABLE",
+      "CHAIR",
+      "COUCH",
+      "CHEST",
+      "STOOL",
+      "BENCH",
+      "DRESSER",
+      "CABINET"
+    ],
+    "false_group": {
+      "category": "FURNITURE",
+      "words": [
+        "CHAIR",
+        "COUCH",
+        "STOOL",
+        "BENCH"
+      ]
+    },
+    "groups": [
+      {
+        "id": "extra-03-g0",
+        "category": "LEADERSHIP TITLES",
+        "category_key": "leadership_titles",
+        "style": "names_of_things",
+        "connection": "Titles of people with organizational leadership responsibilities.",
+        "words": [
+          "CHAIR",
+          "PRESIDENT",
+          "SECRETARY",
+          "TREASURER",
+          "DIRECTOR",
+          "GOVERNOR",
+          "MANAGER",
+          "LEADER"
+        ],
+        "required": [
+          "CHAIR"
+        ],
+        "anchor": "CHAIR",
+        "anchor_alternate_meaning": "CHAIR: Titles of people with organizational leadership responsibilities.",
+        "word_fits": {
+          "CHAIR": "CHAIR: Titles of people with organizational leadership responsibilities.",
+          "PRESIDENT": "PRESIDENT: Titles of people with organizational leadership responsibilities.",
+          "SECRETARY": "SECRETARY: Titles of people with organizational leadership responsibilities.",
+          "TREASURER": "TREASURER: Titles of people with organizational leadership responsibilities.",
+          "DIRECTOR": "DIRECTOR: Titles of people with organizational leadership responsibilities.",
+          "GOVERNOR": "GOVERNOR: Titles of people with organizational leadership responsibilities.",
+          "MANAGER": "MANAGER: Titles of people with organizational leadership responsibilities.",
+          "LEADER": "LEADER: Titles of people with organizational leadership responsibilities."
+        }
+      },
+      {
+        "id": "extra-03-g1",
+        "category": "PUT INTO WORDS",
+        "category_key": "put_into_words",
+        "style": "names_of_things",
+        "connection": "Verbs meaning formulate or express something in words.",
+        "words": [
+          "COUCH",
+          "FORMULATE",
+          "DESCRIBE",
+          "WORD",
+          "STATE",
+          "ARTICULATE",
+          "EXPRESS",
+          "FRAME"
+        ],
+        "required": [
+          "COUCH"
+        ],
+        "anchor": "COUCH",
+        "anchor_alternate_meaning": "COUCH: Verbs meaning formulate or express something in words.",
+        "word_fits": {
+          "COUCH": "COUCH: Verbs meaning formulate or express something in words.",
+          "FORMULATE": "FORMULATE: Verbs meaning formulate or express something in words.",
+          "DESCRIBE": "DESCRIBE: Verbs meaning formulate or express something in words.",
+          "WORD": "WORD: Verbs meaning formulate or express something in words.",
+          "STATE": "STATE: Verbs meaning formulate or express something in words.",
+          "ARTICULATE": "ARTICULATE: Verbs meaning formulate or express something in words.",
+          "EXPRESS": "EXPRESS: Verbs meaning formulate or express something in words.",
+          "FRAME": "FRAME: Verbs meaning formulate or express something in words."
+        }
+      },
+      {
+        "id": "extra-03-g2",
+        "category": "BODY SPECIMENS",
+        "category_key": "body_specimens",
+        "style": "names_of_things",
+        "connection": "Materials collected from the body for medical testing.",
+        "words": [
+          "STOOL",
+          "URINE",
+          "BLOOD",
+          "SALIVA",
+          "SPUTUM",
+          "SEMEN",
+          "TISSUE",
+          "SWEAT"
+        ],
+        "required": [
+          "STOOL"
+        ],
+        "anchor": "STOOL",
+        "anchor_alternate_meaning": "STOOL: Materials collected from the body for medical testing.",
+        "word_fits": {
+          "STOOL": "STOOL: Materials collected from the body for medical testing.",
+          "URINE": "URINE: Materials collected from the body for medical testing.",
+          "BLOOD": "BLOOD: Materials collected from the body for medical testing.",
+          "SALIVA": "SALIVA: Materials collected from the body for medical testing.",
+          "SPUTUM": "SPUTUM: Materials collected from the body for medical testing.",
+          "SEMEN": "SEMEN: Materials collected from the body for medical testing.",
+          "TISSUE": "TISSUE: Materials collected from the body for medical testing.",
+          "SWEAT": "SWEAT: Materials collected from the body for medical testing."
+        }
+      },
+      {
+        "id": "extra-03-g3",
+        "category": "GYM EQUIPMENT",
+        "category_key": "gym_equipment",
+        "style": "names_of_things",
+        "connection": "Items of exercise equipment.",
+        "words": [
+          "BENCH",
+          "TREADMILL",
+          "DUMBBELL",
+          "BARBELL",
+          "KETTLEBELL",
+          "ELLIPTICAL",
+          "ROWER",
+          "TRAMPOLINE"
+        ],
+        "required": [
+          "BENCH"
+        ],
+        "anchor": "BENCH",
+        "anchor_alternate_meaning": "BENCH: Items of exercise equipment.",
+        "word_fits": {
+          "BENCH": "BENCH: Items of exercise equipment.",
+          "TREADMILL": "TREADMILL: Items of exercise equipment.",
+          "DUMBBELL": "DUMBBELL: Items of exercise equipment.",
+          "BARBELL": "BARBELL: Items of exercise equipment.",
+          "KETTLEBELL": "KETTLEBELL: Items of exercise equipment.",
+          "ELLIPTICAL": "ELLIPTICAL: Items of exercise equipment.",
+          "ROWER": "ROWER: Items of exercise equipment.",
+          "TRAMPOLINE": "TRAMPOLINE: Items of exercise equipment."
+        }
+      }
+    ]
+  },
+  {
+    "id": "extra-06",
+    "method": "false_connection",
+    "seed_words": [
+      "SINGER",
+      "CAMEL",
+      "BEAK",
+      "SKUNK"
+    ],
+    "story": [
+      "A traveler wrote SINGER in a notebook before considering school terms.",
+      "A sign reading CAMEL prompted a conversation about those objects.",
+      "A friend offered BEAK as a clue to their setting.",
+      "They remembered SKUNK and compared the ordinary and alternate meanings of the words."
+    ],
+    "root_proposals": [
+      {
+        "category": "SCHOOL TERMS",
+        "words": [
+          "CLASS",
+          "COURSE",
+          "GRADE",
+          "LESSON",
+          "EXAM",
+          "TEST",
+          "QUIZ",
+          "SUBJECT"
+        ],
+        "connection": "Each is a member or term of school terms."
+      },
+      {
+        "category": "BUILDING PARTS",
+        "words": [
+          "ROOF",
+          "FLOOR",
+          "CEILING",
+          "DOOR",
+          "STAIR",
+          "COLUMN",
+          "BEAM",
+          "ARCH"
+        ],
+        "connection": "An alternative concrete theme considered from the story."
+      }
+    ],
+    "root_category": "SCHOOL TERMS",
+    "root_pool": [
+      "CLASS",
+      "COURSE",
+      "GRADE",
+      "LESSON",
+      "EXAM",
+      "TEST",
+      "QUIZ",
+      "SUBJECT"
+    ],
+    "false_group": {
+      "category": "SCHOOL TERMS",
+      "words": [
+        "GRADE",
+        "EXAM",
+        "TEST",
+        "QUIZ"
+      ]
+    },
+    "groups": [
+      {
+        "id": "extra-06-g0",
+        "category": "EVALUATE",
+        "category_key": "evaluate",
+        "style": "names_of_things",
+        "connection": "Verbs meaning judge quality, value, or performance.",
+        "words": [
+          "GRADE",
+          "EVALUATE",
+          "APPRAISE",
+          "RATE",
+          "ASSESS",
+          "SCORE",
+          "REVIEW",
+          "GAUGE"
+        ],
+        "required": [
+          "GRADE"
+        ],
+        "anchor": "GRADE",
+        "anchor_alternate_meaning": "GRADE: Verbs meaning judge quality, value, or performance.",
+        "word_fits": {
+          "GRADE": "GRADE: Verbs meaning judge quality, value, or performance.",
+          "EVALUATE": "EVALUATE: Verbs meaning judge quality, value, or performance.",
+          "APPRAISE": "APPRAISE: Verbs meaning judge quality, value, or performance.",
+          "RATE": "RATE: Verbs meaning judge quality, value, or performance.",
+          "ASSESS": "ASSESS: Verbs meaning judge quality, value, or performance.",
+          "SCORE": "SCORE: Verbs meaning judge quality, value, or performance.",
+          "REVIEW": "REVIEW: Verbs meaning judge quality, value, or performance.",
+          "GAUGE": "GAUGE: Verbs meaning judge quality, value, or performance."
+        }
+      },
+      {
+        "id": "extra-06-g1",
+        "category": "MEDICAL PROCEDURES",
+        "category_key": "medical_procedures",
+        "style": "names_of_things",
+        "connection": "Procedures or examinations used in medical diagnosis.",
+        "words": [
+          "EXAM",
+          "BIOPSY",
+          "X-RAY",
+          "MRI",
+          "ULTRASOUND",
+          "ENDOSCOPY",
+          "EKG",
+          "ANGIOGRAM"
+        ],
+        "required": [
+          "EXAM"
+        ],
+        "anchor": "EXAM",
+        "anchor_alternate_meaning": "EXAM: Procedures or examinations used in medical diagnosis.",
+        "word_fits": {
+          "EXAM": "EXAM: Procedures or examinations used in medical diagnosis.",
+          "BIOPSY": "BIOPSY: Procedures or examinations used in medical diagnosis.",
+          "X-RAY": "X-RAY: Procedures or examinations used in medical diagnosis.",
+          "MRI": "MRI: Procedures or examinations used in medical diagnosis.",
+          "ULTRASOUND": "ULTRASOUND: Procedures or examinations used in medical diagnosis.",
+          "ENDOSCOPY": "ENDOSCOPY: Procedures or examinations used in medical diagnosis.",
+          "EKG": "EKG: Procedures or examinations used in medical diagnosis.",
+          "ANGIOGRAM": "ANGIOGRAM: Procedures or examinations used in medical diagnosis."
+        }
+      },
+      {
+        "id": "extra-06-g2",
+        "category": "___ TUBE",
+        "category_key": "____tube",
+        "style": "fill_in_the_blank",
+        "connection": "Each precedes TUBE in a familiar technical or everyday expression.",
+        "words": [
+          "TEST",
+          "VACUUM",
+          "CATHODE",
+          "INNER",
+          "FEEDING",
+          "BREATHING",
+          "FALLOPIAN",
+          "NEON"
+        ],
+        "required": [
+          "TEST"
+        ],
+        "anchor": "TEST",
+        "anchor_alternate_meaning": "TEST: Each precedes TUBE in a familiar technical or everyday expression.",
+        "word_fits": {
+          "TEST": "TEST: Each precedes TUBE in a familiar technical or everyday expression.",
+          "VACUUM": "VACUUM: Each precedes TUBE in a familiar technical or everyday expression.",
+          "CATHODE": "CATHODE: Each precedes TUBE in a familiar technical or everyday expression.",
+          "INNER": "INNER: Each precedes TUBE in a familiar technical or everyday expression.",
+          "FEEDING": "FEEDING: Each precedes TUBE in a familiar technical or everyday expression.",
+          "BREATHING": "BREATHING: Each precedes TUBE in a familiar technical or everyday expression.",
+          "FALLOPIAN": "FALLOPIAN: Each precedes TUBE in a familiar technical or everyday expression.",
+          "NEON": "NEON: Each precedes TUBE in a familiar technical or everyday expression."
+        }
+      },
+      {
+        "id": "extra-06-g3",
+        "category": "QUESTION CLOSELY",
+        "category_key": "question_closely",
+        "style": "names_of_things",
+        "connection": "Verbs meaning seek information by questioning.",
+        "words": [
+          "QUIZ",
+          "QUESTION",
+          "INTERROGATE",
+          "GRILL",
+          "PROBE",
+          "DEBRIEF",
+          "INTERVIEW",
+          "QUERY"
+        ],
+        "required": [
+          "QUIZ"
+        ],
+        "anchor": "QUIZ",
+        "anchor_alternate_meaning": "QUIZ: Verbs meaning seek information by questioning.",
+        "word_fits": {
+          "QUIZ": "QUIZ: Verbs meaning seek information by questioning.",
+          "QUESTION": "QUESTION: Verbs meaning seek information by questioning.",
+          "INTERROGATE": "INTERROGATE: Verbs meaning seek information by questioning.",
+          "GRILL": "GRILL: Verbs meaning seek information by questioning.",
+          "PROBE": "PROBE: Verbs meaning seek information by questioning.",
+          "DEBRIEF": "DEBRIEF: Verbs meaning seek information by questioning.",
+          "INTERVIEW": "INTERVIEW: Verbs meaning seek information by questioning.",
+          "QUERY": "QUERY: Verbs meaning seek information by questioning."
+        }
+      }
+    ]
+  },
+  {
+    "id": "extra-09",
+    "method": "false_connection",
+    "seed_words": [
+      "UPSET",
+      "LEAVE",
+      "DEUCE",
+      "IMAGINE"
+    ],
+    "story": [
+      "A traveler wrote UPSET in a notebook before considering boating terms.",
+      "A sign reading LEAVE prompted a conversation about those objects.",
+      "A friend offered DEUCE as a clue to their setting.",
+      "They remembered IMAGINE and compared the ordinary and alternate meanings of the words."
+    ],
+    "root_proposals": [
+      {
+        "category": "BOATING TERMS",
+        "words": [
+          "DECK",
+          "HULL",
+          "STERN",
+          "BOW",
+          "MAST",
+          "SAIL",
+          "ANCHOR",
+          "KEEL"
+        ],
+        "connection": "Each is a member or term of boating terms."
+      },
+      {
+        "category": "BIRDS",
+        "words": [
+          "SWALLOW",
+          "MARTIN",
+          "SWIFT",
+          "WREN",
+          "ROBIN",
+          "FINCH",
+          "LARK",
+          "GOOSE"
+        ],
+        "connection": "An alternative concrete theme considered from the story."
+      }
+    ],
+    "root_category": "BOATING TERMS",
+    "root_pool": [
+      "DECK",
+      "HULL",
+      "STERN",
+      "BOW",
+      "MAST",
+      "SAIL",
+      "ANCHOR",
+      "KEEL"
+    ],
+    "false_group": {
+      "category": "BOATING TERMS",
+      "words": [
+        "HULL",
+        "SAIL",
+        "ANCHOR",
+        "KEEL"
+      ]
+    },
+    "groups": [
+      {
+        "id": "extra-09-g0",
+        "category": "OUTER CASINGS",
+        "category_key": "outer_casings",
+        "style": "names_of_things",
+        "connection": "Protective or enclosing outer coverings.",
+        "words": [
+          "HULL",
+          "SHELL",
+          "HUSK",
+          "RIND",
+          "PEEL",
+          "POD",
+          "CASING",
+          "CARAPACE"
+        ],
+        "required": [
+          "HULL"
+        ],
+        "anchor": "HULL",
+        "anchor_alternate_meaning": "HULL: Protective or enclosing outer coverings.",
+        "word_fits": {
+          "HULL": "HULL: Protective or enclosing outer coverings.",
+          "SHELL": "SHELL: Protective or enclosing outer coverings.",
+          "HUSK": "HUSK: Protective or enclosing outer coverings.",
+          "RIND": "RIND: Protective or enclosing outer coverings.",
+          "PEEL": "PEEL: Protective or enclosing outer coverings.",
+          "POD": "POD: Protective or enclosing outer coverings.",
+          "CASING": "CASING: Protective or enclosing outer coverings.",
+          "CARAPACE": "CARAPACE: Protective or enclosing outer coverings."
+        }
+      },
+      {
+        "id": "extra-09-g1",
+        "category": "MOVE EFFORTLESSLY",
+        "category_key": "move_effortlessly",
+        "style": "names_of_things",
+        "connection": "Verbs for moving smoothly or without apparent effort.",
+        "words": [
+          "SAIL",
+          "GLIDE",
+          "COAST",
+          "CRUISE",
+          "DRIFT",
+          "FLOAT",
+          "SOAR",
+          "WAFT"
+        ],
+        "required": [
+          "SAIL"
+        ],
+        "anchor": "SAIL",
+        "anchor_alternate_meaning": "SAIL: Verbs for moving smoothly or without apparent effort.",
+        "word_fits": {
+          "SAIL": "SAIL: Verbs for moving smoothly or without apparent effort.",
+          "GLIDE": "GLIDE: Verbs for moving smoothly or without apparent effort.",
+          "COAST": "COAST: Verbs for moving smoothly or without apparent effort.",
+          "CRUISE": "CRUISE: Verbs for moving smoothly or without apparent effort.",
+          "DRIFT": "DRIFT: Verbs for moving smoothly or without apparent effort.",
+          "FLOAT": "FLOAT: Verbs for moving smoothly or without apparent effort.",
+          "SOAR": "SOAR: Verbs for moving smoothly or without apparent effort.",
+          "WAFT": "WAFT: Verbs for moving smoothly or without apparent effort."
+        }
+      },
+      {
+        "id": "extra-09-g2",
+        "category": "BROADCAST PRESENTERS",
+        "category_key": "broadcast_presenters",
+        "style": "names_of_things",
+        "connection": "People who present or lead broadcast programs.",
+        "words": [
+          "ANCHOR",
+          "EMCEE",
+          "ANNOUNCER",
+          "PRESENTER",
+          "MODERATOR",
+          "NEWSCASTER",
+          "SPORTSCASTER",
+          "INTERVIEWER"
+        ],
+        "required": [
+          "ANCHOR"
+        ],
+        "anchor": "ANCHOR",
+        "anchor_alternate_meaning": "ANCHOR: People who present or lead broadcast programs.",
+        "word_fits": {
+          "ANCHOR": "ANCHOR: People who present or lead broadcast programs.",
+          "EMCEE": "EMCEE: People who present or lead broadcast programs.",
+          "ANNOUNCER": "ANNOUNCER: People who present or lead broadcast programs.",
+          "PRESENTER": "PRESENTER: People who present or lead broadcast programs.",
+          "MODERATOR": "MODERATOR: People who present or lead broadcast programs.",
+          "NEWSCASTER": "NEWSCASTER: People who present or lead broadcast programs.",
+          "SPORTSCASTER": "SPORTSCASTER: People who present or lead broadcast programs.",
+          "INTERVIEWER": "INTERVIEWER: People who present or lead broadcast programs."
+        }
+      },
+      {
+        "id": "extra-09-g3",
+        "category": "___ OVER",
+        "category_key": "____over",
+        "style": "fill_in_the_blank",
+        "connection": "Each precedes OVER in a familiar phrasal verb.",
+        "words": [
+          "KEEL",
+          "TIP",
+          "KNOCK",
+          "BEND",
+          "MULL",
+          "GLOSS",
+          "SKIM",
+          "CARRY"
+        ],
+        "required": [
+          "KEEL"
+        ],
+        "anchor": "KEEL",
+        "anchor_alternate_meaning": "KEEL: Each precedes OVER in a familiar phrasal verb.",
+        "word_fits": {
+          "KEEL": "KEEL: Each precedes OVER in a familiar phrasal verb.",
+          "TIP": "TIP: Each precedes OVER in a familiar phrasal verb.",
+          "KNOCK": "KNOCK: Each precedes OVER in a familiar phrasal verb.",
+          "BEND": "BEND: Each precedes OVER in a familiar phrasal verb.",
+          "MULL": "MULL: Each precedes OVER in a familiar phrasal verb.",
+          "GLOSS": "GLOSS: Each precedes OVER in a familiar phrasal verb.",
+          "SKIM": "SKIM: Each precedes OVER in a familiar phrasal verb.",
+          "CARRY": "CARRY: Each precedes OVER in a familiar phrasal verb."
+        }
+      }
+    ]
+  },
+  {
+    "id": "extra-10",
+    "method": "false_connection",
+    "seed_words": [
+      "THIGH",
+      "HANDFUL",
+      "PAL",
+      "COMEDIAN"
+    ],
+    "story": [
+      "A traveler wrote THIGH in a notebook before considering birds.",
+      "A sign reading HANDFUL prompted a conversation about those objects.",
+      "A friend offered PAL as a clue to their setting.",
+      "They remembered COMEDIAN and compared the ordinary and alternate meanings of the words."
+    ],
+    "root_proposals": [
+      {
+        "category": "BIRDS",
+        "words": [
+          "SWALLOW",
+          "MARTIN",
+          "SWIFT",
+          "WREN",
+          "ROBIN",
+          "FINCH",
+          "LARK",
+          "GOOSE"
+        ],
+        "connection": "Each is a member or term of birds."
+      },
+      {
+        "category": "DOG BREEDS",
+        "words": [
+          "BOXER",
+          "POINTER",
+          "SETTER",
+          "RETRIEVER",
+          "COLLIE",
+          "POODLE",
+          "BEAGLE",
+          "HUSKY"
+        ],
+        "connection": "An alternative concrete theme considered from the story."
+      }
+    ],
+    "root_category": "BIRDS",
+    "root_pool": [
+      "SWALLOW",
+      "MARTIN",
+      "SWIFT",
+      "WREN",
+      "ROBIN",
+      "FINCH",
+      "LARK",
+      "GOOSE"
+    ],
+    "false_group": {
+      "category": "BIRDS",
+      "words": [
+        "ROBIN",
+        "FINCH",
+        "LARK",
+        "GOOSE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "extra-10-g0",
+        "category": "COMIC SIDEKICKS",
+        "category_key": "comic_sidekicks",
+        "style": "names_of_things",
+        "connection": "Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+        "words": [
+          "ROBIN",
+          "SPEEDY",
+          "BUCKY",
+          "SUPERBOY",
+          "AQUALAD",
+          "BATGIRL",
+          "SUPERGIRL",
+          "JUBILEE"
+        ],
+        "required": [
+          "ROBIN"
+        ],
+        "anchor": "ROBIN",
+        "anchor_alternate_meaning": "ROBIN: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+        "word_fits": {
+          "ROBIN": "ROBIN: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+          "SPEEDY": "SPEEDY: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+          "BUCKY": "BUCKY: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+          "SUPERBOY": "SUPERBOY: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+          "AQUALAD": "AQUALAD: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+          "BATGIRL": "BATGIRL: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+          "SUPERGIRL": "SUPERGIRL: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced.",
+          "JUBILEE": "JUBILEE: Names of comic book characters who have served as superhero sidekicks; compound hero names are conventionally also spaced."
+        }
+      },
+      {
+        "id": "extra-10-g1",
+        "category": "END IN NCH",
+        "category_key": "end_in_nch",
+        "style": "wordplay",
+        "connection": "Each word ends with the three letters NCH.",
+        "words": [
+          "FINCH",
+          "CINCH",
+          "WINCH",
+          "LYNCH",
+          "HAUNCH",
+          "LAUNCH",
+          "BLANCH",
+          "TRENCH"
+        ],
+        "required": [
+          "FINCH"
+        ],
+        "anchor": "FINCH",
+        "anchor_alternate_meaning": "FINCH: Each word ends with the three letters NCH.",
+        "word_fits": {
+          "FINCH": "FINCH: Each word ends with the three letters NCH.",
+          "CINCH": "CINCH: Each word ends with the three letters NCH.",
+          "WINCH": "WINCH: Each word ends with the three letters NCH.",
+          "LYNCH": "LYNCH: Each word ends with the three letters NCH.",
+          "HAUNCH": "HAUNCH: Each word ends with the three letters NCH.",
+          "LAUNCH": "LAUNCH: Each word ends with the three letters NCH.",
+          "BLANCH": "BLANCH: Each word ends with the three letters NCH.",
+          "TRENCH": "TRENCH: Each word ends with the three letters NCH."
+        }
+      },
+      {
+        "id": "extra-10-g2",
+        "category": "PLAYFUL ADVENTURES",
+        "category_key": "playful_adventures",
+        "style": "names_of_things",
+        "connection": "Nouns for playful or mischievous adventures and activities.",
+        "words": [
+          "LARK",
+          "PRANK",
+          "ESCAPADE",
+          "ANTIC",
+          "CAPER",
+          "FROLIC",
+          "ROMP",
+          "ADVENTURE"
+        ],
+        "required": [
+          "LARK"
+        ],
+        "anchor": "LARK",
+        "anchor_alternate_meaning": "LARK: Nouns for playful or mischievous adventures and activities.",
+        "word_fits": {
+          "LARK": "LARK: Nouns for playful or mischievous adventures and activities.",
+          "PRANK": "PRANK: Nouns for playful or mischievous adventures and activities.",
+          "ESCAPADE": "ESCAPADE: Nouns for playful or mischievous adventures and activities.",
+          "ANTIC": "ANTIC: Nouns for playful or mischievous adventures and activities.",
+          "CAPER": "CAPER: Nouns for playful or mischievous adventures and activities.",
+          "FROLIC": "FROLIC: Nouns for playful or mischievous adventures and activities.",
+          "ROMP": "ROMP: Nouns for playful or mischievous adventures and activities.",
+          "ADVENTURE": "ADVENTURE: Nouns for playful or mischievous adventures and activities."
+        }
+      },
+      {
+        "id": "extra-10-g3",
+        "category": "URGE INTO ACTION",
+        "category_key": "urge_into_action",
+        "style": "names_of_things",
+        "connection": "Verbs meaning urge or stimulate someone into action.",
+        "words": [
+          "GOOSE",
+          "PROD",
+          "SPUR",
+          "NUDGE",
+          "GOAD",
+          "EGG",
+          "ENCOURAGE",
+          "INCITE"
+        ],
+        "required": [
+          "GOOSE"
+        ],
+        "anchor": "GOOSE",
+        "anchor_alternate_meaning": "GOOSE: Verbs meaning urge or stimulate someone into action.",
+        "word_fits": {
+          "GOOSE": "GOOSE: Verbs meaning urge or stimulate someone into action.",
+          "PROD": "PROD: Verbs meaning urge or stimulate someone into action.",
+          "SPUR": "SPUR: Verbs meaning urge or stimulate someone into action.",
+          "NUDGE": "NUDGE: Verbs meaning urge or stimulate someone into action.",
+          "GOAD": "GOAD: Verbs meaning urge or stimulate someone into action.",
+          "EGG": "EGG: Verbs meaning urge or stimulate someone into action.",
+          "ENCOURAGE": "ENCOURAGE: Verbs meaning urge or stimulate someone into action.",
+          "INCITE": "INCITE: Verbs meaning urge or stimulate someone into action."
+        }
+      }
+    ]
+  },
+  {
+    "id": "extra-17",
+    "method": "false_connection",
+    "seed_words": [
+      "HINGE",
+      "SCORE",
+      "COUCH",
+      "KNEES"
+    ],
+    "story": [
+      "A traveler wrote HINGE in a notebook before considering occupations.",
+      "A sign reading SCORE prompted a conversation about those objects.",
+      "A friend offered COUCH as a clue to their setting.",
+      "They remembered KNEES and compared the ordinary and alternate meanings of the words."
+    ],
+    "root_proposals": [
+      {
+        "category": "OCCUPATIONS",
+        "words": [
+          "JUDGE",
+          "PILOT",
+          "TAILOR",
+          "COBBLER",
+          "PORTER",
+          "STEWARD",
+          "MASON",
+          "BUTLER"
+        ],
+        "connection": "Each is a member or term of occupations."
+      },
+      {
+        "category": "SWEETS",
+        "words": [
+          "FUDGE",
+          "TOFFEE",
+          "TRUFFLE",
+          "CARAMEL",
+          "TAFFY",
+          "BONBON",
+          "NOUGAT",
+          "GUMDROP"
+        ],
+        "connection": "An alternative concrete theme considered from the story."
+      }
+    ],
+    "root_category": "OCCUPATIONS",
+    "root_pool": [
+      "JUDGE",
+      "PILOT",
+      "TAILOR",
+      "COBBLER",
+      "PORTER",
+      "STEWARD",
+      "MASON",
+      "BUTLER"
+    ],
+    "false_group": {
+      "category": "OCCUPATIONS",
+      "words": [
+        "PILOT",
+        "TAILOR",
+        "COBBLER",
+        "STEWARD"
+      ]
+    },
+    "groups": [
+      {
+        "id": "extra-17-g0",
+        "category": "GUIDE",
+        "category_key": "guide",
+        "style": "names_of_things",
+        "connection": "Verbs meaning guide a person, group, or vehicle.",
+        "words": [
+          "PILOT",
+          "STEER",
+          "GUIDE",
+          "SHEPHERD",
+          "CONDUCT",
+          "ESCORT",
+          "USHER",
+          "NAVIGATE"
+        ],
+        "required": [
+          "PILOT"
+        ],
+        "anchor": "PILOT",
+        "anchor_alternate_meaning": "PILOT: Verbs meaning guide a person, group, or vehicle.",
+        "word_fits": {
+          "PILOT": "PILOT: Verbs meaning guide a person, group, or vehicle.",
+          "STEER": "STEER: Verbs meaning guide a person, group, or vehicle.",
+          "GUIDE": "GUIDE: Verbs meaning guide a person, group, or vehicle.",
+          "SHEPHERD": "SHEPHERD: Verbs meaning guide a person, group, or vehicle.",
+          "CONDUCT": "CONDUCT: Verbs meaning guide a person, group, or vehicle.",
+          "ESCORT": "ESCORT: Verbs meaning guide a person, group, or vehicle.",
+          "USHER": "USHER: Verbs meaning guide a person, group, or vehicle.",
+          "NAVIGATE": "NAVIGATE: Verbs meaning guide a person, group, or vehicle."
+        }
+      },
+      {
+        "id": "extra-17-g1",
+        "category": "CUSTOMIZE",
+        "category_key": "customize",
+        "style": "names_of_things",
+        "connection": "Verbs meaning alter something to meet particular needs or settings.",
+        "words": [
+          "TAILOR",
+          "ADAPT",
+          "CUSTOMIZE",
+          "ADJUST",
+          "MODIFY",
+          "PERSONALIZE",
+          "CONFIGURE",
+          "CALIBRATE"
+        ],
+        "required": [
+          "TAILOR"
+        ],
+        "anchor": "TAILOR",
+        "anchor_alternate_meaning": "TAILOR: Verbs meaning alter something to meet particular needs or settings.",
+        "word_fits": {
+          "TAILOR": "TAILOR: Verbs meaning alter something to meet particular needs or settings.",
+          "ADAPT": "ADAPT: Verbs meaning alter something to meet particular needs or settings.",
+          "CUSTOMIZE": "CUSTOMIZE: Verbs meaning alter something to meet particular needs or settings.",
+          "ADJUST": "ADJUST: Verbs meaning alter something to meet particular needs or settings.",
+          "MODIFY": "MODIFY: Verbs meaning alter something to meet particular needs or settings.",
+          "PERSONALIZE": "PERSONALIZE: Verbs meaning alter something to meet particular needs or settings.",
+          "CONFIGURE": "CONFIGURE: Verbs meaning alter something to meet particular needs or settings.",
+          "CALIBRATE": "CALIBRATE: Verbs meaning alter something to meet particular needs or settings."
+        }
+      },
+      {
+        "id": "extra-17-g2",
+        "category": "FRUIT DESSERTS",
+        "category_key": "fruit_desserts",
+        "style": "names_of_things",
+        "connection": "Names of fruit desserts.",
+        "words": [
+          "COBBLER",
+          "CRUMBLE",
+          "BUCKLE",
+          "BETTY",
+          "CRISP",
+          "PANDOWDY",
+          "SLUMP",
+          "FOOL"
+        ],
+        "required": [
+          "COBBLER"
+        ],
+        "anchor": "COBBLER",
+        "anchor_alternate_meaning": "COBBLER: Names of fruit desserts.",
+        "word_fits": {
+          "COBBLER": "COBBLER: Names of fruit desserts.",
+          "CRUMBLE": "CRUMBLE: Names of fruit desserts.",
+          "BUCKLE": "BUCKLE: Names of fruit desserts.",
+          "BETTY": "BETTY: Names of fruit desserts.",
+          "CRISP": "CRISP: Names of fruit desserts.",
+          "PANDOWDY": "PANDOWDY: Names of fruit desserts.",
+          "SLUMP": "SLUMP: Names of fruit desserts.",
+          "FOOL": "FOOL: Names of fruit desserts."
+        }
+      },
+      {
+        "id": "extra-17-g3",
+        "category": "CARETAKER ROLES",
+        "category_key": "caretaker_roles",
+        "style": "names_of_things",
+        "connection": "Roles responsible for caring for or safeguarding people or things.",
+        "words": [
+          "STEWARD",
+          "CUSTODIAN",
+          "GUARDIAN",
+          "CARETAKER",
+          "CURATOR",
+          "WARDEN",
+          "KEEPER",
+          "CONSERVATOR"
+        ],
+        "required": [
+          "STEWARD"
+        ],
+        "anchor": "STEWARD",
+        "anchor_alternate_meaning": "STEWARD: Roles responsible for caring for or safeguarding people or things.",
+        "word_fits": {
+          "STEWARD": "STEWARD: Roles responsible for caring for or safeguarding people or things.",
+          "CUSTODIAN": "CUSTODIAN: Roles responsible for caring for or safeguarding people or things.",
+          "GUARDIAN": "GUARDIAN: Roles responsible for caring for or safeguarding people or things.",
+          "CARETAKER": "CARETAKER: Roles responsible for caring for or safeguarding people or things.",
+          "CURATOR": "CURATOR: Roles responsible for caring for or safeguarding people or things.",
+          "WARDEN": "WARDEN: Roles responsible for caring for or safeguarding people or things.",
+          "KEEPER": "KEEPER: Roles responsible for caring for or safeguarding people or things.",
+          "CONSERVATOR": "CONSERVATOR: Roles responsible for caring for or safeguarding people or things."
+        }
+      }
+    ]
+  }
+]

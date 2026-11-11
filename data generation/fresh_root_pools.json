@@ -1,0 +1,106 @@
+[
+  {
+    "id": "new-01",
+    "words": [
+      "BASS",
+      "PERCH",
+      "SOLE",
+      "CARP",
+      "PIKE",
+      "SKATE",
+      "RAY",
+      "FLOUNDER"
+    ]
+  },
+  {
+    "id": "new-02",
+    "words": [
+      "MOUSE",
+      "WINDOW",
+      "CACHE",
+      "COOKIE",
+      "THREAD",
+      "PROCESS",
+      "TOKEN",
+      "SERVER"
+    ]
+  },
+  {
+    "id": "new-03",
+    "words": [
+      "RUBY",
+      "OPAL",
+      "EMERALD",
+      "GARNET",
+      "AMBER",
+      "JADE",
+      "ONYX",
+      "SAPPHIRE"
+    ]
+  },
+  {
+    "id": "new-04",
+    "words": [
+      "BAT",
+      "BALL",
+      "DIAMOND",
+      "BASE",
+      "MITT",
+      "STRIKE",
+      "WALK",
+      "RUN"
+    ]
+  },
+  {
+    "id": "new-05",
+    "words": [
+      "PERIOD",
+      "COMMA",
+      "COLON",
+      "DASH",
+      "HYPHEN",
+      "BRACKET",
+      "QUOTE",
+      "SLASH"
+    ]
+  },
+  {
+    "id": "new-06",
+    "words": [
+      "KING",
+      "ROOK",
+      "PAWN",
+      "BISHOP",
+      "CHECK",
+      "MATE",
+      "FILE",
+      "RANK"
+    ]
+  },
+  {
+    "id": "new-07",
+    "words": [
+      "CAP",
+      "SOCK",
+      "GLOVE",
+      "BELT",
+      "CUFF",
+      "COLLAR",
+      "POCKET",
+      "HEM"
+    ]
+  },
+  {
+    "id": "new-08",
+    "words": [
+      "BRUSH",
+      "PALETTE",
+      "CANVAS",
+      "EASEL",
+      "CHARCOAL",
+      "INK",
+      "PENCIL",
+      "PASTEL"
+    ]
+  }
+]

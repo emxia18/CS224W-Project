@@ -1,0 +1,14 @@
+{
+  "scope": "Selected documented repairs during independent editing; not a complete transcript",
+  "repairs": [
+    {"group": "io-02-g1", "change": "BABY replaced with PREPARED", "reason": "Baby piano requires the omitted word grand; prepared piano fits literally"},
+    {"group": "io-06-g1", "change": "TURN replaced with POWER", "reason": "Turn point was not an established completion; PowerPoint fits"},
+    {"group": "io-09-g3", "change": "HAMMER replaced with BLACKTIP", "reason": "Hammer shark requires head; blacktip shark fits"},
+    {"group": "io-12-g3", "change": "Reframed as DECORATIVE TRIMMINGS", "reason": "Fringe is a decorative trimming, not a thing that has tassels"},
+    {"group": "io-13-g3", "change": "Rebuilt as ___ EFFECT", "reason": "Butterfly effect supplies a different meaning; winged things duplicated the earlier flying-animal theme"},
+    {"group": "fc-06-g1", "change": "RECORD replaced with PLENTEOUS", "reason": "Record does not independently mean abundant"},
+    {"group": "fc-15-g0", "change": "Rebuilt as ___ ACTION", "reason": "Standalone pump was a weak exercise-movement fit; pump action is literal"},
+    {"group": "fc-10-g2", "change": "Rebuilt as ANAGRAMMED ANIMALS with TAN, ACT, GOD, TAR, LOW, BARE, FLOW, SHORE", "reason": "Physical-striking synonyms overlapped heavily with the defeat-synonym category; all eight repaired words are exact animal anagrams"}
+  ],
+  "rescoring": "Final quartet_scores.json is generated from the repaired pools; construction-stage score files retain their original inputs"
+}

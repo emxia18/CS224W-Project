@@ -1,0 +1,3025 @@
+{
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "input_case": "lowercase",
+  "normalized": true,
+  "input_sha256": "4c0ac1e745297c943b82d6fab3550c4af18aaaf2fa6b65a751fbcf7abcd55abf",
+  "pools": {
+    "extra-01": {
+      "quartets": [
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "TUB",
+            "JAR"
+          ],
+          "similarity": 0.2623486816883087,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "TUB",
+            "CRATE"
+          ],
+          "similarity": 0.2820451259613037,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "TUB",
+            "BOX"
+          ],
+          "similarity": 0.30518999695777893,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "TUB",
+            "BASKET"
+          ],
+          "similarity": 0.26742368936538696,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "TUB",
+            "VESSEL"
+          ],
+          "similarity": 0.24383361637592316,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "JAR",
+            "CRATE"
+          ],
+          "similarity": 0.3056413233280182,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "JAR",
+            "BOX"
+          ],
+          "similarity": 0.3134046792984009,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "JAR",
+            "BASKET"
+          ],
+          "similarity": 0.27499762177467346,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "JAR",
+            "VESSEL"
+          ],
+          "similarity": 0.2620919346809387,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "CRATE",
+            "BOX"
+          ],
+          "similarity": 0.37754926085472107,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "CRATE",
+            "BASKET"
+          ],
+          "similarity": 0.3294559121131897,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "CRATE",
+            "VESSEL"
+          ],
+          "similarity": 0.2955147624015808,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.3221176862716675,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.29492753744125366,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CAN",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.2655816376209259,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "JAR",
+            "CRATE"
+          ],
+          "similarity": 0.3493846356868744,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "JAR",
+            "BOX"
+          ],
+          "similarity": 0.37434113025665283,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "JAR",
+            "BASKET"
+          ],
+          "similarity": 0.3160642683506012,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "JAR",
+            "VESSEL"
+          ],
+          "similarity": 0.3157601058483124,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "CRATE",
+            "BOX"
+          ],
+          "similarity": 0.4317532479763031,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "CRATE",
+            "BASKET"
+          ],
+          "similarity": 0.3637901246547699,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "CRATE",
+            "VESSEL"
+          ],
+          "similarity": 0.3424505293369293,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.3736450672149658,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.3590564727783203,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "TUB",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.3098407983779907,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "JAR",
+            "CRATE",
+            "BOX"
+          ],
+          "similarity": 0.4435049295425415,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "JAR",
+            "CRATE",
+            "BASKET"
+          ],
+          "similarity": 0.37490108609199524,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "JAR",
+            "CRATE",
+            "VESSEL"
+          ],
+          "similarity": 0.36424586176872253,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "JAR",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.36937442421913147,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "JAR",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.365470290184021,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "JAR",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.31561383605003357,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CRATE",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.4615483582019806,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CRATE",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.43660879135131836,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "CRATE",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.377066045999527,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BIN",
+            "BOX",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.36318889260292053,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "JAR",
+            "CRATE"
+          ],
+          "similarity": 0.26629719138145447,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "JAR",
+            "BOX"
+          ],
+          "similarity": 0.2803611755371094,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "JAR",
+            "BASKET"
+          ],
+          "similarity": 0.25397488474845886,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "JAR",
+            "VESSEL"
+          ],
+          "similarity": 0.2550336420536041,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "CRATE",
+            "BOX"
+          ],
+          "similarity": 0.3182290494441986,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "CRATE",
+            "BASKET"
+          ],
+          "similarity": 0.2821565270423889,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "CRATE",
+            "VESSEL"
+          ],
+          "similarity": 0.26217979192733765,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.2811189591884613,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.2678932547569275,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "TUB",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.25056812167167664,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "JAR",
+            "CRATE",
+            "BOX"
+          ],
+          "similarity": 0.33490729331970215,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "JAR",
+            "CRATE",
+            "BASKET"
+          ],
+          "similarity": 0.298194020986557,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "JAR",
+            "CRATE",
+            "VESSEL"
+          ],
+          "similarity": 0.2889016568660736,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "JAR",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.2817748486995697,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "JAR",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.27923354506492615,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "JAR",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.26126769185066223,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "CRATE",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.35440459847450256,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "CRATE",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.3308278024196625,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "CRATE",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.303175687789917,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CAN",
+            "BOX",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.2784059941768646,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "JAR",
+            "CRATE",
+            "BOX"
+          ],
+          "similarity": 0.39746078848838806,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "JAR",
+            "CRATE",
+            "BASKET"
+          ],
+          "similarity": 0.3408776819705963,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "JAR",
+            "CRATE",
+            "VESSEL"
+          ],
+          "similarity": 0.3441868722438812,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "JAR",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.34165170788764954,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "JAR",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.3517119586467743,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "JAR",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.31387630105018616,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "CRATE",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.40754902362823486,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "CRATE",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.3965737819671631,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "CRATE",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.3490518629550934,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TUB",
+            "BOX",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.34147536754608154,
+          "eligible": true
+        },
+        {
+          "words": [
+            "JAR",
+            "CRATE",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.4117419421672821,
+          "eligible": true
+        },
+        {
+          "words": [
+            "JAR",
+            "CRATE",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.4114511013031006,
+          "eligible": true
+        },
+        {
+          "words": [
+            "JAR",
+            "CRATE",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.3632884919643402,
+          "eligible": true
+        },
+        {
+          "words": [
+            "JAR",
+            "BOX",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.3403303623199463,
+          "eligible": true
+        },
+        {
+          "words": [
+            "CRATE",
+            "BOX",
+            "BASKET",
+            "VESSEL"
+          ],
+          "similarity": 0.4199540615081787,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.24383361637592316,
+      "max_similarity": 0.4615483582019806,
+      "selections": {
+        "yellow": {
+          "words": [
+            "BIN",
+            "CRATE",
+            "BOX",
+            "BASKET"
+          ],
+          "similarity": 0.4615483582019806,
+          "eligible": true,
+          "target": 0.4615483582019806
+        },
+        "green": {
+          "words": [
+            "TUB",
+            "CRATE",
+            "BOX",
+            "VESSEL"
+          ],
+          "similarity": 0.3965737819671631,
+          "eligible": true,
+          "target": 0.38897677759329474
+        },
+        "blue": {
+          "words": [
+            "BIN",
+            "TUB",
+            "JAR",
+            "BASKET"
+          ],
+          "similarity": 0.3160642683506012,
+          "eligible": true,
+          "target": 0.31640519698460895
+        },
+        "purple": {
+          "words": [
+            "BIN",
+            "CAN",
+            "TUB",
+            "VESSEL"
+          ],
+          "similarity": 0.24383361637592316,
+          "eligible": true,
+          "target": 0.24383361637592316
+        }
+      }
+    },
+    "extra-04": {
+      "quartets": [
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "AVENUE",
+            "STREET"
+          ],
+          "similarity": 0.3943037688732147,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "AVENUE",
+            "COURT"
+          ],
+          "similarity": 0.28731581568717957,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "AVENUE",
+            "WAY"
+          ],
+          "similarity": 0.26600518822669983,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "AVENUE",
+            "TERRACE"
+          ],
+          "similarity": 0.30975818634033203,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "AVENUE",
+            "ALLEY"
+          ],
+          "similarity": 0.3869531452655792,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "STREET",
+            "COURT"
+          ],
+          "similarity": 0.3272038996219635,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "STREET",
+            "WAY"
+          ],
+          "similarity": 0.2832522690296173,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "STREET",
+            "TERRACE"
+          ],
+          "similarity": 0.3134588897228241,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "STREET",
+            "ALLEY"
+          ],
+          "similarity": 0.38995614647865295,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "COURT",
+            "WAY"
+          ],
+          "similarity": 0.22762787342071533,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "COURT",
+            "TERRACE"
+          ],
+          "similarity": 0.2439502477645874,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "COURT",
+            "ALLEY"
+          ],
+          "similarity": 0.3078310787677765,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.2143687754869461,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.28453347086906433,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "LANE",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.2997630834579468,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "STREET",
+            "COURT"
+          ],
+          "similarity": 0.3612424433231354,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "STREET",
+            "WAY"
+          ],
+          "similarity": 0.32247206568717957,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "STREET",
+            "TERRACE"
+          ],
+          "similarity": 0.3915020227432251,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "STREET",
+            "ALLEY"
+          ],
+          "similarity": 0.4294801950454712,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "COURT",
+            "WAY"
+          ],
+          "similarity": 0.22402739524841309,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "COURT",
+            "TERRACE"
+          ],
+          "similarity": 0.2791731059551239,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "COURT",
+            "ALLEY"
+          ],
+          "similarity": 0.3045348823070526,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.2547729015350342,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.28641849756240845,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "AVENUE",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.340471476316452,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "STREET",
+            "COURT",
+            "WAY"
+          ],
+          "similarity": 0.26109611988067627,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "STREET",
+            "COURT",
+            "TERRACE"
+          ],
+          "similarity": 0.3026954233646393,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "STREET",
+            "COURT",
+            "ALLEY"
+          ],
+          "similarity": 0.32735952734947205,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "STREET",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.2556542158126831,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "STREET",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.2866021394729614,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "STREET",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.3271086812019348,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "COURT",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.19468887150287628,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "COURT",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.21302038431167603,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "COURT",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.2396426945924759,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DRIVE",
+            "WAY",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.21325546503067017,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "STREET",
+            "COURT"
+          ],
+          "similarity": 0.379276305437088,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "STREET",
+            "WAY"
+          ],
+          "similarity": 0.3417477309703827,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "STREET",
+            "TERRACE"
+          ],
+          "similarity": 0.4310714304447174,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "STREET",
+            "ALLEY"
+          ],
+          "similarity": 0.5040847063064575,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "COURT",
+            "WAY"
+          ],
+          "similarity": 0.2412327527999878,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "COURT",
+            "TERRACE"
+          ],
+          "similarity": 0.3166722357273102,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "COURT",
+            "ALLEY"
+          ],
+          "similarity": 0.3770690858364105,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.29351380467414856,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.36019447445869446,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.4345411956310272,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "STREET",
+            "COURT",
+            "WAY"
+          ],
+          "similarity": 0.26795724034309387,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "STREET",
+            "COURT",
+            "TERRACE"
+          ],
+          "similarity": 0.32985034584999084,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "STREET",
+            "COURT",
+            "ALLEY"
+          ],
+          "similarity": 0.38954949378967285,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "STREET",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.28405091166496277,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "STREET",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.35003387928009033,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "STREET",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.4108341634273529,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "COURT",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.22101525962352753,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "COURT",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.2743817865848541,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "COURT",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.32129785418510437,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANE",
+            "WAY",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.29615241289138794,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "STREET",
+            "COURT",
+            "WAY"
+          ],
+          "similarity": 0.3052896559238434,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "STREET",
+            "COURT",
+            "TERRACE"
+          ],
+          "similarity": 0.4060060977935791,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "STREET",
+            "COURT",
+            "ALLEY"
+          ],
+          "similarity": 0.42718613147735596,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "STREET",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.3653879165649414,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "STREET",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.3928517997264862,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "STREET",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.4924754202365875,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "COURT",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.25953197479248047,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "COURT",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.2743794620037079,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "COURT",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.3601188659667969,
+          "eligible": true
+        },
+        {
+          "words": [
+            "AVENUE",
+            "WAY",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.34015464782714844,
+          "eligible": true
+        },
+        {
+          "words": [
+            "STREET",
+            "COURT",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.26989075541496277,
+          "eligible": true
+        },
+        {
+          "words": [
+            "STREET",
+            "COURT",
+            "WAY",
+            "ALLEY"
+          ],
+          "similarity": 0.2840404808521271,
+          "eligible": true
+        },
+        {
+          "words": [
+            "STREET",
+            "COURT",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.35623350739479065,
+          "eligible": true
+        },
+        {
+          "words": [
+            "STREET",
+            "WAY",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.31362834572792053,
+          "eligible": true
+        },
+        {
+          "words": [
+            "COURT",
+            "WAY",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.23263530433177948,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.19468887150287628,
+      "max_similarity": 0.5040847063064575,
+      "selections": {
+        "yellow": {
+          "words": [
+            "LANE",
+            "AVENUE",
+            "STREET",
+            "ALLEY"
+          ],
+          "similarity": 0.5040847063064575,
+          "eligible": true,
+          "target": 0.5040847063064575
+        },
+        "green": {
+          "words": [
+            "AVENUE",
+            "STREET",
+            "COURT",
+            "TERRACE"
+          ],
+          "similarity": 0.4060060977935791,
+          "eligible": true,
+          "target": 0.4009527613719305
+        },
+        "blue": {
+          "words": [
+            "LANE",
+            "WAY",
+            "TERRACE",
+            "ALLEY"
+          ],
+          "similarity": 0.29615241289138794,
+          "eligible": true,
+          "target": 0.2978208164374034
+        },
+        "purple": {
+          "words": [
+            "DRIVE",
+            "COURT",
+            "WAY",
+            "TERRACE"
+          ],
+          "similarity": 0.19468887150287628,
+          "eligible": true,
+          "target": 0.19468887150287628
+        }
+      }
+    },
+    "extra-05": {
+      "quartets": [
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "ISSUE",
+            "EDITION"
+          ],
+          "similarity": 0.2615121304988861,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "ISSUE",
+            "DIGEST"
+          ],
+          "similarity": 0.2087634801864624,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "ISSUE",
+            "REVIEW"
+          ],
+          "similarity": 0.2263398915529251,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "ISSUE",
+            "MAGAZINE"
+          ],
+          "similarity": 0.2685779631137848,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "ISSUE",
+            "JOURNAL"
+          ],
+          "similarity": 0.27185019850730896,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "EDITION",
+            "DIGEST"
+          ],
+          "similarity": 0.23415881395339966,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "EDITION",
+            "REVIEW"
+          ],
+          "similarity": 0.23731398582458496,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "EDITION",
+            "MAGAZINE"
+          ],
+          "similarity": 0.3086014688014984,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "EDITION",
+            "JOURNAL"
+          ],
+          "similarity": 0.31106090545654297,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.21290631592273712,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "DIGEST",
+            "MAGAZINE"
+          ],
+          "similarity": 0.2660510838031769,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "DIGEST",
+            "JOURNAL"
+          ],
+          "similarity": 0.28024402260780334,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.2506204843521118,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.2728450298309326,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "VOLUME",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.36277106404304504,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "EDITION",
+            "DIGEST"
+          ],
+          "similarity": 0.2630809247493744,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "EDITION",
+            "REVIEW"
+          ],
+          "similarity": 0.302776575088501,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "EDITION",
+            "MAGAZINE"
+          ],
+          "similarity": 0.34949788451194763,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "EDITION",
+            "JOURNAL"
+          ],
+          "similarity": 0.33569106459617615,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.2555371820926666,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "DIGEST",
+            "MAGAZINE"
+          ],
+          "similarity": 0.2841157615184784,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "DIGEST",
+            "JOURNAL"
+          ],
+          "similarity": 0.2820424735546112,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.3052256405353546,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.311183899641037,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "ISSUE",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.3765438497066498,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.273122102022171,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "DIGEST",
+            "MAGAZINE"
+          ],
+          "similarity": 0.3307501971721649,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "DIGEST",
+            "JOURNAL"
+          ],
+          "similarity": 0.32786405086517334,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.33743879199028015,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.3425842523574829,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.43699362874031067,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "DIGEST",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.3003976345062256,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "DIGEST",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.31727662682533264,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "DIGEST",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.3935432434082031,
+          "eligible": true
+        },
+        {
+          "words": [
+            "NOVEL",
+            "REVIEW",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.38967767357826233,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "EDITION",
+            "DIGEST"
+          ],
+          "similarity": 0.22078418731689453,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "EDITION",
+            "REVIEW"
+          ],
+          "similarity": 0.23794229328632355,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "EDITION",
+            "MAGAZINE"
+          ],
+          "similarity": 0.3074878752231598,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "EDITION",
+            "JOURNAL"
+          ],
+          "similarity": 0.3010697662830353,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.1924823373556137,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "DIGEST",
+            "MAGAZINE"
+          ],
+          "similarity": 0.2438850998878479,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "DIGEST",
+            "JOURNAL"
+          ],
+          "similarity": 0.24920056760311127,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.24245743453502655,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.25580447912216187,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.3439885675907135,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "EDITION",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.19892887771129608,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "EDITION",
+            "DIGEST",
+            "MAGAZINE"
+          ],
+          "similarity": 0.27938112616539,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "EDITION",
+            "DIGEST",
+            "JOURNAL"
+          ],
+          "similarity": 0.2838837504386902,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "EDITION",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.26353219151496887,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "EDITION",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.276066392660141,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "EDITION",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.39329996705055237,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "DIGEST",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.22827045619487762,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "DIGEST",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.25253817439079285,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "DIGEST",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.35162901878356934,
+          "eligible": true
+        },
+        {
+          "words": [
+            "VOLUME",
+            "REVIEW",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.32522591948509216,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "EDITION",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.2412836104631424,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "EDITION",
+            "DIGEST",
+            "MAGAZINE"
+          ],
+          "similarity": 0.2971697151660919,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "EDITION",
+            "DIGEST",
+            "JOURNAL"
+          ],
+          "similarity": 0.28540608286857605,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "EDITION",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.3178612291812897,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "EDITION",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.31412920355796814,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "EDITION",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.4067966043949127,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "DIGEST",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.2597677707672119,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "DIGEST",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.2677692770957947,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "DIGEST",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.34229397773742676,
+          "eligible": true
+        },
+        {
+          "words": [
+            "ISSUE",
+            "REVIEW",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.3524312973022461,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EDITION",
+            "DIGEST",
+            "REVIEW",
+            "MAGAZINE"
+          ],
+          "similarity": 0.28745341300964355,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EDITION",
+            "DIGEST",
+            "REVIEW",
+            "JOURNAL"
+          ],
+          "similarity": 0.29464206099510193,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EDITION",
+            "DIGEST",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.39821621775627136,
+          "eligible": true
+        },
+        {
+          "words": [
+            "EDITION",
+            "REVIEW",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.3939323425292969,
+          "eligible": true
+        },
+        {
+          "words": [
+            "DIGEST",
+            "REVIEW",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.3577705919742584,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.1924823373556137,
+      "max_similarity": 0.43699362874031067,
+      "selections": {
+        "yellow": {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.43699362874031067,
+          "eligible": true,
+          "target": 0.43699362874031067
+        },
+        "green": {
+          "words": [
+            "DIGEST",
+            "REVIEW",
+            "MAGAZINE",
+            "JOURNAL"
+          ],
+          "similarity": 0.3577705919742584,
+          "eligible": true,
+          "target": 0.3554898649454117
+        },
+        "blue": {
+          "words": [
+            "NOVEL",
+            "EDITION",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.273122102022171,
+          "eligible": true,
+          "target": 0.2739861011505127
+        },
+        "purple": {
+          "words": [
+            "VOLUME",
+            "ISSUE",
+            "DIGEST",
+            "REVIEW"
+          ],
+          "similarity": 0.1924823373556137,
+          "eligible": true,
+          "target": 0.1924823373556137
+        }
+      }
+    },
+    "extra-07": {
+      "quartets": [
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "LAMP",
+            "BULB"
+          ],
+          "similarity": 0.5898491740226746,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "LAMP",
+            "FLARE"
+          ],
+          "similarity": 0.4890154302120209,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "LAMP",
+            "GLOW"
+          ],
+          "similarity": 0.5209323763847351,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "LAMP",
+            "CANDLE"
+          ],
+          "similarity": 0.563917875289917,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "LAMP",
+            "FLASH"
+          ],
+          "similarity": 0.4799964427947998,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "BULB",
+            "FLARE"
+          ],
+          "similarity": 0.47007104754447937,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "BULB",
+            "GLOW"
+          ],
+          "similarity": 0.49616262316703796,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "BULB",
+            "CANDLE"
+          ],
+          "similarity": 0.5427792072296143,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "BULB",
+            "FLASH"
+          ],
+          "similarity": 0.4605490267276764,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "FLARE",
+            "GLOW"
+          ],
+          "similarity": 0.4655549228191376,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "FLARE",
+            "CANDLE"
+          ],
+          "similarity": 0.4641002118587494,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "FLARE",
+            "FLASH"
+          ],
+          "similarity": 0.4450920820236206,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.49860891699790955,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.4522256553173065,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.44121626019477844,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "BULB",
+            "FLARE"
+          ],
+          "similarity": 0.4870329797267914,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "BULB",
+            "GLOW"
+          ],
+          "similarity": 0.5284351706504822,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "BULB",
+            "CANDLE"
+          ],
+          "similarity": 0.593723714351654,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "BULB",
+            "FLASH"
+          ],
+          "similarity": 0.5014095306396484,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "FLARE",
+            "GLOW"
+          ],
+          "similarity": 0.443386048078537,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "FLARE",
+            "CANDLE"
+          ],
+          "similarity": 0.4606032371520996,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "FLARE",
+            "FLASH"
+          ],
+          "similarity": 0.431511253118515,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.5104225277900696,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.45395541191101074,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "LAMP",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.46161791682243347,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "BULB",
+            "FLARE",
+            "GLOW"
+          ],
+          "similarity": 0.42737433314323425,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "BULB",
+            "FLARE",
+            "CANDLE"
+          ],
+          "similarity": 0.44822263717651367,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "BULB",
+            "FLARE",
+            "FLASH"
+          ],
+          "similarity": 0.42082175612449646,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "BULB",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.49221673607826233,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "BULB",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.4374406635761261,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "BULB",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.4487342834472656,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "FLARE",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.4293222427368164,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "FLARE",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.43776825070381165,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "FLARE",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.4009905755519867,
+          "eligible": true
+        },
+        {
+          "words": [
+            "TORCH",
+            "GLOW",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.4260266125202179,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "BULB",
+            "FLARE"
+          ],
+          "similarity": 0.48361125588417053,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "BULB",
+            "GLOW"
+          ],
+          "similarity": 0.5209986567497253,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "BULB",
+            "CANDLE"
+          ],
+          "similarity": 0.5962281227111816,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "BULB",
+            "FLASH"
+          ],
+          "similarity": 0.48535123467445374,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "FLARE",
+            "GLOW"
+          ],
+          "similarity": 0.4346142113208771,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "FLARE",
+            "CANDLE"
+          ],
+          "similarity": 0.4617723524570465,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "FLARE",
+            "FLASH"
+          ],
+          "similarity": 0.41411760449409485,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.5075768828392029,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.4325469732284546,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.45015037059783936,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "BULB",
+            "FLARE",
+            "GLOW"
+          ],
+          "similarity": 0.4192044734954834,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "BULB",
+            "FLARE",
+            "CANDLE"
+          ],
+          "similarity": 0.44999369978904724,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "BULB",
+            "FLARE",
+            "FLASH"
+          ],
+          "similarity": 0.40403008460998535,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "BULB",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.48997291922569275,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "BULB",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.416634202003479,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "BULB",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.4378686845302582,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "FLARE",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.42574310302734375,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "FLARE",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.4156264364719391,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "FLARE",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.38878968358039856,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LANTERN",
+            "GLOW",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.4098109304904938,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "BULB",
+            "FLARE",
+            "GLOW"
+          ],
+          "similarity": 0.42757606506347656,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "BULB",
+            "FLARE",
+            "CANDLE"
+          ],
+          "similarity": 0.4770371913909912,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "BULB",
+            "FLARE",
+            "FLASH"
+          ],
+          "similarity": 0.42098966240882874,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "BULB",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.5323271155357361,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "BULB",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.4489043951034546,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "BULB",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.48881086707115173,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "FLARE",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.4136558473110199,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "FLARE",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.39345526695251465,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "FLARE",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.3852904140949249,
+          "eligible": true
+        },
+        {
+          "words": [
+            "LAMP",
+            "GLOW",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.42162224650382996,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BULB",
+            "FLARE",
+            "GLOW",
+            "CANDLE"
+          ],
+          "similarity": 0.4048099219799042,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BULB",
+            "FLARE",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.3863004446029663,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BULB",
+            "FLARE",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.381766676902771,
+          "eligible": true
+        },
+        {
+          "words": [
+            "BULB",
+            "GLOW",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.4122732877731323,
+          "eligible": true
+        },
+        {
+          "words": [
+            "FLARE",
+            "GLOW",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.37897881865501404,
+          "eligible": true
+        }
+      ],
+      "eligible_count": 70,
+      "required": [],
+      "min_similarity": 0.37897881865501404,
+      "max_similarity": 0.5962281227111816,
+      "selections": {
+        "yellow": {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "BULB",
+            "CANDLE"
+          ],
+          "similarity": 0.5962281227111816,
+          "eligible": true,
+          "target": 0.5962281227111816
+        },
+        "green": {
+          "words": [
+            "LANTERN",
+            "LAMP",
+            "BULB",
+            "GLOW"
+          ],
+          "similarity": 0.5209986567497253,
+          "eligible": true,
+          "target": 0.5238116880257925
+        },
+        "blue": {
+          "words": [
+            "TORCH",
+            "LANTERN",
+            "GLOW",
+            "FLASH"
+          ],
+          "similarity": 0.4522256553173065,
+          "eligible": true,
+          "target": 0.45139525334040326
+        },
+        "purple": {
+          "words": [
+            "FLARE",
+            "GLOW",
+            "CANDLE",
+            "FLASH"
+          ],
+          "similarity": 0.37897881865501404,
+          "eligible": true,
+          "target": 0.37897881865501404
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1570 @@
+[
+  {
+    "id": "new-01",
+    "method": "false_connection",
+    "seed_words": [
+      "KICK",
+      "GAFFE",
+      "DUDE",
+      "GOLDILOCKS"
+    ],
+    "story": [
+      "A fisherman gave the stubborn motor a KICK.",
+      "He called his accidental splash a GAFFE.",
+      "A passing DUDE helped him retrieve the tackle.",
+      "They nicknamed their boat GOLDILOCKS and tried a quieter fishing spot."
+    ],
+    "root_proposals": [
+      {
+        "category": "FISH",
+        "words": [
+          "BASS",
+          "PERCH",
+          "SOLE",
+          "CARP",
+          "PIKE",
+          "SKATE",
+          "RAY",
+          "FLOUNDER"
+        ],
+        "connection": "Each belongs to fish."
+      },
+      {
+        "category": "BASEBALL TERMS",
+        "words": [
+          "BAT",
+          "BALL",
+          "DIAMOND",
+          "BASE",
+          "MITT",
+          "STRIKE",
+          "WALK",
+          "RUN"
+        ],
+        "connection": "Each belongs to baseball terms."
+      }
+    ],
+    "root_category": "FISH",
+    "root_pool": [
+      "BASS",
+      "PERCH",
+      "SOLE",
+      "CARP",
+      "PIKE",
+      "SKATE",
+      "RAY",
+      "FLOUNDER"
+    ],
+    "false_group": {
+      "category": "FISH",
+      "words": [
+        "PERCH",
+        "CARP",
+        "PIKE",
+        "FLOUNDER"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-01-g0",
+        "category": "BODY POSTURES",
+        "category_key": "body_postures",
+        "style": "names_of_things",
+        "connection": "Positions or ways of positioning the human body.",
+        "words": [
+          "PERCH",
+          "SQUAT",
+          "CROUCH",
+          "KNEEL",
+          "RECLINE",
+          "LOUNGE",
+          "HUNCH",
+          "SPRAWL"
+        ],
+        "required": [
+          "PERCH"
+        ],
+        "anchor": "PERCH",
+        "anchor_alternate_meaning": "PERCH: Positions or ways of positioning the human body.",
+        "word_fits": {
+          "PERCH": "PERCH: Positions or ways of positioning the human body.",
+          "SQUAT": "SQUAT: Positions or ways of positioning the human body.",
+          "CROUCH": "CROUCH: Positions or ways of positioning the human body.",
+          "KNEEL": "KNEEL: Positions or ways of positioning the human body.",
+          "RECLINE": "RECLINE: Positions or ways of positioning the human body.",
+          "LOUNGE": "LOUNGE: Positions or ways of positioning the human body.",
+          "HUNCH": "HUNCH: Positions or ways of positioning the human body.",
+          "SPRAWL": "SPRAWL: Positions or ways of positioning the human body."
+        }
+      },
+      {
+        "id": "new-01-g1",
+        "category": "VOICE DISSATISFACTION",
+        "category_key": "express_discontent",
+        "style": "names_of_things",
+        "connection": "Verbs for voicing dissatisfaction, rather than attacking a target.",
+        "words": [
+          "CARP",
+          "COMPLAIN",
+          "GRUMBLE",
+          "GROUSE",
+          "WHINGE",
+          "WHINE",
+          "MOAN",
+          "KVETCH"
+        ],
+        "required": [
+          "CARP"
+        ],
+        "anchor": "CARP",
+        "anchor_alternate_meaning": "CARP: Verbs for voicing dissatisfaction, rather than attacking a target.",
+        "word_fits": {
+          "CARP": "CARP: Verbs for voicing dissatisfaction, rather than attacking a target.",
+          "COMPLAIN": "COMPLAIN: Verbs for voicing dissatisfaction, rather than attacking a target.",
+          "GRUMBLE": "GRUMBLE: Verbs for voicing dissatisfaction, rather than attacking a target.",
+          "GROUSE": "GROUSE: Verbs for voicing dissatisfaction, rather than attacking a target.",
+          "WHINGE": "WHINGE: Verbs for voicing dissatisfaction, rather than attacking a target.",
+          "WHINE": "WHINE: Verbs for voicing dissatisfaction, rather than attacking a target.",
+          "MOAN": "MOAN: Verbs for voicing dissatisfaction, rather than attacking a target.",
+          "KVETCH": "KVETCH: Verbs for voicing dissatisfaction, rather than attacking a target."
+        }
+      },
+      {
+        "id": "new-01-g2",
+        "category": "POLE WEAPONS",
+        "category_key": "pole_weapons",
+        "style": "names_of_things",
+        "connection": "Weapons consisting of a long shaft with a pointed or bladed head.",
+        "words": [
+          "PIKE",
+          "SPEAR",
+          "LANCE",
+          "HALBERD",
+          "GLAIVE",
+          "PARTISAN",
+          "TRIDENT",
+          "JAVELIN"
+        ],
+        "required": [
+          "PIKE"
+        ],
+        "anchor": "PIKE",
+        "anchor_alternate_meaning": "PIKE: Weapons consisting of a long shaft with a pointed or bladed head.",
+        "word_fits": {
+          "PIKE": "PIKE: Weapons consisting of a long shaft with a pointed or bladed head.",
+          "SPEAR": "SPEAR: Weapons consisting of a long shaft with a pointed or bladed head.",
+          "LANCE": "LANCE: Weapons consisting of a long shaft with a pointed or bladed head.",
+          "HALBERD": "HALBERD: Weapons consisting of a long shaft with a pointed or bladed head.",
+          "GLAIVE": "GLAIVE: Weapons consisting of a long shaft with a pointed or bladed head.",
+          "PARTISAN": "PARTISAN: Weapons consisting of a long shaft with a pointed or bladed head.",
+          "TRIDENT": "TRIDENT: Weapons consisting of a long shaft with a pointed or bladed head.",
+          "JAVELIN": "JAVELIN: Weapons consisting of a long shaft with a pointed or bladed head."
+        }
+      },
+      {
+        "id": "new-01-g3",
+        "category": "ACT INEPTLY",
+        "category_key": "inept_performance",
+        "style": "names_of_things",
+        "connection": "Verbs describing struggling or performing clumsily.",
+        "words": [
+          "FLOUNDER",
+          "FUMBLE",
+          "BUMBLE",
+          "STUMBLE",
+          "FALTER",
+          "FLAIL",
+          "BLUNDER",
+          "BOTCH"
+        ],
+        "required": [
+          "FLOUNDER"
+        ],
+        "anchor": "FLOUNDER",
+        "anchor_alternate_meaning": "FLOUNDER: Verbs describing struggling or performing clumsily.",
+        "word_fits": {
+          "FLOUNDER": "FLOUNDER: Verbs describing struggling or performing clumsily.",
+          "FUMBLE": "FUMBLE: Verbs describing struggling or performing clumsily.",
+          "BUMBLE": "BUMBLE: Verbs describing struggling or performing clumsily.",
+          "STUMBLE": "STUMBLE: Verbs describing struggling or performing clumsily.",
+          "FALTER": "FALTER: Verbs describing struggling or performing clumsily.",
+          "FLAIL": "FLAIL: Verbs describing struggling or performing clumsily.",
+          "BLUNDER": "BLUNDER: Verbs describing struggling or performing clumsily.",
+          "BOTCH": "BOTCH: Verbs describing struggling or performing clumsily."
+        }
+      }
+    ]
+  },
+  {
+    "id": "new-02",
+    "method": "false_connection",
+    "seed_words": [
+      "REVOLUTION",
+      "ENGROSS",
+      "AMERICA",
+      "GEN"
+    ],
+    "story": [
+      "An exhibit promised a REVOLUTION in household computing.",
+      "Its games could ENGROSS even skeptical visitors.",
+      "A family touring AMERICA stopped at the booth.",
+      "Their daughter GEN used a mouse to order a virtual cookie."
+    ],
+    "root_proposals": [
+      {
+        "category": "COMPUTING TERMS",
+        "words": [
+          "MOUSE",
+          "WINDOW",
+          "CACHE",
+          "COOKIE",
+          "THREAD",
+          "PROCESS",
+          "TOKEN",
+          "SERVER"
+        ],
+        "connection": "Each belongs to computing terms."
+      },
+      {
+        "category": "PUNCTUATION",
+        "words": [
+          "PERIOD",
+          "COMMA",
+          "COLON",
+          "DASH",
+          "HYPHEN",
+          "BRACKET",
+          "QUOTE",
+          "SLASH"
+        ],
+        "connection": "Each belongs to punctuation."
+      }
+    ],
+    "root_category": "COMPUTING TERMS",
+    "root_pool": [
+      "MOUSE",
+      "WINDOW",
+      "CACHE",
+      "COOKIE",
+      "THREAD",
+      "PROCESS",
+      "TOKEN",
+      "SERVER"
+    ],
+    "false_group": {
+      "category": "COMPUTING TERMS",
+      "words": [
+        "MOUSE",
+        "COOKIE",
+        "TOKEN",
+        "SERVER"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-02-g0",
+        "category": "MODEL ORGANISMS",
+        "category_key": "model_organisms",
+        "style": "names_of_things",
+        "connection": "Organisms routinely used in biological research.",
+        "words": [
+          "MOUSE",
+          "ZEBRAFISH",
+          "NEMATODE",
+          "YEAST",
+          "BACTERIUM",
+          "FLY",
+          "FROG",
+          "RABBIT"
+        ],
+        "required": [
+          "MOUSE"
+        ],
+        "anchor": "MOUSE",
+        "anchor_alternate_meaning": "MOUSE: Organisms routinely used in biological research.",
+        "word_fits": {
+          "MOUSE": "MOUSE: Organisms routinely used in biological research.",
+          "ZEBRAFISH": "ZEBRAFISH: Organisms routinely used in biological research.",
+          "NEMATODE": "NEMATODE: Organisms routinely used in biological research.",
+          "YEAST": "YEAST: Organisms routinely used in biological research.",
+          "BACTERIUM": "BACTERIUM: Organisms routinely used in biological research.",
+          "FLY": "FLY: Organisms routinely used in biological research.",
+          "FROG": "FROG: Organisms routinely used in biological research.",
+          "RABBIT": "RABBIT: Organisms routinely used in biological research."
+        }
+      },
+      {
+        "id": "new-02-g1",
+        "category": "BAKED SWEETS",
+        "category_key": "baked_sweets",
+        "style": "names_of_things",
+        "connection": "Sweet treats prepared by baking.",
+        "words": [
+          "COOKIE",
+          "BROWNIE",
+          "BLONDIE",
+          "MACARON",
+          "MERINGUE",
+          "CUPCAKE",
+          "TART",
+          "ECLAIR"
+        ],
+        "required": [
+          "COOKIE"
+        ],
+        "anchor": "COOKIE",
+        "anchor_alternate_meaning": "COOKIE: Sweet treats prepared by baking.",
+        "word_fits": {
+          "COOKIE": "COOKIE: Sweet treats prepared by baking.",
+          "BROWNIE": "BROWNIE: Sweet treats prepared by baking.",
+          "BLONDIE": "BLONDIE: Sweet treats prepared by baking.",
+          "MACARON": "MACARON: Sweet treats prepared by baking.",
+          "MERINGUE": "MERINGUE: Sweet treats prepared by baking.",
+          "CUPCAKE": "CUPCAKE: Sweet treats prepared by baking.",
+          "TART": "TART: Sweet treats prepared by baking.",
+          "ECLAIR": "ECLAIR: Sweet treats prepared by baking."
+        }
+      },
+      {
+        "id": "new-02-g2",
+        "category": "SENTIMENTAL OBJECTS",
+        "category_key": "sentimental_objects",
+        "style": "names_of_things",
+        "connection": "Objects kept as reminders of people, places, events, or affection.",
+        "words": [
+          "TOKEN",
+          "MEMENTO",
+          "KEEPSAKE",
+          "SOUVENIR",
+          "REMEMBRANCE",
+          "HEIRLOOM",
+          "RELIC",
+          "MEMORABILIA"
+        ],
+        "required": [
+          "TOKEN"
+        ],
+        "anchor": "TOKEN",
+        "anchor_alternate_meaning": "A TOKEN can be a physical keepsake representing affection or remembrance.",
+        "word_fits": {
+          "TOKEN": "An object serving as a sign of affection or remembrance.",
+          "MEMENTO": "An object kept to remember a person or event.",
+          "KEEPSAKE": "A small object kept for sentimental reasons.",
+          "SOUVENIR": "Something retained as a reminder of a place or visit.",
+          "REMEMBRANCE": "A gift or keepsake serving as a reminder.",
+          "HEIRLOOM": "An object preserved across generations, often sentimentally.",
+          "RELIC": "A surviving object preserved as a reminder of the past.",
+          "MEMORABILIA": "Objects kept because of their connection to memorable people or events."
+        }
+      },
+      {
+        "id": "new-02-g3",
+        "category": "RESTAURANT ROLES",
+        "category_key": "restaurant_roles",
+        "style": "names_of_things",
+        "connection": "Job roles found in restaurants.",
+        "words": [
+          "SERVER",
+          "CHEF",
+          "BUSSER",
+          "HOST",
+          "SOMMELIER",
+          "DISHWASHER",
+          "BARTENDER",
+          "CASHIER"
+        ],
+        "required": [
+          "SERVER"
+        ],
+        "anchor": "SERVER",
+        "anchor_alternate_meaning": "SERVER: Job roles found in restaurants.",
+        "word_fits": {
+          "SERVER": "SERVER: Job roles found in restaurants.",
+          "CHEF": "CHEF: Job roles found in restaurants.",
+          "BUSSER": "BUSSER: Job roles found in restaurants.",
+          "HOST": "HOST: Job roles found in restaurants.",
+          "SOMMELIER": "SOMMELIER: Job roles found in restaurants.",
+          "DISHWASHER": "DISHWASHER: Job roles found in restaurants.",
+          "BARTENDER": "BARTENDER: Job roles found in restaurants.",
+          "CASHIER": "CASHIER: Job roles found in restaurants."
+        }
+      }
+    ]
+  },
+  {
+    "id": "new-03",
+    "method": "false_connection",
+    "seed_words": [
+      "BANANA",
+      "MELT",
+      "ZERO",
+      "KINKY"
+    ],
+    "story": [
+      "A BANANA seller admired the gems in the next stall.",
+      "He watched ice begin to MELT around his fruit.",
+      "With ZERO customers waiting, he visited the jeweler.",
+      "The jeweler's KINKY curls framed a dazzling emerald pendant."
+    ],
+    "root_proposals": [
+      {
+        "category": "GEMSTONES",
+        "words": [
+          "RUBY",
+          "OPAL",
+          "EMERALD",
+          "GARNET",
+          "AMBER",
+          "JADE",
+          "ONYX",
+          "SAPPHIRE"
+        ],
+        "connection": "Each belongs to gemstones."
+      },
+      {
+        "category": "CHESS TERMS",
+        "words": [
+          "KING",
+          "ROOK",
+          "PAWN",
+          "BISHOP",
+          "CHECK",
+          "MATE",
+          "FILE",
+          "RANK"
+        ],
+        "connection": "Each belongs to chess terms."
+      }
+    ],
+    "root_category": "GEMSTONES",
+    "root_pool": [
+      "RUBY",
+      "OPAL",
+      "EMERALD",
+      "GARNET",
+      "AMBER",
+      "JADE",
+      "ONYX",
+      "SAPPHIRE"
+    ],
+    "false_group": {
+      "category": "GEMSTONES",
+      "words": [
+        "RUBY",
+        "EMERALD",
+        "GARNET",
+        "SAPPHIRE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-03-g0",
+        "category": "PROGRAMMING LANGUAGES",
+        "category_key": "programming_languages",
+        "style": "names_of_things",
+        "connection": "Names of programming languages.",
+        "words": [
+          "RUBY",
+          "PYTHON",
+          "JAVA",
+          "RUST",
+          "SWIFT",
+          "SCALA",
+          "GO",
+          "KOTLIN"
+        ],
+        "required": [
+          "RUBY"
+        ],
+        "anchor": "RUBY",
+        "anchor_alternate_meaning": "RUBY: Names of programming languages.",
+        "word_fits": {
+          "RUBY": "RUBY: Names of programming languages.",
+          "PYTHON": "PYTHON: Names of programming languages.",
+          "JAVA": "JAVA: Names of programming languages.",
+          "RUST": "RUST: Names of programming languages.",
+          "SWIFT": "SWIFT: Names of programming languages.",
+          "SCALA": "SCALA: Names of programming languages.",
+          "GO": "GO: Names of programming languages.",
+          "KOTLIN": "KOTLIN: Names of programming languages."
+        }
+      },
+      {
+        "id": "new-03-g1",
+        "category": "___ CITY",
+        "category_key": "____city",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding CITY in established city nicknames.",
+        "words": [
+          "EMERALD",
+          "FORBIDDEN",
+          "WINDY",
+          "MAGIC",
+          "ROSE",
+          "CRESCENT",
+          "HOLY",
+          "ETERNAL"
+        ],
+        "required": [
+          "EMERALD"
+        ],
+        "anchor": "EMERALD",
+        "anchor_alternate_meaning": "EMERALD CITY",
+        "word_fits": {
+          "EMERALD": "EMERALD CITY",
+          "FORBIDDEN": "FORBIDDEN CITY",
+          "WINDY": "WINDY CITY",
+          "MAGIC": "MAGIC CITY",
+          "ROSE": "ROSE CITY",
+          "CRESCENT": "CRESCENT CITY",
+          "HOLY": "HOLY CITY",
+          "ETERNAL": "ETERNAL CITY"
+        }
+      },
+      {
+        "id": "new-03-g2",
+        "category": "REBECCA SUGAR CHARACTERS",
+        "category_key": "steven_universe_characters",
+        "style": "names_of_things",
+        "connection": "Exact single-word character names from Steven Universe.",
+        "words": [
+          "GARNET",
+          "STEVEN",
+          "CONNIE",
+          "LARS",
+          "SADIE",
+          "ONION",
+          "GREG",
+          "JASPER"
+        ],
+        "required": [
+          "GARNET"
+        ],
+        "anchor": "GARNET",
+        "anchor_alternate_meaning": "GARNET: Exact single-word character names from Steven Universe.",
+        "word_fits": {
+          "GARNET": "GARNET: Exact single-word character names from Steven Universe.",
+          "STEVEN": "STEVEN: Exact single-word character names from Steven Universe.",
+          "CONNIE": "CONNIE: Exact single-word character names from Steven Universe.",
+          "LARS": "LARS: Exact single-word character names from Steven Universe.",
+          "SADIE": "SADIE: Exact single-word character names from Steven Universe.",
+          "ONION": "ONION: Exact single-word character names from Steven Universe.",
+          "GREG": "GREG: Exact single-word character names from Steven Universe.",
+          "JASPER": "JASPER: Exact single-word character names from Steven Universe."
+        }
+      },
+      {
+        "id": "new-03-g3",
+        "category": "___ BLUE",
+        "category_key": "____blue",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding BLUE to name familiar shades.",
+        "words": [
+          "SAPPHIRE",
+          "NAVY",
+          "ROYAL",
+          "BABY",
+          "SKY",
+          "POWDER",
+          "MIDNIGHT",
+          "STEEL"
+        ],
+        "required": [
+          "SAPPHIRE"
+        ],
+        "anchor": "SAPPHIRE",
+        "anchor_alternate_meaning": "SAPPHIRE BLUE",
+        "word_fits": {
+          "SAPPHIRE": "SAPPHIRE BLUE",
+          "NAVY": "NAVY BLUE",
+          "ROYAL": "ROYAL BLUE",
+          "BABY": "BABY BLUE",
+          "SKY": "SKY BLUE",
+          "POWDER": "POWDER BLUE",
+          "MIDNIGHT": "MIDNIGHT BLUE",
+          "STEEL": "STEEL BLUE"
+        }
+      }
+    ]
+  },
+  {
+    "id": "new-04",
+    "method": "false_connection",
+    "seed_words": [
+      "HONDA",
+      "MUSSEL",
+      "MODERN",
+      "COTTAGE"
+    ],
+    "story": [
+      "A HONDA stopped beside a baseball field.",
+      "Its driver carried a sandwich filled with MUSSEL meat.",
+      "The players preferred MODERN equipment to the old wooden bats.",
+      "After practice they gathered at a nearby COTTAGE."
+    ],
+    "root_proposals": [
+      {
+        "category": "BASEBALL TERMS",
+        "words": [
+          "BAT",
+          "BALL",
+          "DIAMOND",
+          "BASE",
+          "MITT",
+          "STRIKE",
+          "WALK",
+          "RUN"
+        ],
+        "connection": "Each belongs to baseball terms."
+      },
+      {
+        "category": "CLOTHING DETAILS",
+        "words": [
+          "CAP",
+          "SOCK",
+          "GLOVE",
+          "BELT",
+          "CUFF",
+          "COLLAR",
+          "POCKET",
+          "HEM"
+        ],
+        "connection": "Each belongs to clothing details."
+      }
+    ],
+    "root_category": "BASEBALL TERMS",
+    "root_pool": [
+      "BAT",
+      "BALL",
+      "DIAMOND",
+      "BASE",
+      "MITT",
+      "STRIKE",
+      "WALK",
+      "RUN"
+    ],
+    "false_group": {
+      "category": "BASEBALL TERMS",
+      "words": [
+        "BAT",
+        "BALL",
+        "DIAMOND",
+        "BASE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-04-g0",
+        "category": "___MAN CHARACTERS",
+        "category_key": "____man_characters",
+        "style": "fill_in_the_blank",
+        "connection": "Stems joining MAN in established comic-book character names, allowing normal hyphenation.",
+        "words": [
+          "BAT",
+          "SPIDER",
+          "IRON",
+          "SUPER",
+          "SAND",
+          "AQUA",
+          "ANT",
+          "ICE"
+        ],
+        "required": [
+          "BAT"
+        ],
+        "anchor": "BAT",
+        "anchor_alternate_meaning": "BATMAN CHARACTERS",
+        "word_fits": {
+          "BAT": "BATMAN CHARACTERS",
+          "SPIDER": "SPIDERMAN CHARACTERS",
+          "IRON": "IRONMAN CHARACTERS",
+          "SUPER": "SUPERMAN CHARACTERS",
+          "SAND": "SANDMAN CHARACTERS",
+          "AQUA": "AQUAMAN CHARACTERS",
+          "ANT": "ANTMAN CHARACTERS",
+          "ICE": "ICEMAN CHARACTERS"
+        }
+      },
+      {
+        "id": "new-04-g1",
+        "category": "SOCIAL EVENTS",
+        "category_key": "social_events",
+        "style": "names_of_things",
+        "connection": "Organized social gatherings or celebrations.",
+        "words": [
+          "BALL",
+          "GALA",
+          "SOIREE",
+          "RECEPTION",
+          "BANQUET",
+          "FESTIVAL",
+          "FETE",
+          "GATHERING"
+        ],
+        "required": [
+          "BALL"
+        ],
+        "anchor": "BALL",
+        "anchor_alternate_meaning": "BALL: Organized social gatherings or celebrations.",
+        "word_fits": {
+          "BALL": "BALL: Organized social gatherings or celebrations.",
+          "GALA": "GALA: Organized social gatherings or celebrations.",
+          "SOIREE": "SOIREE: Organized social gatherings or celebrations.",
+          "RECEPTION": "RECEPTION: Organized social gatherings or celebrations.",
+          "BANQUET": "BANQUET: Organized social gatherings or celebrations.",
+          "FESTIVAL": "FESTIVAL: Organized social gatherings or celebrations.",
+          "FETE": "FETE: Organized social gatherings or celebrations.",
+          "GATHERING": "GATHERING: Organized social gatherings or celebrations."
+        }
+      },
+      {
+        "id": "new-04-g2",
+        "category": "ANNIVERSARY MATERIALS",
+        "category_key": "anniversary_materials",
+        "style": "names_of_things",
+        "connection": "Materials traditionally associated with wedding anniversaries.",
+        "words": [
+          "DIAMOND",
+          "PAPER",
+          "WOOD",
+          "TIN",
+          "COPPER",
+          "BRONZE",
+          "CRYSTAL",
+          "LINEN"
+        ],
+        "required": [
+          "DIAMOND"
+        ],
+        "anchor": "DIAMOND",
+        "anchor_alternate_meaning": "DIAMOND: Materials traditionally associated with wedding anniversaries.",
+        "word_fits": {
+          "DIAMOND": "DIAMOND: Materials traditionally associated with wedding anniversaries.",
+          "PAPER": "PAPER: Materials traditionally associated with wedding anniversaries.",
+          "WOOD": "WOOD: Materials traditionally associated with wedding anniversaries.",
+          "TIN": "TIN: Materials traditionally associated with wedding anniversaries.",
+          "COPPER": "COPPER: Materials traditionally associated with wedding anniversaries.",
+          "BRONZE": "BRONZE: Materials traditionally associated with wedding anniversaries.",
+          "CRYSTAL": "CRYSTAL: Materials traditionally associated with wedding anniversaries.",
+          "LINEN": "LINEN: Materials traditionally associated with wedding anniversaries."
+        }
+      },
+      {
+        "id": "new-04-g3",
+        "category": "ALKALINE TERMS",
+        "category_key": "alkaline_terms",
+        "style": "names_of_things",
+        "connection": "Names or class terms for basic chemicals.",
+        "words": [
+          "BASE",
+          "LYE",
+          "AMMONIA",
+          "BORAX",
+          "POTASH",
+          "LIME",
+          "HYDROXIDE",
+          "ALKALI"
+        ],
+        "required": [
+          "BASE"
+        ],
+        "anchor": "BASE",
+        "anchor_alternate_meaning": "BASE: Names or class terms for basic chemicals.",
+        "word_fits": {
+          "BASE": "BASE: Names or class terms for basic chemicals.",
+          "LYE": "LYE: Names or class terms for basic chemicals.",
+          "AMMONIA": "AMMONIA: Names or class terms for basic chemicals.",
+          "BORAX": "BORAX: Names or class terms for basic chemicals.",
+          "POTASH": "POTASH: Names or class terms for basic chemicals.",
+          "LIME": "LIME: Names or class terms for basic chemicals.",
+          "HYDROXIDE": "HYDROXIDE: Names or class terms for basic chemicals.",
+          "ALKALI": "ALKALI: Names or class terms for basic chemicals."
+        }
+      }
+    ]
+  },
+  {
+    "id": "new-05",
+    "method": "false_connection",
+    "seed_words": [
+      "STALE",
+      "SWITCH",
+      "EBB",
+      "BUILT"
+    ],
+    "story": [
+      "A STALE newsletter needed fresh editing.",
+      "Its editor decided to SWITCH the punctuation style.",
+      "Her enthusiasm did not EBB as she adjusted every bracket.",
+      "By night she had BUILT a tidy guide to dashes and hyphens."
+    ],
+    "root_proposals": [
+      {
+        "category": "PUNCTUATION",
+        "words": [
+          "PERIOD",
+          "COMMA",
+          "COLON",
+          "DASH",
+          "HYPHEN",
+          "BRACKET",
+          "QUOTE",
+          "SLASH"
+        ],
+        "connection": "Each belongs to punctuation."
+      },
+      {
+        "category": "ART SUPPLIES",
+        "words": [
+          "BRUSH",
+          "PALETTE",
+          "CANVAS",
+          "EASEL",
+          "CHARCOAL",
+          "INK",
+          "PENCIL",
+          "PASTEL"
+        ],
+        "connection": "Each belongs to art supplies."
+      }
+    ],
+    "root_category": "PUNCTUATION",
+    "root_pool": [
+      "PERIOD",
+      "COMMA",
+      "COLON",
+      "DASH",
+      "HYPHEN",
+      "BRACKET",
+      "QUOTE",
+      "SLASH"
+    ],
+    "false_group": {
+      "category": "PUNCTUATION",
+      "words": [
+        "DASH",
+        "HYPHEN",
+        "BRACKET",
+        "SLASH"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-05-g0",
+        "category": "MOVE HURRIEDLY",
+        "category_key": "move_hurriedly",
+        "style": "names_of_things",
+        "connection": "Verbs for moving or proceeding quickly.",
+        "words": [
+          "DASH",
+          "HURRY",
+          "RUSH",
+          "SCURRY",
+          "HASTEN",
+          "HUSTLE",
+          "RACE",
+          "SPRINT"
+        ],
+        "required": [
+          "DASH"
+        ],
+        "anchor": "DASH",
+        "anchor_alternate_meaning": "DASH: Verbs for moving or proceeding quickly.",
+        "word_fits": {
+          "DASH": "DASH: Verbs for moving or proceeding quickly.",
+          "HURRY": "HURRY: Verbs for moving or proceeding quickly.",
+          "RUSH": "RUSH: Verbs for moving or proceeding quickly.",
+          "SCURRY": "SCURRY: Verbs for moving or proceeding quickly.",
+          "HASTEN": "HASTEN: Verbs for moving or proceeding quickly.",
+          "HUSTLE": "HUSTLE: Verbs for moving or proceeding quickly.",
+          "RACE": "RACE: Verbs for moving or proceeding quickly.",
+          "SPRINT": "SPRINT: Verbs for moving or proceeding quickly."
+        }
+      },
+      {
+        "id": "new-05-g1",
+        "category": "PH PRONOUNCED F",
+        "category_key": "ph_pronounced_f",
+        "style": "wordplay",
+        "connection": "Each contains PH pronounced as the F sound.",
+        "words": [
+          "HYPHEN",
+          "PHONE",
+          "PHOTO",
+          "PHASE",
+          "PHRASE",
+          "GRAPH",
+          "ORPHAN",
+          "TROPHY"
+        ],
+        "required": [
+          "HYPHEN"
+        ],
+        "anchor": "HYPHEN",
+        "anchor_alternate_meaning": "HYPHEN: Each contains PH pronounced as the F sound.",
+        "word_fits": {
+          "HYPHEN": "HYPHEN: Each contains PH pronounced as the F sound.",
+          "PHONE": "PHONE: Each contains PH pronounced as the F sound.",
+          "PHOTO": "PHOTO: Each contains PH pronounced as the F sound.",
+          "PHASE": "PHASE: Each contains PH pronounced as the F sound.",
+          "PHRASE": "PHRASE: Each contains PH pronounced as the F sound.",
+          "GRAPH": "GRAPH: Each contains PH pronounced as the F sound.",
+          "ORPHAN": "ORPHAN: Each contains PH pronounced as the F sound.",
+          "TROPHY": "TROPHY: Each contains PH pronounced as the F sound."
+        }
+      },
+      {
+        "id": "new-05-g2",
+        "category": "TOURNAMENT TERMS",
+        "category_key": "tournament_structure",
+        "style": "names_of_things",
+        "connection": "Terms for arranging and progressing through a tournament.",
+        "words": [
+          "BRACKET",
+          "SEED",
+          "DRAW",
+          "ROUND",
+          "BYE",
+          "MATCHUP",
+          "QUALIFIER",
+          "FINAL"
+        ],
+        "required": [
+          "BRACKET"
+        ],
+        "anchor": "BRACKET",
+        "anchor_alternate_meaning": "BRACKET: Terms for arranging and progressing through a tournament.",
+        "word_fits": {
+          "BRACKET": "BRACKET: Terms for arranging and progressing through a tournament.",
+          "SEED": "SEED: Terms for arranging and progressing through a tournament.",
+          "DRAW": "DRAW: Terms for arranging and progressing through a tournament.",
+          "ROUND": "ROUND: Terms for arranging and progressing through a tournament.",
+          "BYE": "BYE: Terms for arranging and progressing through a tournament.",
+          "MATCHUP": "MATCHUP: Terms for arranging and progressing through a tournament.",
+          "QUALIFIER": "QUALIFIER: Terms for arranging and progressing through a tournament.",
+          "FINAL": "FINAL: Terms for arranging and progressing through a tournament."
+        }
+      },
+      {
+        "id": "new-05-g3",
+        "category": "REDUCE",
+        "category_key": "reduce_quantity",
+        "style": "names_of_things",
+        "connection": "Verbs meaning make or become smaller in amount.",
+        "words": [
+          "SLASH",
+          "CUT",
+          "TRIM",
+          "PRUNE",
+          "PARE",
+          "CURTAIL",
+          "DECREASE",
+          "DWINDLE"
+        ],
+        "required": [
+          "SLASH"
+        ],
+        "anchor": "SLASH",
+        "anchor_alternate_meaning": "SLASH: Verbs meaning make or become smaller in amount.",
+        "word_fits": {
+          "SLASH": "SLASH: Verbs meaning make or become smaller in amount.",
+          "CUT": "CUT: Verbs meaning make or become smaller in amount.",
+          "TRIM": "TRIM: Verbs meaning make or become smaller in amount.",
+          "PRUNE": "PRUNE: Verbs meaning make or become smaller in amount.",
+          "PARE": "PARE: Verbs meaning make or become smaller in amount.",
+          "CURTAIL": "CURTAIL: Verbs meaning make or become smaller in amount.",
+          "DECREASE": "DECREASE: Verbs meaning make or become smaller in amount.",
+          "DWINDLE": "DWINDLE: Verbs meaning make or become smaller in amount."
+        }
+      }
+    ]
+  },
+  {
+    "id": "new-06",
+    "method": "false_connection",
+    "seed_words": [
+      "NEPO",
+      "SORRY",
+      "ROAM",
+      "DOWN"
+    ],
+    "story": [
+      "The chess club jokingly called its president NEPO.",
+      "He said SORRY after knocking over a rook.",
+      "A curious cat began to ROAM across the board.",
+      "They put the pieces DOWN and offered it a cushion."
+    ],
+    "root_proposals": [
+      {
+        "category": "CHESS TERMS",
+        "words": [
+          "KING",
+          "ROOK",
+          "PAWN",
+          "BISHOP",
+          "CHECK",
+          "MATE",
+          "FILE",
+          "RANK"
+        ],
+        "connection": "Each belongs to chess terms."
+      },
+      {
+        "category": "FISH",
+        "words": [
+          "BASS",
+          "PERCH",
+          "SOLE",
+          "CARP",
+          "PIKE",
+          "SKATE",
+          "RAY",
+          "FLOUNDER"
+        ],
+        "connection": "Each belongs to fish."
+      }
+    ],
+    "root_category": "CHESS TERMS",
+    "root_pool": [
+      "KING",
+      "ROOK",
+      "PAWN",
+      "BISHOP",
+      "CHECK",
+      "MATE",
+      "FILE",
+      "RANK"
+    ],
+    "false_group": {
+      "category": "CHESS TERMS",
+      "words": [
+        "KING",
+        "ROOK",
+        "PAWN",
+        "BISHOP"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-06-g0",
+        "category": "___ SIZE",
+        "category_key": "____size",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding SIZE in familiar size descriptions, allowing normal hyphenation.",
+        "words": [
+          "KING",
+          "FULL",
+          "HALF",
+          "FUN",
+          "POCKET",
+          "BITE",
+          "FAMILY",
+          "ECONOMY"
+        ],
+        "required": [
+          "KING"
+        ],
+        "anchor": "KING",
+        "anchor_alternate_meaning": "KING SIZE",
+        "word_fits": {
+          "KING": "KING SIZE",
+          "FULL": "FULL SIZE",
+          "HALF": "HALF SIZE",
+          "FUN": "FUN SIZE",
+          "POCKET": "POCKET SIZE",
+          "BITE": "BITE SIZE",
+          "FAMILY": "FAMILY SIZE",
+          "ECONOMY": "ECONOMY SIZE"
+        }
+      },
+      {
+        "id": "new-06-g1",
+        "category": "DECEIVE",
+        "category_key": "defraud",
+        "style": "names_of_things",
+        "connection": "Verbs for deceiving or cheating someone.",
+        "words": [
+          "ROOK",
+          "SWINDLE",
+          "FLEECE",
+          "DEFRAUD",
+          "CON",
+          "CHEAT",
+          "DUPE",
+          "HOODWINK"
+        ],
+        "required": [
+          "ROOK"
+        ],
+        "anchor": "ROOK",
+        "anchor_alternate_meaning": "ROOK: Verbs for deceiving or cheating someone.",
+        "word_fits": {
+          "ROOK": "ROOK: Verbs for deceiving or cheating someone.",
+          "SWINDLE": "SWINDLE: Verbs for deceiving or cheating someone.",
+          "FLEECE": "FLEECE: Verbs for deceiving or cheating someone.",
+          "DEFRAUD": "DEFRAUD: Verbs for deceiving or cheating someone.",
+          "CON": "CON: Verbs for deceiving or cheating someone.",
+          "CHEAT": "CHEAT: Verbs for deceiving or cheating someone.",
+          "DUPE": "DUPE: Verbs for deceiving or cheating someone.",
+          "HOODWINK": "HOODWINK: Verbs for deceiving or cheating someone."
+        }
+      },
+      {
+        "id": "new-06-g2",
+        "category": "LOAN SECURITY",
+        "category_key": "loan_security",
+        "style": "names_of_things",
+        "connection": "Things or legal arrangements securing an obligation.",
+        "words": [
+          "PAWN",
+          "COLLATERAL",
+          "GUARANTEE",
+          "PLEDGE",
+          "SURETY",
+          "LIEN",
+          "MORTGAGE",
+          "BOND"
+        ],
+        "required": [
+          "PAWN"
+        ],
+        "anchor": "PAWN",
+        "anchor_alternate_meaning": "PAWN: Things or legal arrangements securing an obligation.",
+        "word_fits": {
+          "PAWN": "PAWN: Things or legal arrangements securing an obligation.",
+          "COLLATERAL": "COLLATERAL: Things or legal arrangements securing an obligation.",
+          "GUARANTEE": "GUARANTEE: Things or legal arrangements securing an obligation.",
+          "PLEDGE": "PLEDGE: Things or legal arrangements securing an obligation.",
+          "SURETY": "SURETY: Things or legal arrangements securing an obligation.",
+          "LIEN": "LIEN: Things or legal arrangements securing an obligation.",
+          "MORTGAGE": "MORTGAGE: Things or legal arrangements securing an obligation.",
+          "BOND": "BOND: Things or legal arrangements securing an obligation."
+        }
+      },
+      {
+        "id": "new-06-g3",
+        "category": "CHRISTIAN CLERGY",
+        "category_key": "christian_clergy",
+        "style": "names_of_things",
+        "connection": "Titles or roles of Christian clergy.",
+        "words": [
+          "BISHOP",
+          "PRIEST",
+          "DEACON",
+          "VICAR",
+          "RECTOR",
+          "CURATE",
+          "PASTOR",
+          "CHAPLAIN"
+        ],
+        "required": [
+          "BISHOP"
+        ],
+        "anchor": "BISHOP",
+        "anchor_alternate_meaning": "BISHOP: Titles or roles of Christian clergy.",
+        "word_fits": {
+          "BISHOP": "BISHOP: Titles or roles of Christian clergy.",
+          "PRIEST": "PRIEST: Titles or roles of Christian clergy.",
+          "DEACON": "DEACON: Titles or roles of Christian clergy.",
+          "VICAR": "VICAR: Titles or roles of Christian clergy.",
+          "RECTOR": "RECTOR: Titles or roles of Christian clergy.",
+          "CURATE": "CURATE: Titles or roles of Christian clergy.",
+          "PASTOR": "PASTOR: Titles or roles of Christian clergy.",
+          "CHAPLAIN": "CHAPLAIN: Titles or roles of Christian clergy."
+        }
+      }
+    ]
+  },
+  {
+    "id": "new-07",
+    "method": "false_connection",
+    "seed_words": [
+      "ROOT",
+      "PASS",
+      "ORIGAMI",
+      "LAVISH"
+    ],
+    "story": [
+      "A seamstress searched for the ROOT of a snag.",
+      "She made one careful PASS with her needle.",
+      "An ORIGAMI bird sat beside her sewing basket.",
+      "She finished a LAVISH collar and folded the spare gloves."
+    ],
+    "root_proposals": [
+      {
+        "category": "CLOTHING DETAILS",
+        "words": [
+          "CAP",
+          "SOCK",
+          "GLOVE",
+          "BELT",
+          "CUFF",
+          "COLLAR",
+          "POCKET",
+          "HEM"
+        ],
+        "connection": "Each belongs to clothing details."
+      },
+      {
+        "category": "COMPUTING TERMS",
+        "words": [
+          "MOUSE",
+          "WINDOW",
+          "CACHE",
+          "COOKIE",
+          "THREAD",
+          "PROCESS",
+          "TOKEN",
+          "SERVER"
+        ],
+        "connection": "Each belongs to computing terms."
+      }
+    ],
+    "root_category": "CLOTHING DETAILS",
+    "root_pool": [
+      "CAP",
+      "SOCK",
+      "GLOVE",
+      "BELT",
+      "CUFF",
+      "COLLAR",
+      "POCKET",
+      "HEM"
+    ],
+    "false_group": {
+      "category": "CLOTHING DETAILS",
+      "words": [
+        "SOCK",
+        "GLOVE",
+        "CUFF",
+        "COLLAR"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-07-g0",
+        "category": "___ DRAWER",
+        "category_key": "____drawer",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding DRAWER to describe a drawer by furniture, contents, or use.",
+        "words": [
+          "SOCK",
+          "DESK",
+          "CASH",
+          "UTILITY",
+          "KNIFE",
+          "SILVERWARE",
+          "KITCHEN",
+          "UNDERWEAR"
+        ],
+        "required": [
+          "SOCK"
+        ],
+        "anchor": "SOCK",
+        "anchor_alternate_meaning": "SOCK DRAWER",
+        "word_fits": {
+          "SOCK": "SOCK DRAWER",
+          "DESK": "DESK DRAWER",
+          "CASH": "CASH DRAWER",
+          "UTILITY": "UTILITY DRAWER",
+          "KNIFE": "KNIFE DRAWER",
+          "SILVERWARE": "SILVERWARE DRAWER",
+          "KITCHEN": "KITCHEN DRAWER",
+          "UNDERWEAR": "UNDERWEAR DRAWER"
+        }
+      },
+      {
+        "id": "new-07-g1",
+        "category": "___ COMPARTMENT",
+        "category_key": "____compartment",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding COMPARTMENT in familiar expressions.",
+        "words": [
+          "GLOVE",
+          "ENGINE",
+          "LUGGAGE",
+          "PASSENGER",
+          "STORAGE",
+          "BATTERY",
+          "FREEZER",
+          "SECRET"
+        ],
+        "required": [
+          "GLOVE"
+        ],
+        "anchor": "GLOVE",
+        "anchor_alternate_meaning": "GLOVE COMPARTMENT",
+        "word_fits": {
+          "GLOVE": "GLOVE COMPARTMENT",
+          "ENGINE": "ENGINE COMPARTMENT",
+          "LUGGAGE": "LUGGAGE COMPARTMENT",
+          "PASSENGER": "PASSENGER COMPARTMENT",
+          "STORAGE": "STORAGE COMPARTMENT",
+          "BATTERY": "BATTERY COMPARTMENT",
+          "FREEZER": "FREEZER COMPARTMENT",
+          "SECRET": "SECRET COMPARTMENT"
+        }
+      },
+      {
+        "id": "new-07-g2",
+        "category": "DOUBLED FINAL LETTERS",
+        "category_key": "doubled_final_letters",
+        "style": "wordplay",
+        "connection": "Every word ends in a doubled consonant.",
+        "words": [
+          "CUFF",
+          "JAZZ",
+          "FUZZ",
+          "BUZZ",
+          "HISS",
+          "MOSS",
+          "BELL",
+          "DOLL"
+        ],
+        "required": [
+          "CUFF"
+        ],
+        "anchor": "CUFF",
+        "anchor_alternate_meaning": "CUFF: Every word ends in a doubled consonant.",
+        "word_fits": {
+          "CUFF": "CUFF: Every word ends in a doubled consonant.",
+          "JAZZ": "JAZZ: Every word ends in a doubled consonant.",
+          "FUZZ": "FUZZ: Every word ends in a doubled consonant.",
+          "BUZZ": "BUZZ: Every word ends in a doubled consonant.",
+          "HISS": "HISS: Every word ends in a doubled consonant.",
+          "MOSS": "MOSS: Every word ends in a doubled consonant.",
+          "BELL": "BELL: Every word ends in a doubled consonant.",
+          "DOLL": "DOLL: Every word ends in a doubled consonant."
+        }
+      },
+      {
+        "id": "new-07-g3",
+        "category": "APPREHEND",
+        "category_key": "apprehend",
+        "style": "names_of_things",
+        "connection": "Verbs for taking someone into custody or catching them.",
+        "words": [
+          "COLLAR",
+          "ARREST",
+          "NAB",
+          "CATCH",
+          "CAPTURE",
+          "DETAIN",
+          "BUST",
+          "PINCH"
+        ],
+        "required": [
+          "COLLAR"
+        ],
+        "anchor": "COLLAR",
+        "anchor_alternate_meaning": "COLLAR: Verbs for taking someone into custody or catching them.",
+        "word_fits": {
+          "COLLAR": "COLLAR: Verbs for taking someone into custody or catching them.",
+          "ARREST": "ARREST: Verbs for taking someone into custody or catching them.",
+          "NAB": "NAB: Verbs for taking someone into custody or catching them.",
+          "CATCH": "CATCH: Verbs for taking someone into custody or catching them.",
+          "CAPTURE": "CAPTURE: Verbs for taking someone into custody or catching them.",
+          "DETAIN": "DETAIN: Verbs for taking someone into custody or catching them.",
+          "BUST": "BUST: Verbs for taking someone into custody or catching them.",
+          "PINCH": "PINCH: Verbs for taking someone into custody or catching them."
+        }
+      }
+    ]
+  },
+  {
+    "id": "new-08",
+    "method": "false_connection",
+    "seed_words": [
+      "CLAY",
+      "MUSTARD",
+      "BUG",
+      "RINGS"
+    ],
+    "story": [
+      "A potter set aside her CLAY to visit an art shop.",
+      "The clerk recommended a MUSTARD pigment.",
+      "A tiny BUG crawled across a canvas sample.",
+      "She bought drawing supplies and left when the closing bell began its RINGS."
+    ],
+    "root_proposals": [
+      {
+        "category": "ART SUPPLIES",
+        "words": [
+          "BRUSH",
+          "PALETTE",
+          "CANVAS",
+          "EASEL",
+          "CHARCOAL",
+          "INK",
+          "PENCIL",
+          "PASTEL"
+        ],
+        "connection": "Each belongs to art supplies."
+      },
+      {
+        "category": "GEMSTONES",
+        "words": [
+          "RUBY",
+          "OPAL",
+          "EMERALD",
+          "GARNET",
+          "AMBER",
+          "JADE",
+          "ONYX",
+          "SAPPHIRE"
+        ],
+        "connection": "Each belongs to gemstones."
+      }
+    ],
+    "root_category": "ART SUPPLIES",
+    "root_pool": [
+      "BRUSH",
+      "PALETTE",
+      "CANVAS",
+      "EASEL",
+      "CHARCOAL",
+      "INK",
+      "PENCIL",
+      "PASTEL"
+    ],
+    "false_group": {
+      "category": "ART SUPPLIES",
+      "words": [
+        "CANVAS",
+        "CHARCOAL",
+        "INK",
+        "PENCIL"
+      ]
+    },
+    "groups": [
+      {
+        "id": "new-08-g0",
+        "category": "WOVEN FABRICS",
+        "category_key": "woven_fabrics",
+        "style": "names_of_things",
+        "connection": "Names of fabrics made by weaving.",
+        "words": [
+          "CANVAS",
+          "DENIM",
+          "TWEED",
+          "SERGE",
+          "CORDUROY",
+          "BROADCLOTH",
+          "GABARDINE",
+          "BURLAP"
+        ],
+        "required": [
+          "CANVAS"
+        ],
+        "anchor": "CANVAS",
+        "anchor_alternate_meaning": "CANVAS: Names of fabrics made by weaving.",
+        "word_fits": {
+          "CANVAS": "CANVAS: Names of fabrics made by weaving.",
+          "DENIM": "DENIM: Names of fabrics made by weaving.",
+          "TWEED": "TWEED: Names of fabrics made by weaving.",
+          "SERGE": "SERGE: Names of fabrics made by weaving.",
+          "CORDUROY": "CORDUROY: Names of fabrics made by weaving.",
+          "BROADCLOTH": "BROADCLOTH: Names of fabrics made by weaving.",
+          "GABARDINE": "GABARDINE: Names of fabrics made by weaving.",
+          "BURLAP": "BURLAP: Names of fabrics made by weaving."
+        }
+      },
+      {
+        "id": "new-08-g1",
+        "category": "BARBECUE FUELS",
+        "category_key": "barbecue_fuels",
+        "style": "names_of_things",
+        "connection": "Gases, charcoal, or woods used as barbecue fuel.",
+        "words": [
+          "CHARCOAL",
+          "PROPANE",
+          "BUTANE",
+          "MESQUITE",
+          "HICKORY",
+          "OAK",
+          "MAPLE",
+          "CHERRY"
+        ],
+        "required": [
+          "CHARCOAL"
+        ],
+        "anchor": "CHARCOAL",
+        "anchor_alternate_meaning": "CHARCOAL: Gases, charcoal, or woods used as barbecue fuel.",
+        "word_fits": {
+          "CHARCOAL": "CHARCOAL: Gases, charcoal, or woods used as barbecue fuel.",
+          "PROPANE": "PROPANE: Gases, charcoal, or woods used as barbecue fuel.",
+          "BUTANE": "BUTANE: Gases, charcoal, or woods used as barbecue fuel.",
+          "MESQUITE": "MESQUITE: Gases, charcoal, or woods used as barbecue fuel.",
+          "HICKORY": "HICKORY: Gases, charcoal, or woods used as barbecue fuel.",
+          "OAK": "OAK: Gases, charcoal, or woods used as barbecue fuel.",
+          "MAPLE": "MAPLE: Gases, charcoal, or woods used as barbecue fuel.",
+          "CHERRY": "CHERRY: Gases, charcoal, or woods used as barbecue fuel."
+        }
+      },
+      {
+        "id": "new-08-g2",
+        "category": "WRITE ON DOCUMENTS",
+        "category_key": "document_signing",
+        "style": "names_of_things",
+        "connection": "Verbs for writing on documents, especially adding signatures or endorsements.",
+        "words": [
+          "INK",
+          "SIGN",
+          "AUTOGRAPH",
+          "ENDORSE",
+          "INSCRIBE",
+          "EXECUTE",
+          "INITIAL",
+          "COUNTERSIGN"
+        ],
+        "required": [
+          "INK"
+        ],
+        "anchor": "INK",
+        "anchor_alternate_meaning": "Apply ink to a document, including signing a contract.",
+        "word_fits": {
+          "INK": "Apply ink to a document, including signing a contract.",
+          "SIGN": "Put a signature on a document.",
+          "AUTOGRAPH": "Write one's signature on something.",
+          "ENDORSE": "Sign the back of a check or other instrument.",
+          "INSCRIBE": "Write words on a surface or document.",
+          "EXECUTE": "Sign a legal document to give it effect.",
+          "INITIAL": "Write identifying initials on a document.",
+          "COUNTERSIGN": "Add a confirming signature to a document."
+        }
+      },
+      {
+        "id": "new-08-g3",
+        "category": "___ IN",
+        "category_key": "____in",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding IN in familiar phrasal verbs.",
+        "words": [
+          "PENCIL",
+          "TUNE",
+          "FILL",
+          "LOG",
+          "CHECK",
+          "WEIGH",
+          "PLUG",
+          "STEP"
+        ],
+        "required": [
+          "PENCIL"
+        ],
+        "anchor": "PENCIL",
+        "anchor_alternate_meaning": "PENCIL IN",
+        "word_fits": {
+          "PENCIL": "PENCIL IN",
+          "TUNE": "TUNE IN",
+          "FILL": "FILL IN",
+          "LOG": "LOG IN",
+          "CHECK": "CHECK IN",
+          "WEIGH": "WEIGH IN",
+          "PLUG": "PLUG IN",
+          "STEP": "STEP IN"
+        }
+      }
+    ]
+  }
+]

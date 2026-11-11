@@ -1,0 +1,2882 @@
+[
+  {
+    "id": "fc-01",
+    "method": "false_connection",
+    "seed_words": [
+      "CANVASS",
+      "GOOBER",
+      "TOPKNOT",
+      "CHESTNUT"
+    ],
+    "story": [
+      "A volunteer paused to CANVASS a leafy neighborhood.",
+      "A child nicknamed GOOBER offered to guide her.",
+      "His TOPKNOT caught a low branch.",
+      "They laughed beneath a CHESTNUT tree while admiring the woman's jewelry."
+    ],
+    "root_proposals": [
+      {
+        "category": "TREE PARTS",
+        "words": [
+          "BARK",
+          "ROOT",
+          "TRUNK",
+          "BRANCH",
+          "LEAF",
+          "LIMB",
+          "BOUGH",
+          "CROWN"
+        ],
+        "connection": "Each word is an example of tree parts."
+      },
+      {
+        "category": "JEWELRY TERMS",
+        "words": [
+          "BAND",
+          "STUD",
+          "HOOP",
+          "CHAIN",
+          "LINK",
+          "PEARL",
+          "ROCK",
+          "CHARM"
+        ],
+        "connection": "Each word is an example of jewelry terms."
+      }
+    ],
+    "root_category": "TREE PARTS",
+    "root_pool": [
+      "BARK",
+      "ROOT",
+      "TRUNK",
+      "BRANCH",
+      "LEAF",
+      "LIMB",
+      "BOUGH",
+      "CROWN"
+    ],
+    "false_group": {
+      "category": "TREE PARTS",
+      "words": [
+        "TRUNK",
+        "BRANCH",
+        "LEAF",
+        "LIMB"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-01-g0",
+        "category": "LUGGAGE",
+        "style": "names_of_things",
+        "connection": "Travel containers",
+        "words": [
+          "TRUNK",
+          "CASE",
+          "SATCHEL",
+          "VALISE",
+          "SUITCASE",
+          "DUFFEL",
+          "HOLDALL",
+          "BACKPACK"
+        ],
+        "required": [
+          "TRUNK"
+        ],
+        "anchor": "TRUNK",
+        "anchor_alternate_meaning": "TRUNK: travel containers",
+        "word_fits": {
+          "TRUNK": "TRUNK: travel containers",
+          "CASE": "CASE: travel containers",
+          "SATCHEL": "SATCHEL: travel containers",
+          "VALISE": "VALISE: travel containers",
+          "SUITCASE": "SUITCASE: travel containers",
+          "DUFFEL": "DUFFEL: travel containers",
+          "HOLDALL": "HOLDALL: travel containers",
+          "BACKPACK": "BACKPACK: travel containers"
+        }
+      },
+      {
+        "id": "fc-01-g1",
+        "category": "DIVERGE",
+        "style": "synonyms_or_slang",
+        "connection": "Separate from a common course",
+        "words": [
+          "BRANCH",
+          "FORK",
+          "SPLIT",
+          "DEVIATE",
+          "VEER",
+          "SEPARATE",
+          "BIFURCATE",
+          "PART"
+        ],
+        "required": [
+          "BRANCH"
+        ],
+        "anchor": "BRANCH",
+        "anchor_alternate_meaning": "BRANCH: separate from a common course",
+        "word_fits": {
+          "BRANCH": "BRANCH: separate from a common course",
+          "FORK": "FORK: separate from a common course",
+          "SPLIT": "SPLIT: separate from a common course",
+          "DEVIATE": "DEVIATE: separate from a common course",
+          "VEER": "VEER: separate from a common course",
+          "SEPARATE": "SEPARATE: separate from a common course",
+          "BIFURCATE": "BIFURCATE: separate from a common course",
+          "PART": "PART: separate from a common course"
+        }
+      },
+      {
+        "id": "fc-01-g2",
+        "category": "___ THROUGH",
+        "style": "fill_in_the_blank",
+        "connection": "Verbs preceding THROUGH when looking through reading material",
+        "words": [
+          "LEAF",
+          "FLIP",
+          "THUMB",
+          "SKIM",
+          "SCAN",
+          "BROWSE",
+          "RIFFLE",
+          "PAGE"
+        ],
+        "required": [
+          "LEAF"
+        ],
+        "anchor": "LEAF",
+        "anchor_alternate_meaning": "LEAF THROUGH",
+        "word_fits": {
+          "LEAF": "LEAF THROUGH",
+          "FLIP": "FLIP THROUGH",
+          "THUMB": "THUMB THROUGH",
+          "SKIM": "SKIM THROUGH",
+          "SCAN": "SCAN THROUGH",
+          "BROWSE": "BROWSE THROUGH",
+          "RIFFLE": "RIFFLE THROUGH",
+          "PAGE": "PAGE THROUGH"
+        }
+      },
+      {
+        "id": "fc-01-g3",
+        "category": "BODY PARTS",
+        "style": "names_of_things",
+        "connection": "Anatomical regions or appendages",
+        "words": [
+          "LIMB",
+          "ARM",
+          "LEG",
+          "HAND",
+          "FOOT",
+          "HEAD",
+          "NECK",
+          "TORSO"
+        ],
+        "required": [
+          "LIMB"
+        ],
+        "anchor": "LIMB",
+        "anchor_alternate_meaning": "LIMB: anatomical regions or appendages",
+        "word_fits": {
+          "LIMB": "LIMB: anatomical regions or appendages",
+          "ARM": "ARM: anatomical regions or appendages",
+          "LEG": "LEG: anatomical regions or appendages",
+          "HAND": "HAND: anatomical regions or appendages",
+          "FOOT": "FOOT: anatomical regions or appendages",
+          "HEAD": "HEAD: anatomical regions or appendages",
+          "NECK": "NECK: anatomical regions or appendages",
+          "TORSO": "TORSO: anatomical regions or appendages"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-02",
+    "method": "false_connection",
+    "seed_words": [
+      "ITCHY",
+      "COUSIN",
+      "STAKE",
+      "DRESS"
+    ],
+    "story": [
+      "An ITCHY traveler visited her COUSIN.",
+      "They put a small STAKE on who could prepare dinner faster.",
+      "She wore a formal DRESS beneath a borrowed apron.",
+      "Their talk drifted from clothes to a show on television."
+    ],
+    "root_proposals": [
+      {
+        "category": "GARMENTS",
+        "words": [
+          "DRESS",
+          "COAT",
+          "SUIT",
+          "CAP",
+          "TOP",
+          "TIE",
+          "VEST",
+          "SLIP"
+        ],
+        "connection": "Each word is an example of garments."
+      },
+      {
+        "category": "TELEVISION TITLES",
+        "words": [
+          "GLEE",
+          "FRIENDS",
+          "LOST",
+          "HOUSE",
+          "BONES",
+          "FARGO",
+          "CHEERS",
+          "SUCCESSION"
+        ],
+        "connection": "Each word is an example of television titles."
+      }
+    ],
+    "root_category": "GARMENTS",
+    "root_pool": [
+      "DRESS",
+      "COAT",
+      "SUIT",
+      "CAP",
+      "TOP",
+      "TIE",
+      "VEST",
+      "SLIP"
+    ],
+    "false_group": {
+      "category": "GARMENTS",
+      "words": [
+        "DRESS",
+        "COAT",
+        "SUIT",
+        "VEST"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-02-g0",
+        "category": "FOOD PREPARATION VERBS",
+        "style": "names_of_things",
+        "connection": "Actions used to prepare or flavor food",
+        "words": [
+          "DRESS",
+          "BASTE",
+          "SEASON",
+          "MARINATE",
+          "BRINE",
+          "GLAZE",
+          "RUB",
+          "STUFF"
+        ],
+        "required": [
+          "DRESS"
+        ],
+        "anchor": "DRESS",
+        "anchor_alternate_meaning": "DRESS: actions used to prepare or flavor food",
+        "word_fits": {
+          "DRESS": "DRESS: actions used to prepare or flavor food",
+          "BASTE": "BASTE: actions used to prepare or flavor food",
+          "SEASON": "SEASON: actions used to prepare or flavor food",
+          "MARINATE": "MARINATE: actions used to prepare or flavor food",
+          "BRINE": "BRINE: actions used to prepare or flavor food",
+          "GLAZE": "GLAZE: actions used to prepare or flavor food",
+          "RUB": "RUB: actions used to prepare or flavor food",
+          "STUFF": "STUFF: actions used to prepare or flavor food"
+        }
+      },
+      {
+        "id": "fc-02-g1",
+        "category": "PROVIDE A COVERING",
+        "style": "synonyms_or_slang",
+        "connection": "Put a covering over something",
+        "words": [
+          "COAT",
+          "COVER",
+          "SHEATHE",
+          "ENCASE",
+          "OVERLAY",
+          "WRAP",
+          "ENVELOP",
+          "BLANKET"
+        ],
+        "required": [
+          "COAT"
+        ],
+        "anchor": "COAT",
+        "anchor_alternate_meaning": "COAT: put a covering over something",
+        "word_fits": {
+          "COAT": "COAT: put a covering over something",
+          "COVER": "COVER: put a covering over something",
+          "SHEATHE": "SHEATHE: put a covering over something",
+          "ENCASE": "ENCASE: put a covering over something",
+          "OVERLAY": "OVERLAY: put a covering over something",
+          "WRAP": "WRAP: put a covering over something",
+          "ENVELOP": "ENVELOP: put a covering over something",
+          "BLANKET": "BLANKET: put a covering over something"
+        }
+      },
+      {
+        "id": "fc-02-g2",
+        "category": "LEGAL PROCEEDINGS",
+        "style": "names_of_things",
+        "connection": "Named forms of legal proceeding",
+        "words": [
+          "SUIT",
+          "ACTION",
+          "CASE",
+          "APPEAL",
+          "TRIAL",
+          "HEARING",
+          "INQUEST",
+          "ARBITRATION"
+        ],
+        "required": [
+          "SUIT"
+        ],
+        "anchor": "SUIT",
+        "anchor_alternate_meaning": "SUIT: named forms of legal proceeding",
+        "word_fits": {
+          "SUIT": "SUIT: named forms of legal proceeding",
+          "ACTION": "ACTION: named forms of legal proceeding",
+          "CASE": "CASE: named forms of legal proceeding",
+          "APPEAL": "APPEAL: named forms of legal proceeding",
+          "TRIAL": "TRIAL: named forms of legal proceeding",
+          "HEARING": "HEARING: named forms of legal proceeding",
+          "INQUEST": "INQUEST: named forms of legal proceeding",
+          "ARBITRATION": "ARBITRATION: named forms of legal proceeding"
+        }
+      },
+      {
+        "id": "fc-02-g3",
+        "category": "EQUITY AWARD VERBS",
+        "style": "names_of_things",
+        "connection": "Actions or events involving employee share awards",
+        "words": [
+          "VEST",
+          "GRANT",
+          "EXERCISE",
+          "FORFEIT",
+          "SELL",
+          "HOLD",
+          "TRANSFER",
+          "CONVERT"
+        ],
+        "required": [
+          "VEST"
+        ],
+        "anchor": "VEST",
+        "anchor_alternate_meaning": "VEST: actions or events involving employee share awards",
+        "word_fits": {
+          "VEST": "VEST: actions or events involving employee share awards",
+          "GRANT": "GRANT: actions or events involving employee share awards",
+          "EXERCISE": "EXERCISE: actions or events involving employee share awards",
+          "FORFEIT": "FORFEIT: actions or events involving employee share awards",
+          "SELL": "SELL: actions or events involving employee share awards",
+          "HOLD": "HOLD: actions or events involving employee share awards",
+          "TRANSFER": "TRANSFER: actions or events involving employee share awards",
+          "CONVERT": "CONVERT: actions or events involving employee share awards"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-03",
+    "method": "false_connection",
+    "seed_words": [
+      "BANKS",
+      "PIC",
+      "LEVEL",
+      "LAND"
+    ],
+    "story": [
+      "Two steep BANKS framed the river.",
+      "A tourist took a PIC from the bridge.",
+      "The boat stayed LEVEL as it approached the LAND.",
+      "At the dock, a vendor offered jewelry engraved with maps."
+    ],
+    "root_proposals": [
+      {
+        "category": "GEOGRAPHIC FEATURES",
+        "words": [
+          "BANK",
+          "CAPE",
+          "SOUND",
+          "CHANNEL",
+          "DELTA",
+          "PLAIN",
+          "GULF",
+          "POINT"
+        ],
+        "connection": "Each word is an example of geographic features."
+      },
+      {
+        "category": "COLOR NAMES",
+        "words": [
+          "GOLD",
+          "SILVER",
+          "ROSE",
+          "CORAL",
+          "SALMON",
+          "TAN",
+          "CREAM",
+          "PLUM"
+        ],
+        "connection": "Each word is an example of color names."
+      }
+    ],
+    "root_category": "GEOGRAPHIC FEATURES",
+    "root_pool": [
+      "BANK",
+      "CAPE",
+      "SOUND",
+      "CHANNEL",
+      "DELTA",
+      "PLAIN",
+      "GULF",
+      "POINT"
+    ],
+    "false_group": {
+      "category": "GEOGRAPHIC FEATURES",
+      "words": [
+        "CAPE",
+        "DELTA",
+        "PLAIN",
+        "GULF"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-03-g0",
+        "category": "SHOULDER COVERINGS",
+        "style": "names_of_things",
+        "connection": "Garments worn over the shoulders",
+        "words": [
+          "CAPE",
+          "CLOAK",
+          "SHAWL",
+          "STOLE",
+          "PONCHO",
+          "WRAP",
+          "MANTLE",
+          "TIPPET"
+        ],
+        "required": [
+          "CAPE"
+        ],
+        "anchor": "CAPE",
+        "anchor_alternate_meaning": "CAPE: garments worn over the shoulders",
+        "word_fits": {
+          "CAPE": "CAPE: garments worn over the shoulders",
+          "CLOAK": "CLOAK: garments worn over the shoulders",
+          "SHAWL": "SHAWL: garments worn over the shoulders",
+          "STOLE": "STOLE: garments worn over the shoulders",
+          "PONCHO": "PONCHO: garments worn over the shoulders",
+          "WRAP": "WRAP: garments worn over the shoulders",
+          "MANTLE": "MANTLE: garments worn over the shoulders",
+          "TIPPET": "TIPPET: garments worn over the shoulders"
+        }
+      },
+      {
+        "id": "fc-03-g1",
+        "category": "GREEK LETTERS",
+        "style": "names_of_things",
+        "connection": "Names of Greek alphabet letters",
+        "words": [
+          "DELTA",
+          "ALPHA",
+          "BETA",
+          "GAMMA",
+          "EPSILON",
+          "ZETA",
+          "ETA",
+          "THETA"
+        ],
+        "required": [
+          "DELTA"
+        ],
+        "anchor": "DELTA",
+        "anchor_alternate_meaning": "DELTA: names of Greek alphabet letters",
+        "word_fits": {
+          "DELTA": "DELTA: names of Greek alphabet letters",
+          "ALPHA": "ALPHA: names of Greek alphabet letters",
+          "BETA": "BETA: names of Greek alphabet letters",
+          "GAMMA": "GAMMA: names of Greek alphabet letters",
+          "EPSILON": "EPSILON: names of Greek alphabet letters",
+          "ZETA": "ZETA: names of Greek alphabet letters",
+          "ETA": "ETA: names of Greek alphabet letters",
+          "THETA": "THETA: names of Greek alphabet letters"
+        }
+      },
+      {
+        "id": "fc-03-g2",
+        "category": "UNADORNED",
+        "style": "synonyms_or_slang",
+        "connection": "Adjectives describing an unornamented appearance",
+        "words": [
+          "PLAIN",
+          "SIMPLE",
+          "BARE",
+          "AUSTERE",
+          "SPARE",
+          "UNDECORATED",
+          "UNEMBELLISHED",
+          "SEVERE"
+        ],
+        "required": [
+          "PLAIN"
+        ],
+        "anchor": "PLAIN",
+        "anchor_alternate_meaning": "PLAIN: adjectives describing an unornamented appearance",
+        "word_fits": {
+          "PLAIN": "PLAIN: adjectives describing an unornamented appearance",
+          "SIMPLE": "SIMPLE: adjectives describing an unornamented appearance",
+          "BARE": "BARE: adjectives describing an unornamented appearance",
+          "AUSTERE": "AUSTERE: adjectives describing an unornamented appearance",
+          "SPARE": "SPARE: adjectives describing an unornamented appearance",
+          "UNDECORATED": "UNDECORATED: adjectives describing an unornamented appearance",
+          "UNEMBELLISHED": "UNEMBELLISHED: adjectives describing an unornamented appearance",
+          "SEVERE": "SEVERE: adjectives describing an unornamented appearance"
+        }
+      },
+      {
+        "id": "fc-03-g3",
+        "category": "SEPARATION",
+        "style": "synonyms_or_slang",
+        "connection": "Words for figurative divisions between people or positions",
+        "words": [
+          "GULF",
+          "GAP",
+          "CHASM",
+          "DIVIDE",
+          "RIFT",
+          "BREACH",
+          "SCHISM",
+          "SPLIT"
+        ],
+        "required": [
+          "GULF"
+        ],
+        "anchor": "GULF",
+        "anchor_alternate_meaning": "GULF: words for figurative divisions between people or positions",
+        "word_fits": {
+          "GULF": "GULF: words for figurative divisions between people or positions",
+          "GAP": "GAP: words for figurative divisions between people or positions",
+          "CHASM": "CHASM: words for figurative divisions between people or positions",
+          "DIVIDE": "DIVIDE: words for figurative divisions between people or positions",
+          "RIFT": "RIFT: words for figurative divisions between people or positions",
+          "BREACH": "BREACH: words for figurative divisions between people or positions",
+          "SCHISM": "SCHISM: words for figurative divisions between people or positions",
+          "SPLIT": "SPLIT: words for figurative divisions between people or positions"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-04",
+    "method": "false_connection",
+    "seed_words": [
+      "CREST",
+      "DOJA",
+      "SPARKS",
+      "QUADRANT"
+    ],
+    "story": [
+      "A painted CREST hung above the concert stage.",
+      "A fan called DOJA pointed toward the lights.",
+      "SPARKS flew from a stage effect.",
+      "The audience in one QUADRANT cheered while a card trick unfolded nearby."
+    ],
+    "root_proposals": [
+      {
+        "category": "FIRE VOCABULARY",
+        "words": [
+          "SPARK",
+          "FLAME",
+          "MATCH",
+          "ASH",
+          "COAL",
+          "SMOKE",
+          "KINDLE",
+          "LIGHT"
+        ],
+        "connection": "Each word is an example of fire vocabulary."
+      },
+      {
+        "category": "WILD CATS",
+        "words": [
+          "TIGER",
+          "LION",
+          "LEOPARD",
+          "JAGUAR",
+          "PUMA",
+          "PANTHER",
+          "LYNX",
+          "COUGAR"
+        ],
+        "connection": "Each word is an example of wild cats."
+      }
+    ],
+    "root_category": "FIRE VOCABULARY",
+    "root_pool": [
+      "SPARK",
+      "FLAME",
+      "MATCH",
+      "ASH",
+      "COAL",
+      "SMOKE",
+      "KINDLE",
+      "LIGHT"
+    ],
+    "false_group": {
+      "category": "FIRE VOCABULARY",
+      "words": [
+        "FLAME",
+        "ASH",
+        "COAL",
+        "SMOKE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-04-g0",
+        "category": "CRITICIZE HARSHLY",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning attack verbally",
+        "words": [
+          "FLAME",
+          "BLAST",
+          "SLAM",
+          "PAN",
+          "ROAST",
+          "RIP",
+          "BASH",
+          "TRASH"
+        ],
+        "required": [
+          "FLAME"
+        ],
+        "anchor": "FLAME",
+        "anchor_alternate_meaning": "FLAME: verbs meaning attack verbally",
+        "word_fits": {
+          "FLAME": "FLAME: verbs meaning attack verbally",
+          "BLAST": "BLAST: verbs meaning attack verbally",
+          "SLAM": "SLAM: verbs meaning attack verbally",
+          "PAN": "PAN: verbs meaning attack verbally",
+          "ROAST": "ROAST: verbs meaning attack verbally",
+          "RIP": "RIP: verbs meaning attack verbally",
+          "BASH": "BASH: verbs meaning attack verbally",
+          "TRASH": "TRASH: verbs meaning attack verbally"
+        }
+      },
+      {
+        "id": "fc-04-g1",
+        "category": "TREES",
+        "style": "names_of_things",
+        "connection": "Names of trees",
+        "words": [
+          "ASH",
+          "OAK",
+          "ELM",
+          "BIRCH",
+          "PINE",
+          "FIR",
+          "CEDAR",
+          "MAPLE"
+        ],
+        "required": [
+          "ASH"
+        ],
+        "anchor": "ASH",
+        "anchor_alternate_meaning": "ASH: names of trees",
+        "word_fits": {
+          "ASH": "ASH: names of trees",
+          "OAK": "OAK: names of trees",
+          "ELM": "ELM: names of trees",
+          "BIRCH": "BIRCH: names of trees",
+          "PINE": "PINE: names of trees",
+          "FIR": "FIR: names of trees",
+          "CEDAR": "CEDAR: names of trees",
+          "MAPLE": "MAPLE: names of trees"
+        }
+      },
+      {
+        "id": "fc-04-g2",
+        "category": "___ BLACK",
+        "style": "fill_in_the_blank",
+        "connection": "Words used before BLACK to describe a very dark shade",
+        "words": [
+          "COAL",
+          "JET",
+          "INK",
+          "PITCH",
+          "NIGHT",
+          "RAVEN",
+          "EBONY",
+          "SOOT"
+        ],
+        "required": [
+          "COAL"
+        ],
+        "anchor": "COAL",
+        "anchor_alternate_meaning": "COAL BLACK",
+        "word_fits": {
+          "COAL": "COAL BLACK",
+          "JET": "JET BLACK",
+          "INK": "INK BLACK",
+          "PITCH": "PITCH BLACK",
+          "NIGHT": "NIGHT BLACK",
+          "RAVEN": "RAVEN BLACK",
+          "EBONY": "EBONY BLACK",
+          "SOOT": "SOOT BLACK"
+        }
+      },
+      {
+        "id": "fc-04-g3",
+        "category": "___ SIGNAL",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding SIGNAL in established phrases",
+        "words": [
+          "SMOKE",
+          "HAND",
+          "TRAFFIC",
+          "TURN",
+          "RADIO",
+          "DISTRESS",
+          "WARNING",
+          "START"
+        ],
+        "required": [
+          "SMOKE"
+        ],
+        "anchor": "SMOKE",
+        "anchor_alternate_meaning": "SMOKE SIGNAL",
+        "word_fits": {
+          "SMOKE": "SMOKE SIGNAL",
+          "HAND": "HAND SIGNAL",
+          "TRAFFIC": "TRAFFIC SIGNAL",
+          "TURN": "TURN SIGNAL",
+          "RADIO": "RADIO SIGNAL",
+          "DISTRESS": "DISTRESS SIGNAL",
+          "WARNING": "WARNING SIGNAL",
+          "START": "START SIGNAL"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-05",
+    "method": "false_connection",
+    "seed_words": [
+      "GRINCH",
+      "SPIKE",
+      "LEGEND",
+      "SABBATH"
+    ],
+    "story": [
+      "A performer dressed as the GRINCH entered the rehearsal room.",
+      "A loose SPIKE on his costume snagged a music stand.",
+      "The bandleader was already a local LEGEND.",
+      "After playing through the score, they rested until the SABBATH and discussed new shoes."
+    ],
+    "root_proposals": [
+      {
+        "category": "MUSIC TERMS",
+        "words": [
+          "PITCH",
+          "NOTE",
+          "KEY",
+          "SCALE",
+          "REST",
+          "STAFF",
+          "BAR",
+          "BEAT"
+        ],
+        "connection": "Each word is an example of musical notation."
+      },
+      {
+        "category": "BOARD GAMES",
+        "words": [
+          "CHESS",
+          "GO",
+          "RISK",
+          "TROUBLE",
+          "CLUE",
+          "LIFE",
+          "SORRY",
+          "OPERATION"
+        ],
+        "connection": "Each word is an example of board games."
+      }
+    ],
+    "root_category": "MUSIC TERMS",
+    "root_pool": [
+      "PITCH",
+      "NOTE",
+      "KEY",
+      "SCALE",
+      "REST",
+      "STAFF",
+      "BAR",
+      "BEAT"
+    ],
+    "false_group": {
+      "category": "MUSIC TERMS",
+      "words": [
+        "PITCH",
+        "NOTE",
+        "KEY",
+        "BEAT"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-05-g0",
+        "category": "THROW",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs for propelling something through the air",
+        "words": [
+          "PITCH",
+          "HURL",
+          "TOSS",
+          "FLING",
+          "CAST",
+          "CHUCK",
+          "LOB",
+          "SLING"
+        ],
+        "required": [
+          "PITCH"
+        ],
+        "anchor": "PITCH",
+        "anchor_alternate_meaning": "PITCH: verbs for propelling something through the air",
+        "word_fits": {
+          "PITCH": "PITCH: verbs for propelling something through the air",
+          "HURL": "HURL: verbs for propelling something through the air",
+          "TOSS": "TOSS: verbs for propelling something through the air",
+          "FLING": "FLING: verbs for propelling something through the air",
+          "CAST": "CAST: verbs for propelling something through the air",
+          "CHUCK": "CHUCK: verbs for propelling something through the air",
+          "LOB": "LOB: verbs for propelling something through the air",
+          "SLING": "SLING: verbs for propelling something through the air"
+        }
+      },
+      {
+        "id": "fc-05-g1",
+        "category": "___BOOK",
+        "style": "fill_in_the_blank",
+        "connection": "Words combining with BOOK into a familiar book type",
+        "words": [
+          "NOTE",
+          "COOK",
+          "TEXT",
+          "WORK",
+          "GUEST",
+          "PHONE",
+          "SCRAP",
+          "PASS"
+        ],
+        "required": [
+          "NOTE"
+        ],
+        "anchor": "NOTE",
+        "anchor_alternate_meaning": "NOTEBOOK",
+        "word_fits": {
+          "NOTE": "NOTEBOOK",
+          "COOK": "COOKBOOK",
+          "TEXT": "TEXTBOOK",
+          "WORK": "WORKBOOK",
+          "GUEST": "GUESTBOOK",
+          "PHONE": "PHONEBOOK",
+          "SCRAP": "SCRAPBOOK",
+          "PASS": "PASSBOOK"
+        }
+      },
+      {
+        "id": "fc-05-g2",
+        "category": "___HOLE",
+        "style": "fill_in_the_blank",
+        "connection": "Words combining with HOLE to name an opening or cavity",
+        "words": [
+          "KEY",
+          "BUTTON",
+          "PEEP",
+          "PORT",
+          "LOOP",
+          "SINK",
+          "ARM",
+          "POT"
+        ],
+        "required": [
+          "KEY"
+        ],
+        "anchor": "KEY",
+        "anchor_alternate_meaning": "KEYHOLE",
+        "word_fits": {
+          "KEY": "KEYHOLE",
+          "BUTTON": "BUTTONHOLE",
+          "PEEP": "PEEPHOLE",
+          "PORT": "PORTHOLE",
+          "LOOP": "LOOPHOLE",
+          "SINK": "SINKHOLE",
+          "ARM": "ARMHOLE",
+          "POT": "POTHOLE"
+        }
+      },
+      {
+        "id": "fc-05-g3",
+        "category": "DEPLETE ENERGY",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning wear out or weaken",
+        "words": [
+          "BEAT",
+          "DRAIN",
+          "TIRE",
+          "EXHAUST",
+          "FATIGUE",
+          "WEARY",
+          "SAP",
+          "DEBILITATE"
+        ],
+        "required": [
+          "BEAT"
+        ],
+        "anchor": "BEAT",
+        "anchor_alternate_meaning": "BEAT: verbs meaning wear out or weaken",
+        "word_fits": {
+          "BEAT": "BEAT: verbs meaning wear out or weaken",
+          "DRAIN": "DRAIN: verbs meaning wear out or weaken",
+          "TIRE": "TIRE: verbs meaning wear out or weaken",
+          "EXHAUST": "EXHAUST: verbs meaning wear out or weaken",
+          "FATIGUE": "FATIGUE: verbs meaning wear out or weaken",
+          "WEARY": "WEARY: verbs meaning wear out or weaken",
+          "SAP": "SAP: verbs meaning wear out or weaken",
+          "DEBILITATE": "DEBILITATE: verbs meaning wear out or weaken"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-06",
+    "method": "false_connection",
+    "seed_words": [
+      "SHALLOW",
+      "MOTOR",
+      "COULD",
+      "FOOL"
+    ],
+    "story": [
+      "The boat crossed SHALLOW water.",
+      "Its MOTOR began to cough.",
+      "The driver said they COULD fix it with parts from his car.",
+      "His friend refused to play the FOOL and called a mechanic before their card game."
+    ],
+    "root_proposals": [
+      {
+        "category": "CAR PARTS",
+        "words": [
+          "BOOT",
+          "HOOD",
+          "TRUNK",
+          "BUMPER",
+          "WHEEL",
+          "TIRE",
+          "DASH",
+          "MIRROR"
+        ],
+        "connection": "Each word is an example of car parts."
+      },
+      {
+        "category": "BIRDS",
+        "words": [
+          "CRANE",
+          "SWIFT",
+          "SWALLOW",
+          "DUCK",
+          "HAWK",
+          "RAVEN",
+          "ROOK",
+          "KITE"
+        ],
+        "connection": "Each word is an example of birds."
+      }
+    ],
+    "root_category": "CAR PARTS",
+    "root_pool": [
+      "BOOT",
+      "HOOD",
+      "TRUNK",
+      "BUMPER",
+      "WHEEL",
+      "TIRE",
+      "DASH",
+      "MIRROR"
+    ],
+    "false_group": {
+      "category": "CAR PARTS",
+      "words": [
+        "TRUNK",
+        "BUMPER",
+        "WHEEL",
+        "TIRE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-06-g0",
+        "category": "ANIMAL APPENDAGES",
+        "style": "names_of_things",
+        "connection": "External projecting body parts of animals",
+        "words": [
+          "TRUNK",
+          "TAIL",
+          "HORN",
+          "WING",
+          "FIN",
+          "FLIPPER",
+          "TENTACLE",
+          "ANTENNA"
+        ],
+        "required": [
+          "TRUNK"
+        ],
+        "anchor": "TRUNK",
+        "anchor_alternate_meaning": "TRUNK: external projecting body parts of animals",
+        "word_fits": {
+          "TRUNK": "TRUNK: external projecting body parts of animals",
+          "TAIL": "TAIL: external projecting body parts of animals",
+          "HORN": "HORN: external projecting body parts of animals",
+          "WING": "WING: external projecting body parts of animals",
+          "FIN": "FIN: external projecting body parts of animals",
+          "FLIPPER": "FLIPPER: external projecting body parts of animals",
+          "TENTACLE": "TENTACLE: external projecting body parts of animals",
+          "ANTENNA": "ANTENNA: external projecting body parts of animals"
+        }
+      },
+      {
+        "id": "fc-06-g1",
+        "category": "LARGE IN QUANTITY",
+        "style": "synonyms_or_slang",
+        "connection": "Adjectives describing a large yield or supply",
+        "words": [
+          "BUMPER",
+          "PLENTEOUS",
+          "PLENTIFUL",
+          "COPIOUS",
+          "BOUNTIFUL",
+          "LAVISH",
+          "AMPLE",
+          "ABUNDANT"
+        ],
+        "required": [
+          "BUMPER"
+        ],
+        "anchor": "BUMPER",
+        "anchor_alternate_meaning": "BUMPER: adjectives describing a large yield or supply",
+        "word_fits": {
+          "BUMPER": "BUMPER: adjectives describing a large yield or supply",
+          "PLENTIFUL": "PLENTIFUL: adjectives describing a large yield or supply",
+          "COPIOUS": "COPIOUS: adjectives describing a large yield or supply",
+          "BOUNTIFUL": "BOUNTIFUL: adjectives describing a large yield or supply",
+          "LAVISH": "LAVISH: adjectives describing a large yield or supply",
+          "AMPLE": "AMPLE: adjectives describing a large yield or supply",
+          "ABUNDANT": "ABUNDANT: adjectives describing a large yield or supply",
+          "PLENTEOUS": "PLENTEOUS: describes a large supply."
+        }
+      },
+      {
+        "id": "fc-06-g2",
+        "category": "___HOUSE",
+        "style": "fill_in_the_blank",
+        "connection": "Words that form a familiar compound ending HOUSE",
+        "words": [
+          "WHEEL",
+          "GREEN",
+          "LIGHT",
+          "CLUB",
+          "SCHOOL",
+          "COURT",
+          "POWER",
+          "WARE"
+        ],
+        "required": [
+          "WHEEL"
+        ],
+        "anchor": "WHEEL",
+        "anchor_alternate_meaning": "WHEELHOUSE",
+        "word_fits": {
+          "WHEEL": "WHEELHOUSE",
+          "GREEN": "GREENHOUSE",
+          "LIGHT": "LIGHTHOUSE",
+          "CLUB": "CLUBHOUSE",
+          "SCHOOL": "SCHOOLHOUSE",
+          "COURT": "COURTHOUSE",
+          "POWER": "POWERHOUSE",
+          "WARE": "WAREHOUSE"
+        }
+      },
+      {
+        "id": "fc-06-g3",
+        "category": "WEAR OUT",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning deplete strength",
+        "words": [
+          "TIRE",
+          "EXHAUST",
+          "FATIGUE",
+          "DRAIN",
+          "WEARY",
+          "SAP",
+          "TAX",
+          "ENERVATE"
+        ],
+        "required": [
+          "TIRE"
+        ],
+        "anchor": "TIRE",
+        "anchor_alternate_meaning": "TIRE: verbs meaning deplete strength",
+        "word_fits": {
+          "TIRE": "TIRE: verbs meaning deplete strength",
+          "EXHAUST": "EXHAUST: verbs meaning deplete strength",
+          "FATIGUE": "FATIGUE: verbs meaning deplete strength",
+          "DRAIN": "DRAIN: verbs meaning deplete strength",
+          "WEARY": "WEARY: verbs meaning deplete strength",
+          "SAP": "SAP: verbs meaning deplete strength",
+          "TAX": "TAX: verbs meaning deplete strength",
+          "ENERVATE": "ENERVATE: verbs meaning deplete strength"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-07",
+    "method": "false_connection",
+    "seed_words": [
+      "SOLID",
+      "SHUFFLE",
+      "MUSTACHE",
+      "COMMON"
+    ],
+    "story": [
+      "A magician placed a SOLID box on the table.",
+      "He began to SHUFFLE a deck.",
+      "A painted MUSTACHE concealed his smile.",
+      "His assistant found the missing card among COMMON wildflowers beside some ornaments."
+    ],
+    "root_proposals": [
+      {
+        "category": "CARD TERMS",
+        "words": [
+          "ACE",
+          "KING",
+          "QUEEN",
+          "JACK",
+          "HEART",
+          "DIAMOND",
+          "CLUB",
+          "SPADE"
+        ],
+        "connection": "Each word is an example of playing card symbols."
+      },
+      {
+        "category": "MAGIC VOCABULARY",
+        "words": [
+          "CAST",
+          "SPELL",
+          "TRICK",
+          "CHARM",
+          "WAND",
+          "HEX",
+          "JINX",
+          "CURSE"
+        ],
+        "connection": "Each word is an example of magic vocabulary."
+      }
+    ],
+    "root_category": "CARD TERMS",
+    "root_pool": [
+      "ACE",
+      "KING",
+      "QUEEN",
+      "JACK",
+      "HEART",
+      "DIAMOND",
+      "CLUB",
+      "SPADE"
+    ],
+    "false_group": {
+      "category": "CARD TERMS",
+      "words": [
+        "ACE",
+        "KING",
+        "QUEEN",
+        "SPADE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-07-g0",
+        "category": "DO WELL",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs for doing very well or succeeding",
+        "words": [
+          "ACE",
+          "SHINE",
+          "EXCEL",
+          "TRIUMPH",
+          "PREVAIL",
+          "FLOURISH",
+          "THRIVE",
+          "SUCCEED"
+        ],
+        "required": [
+          "ACE"
+        ],
+        "anchor": "ACE",
+        "anchor_alternate_meaning": "ACE: verbs for doing very well or succeeding",
+        "word_fits": {
+          "ACE": "ACE: verbs for doing very well or succeeding",
+          "SHINE": "SHINE: verbs for doing very well or succeeding",
+          "EXCEL": "EXCEL: verbs for doing very well or succeeding",
+          "TRIUMPH": "TRIUMPH: verbs for doing very well or succeeding",
+          "PREVAIL": "PREVAIL: verbs for doing very well or succeeding",
+          "FLOURISH": "FLOURISH: verbs for doing very well or succeeding",
+          "THRIVE": "THRIVE: verbs for doing very well or succeeding",
+          "SUCCEED": "SUCCEED: verbs for doing very well or succeeding"
+        }
+      },
+      {
+        "id": "fc-07-g1",
+        "category": "NOVELISTS",
+        "style": "names_of_things",
+        "connection": "Surnames of established novelists",
+        "words": [
+          "KING",
+          "AUSTEN",
+          "ORWELL",
+          "WOOLF",
+          "DICKENS",
+          "HARDY",
+          "ELIOT",
+          "SWIFT"
+        ],
+        "required": [
+          "KING"
+        ],
+        "anchor": "KING",
+        "anchor_alternate_meaning": "KING: surnames of established novelists",
+        "word_fits": {
+          "KING": "KING: surnames of established novelists",
+          "AUSTEN": "AUSTEN: surnames of established novelists",
+          "ORWELL": "ORWELL: surnames of established novelists",
+          "WOOLF": "WOOLF: surnames of established novelists",
+          "DICKENS": "DICKENS: surnames of established novelists",
+          "HARDY": "HARDY: surnames of established novelists",
+          "ELIOT": "ELIOT: surnames of established novelists",
+          "SWIFT": "SWIFT: surnames of established novelists"
+        }
+      },
+      {
+        "id": "fc-07-g2",
+        "category": "BANDS",
+        "style": "names_of_things",
+        "connection": "Single-word names of musical bands",
+        "words": [
+          "QUEEN",
+          "KISS",
+          "RUSH",
+          "BLUR",
+          "CREAM",
+          "OASIS",
+          "JOURNEY",
+          "CHIC"
+        ],
+        "required": [
+          "QUEEN"
+        ],
+        "anchor": "QUEEN",
+        "anchor_alternate_meaning": "QUEEN: single-word names of musical bands",
+        "word_fits": {
+          "QUEEN": "QUEEN: single-word names of musical bands",
+          "KISS": "KISS: single-word names of musical bands",
+          "RUSH": "RUSH: single-word names of musical bands",
+          "BLUR": "BLUR: single-word names of musical bands",
+          "CREAM": "CREAM: single-word names of musical bands",
+          "OASIS": "OASIS: single-word names of musical bands",
+          "JOURNEY": "JOURNEY: single-word names of musical bands",
+          "CHIC": "CHIC: single-word names of musical bands"
+        }
+      },
+      {
+        "id": "fc-07-g3",
+        "category": "GARDEN TOOLS",
+        "style": "names_of_things",
+        "connection": "Hand tools used in a garden",
+        "words": [
+          "SPADE",
+          "RAKE",
+          "HOE",
+          "TROWEL",
+          "SHOVEL",
+          "SICKLE",
+          "DIBBER",
+          "FORK"
+        ],
+        "required": [
+          "SPADE"
+        ],
+        "anchor": "SPADE",
+        "anchor_alternate_meaning": "SPADE: hand tools used in a garden",
+        "word_fits": {
+          "SPADE": "SPADE: hand tools used in a garden",
+          "RAKE": "RAKE: hand tools used in a garden",
+          "HOE": "HOE: hand tools used in a garden",
+          "TROWEL": "TROWEL: hand tools used in a garden",
+          "SHOVEL": "SHOVEL: hand tools used in a garden",
+          "SICKLE": "SICKLE: hand tools used in a garden",
+          "DIBBER": "DIBBER: hand tools used in a garden",
+          "FORK": "FORK: hand tools used in a garden"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-08",
+    "method": "false_connection",
+    "seed_words": [
+      "BULB",
+      "BROOCH",
+      "BUDGET",
+      "TENDER"
+    ],
+    "story": [
+      "A bare BULB lit the jeweler's window.",
+      "A silver BROOCH caught a shopper's eye.",
+      "Her BUDGET allowed one small purchase.",
+      "The TENDER exchange reminded her of a scene from a television show."
+    ],
+    "root_proposals": [
+      {
+        "category": "JEWELRY TERMS",
+        "words": [
+          "BAND",
+          "STUD",
+          "HOOP",
+          "CHAIN",
+          "LINK",
+          "PEARL",
+          "ROCK",
+          "CHARM"
+        ],
+        "connection": "Each word is an example of jewelry terms."
+      },
+      {
+        "category": "FOOTWEAR",
+        "words": [
+          "PUMP",
+          "FLAT",
+          "WEDGE",
+          "MULE",
+          "CLOG",
+          "SLIDE",
+          "BOOT",
+          "LOAFER"
+        ],
+        "connection": "Each word is an example of footwear."
+      }
+    ],
+    "root_category": "JEWELRY TERMS",
+    "root_pool": [
+      "BAND",
+      "STUD",
+      "HOOP",
+      "CHAIN",
+      "LINK",
+      "PEARL",
+      "ROCK",
+      "CHARM"
+    ],
+    "false_group": {
+      "category": "JEWELRY TERMS",
+      "words": [
+        "BAND",
+        "PEARL",
+        "ROCK",
+        "CHARM"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-08-g0",
+        "category": "COLLECTIVE GROUPS",
+        "style": "names_of_things",
+        "connection": "Collective nouns for assembled beings",
+        "words": [
+          "BAND",
+          "FLOCK",
+          "HERD",
+          "SWARM",
+          "PACK",
+          "TROOP",
+          "BEVY",
+          "GAGGLE"
+        ],
+        "required": [
+          "BAND"
+        ],
+        "anchor": "BAND",
+        "anchor_alternate_meaning": "BAND: collective nouns for assembled beings",
+        "word_fits": {
+          "BAND": "BAND: collective nouns for assembled beings",
+          "FLOCK": "FLOCK: collective nouns for assembled beings",
+          "HERD": "HERD: collective nouns for assembled beings",
+          "SWARM": "SWARM: collective nouns for assembled beings",
+          "PACK": "PACK: collective nouns for assembled beings",
+          "TROOP": "TROOP: collective nouns for assembled beings",
+          "BEVY": "BEVY: collective nouns for assembled beings",
+          "GAGGLE": "GAGGLE: collective nouns for assembled beings"
+        }
+      },
+      {
+        "id": "fc-08-g1",
+        "category": "___ JAM",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding JAM in established expressions",
+        "words": [
+          "PEARL",
+          "TRAFFIC",
+          "PAPER",
+          "LOG",
+          "TOE",
+          "RASPBERRY",
+          "STRAWBERRY",
+          "APRICOT"
+        ],
+        "required": [
+          "PEARL"
+        ],
+        "anchor": "PEARL",
+        "anchor_alternate_meaning": "PEARL JAM",
+        "word_fits": {
+          "PEARL": "PEARL JAM",
+          "TRAFFIC": "TRAFFIC JAM",
+          "PAPER": "PAPER JAM",
+          "LOG": "LOG JAM",
+          "TOE": "TOE JAM",
+          "RASPBERRY": "RASPBERRY JAM",
+          "STRAWBERRY": "STRAWBERRY JAM",
+          "APRICOT": "APRICOT JAM"
+        }
+      },
+      {
+        "id": "fc-08-g2",
+        "category": "___ STAR",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding STAR in familiar expressions",
+        "words": [
+          "ROCK",
+          "POP",
+          "MOVIE",
+          "CHILD",
+          "NORTH",
+          "LODE",
+          "FALLING",
+          "SHOOTING"
+        ],
+        "required": [
+          "ROCK"
+        ],
+        "anchor": "ROCK",
+        "anchor_alternate_meaning": "ROCK STAR",
+        "word_fits": {
+          "ROCK": "ROCK STAR",
+          "POP": "POP STAR",
+          "MOVIE": "MOVIE STAR",
+          "CHILD": "CHILD STAR",
+          "NORTH": "NORTH STAR",
+          "LODE": "LODE STAR",
+          "FALLING": "FALLING STAR",
+          "SHOOTING": "SHOOTING STAR"
+        }
+      },
+      {
+        "id": "fc-08-g3",
+        "category": "HOLD ATTENTION",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs for holding someone spellbound",
+        "words": [
+          "CHARM",
+          "ENCHANT",
+          "CAPTIVATE",
+          "BEGUILE",
+          "ENTRANCE",
+          "FASCINATE",
+          "SPELLBIND",
+          "MESMERIZE"
+        ],
+        "required": [
+          "CHARM"
+        ],
+        "anchor": "CHARM",
+        "anchor_alternate_meaning": "CHARM: verbs for holding someone spellbound",
+        "word_fits": {
+          "CHARM": "CHARM: verbs for holding someone spellbound",
+          "ENCHANT": "ENCHANT: verbs for holding someone spellbound",
+          "CAPTIVATE": "CAPTIVATE: verbs for holding someone spellbound",
+          "BEGUILE": "BEGUILE: verbs for holding someone spellbound",
+          "ENTRANCE": "ENTRANCE: verbs for holding someone spellbound",
+          "FASCINATE": "FASCINATE: verbs for holding someone spellbound",
+          "SPELLBIND": "SPELLBIND: verbs for holding someone spellbound",
+          "MESMERIZE": "MESMERIZE: verbs for holding someone spellbound"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-09",
+    "method": "false_connection",
+    "seed_words": [
+      "SI",
+      "MICHELLE",
+      "COBWEB",
+      "GLEE"
+    ],
+    "story": [
+      "A singer practiced the syllable SI.",
+      "MICHELLE joined the rehearsal.",
+      "They brushed a COBWEB from the television in the corner.",
+      "Their GLEE grew when the old set played a travel show about American cities."
+    ],
+    "root_proposals": [
+      {
+        "category": "TELEVISION TITLES",
+        "words": [
+          "GLEE",
+          "FRIENDS",
+          "LOST",
+          "HOUSE",
+          "BONES",
+          "FARGO",
+          "CHEERS",
+          "SUCCESSION"
+        ],
+        "connection": "Each word is an example of television titles."
+      },
+      {
+        "category": "TREE PARTS",
+        "words": [
+          "BARK",
+          "ROOT",
+          "TRUNK",
+          "BRANCH",
+          "LEAF",
+          "LIMB",
+          "BOUGH",
+          "CROWN"
+        ],
+        "connection": "Each word is an example of tree parts."
+      }
+    ],
+    "root_category": "TELEVISION TITLES",
+    "root_pool": [
+      "GLEE",
+      "FRIENDS",
+      "LOST",
+      "HOUSE",
+      "BONES",
+      "FARGO",
+      "CHEERS",
+      "SUCCESSION"
+    ],
+    "false_group": {
+      "category": "TELEVISION TITLES",
+      "words": [
+        "GLEE",
+        "FRIENDS",
+        "LOST",
+        "FARGO"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-09-g0",
+        "category": "HAPPINESS",
+        "style": "synonyms_or_slang",
+        "connection": "Nouns for intense pleasure or happiness",
+        "words": [
+          "GLEE",
+          "JOY",
+          "DELIGHT",
+          "ELATION",
+          "BLISS",
+          "MIRTH",
+          "JUBILATION",
+          "EXULTATION"
+        ],
+        "required": [
+          "GLEE"
+        ],
+        "anchor": "GLEE",
+        "anchor_alternate_meaning": "GLEE: nouns for intense pleasure or happiness",
+        "word_fits": {
+          "GLEE": "GLEE: nouns for intense pleasure or happiness",
+          "JOY": "JOY: nouns for intense pleasure or happiness",
+          "DELIGHT": "DELIGHT: nouns for intense pleasure or happiness",
+          "ELATION": "ELATION: nouns for intense pleasure or happiness",
+          "BLISS": "BLISS: nouns for intense pleasure or happiness",
+          "MIRTH": "MIRTH: nouns for intense pleasure or happiness",
+          "JUBILATION": "JUBILATION: nouns for intense pleasure or happiness",
+          "EXULTATION": "EXULTATION: nouns for intense pleasure or happiness"
+        }
+      },
+      {
+        "id": "fc-09-g1",
+        "category": "CLOSE ASSOCIATES",
+        "style": "synonyms_or_slang",
+        "connection": "People with personal or supportive relationships",
+        "words": [
+          "FRIENDS",
+          "ALLIES",
+          "PALS",
+          "BUDDIES",
+          "CHUMS",
+          "COMPANIONS",
+          "CRONIES",
+          "CONFIDANTS"
+        ],
+        "required": [
+          "FRIENDS"
+        ],
+        "anchor": "FRIENDS",
+        "anchor_alternate_meaning": "FRIENDS: people with personal or supportive relationships",
+        "word_fits": {
+          "FRIENDS": "FRIENDS: people with personal or supportive relationships",
+          "ALLIES": "ALLIES: people with personal or supportive relationships",
+          "PALS": "PALS: people with personal or supportive relationships",
+          "BUDDIES": "BUDDIES: people with personal or supportive relationships",
+          "CHUMS": "CHUMS: people with personal or supportive relationships",
+          "COMPANIONS": "COMPANIONS: people with personal or supportive relationships",
+          "CRONIES": "CRONIES: people with personal or supportive relationships",
+          "CONFIDANTS": "CONFIDANTS: people with personal or supportive relationships"
+        }
+      },
+      {
+        "id": "fc-09-g2",
+        "category": "UNLOCATED",
+        "style": "synonyms_or_slang",
+        "connection": "Adjectives describing someone or something not where expected",
+        "words": [
+          "LOST",
+          "MISSING",
+          "ABSENT",
+          "GONE",
+          "MISPLACED",
+          "UNTRACEABLE",
+          "VANISHED",
+          "STRAY"
+        ],
+        "required": [
+          "LOST"
+        ],
+        "anchor": "LOST",
+        "anchor_alternate_meaning": "LOST: adjectives describing someone or something not where expected",
+        "word_fits": {
+          "LOST": "LOST: adjectives describing someone or something not where expected",
+          "MISSING": "MISSING: adjectives describing someone or something not where expected",
+          "ABSENT": "ABSENT: adjectives describing someone or something not where expected",
+          "GONE": "GONE: adjectives describing someone or something not where expected",
+          "MISPLACED": "MISPLACED: adjectives describing someone or something not where expected",
+          "UNTRACEABLE": "UNTRACEABLE: adjectives describing someone or something not where expected",
+          "VANISHED": "VANISHED: adjectives describing someone or something not where expected",
+          "STRAY": "STRAY: adjectives describing someone or something not where expected"
+        }
+      },
+      {
+        "id": "fc-09-g3",
+        "category": "AMERICAN CITIES",
+        "style": "names_of_things",
+        "connection": "Names of United States cities",
+        "words": [
+          "FARGO",
+          "PHOENIX",
+          "MOBILE",
+          "BUFFALO",
+          "AUSTIN",
+          "SALEM",
+          "DOVER",
+          "LINCOLN"
+        ],
+        "required": [
+          "FARGO"
+        ],
+        "anchor": "FARGO",
+        "anchor_alternate_meaning": "FARGO: names of United States cities",
+        "word_fits": {
+          "FARGO": "FARGO: names of United States cities",
+          "PHOENIX": "PHOENIX: names of United States cities",
+          "MOBILE": "MOBILE: names of United States cities",
+          "BUFFALO": "BUFFALO: names of United States cities",
+          "AUSTIN": "AUSTIN: names of United States cities",
+          "SALEM": "SALEM: names of United States cities",
+          "DOVER": "DOVER: names of United States cities",
+          "LINCOLN": "LINCOLN: names of United States cities"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-10",
+    "method": "false_connection",
+    "seed_words": [
+      "YELLOW",
+      "SUNFLOWER",
+      "WHITE",
+      "CENTER"
+    ],
+    "story": [
+      "A YELLOW scarf lay on the table.",
+      "A SUNFLOWER stood beside it.",
+      "The WHITE walls made every shade vivid.",
+      "At the CENTER of the room, a gardener compared paint colors with tree leaves."
+    ],
+    "root_proposals": [
+      {
+        "category": "COLOR NAMES",
+        "words": [
+          "GOLD",
+          "SILVER",
+          "ROSE",
+          "CORAL",
+          "SALMON",
+          "TAN",
+          "CREAM",
+          "PLUM"
+        ],
+        "connection": "Each word is an example of color names."
+      },
+      {
+        "category": "GARMENTS",
+        "words": [
+          "DRESS",
+          "COAT",
+          "SUIT",
+          "CAP",
+          "TOP",
+          "TIE",
+          "VEST",
+          "SLIP"
+        ],
+        "connection": "Each word is an example of garments."
+      }
+    ],
+    "root_category": "COLOR NAMES",
+    "root_pool": [
+      "GOLD",
+      "SILVER",
+      "ROSE",
+      "CORAL",
+      "SALMON",
+      "TAN",
+      "CREAM",
+      "PLUM"
+    ],
+    "false_group": {
+      "category": "COLOR NAMES",
+      "words": [
+        "GOLD",
+        "SILVER",
+        "TAN",
+        "CREAM"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-10-g0",
+        "category": "___ RUSH",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding RUSH in established expressions",
+        "words": [
+          "GOLD",
+          "SUGAR",
+          "HEAD",
+          "LAND",
+          "ADRENALINE",
+          "LUNCH",
+          "MORNING",
+          "EVENING"
+        ],
+        "required": [
+          "GOLD"
+        ],
+        "anchor": "GOLD",
+        "anchor_alternate_meaning": "GOLD RUSH",
+        "word_fits": {
+          "GOLD": "GOLD RUSH",
+          "SUGAR": "SUGAR RUSH",
+          "HEAD": "HEAD RUSH",
+          "LAND": "LAND RUSH",
+          "ADRENALINE": "ADRENALINE RUSH",
+          "LUNCH": "LUNCH RUSH",
+          "MORNING": "MORNING RUSH",
+          "EVENING": "EVENING RUSH"
+        }
+      },
+      {
+        "id": "fc-10-g1",
+        "category": "___ LINING",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding LINING in established expressions",
+        "words": [
+          "SILVER",
+          "FLEECE",
+          "FUR",
+          "SILK",
+          "COTTON",
+          "SATIN",
+          "WOOL",
+          "THERMAL"
+        ],
+        "required": [
+          "SILVER"
+        ],
+        "anchor": "SILVER",
+        "anchor_alternate_meaning": "SILVER LINING",
+        "word_fits": {
+          "SILVER": "SILVER LINING",
+          "FLEECE": "FLEECE LINING",
+          "FUR": "FUR LINING",
+          "SILK": "SILK LINING",
+          "COTTON": "COTTON LINING",
+          "SATIN": "SATIN LINING",
+          "WOOL": "WOOL LINING",
+          "THERMAL": "THERMAL LINING"
+        }
+      },
+      {
+        "id": "fc-10-g2",
+        "category": "ANAGRAMMED ANIMALS",
+        "style": "wordplay",
+        "connection": "Rearrange the letters of each given word to obtain an animal name.",
+        "words": [
+          "TAN",
+          "ACT",
+          "GOD",
+          "TAR",
+          "LOW",
+          "BARE",
+          "FLOW",
+          "SHORE"
+        ],
+        "required": [
+          "TAN"
+        ],
+        "anchor": "TAN",
+        "anchor_alternate_meaning": "TAN is an anagram of ANT; its letters supply the animal name rather than its color sense.",
+        "word_fits": {
+          "TAN": "TAN rearranges exactly to ANT.",
+          "ACT": "ACT rearranges exactly to CAT.",
+          "GOD": "GOD rearranges exactly to DOG.",
+          "TAR": "TAR rearranges exactly to RAT.",
+          "LOW": "LOW rearranges exactly to OWL.",
+          "BARE": "BARE rearranges exactly to BEAR.",
+          "FLOW": "FLOW rearranges exactly to WOLF.",
+          "SHORE": "SHORE rearranges exactly to HORSE."
+        }
+      },
+      {
+        "id": "fc-10-g3",
+        "category": "BEAT DECISIVELY",
+        "style": "synonyms_or_slang",
+        "connection": "Informal verbs for defeating an opponent badly",
+        "words": [
+          "CREAM",
+          "ROUT",
+          "TROUNCE",
+          "DRUB",
+          "WALLOP",
+          "CLOBBER",
+          "POUND",
+          "SMASH"
+        ],
+        "required": [
+          "CREAM"
+        ],
+        "anchor": "CREAM",
+        "anchor_alternate_meaning": "CREAM: informal verbs for defeating an opponent badly",
+        "word_fits": {
+          "CREAM": "CREAM: informal verbs for defeating an opponent badly",
+          "ROUT": "ROUT: informal verbs for defeating an opponent badly",
+          "TROUNCE": "TROUNCE: informal verbs for defeating an opponent badly",
+          "DRUB": "DRUB: informal verbs for defeating an opponent badly",
+          "WALLOP": "WALLOP: informal verbs for defeating an opponent badly",
+          "CLOBBER": "CLOBBER: informal verbs for defeating an opponent badly",
+          "POUND": "POUND: informal verbs for defeating an opponent badly",
+          "SMASH": "SMASH: informal verbs for defeating an opponent badly"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-11",
+    "method": "false_connection",
+    "seed_words": [
+      "TABBY",
+      "ROT",
+      "BATON",
+      "SHARE"
+    ],
+    "story": [
+      "A TABBY watched a fallen log begin to ROT.",
+      "Its owner waved a BATON to call a dog.",
+      "She offered to SHARE a wildlife magazine.",
+      "The photographs of large cats reminded her of patterns on a visiting musician's clothes."
+    ],
+    "root_proposals": [
+      {
+        "category": "WILD CATS",
+        "words": [
+          "TIGER",
+          "LION",
+          "LEOPARD",
+          "JAGUAR",
+          "PUMA",
+          "PANTHER",
+          "LYNX",
+          "COUGAR"
+        ],
+        "connection": "Each word is an example of wild cats."
+      },
+      {
+        "category": "GEOGRAPHIC FEATURES",
+        "words": [
+          "BANK",
+          "CAPE",
+          "SOUND",
+          "CHANNEL",
+          "DELTA",
+          "PLAIN",
+          "GULF",
+          "POINT"
+        ],
+        "connection": "Each word is an example of geographic features."
+      }
+    ],
+    "root_category": "WILD CATS",
+    "root_pool": [
+      "TIGER",
+      "LION",
+      "LEOPARD",
+      "JAGUAR",
+      "PUMA",
+      "PANTHER",
+      "LYNX",
+      "COUGAR"
+    ],
+    "false_group": {
+      "category": "WILD CATS",
+      "words": [
+        "TIGER",
+        "LION",
+        "LEOPARD",
+        "JAGUAR"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-11-g0",
+        "category": "___ SHARK",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding SHARK to name shark types",
+        "words": [
+          "TIGER",
+          "BULL",
+          "NURSE",
+          "WHALE",
+          "LEMON",
+          "REEF",
+          "BASKING",
+          "HAMMERHEAD"
+        ],
+        "required": [
+          "TIGER"
+        ],
+        "anchor": "TIGER",
+        "anchor_alternate_meaning": "TIGER SHARK",
+        "word_fits": {
+          "TIGER": "TIGER SHARK",
+          "BULL": "BULL SHARK",
+          "NURSE": "NURSE SHARK",
+          "WHALE": "WHALE SHARK",
+          "LEMON": "LEMON SHARK",
+          "REEF": "REEF SHARK",
+          "BASKING": "BASKING SHARK",
+          "HAMMERHEAD": "HAMMERHEAD SHARK"
+        }
+      },
+      {
+        "id": "fc-11-g1",
+        "category": "___HEART",
+        "style": "fill_in_the_blank",
+        "connection": "Words that precede HEART in familiar compounds or expressions",
+        "words": [
+          "LION",
+          "SWEET",
+          "BRAVE",
+          "LIGHT",
+          "HEAVY",
+          "BROKEN",
+          "BLEEDING",
+          "PURPLE"
+        ],
+        "required": [
+          "LION"
+        ],
+        "anchor": "LION",
+        "anchor_alternate_meaning": "LIONHEART",
+        "word_fits": {
+          "LION": "LIONHEART",
+          "SWEET": "SWEETHEART",
+          "BRAVE": "BRAVEHEART",
+          "LIGHT": "LIGHTHEART",
+          "HEAVY": "HEAVYHEART",
+          "BROKEN": "BROKENHEART",
+          "BLEEDING": "BLEEDINGHEART",
+          "PURPLE": "PURPLEHEART"
+        }
+      },
+      {
+        "id": "fc-11-g2",
+        "category": "___ PRINT",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding PRINT in familiar open or closed compounds",
+        "words": [
+          "LEOPARD",
+          "ANIMAL",
+          "FINGER",
+          "FOOT",
+          "BLUE",
+          "NEWS",
+          "SCREEN",
+          "SMALL"
+        ],
+        "required": [
+          "LEOPARD"
+        ],
+        "anchor": "LEOPARD",
+        "anchor_alternate_meaning": "LEOPARD PRINT",
+        "word_fits": {
+          "LEOPARD": "LEOPARD PRINT",
+          "ANIMAL": "ANIMAL PRINT",
+          "FINGER": "FINGER PRINT",
+          "FOOT": "FOOT PRINT",
+          "BLUE": "BLUE PRINT",
+          "NEWS": "NEWS PRINT",
+          "SCREEN": "SCREEN PRINT",
+          "SMALL": "SMALL PRINT"
+        }
+      },
+      {
+        "id": "fc-11-g3",
+        "category": "CAR BRANDS",
+        "style": "names_of_things",
+        "connection": "Automobile marques",
+        "words": [
+          "JAGUAR",
+          "FORD",
+          "AUDI",
+          "HONDA",
+          "BUICK",
+          "DODGE",
+          "MINI",
+          "SMART"
+        ],
+        "required": [
+          "JAGUAR"
+        ],
+        "anchor": "JAGUAR",
+        "anchor_alternate_meaning": "JAGUAR: automobile marques",
+        "word_fits": {
+          "JAGUAR": "JAGUAR: automobile marques",
+          "FORD": "FORD: automobile marques",
+          "AUDI": "AUDI: automobile marques",
+          "HONDA": "HONDA: automobile marques",
+          "BUICK": "BUICK: automobile marques",
+          "DODGE": "DODGE: automobile marques",
+          "MINI": "MINI: automobile marques",
+          "SMART": "SMART: automobile marques"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-12",
+    "method": "false_connection",
+    "seed_words": [
+      "JOHN",
+      "RUBY",
+      "BEANS",
+      "SWIMMING"
+    ],
+    "story": [
+      "JOHN picked up a RUBY token.",
+      "A bowl of BEANS stood beside the board game.",
+      "His sister returned from SWIMMING to take her turn.",
+      "A documentary about magic played quietly while they rolled the dice."
+    ],
+    "root_proposals": [
+      {
+        "category": "BOARD GAMES",
+        "words": [
+          "CHESS",
+          "GO",
+          "RISK",
+          "TROUBLE",
+          "CLUE",
+          "LIFE",
+          "SORRY",
+          "OPERATION"
+        ],
+        "connection": "Each word is an example of board games."
+      },
+      {
+        "category": "FIRE VOCABULARY",
+        "words": [
+          "SPARK",
+          "FLAME",
+          "MATCH",
+          "ASH",
+          "COAL",
+          "SMOKE",
+          "KINDLE",
+          "LIGHT"
+        ],
+        "connection": "Each word is an example of fire vocabulary."
+      }
+    ],
+    "root_category": "BOARD GAMES",
+    "root_pool": [
+      "CHESS",
+      "GO",
+      "RISK",
+      "TROUBLE",
+      "CLUE",
+      "LIFE",
+      "SORRY",
+      "OPERATION"
+    ],
+    "false_group": {
+      "category": "BOARD GAMES",
+      "words": [
+        "RISK",
+        "TROUBLE",
+        "CLUE",
+        "LIFE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-12-g0",
+        "category": "GAMBLING VERBS",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs involving uncertain outcomes",
+        "words": [
+          "RISK",
+          "GAMBLE",
+          "VENTURE",
+          "WAGER",
+          "BET",
+          "CHANCE",
+          "HAZARD",
+          "SPECULATE"
+        ],
+        "required": [
+          "RISK"
+        ],
+        "anchor": "RISK",
+        "anchor_alternate_meaning": "RISK: verbs involving uncertain outcomes",
+        "word_fits": {
+          "RISK": "RISK: verbs involving uncertain outcomes",
+          "GAMBLE": "GAMBLE: verbs involving uncertain outcomes",
+          "VENTURE": "VENTURE: verbs involving uncertain outcomes",
+          "WAGER": "WAGER: verbs involving uncertain outcomes",
+          "BET": "BET: verbs involving uncertain outcomes",
+          "CHANCE": "CHANCE: verbs involving uncertain outcomes",
+          "HAZARD": "HAZARD: verbs involving uncertain outcomes",
+          "SPECULATE": "SPECULATE: verbs involving uncertain outcomes"
+        }
+      },
+      {
+        "id": "fc-12-g1",
+        "category": "IRRITATE",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning disturb someone",
+        "words": [
+          "TROUBLE",
+          "ANNOY",
+          "IRK",
+          "VEX",
+          "PESTER",
+          "HARASS",
+          "BUG",
+          "BOTHER"
+        ],
+        "required": [
+          "TROUBLE"
+        ],
+        "anchor": "TROUBLE",
+        "anchor_alternate_meaning": "TROUBLE: verbs meaning disturb someone",
+        "word_fits": {
+          "TROUBLE": "TROUBLE: verbs meaning disturb someone",
+          "ANNOY": "ANNOY: verbs meaning disturb someone",
+          "IRK": "IRK: verbs meaning disturb someone",
+          "VEX": "VEX: verbs meaning disturb someone",
+          "PESTER": "PESTER: verbs meaning disturb someone",
+          "HARASS": "HARASS: verbs meaning disturb someone",
+          "BUG": "BUG: verbs meaning disturb someone",
+          "BOTHER": "BOTHER: verbs meaning disturb someone"
+        }
+      },
+      {
+        "id": "fc-12-g2",
+        "category": "DETECTIVE EVIDENCE",
+        "style": "names_of_things",
+        "connection": "Items that may provide evidence in an investigation",
+        "words": [
+          "CLUE",
+          "FINGERPRINT",
+          "FOOTPRINT",
+          "FIBER",
+          "HAIR",
+          "TRACE",
+          "SAMPLE",
+          "RECORDING"
+        ],
+        "required": [
+          "CLUE"
+        ],
+        "anchor": "CLUE",
+        "anchor_alternate_meaning": "CLUE: items that may provide evidence in an investigation",
+        "word_fits": {
+          "CLUE": "CLUE: items that may provide evidence in an investigation",
+          "FINGERPRINT": "FINGERPRINT: items that may provide evidence in an investigation",
+          "FOOTPRINT": "FOOTPRINT: items that may provide evidence in an investigation",
+          "FIBER": "FIBER: items that may provide evidence in an investigation",
+          "HAIR": "HAIR: items that may provide evidence in an investigation",
+          "TRACE": "TRACE: items that may provide evidence in an investigation",
+          "SAMPLE": "SAMPLE: items that may provide evidence in an investigation",
+          "RECORDING": "RECORDING: items that may provide evidence in an investigation"
+        }
+      },
+      {
+        "id": "fc-12-g3",
+        "category": "___BOAT",
+        "style": "fill_in_the_blank",
+        "connection": "Words combining with BOAT to name a vessel type",
+        "words": [
+          "LIFE",
+          "ROW",
+          "SAIL",
+          "SPEED",
+          "HOUSE",
+          "STEAM",
+          "MOTOR",
+          "TUG"
+        ],
+        "required": [
+          "LIFE"
+        ],
+        "anchor": "LIFE",
+        "anchor_alternate_meaning": "LIFEBOAT",
+        "word_fits": {
+          "LIFE": "LIFEBOAT",
+          "ROW": "ROWBOAT",
+          "SAIL": "SAILBOAT",
+          "SPEED": "SPEEDBOAT",
+          "HOUSE": "HOUSEBOAT",
+          "STEAM": "STEAMBOAT",
+          "MOTOR": "MOTORBOAT",
+          "TUG": "TUGBOAT"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-13",
+    "method": "false_connection",
+    "seed_words": [
+      "PERCH",
+      "JIFFY",
+      "WAVE",
+      "ATTACK"
+    ],
+    "story": [
+      "A bird chose a high PERCH.",
+      "In a JIFFY it rose above the river.",
+      "A WAVE broke below the cliff.",
+      "The flock seemed ready to ATTACK a passing kite as children sorted their shoes."
+    ],
+    "root_proposals": [
+      {
+        "category": "BIRDS",
+        "words": [
+          "CRANE",
+          "SWIFT",
+          "SWALLOW",
+          "DUCK",
+          "HAWK",
+          "RAVEN",
+          "ROOK",
+          "KITE"
+        ],
+        "connection": "Each word is an example of birds."
+      },
+      {
+        "category": "MUSIC TERMS",
+        "words": [
+          "PITCH",
+          "NOTE",
+          "KEY",
+          "SCALE",
+          "REST",
+          "STAFF",
+          "BAR",
+          "BEAT"
+        ],
+        "connection": "Each word is an example of musical notation."
+      }
+    ],
+    "root_category": "BIRDS",
+    "root_pool": [
+      "CRANE",
+      "SWIFT",
+      "SWALLOW",
+      "DUCK",
+      "HAWK",
+      "RAVEN",
+      "ROOK",
+      "KITE"
+    ],
+    "false_group": {
+      "category": "BIRDS",
+      "words": [
+        "CRANE",
+        "DUCK",
+        "HAWK",
+        "KITE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-13-g0",
+        "category": "CONSTRUCTION MACHINES",
+        "style": "names_of_things",
+        "connection": "Heavy equipment used at building sites",
+        "words": [
+          "CRANE",
+          "EXCAVATOR",
+          "BULLDOZER",
+          "GRADER",
+          "BACKHOE",
+          "LOADER",
+          "COMPACTOR",
+          "SCRAPER"
+        ],
+        "required": [
+          "CRANE"
+        ],
+        "anchor": "CRANE",
+        "anchor_alternate_meaning": "CRANE: heavy equipment used at building sites",
+        "word_fits": {
+          "CRANE": "CRANE: heavy equipment used at building sites",
+          "EXCAVATOR": "EXCAVATOR: heavy equipment used at building sites",
+          "BULLDOZER": "BULLDOZER: heavy equipment used at building sites",
+          "GRADER": "GRADER: heavy equipment used at building sites",
+          "BACKHOE": "BACKHOE: heavy equipment used at building sites",
+          "LOADER": "LOADER: heavy equipment used at building sites",
+          "COMPACTOR": "COMPACTOR: heavy equipment used at building sites",
+          "SCRAPER": "SCRAPER: heavy equipment used at building sites"
+        }
+      },
+      {
+        "id": "fc-13-g1",
+        "category": "AVOID",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning keep away from something",
+        "words": [
+          "DUCK",
+          "EVADE",
+          "DODGE",
+          "ELUDE",
+          "SHUN",
+          "ESCHEW",
+          "SIDESTEP",
+          "CIRCUMVENT"
+        ],
+        "required": [
+          "DUCK"
+        ],
+        "anchor": "DUCK",
+        "anchor_alternate_meaning": "DUCK: verbs meaning keep away from something",
+        "word_fits": {
+          "DUCK": "DUCK: verbs meaning keep away from something",
+          "EVADE": "EVADE: verbs meaning keep away from something",
+          "DODGE": "DODGE: verbs meaning keep away from something",
+          "ELUDE": "ELUDE: verbs meaning keep away from something",
+          "SHUN": "SHUN: verbs meaning keep away from something",
+          "ESCHEW": "ESCHEW: verbs meaning keep away from something",
+          "SIDESTEP": "SIDESTEP: verbs meaning keep away from something",
+          "CIRCUMVENT": "CIRCUMVENT: verbs meaning keep away from something"
+        }
+      },
+      {
+        "id": "fc-13-g2",
+        "category": "OFFER FOR PURCHASE",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning offer goods for purchase",
+        "words": [
+          "HAWK",
+          "PEDDLE",
+          "VEND",
+          "MARKET",
+          "RETAIL",
+          "PURVEY",
+          "TRADE",
+          "SELL"
+        ],
+        "required": [
+          "HAWK"
+        ],
+        "anchor": "HAWK",
+        "anchor_alternate_meaning": "HAWK: verbs meaning offer goods for purchase",
+        "word_fits": {
+          "HAWK": "HAWK: verbs meaning offer goods for purchase",
+          "PEDDLE": "PEDDLE: verbs meaning offer goods for purchase",
+          "VEND": "VEND: verbs meaning offer goods for purchase",
+          "MARKET": "MARKET: verbs meaning offer goods for purchase",
+          "RETAIL": "RETAIL: verbs meaning offer goods for purchase",
+          "PURVEY": "PURVEY: verbs meaning offer goods for purchase",
+          "TRADE": "TRADE: verbs meaning offer goods for purchase",
+          "SELL": "SELL: verbs meaning offer goods for purchase"
+        }
+      },
+      {
+        "id": "fc-13-g3",
+        "category": "QUADRILATERALS",
+        "style": "names_of_things",
+        "connection": "Names for four-sided geometric figures",
+        "words": [
+          "KITE",
+          "SQUARE",
+          "RECTANGLE",
+          "RHOMBUS",
+          "TRAPEZOID",
+          "TRAPEZIUM",
+          "PARALLELOGRAM",
+          "DELTOID"
+        ],
+        "required": [
+          "KITE"
+        ],
+        "anchor": "KITE",
+        "anchor_alternate_meaning": "KITE: names for four-sided geometric figures",
+        "word_fits": {
+          "KITE": "KITE: names for four-sided geometric figures",
+          "SQUARE": "SQUARE: names for four-sided geometric figures",
+          "RECTANGLE": "RECTANGLE: names for four-sided geometric figures",
+          "RHOMBUS": "RHOMBUS: names for four-sided geometric figures",
+          "TRAPEZOID": "TRAPEZOID: names for four-sided geometric figures",
+          "TRAPEZIUM": "TRAPEZIUM: names for four-sided geometric figures",
+          "PARALLELOGRAM": "PARALLELOGRAM: names for four-sided geometric figures",
+          "DELTOID": "DELTOID: names for four-sided geometric figures"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-14",
+    "method": "false_connection",
+    "seed_words": [
+      "THIRST",
+      "MAGICIAN",
+      "CREATION",
+      "CONNECTION"
+    ],
+    "story": [
+      "A THIRST for adventure brought a young traveler to the fair.",
+      "A MAGICIAN invited her onstage.",
+      "His latest CREATION was a box with a hidden door.",
+      "She spotted its CONNECTION to an old shoe cabinet and laughed."
+    ],
+    "root_proposals": [
+      {
+        "category": "MAGIC VOCABULARY",
+        "words": [
+          "CAST",
+          "SPELL",
+          "TRICK",
+          "CHARM",
+          "WAND",
+          "HEX",
+          "JINX",
+          "CURSE"
+        ],
+        "connection": "Each word is an example of magic vocabulary."
+      },
+      {
+        "category": "CAR PARTS",
+        "words": [
+          "BOOT",
+          "HOOD",
+          "TRUNK",
+          "BUMPER",
+          "WHEEL",
+          "TIRE",
+          "DASH",
+          "MIRROR"
+        ],
+        "connection": "Each word is an example of car parts."
+      }
+    ],
+    "root_category": "MAGIC VOCABULARY",
+    "root_pool": [
+      "CAST",
+      "SPELL",
+      "TRICK",
+      "CHARM",
+      "WAND",
+      "HEX",
+      "JINX",
+      "CURSE"
+    ],
+    "false_group": {
+      "category": "MAGIC VOCABULARY",
+      "words": [
+        "CAST",
+        "SPELL",
+        "CHARM",
+        "CURSE"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-14-g0",
+        "category": "THROW",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs for throwing an object",
+        "words": [
+          "CAST",
+          "HURL",
+          "TOSS",
+          "FLING",
+          "CHUCK",
+          "LOB",
+          "PITCH",
+          "SLING"
+        ],
+        "required": [
+          "CAST"
+        ],
+        "anchor": "CAST",
+        "anchor_alternate_meaning": "CAST: verbs for throwing an object",
+        "word_fits": {
+          "CAST": "CAST: verbs for throwing an object",
+          "HURL": "HURL: verbs for throwing an object",
+          "TOSS": "TOSS: verbs for throwing an object",
+          "FLING": "FLING: verbs for throwing an object",
+          "CHUCK": "CHUCK: verbs for throwing an object",
+          "LOB": "LOB: verbs for throwing an object",
+          "PITCH": "PITCH: verbs for throwing an object",
+          "SLING": "SLING: verbs for throwing an object"
+        }
+      },
+      {
+        "id": "fc-14-g1",
+        "category": "BE A SIGN",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning foreshadow or stand for an outcome",
+        "words": [
+          "SPELL",
+          "SIGNIFY",
+          "MEAN",
+          "PORTEND",
+          "BETOKEN",
+          "HERALD",
+          "INDICATE",
+          "SIGNAL"
+        ],
+        "required": [
+          "SPELL"
+        ],
+        "anchor": "SPELL",
+        "anchor_alternate_meaning": "SPELL: verbs meaning foreshadow or stand for an outcome",
+        "word_fits": {
+          "SPELL": "SPELL: verbs meaning foreshadow or stand for an outcome",
+          "SIGNIFY": "SIGNIFY: verbs meaning foreshadow or stand for an outcome",
+          "MEAN": "MEAN: verbs meaning foreshadow or stand for an outcome",
+          "PORTEND": "PORTEND: verbs meaning foreshadow or stand for an outcome",
+          "BETOKEN": "BETOKEN: verbs meaning foreshadow or stand for an outcome",
+          "HERALD": "HERALD: verbs meaning foreshadow or stand for an outcome",
+          "INDICATE": "INDICATE: verbs meaning foreshadow or stand for an outcome",
+          "SIGNAL": "SIGNAL: verbs meaning foreshadow or stand for an outcome"
+        }
+      },
+      {
+        "id": "fc-14-g2",
+        "category": "JEWELRY ITEMS",
+        "style": "names_of_things",
+        "connection": "Objects worn as jewelry",
+        "words": [
+          "CHARM",
+          "RING",
+          "BRACELET",
+          "NECKLACE",
+          "EARRING",
+          "BROOCH",
+          "LOCKET",
+          "PENDANT"
+        ],
+        "required": [
+          "CHARM"
+        ],
+        "anchor": "CHARM",
+        "anchor_alternate_meaning": "CHARM: objects worn as jewelry",
+        "word_fits": {
+          "CHARM": "CHARM: objects worn as jewelry",
+          "RING": "RING: objects worn as jewelry",
+          "BRACELET": "BRACELET: objects worn as jewelry",
+          "NECKLACE": "NECKLACE: objects worn as jewelry",
+          "EARRING": "EARRING: objects worn as jewelry",
+          "BROOCH": "BROOCH: objects worn as jewelry",
+          "LOCKET": "LOCKET: objects worn as jewelry",
+          "PENDANT": "PENDANT: objects worn as jewelry"
+        }
+      },
+      {
+        "id": "fc-14-g3",
+        "category": "EXPRESS ANGER",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs for expressing anger verbally or visibly",
+        "words": [
+          "CURSE",
+          "CUSS",
+          "SWEAR",
+          "RAIL",
+          "RANT",
+          "RAVE",
+          "FUME",
+          "SEETHE"
+        ],
+        "required": [
+          "CURSE"
+        ],
+        "anchor": "CURSE",
+        "anchor_alternate_meaning": "CURSE: verbs for expressing anger verbally or visibly",
+        "word_fits": {
+          "CURSE": "CURSE: verbs for expressing anger verbally or visibly",
+          "CUSS": "CUSS: verbs for expressing anger verbally or visibly",
+          "SWEAR": "SWEAR: verbs for expressing anger verbally or visibly",
+          "RAIL": "RAIL: verbs for expressing anger verbally or visibly",
+          "RANT": "RANT: verbs for expressing anger verbally or visibly",
+          "RAVE": "RAVE: verbs for expressing anger verbally or visibly",
+          "FUME": "FUME: verbs for expressing anger verbally or visibly",
+          "SEETHE": "SEETHE: verbs for expressing anger verbally or visibly"
+        }
+      }
+    ]
+  },
+  {
+    "id": "fc-15",
+    "method": "false_connection",
+    "seed_words": [
+      "SOUP",
+      "FINAL",
+      "GUCCI",
+      "LEGGINGS"
+    ],
+    "story": [
+      "A bowl of SOUP waited backstage.",
+      "The dancer practiced her FINAL turn.",
+      "A costume bag marked GUCCI hung nearby.",
+      "She pulled on her LEGGINGS and checked her shoes before the orchestra began."
+    ],
+    "root_proposals": [
+      {
+        "category": "FOOTWEAR",
+        "words": [
+          "PUMP",
+          "FLAT",
+          "WEDGE",
+          "MULE",
+          "CLOG",
+          "SLIDE",
+          "BOOT",
+          "LOAFER"
+        ],
+        "connection": "Each word is an example of footwear."
+      },
+      {
+        "category": "CARD TERMS",
+        "words": [
+          "ACE",
+          "KING",
+          "QUEEN",
+          "JACK",
+          "HEART",
+          "DIAMOND",
+          "CLUB",
+          "SPADE"
+        ],
+        "connection": "Each word is an example of playing card symbols."
+      }
+    ],
+    "root_category": "FOOTWEAR",
+    "root_pool": [
+      "PUMP",
+      "FLAT",
+      "WEDGE",
+      "MULE",
+      "CLOG",
+      "SLIDE",
+      "BOOT",
+      "LOAFER"
+    ],
+    "false_group": {
+      "category": "FOOTWEAR",
+      "words": [
+        "PUMP",
+        "CLOG",
+        "BOOT",
+        "LOAFER"
+      ]
+    },
+    "groups": [
+      {
+        "id": "fc-15-g0",
+        "category": "___ ACTION",
+        "style": "fill_in_the_blank",
+        "connection": "Words preceding ACTION in familiar open or hyphenated compounds.",
+        "words": [
+          "PUMP",
+          "LEVER",
+          "BOLT",
+          "BREAK",
+          "DOUBLE",
+          "SINGLE",
+          "LIVE",
+          "STOP"
+        ],
+        "required": [
+          "PUMP"
+        ],
+        "anchor": "PUMP",
+        "anchor_alternate_meaning": "Pump-action firearm mechanism",
+        "word_fits": {
+          "PUMP": "PUMP ACTION",
+          "LEVER": "LEVER ACTION",
+          "BOLT": "BOLT ACTION",
+          "BREAK": "BREAK ACTION",
+          "DOUBLE": "DOUBLE ACTION",
+          "SINGLE": "SINGLE ACTION",
+          "LIVE": "LIVE ACTION",
+          "STOP": "STOP ACTION"
+        }
+      },
+      {
+        "id": "fc-15-g1",
+        "category": "IMPEDE",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning impede a passage",
+        "words": [
+          "CLOG",
+          "BLOCK",
+          "CHOKE",
+          "PLUG",
+          "STOPPER",
+          "OCCLUDE",
+          "OBSTRUCT",
+          "JAM"
+        ],
+        "required": [
+          "CLOG"
+        ],
+        "anchor": "CLOG",
+        "anchor_alternate_meaning": "CLOG: verbs meaning impede a passage",
+        "word_fits": {
+          "CLOG": "CLOG: verbs meaning impede a passage",
+          "BLOCK": "BLOCK: verbs meaning impede a passage",
+          "CHOKE": "CHOKE: verbs meaning impede a passage",
+          "PLUG": "PLUG: verbs meaning impede a passage",
+          "STOPPER": "STOPPER: verbs meaning impede a passage",
+          "OCCLUDE": "OCCLUDE: verbs meaning impede a passage",
+          "OBSTRUCT": "OBSTRUCT: verbs meaning impede a passage",
+          "JAM": "JAM: verbs meaning impede a passage"
+        }
+      },
+      {
+        "id": "fc-15-g2",
+        "category": "REMOVE FROM POSITION",
+        "style": "synonyms_or_slang",
+        "connection": "Verbs meaning remove someone from a role or place",
+        "words": [
+          "BOOT",
+          "SACK",
+          "FIRE",
+          "AXE",
+          "OUST",
+          "EJECT",
+          "EXPEL",
+          "DISMISS"
+        ],
+        "required": [
+          "BOOT"
+        ],
+        "anchor": "BOOT",
+        "anchor_alternate_meaning": "BOOT: verbs meaning remove someone from a role or place",
+        "word_fits": {
+          "BOOT": "BOOT: verbs meaning remove someone from a role or place",
+          "SACK": "SACK: verbs meaning remove someone from a role or place",
+          "FIRE": "FIRE: verbs meaning remove someone from a role or place",
+          "AXE": "AXE: verbs meaning remove someone from a role or place",
+          "OUST": "OUST: verbs meaning remove someone from a role or place",
+          "EJECT": "EJECT: verbs meaning remove someone from a role or place",
+          "EXPEL": "EXPEL: verbs meaning remove someone from a role or place",
+          "DISMISS": "DISMISS: verbs meaning remove someone from a role or place"
+        }
+      },
+      {
+        "id": "fc-15-g3",
+        "category": "WORK AVOIDERS",
+        "style": "synonyms_or_slang",
+        "connection": "Words for people avoiding work",
+        "words": [
+          "LOAFER",
+          "SLACKER",
+          "IDLER",
+          "LAYABOUT",
+          "SLUGGARD",
+          "DAWDLER",
+          "DRONE",
+          "LOUNGER"
+        ],
+        "required": [
+          "LOAFER"
+        ],
+        "anchor": "LOAFER",
+        "anchor_alternate_meaning": "LOAFER: words for people avoiding work",
+        "word_fits": {
+          "LOAFER": "LOAFER: words for people avoiding work",
+          "SLACKER": "SLACKER: words for people avoiding work",
+          "IDLER": "IDLER: words for people avoiding work",
+          "LAYABOUT": "LAYABOUT: words for people avoiding work",
+          "SLUGGARD": "SLUGGARD: words for people avoiding work",
+          "DAWDLER": "DAWDLER: words for people avoiding work",
+          "DRONE": "DRONE: words for people avoiding work",
+          "LOUNGER": "LOUNGER: words for people avoiding work"
+        }
+      }
+    ]
+  }
+]

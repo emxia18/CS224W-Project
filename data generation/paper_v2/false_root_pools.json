@@ -1,0 +1,197 @@
+[
+  {
+    "id": "fc-01",
+    "words": [
+      "BARK",
+      "ROOT",
+      "TRUNK",
+      "BRANCH",
+      "LEAF",
+      "LIMB",
+      "BOUGH",
+      "CROWN"
+    ]
+  },
+  {
+    "id": "fc-02",
+    "words": [
+      "DRESS",
+      "COAT",
+      "SUIT",
+      "CAP",
+      "TOP",
+      "TIE",
+      "VEST",
+      "SLIP"
+    ]
+  },
+  {
+    "id": "fc-03",
+    "words": [
+      "BANK",
+      "CAPE",
+      "SOUND",
+      "CHANNEL",
+      "DELTA",
+      "PLAIN",
+      "GULF",
+      "POINT"
+    ]
+  },
+  {
+    "id": "fc-04",
+    "words": [
+      "SPARK",
+      "FLAME",
+      "MATCH",
+      "ASH",
+      "COAL",
+      "SMOKE",
+      "KINDLE",
+      "LIGHT"
+    ]
+  },
+  {
+    "id": "fc-05",
+    "words": [
+      "PITCH",
+      "NOTE",
+      "KEY",
+      "SCALE",
+      "REST",
+      "STAFF",
+      "BAR",
+      "BEAT"
+    ]
+  },
+  {
+    "id": "fc-06",
+    "words": [
+      "BOOT",
+      "HOOD",
+      "TRUNK",
+      "BUMPER",
+      "WHEEL",
+      "TIRE",
+      "DASH",
+      "MIRROR"
+    ]
+  },
+  {
+    "id": "fc-07",
+    "words": [
+      "ACE",
+      "KING",
+      "QUEEN",
+      "JACK",
+      "HEART",
+      "DIAMOND",
+      "CLUB",
+      "SPADE"
+    ]
+  },
+  {
+    "id": "fc-08",
+    "words": [
+      "BAND",
+      "STUD",
+      "HOOP",
+      "CHAIN",
+      "LINK",
+      "PEARL",
+      "ROCK",
+      "CHARM"
+    ]
+  },
+  {
+    "id": "fc-09",
+    "words": [
+      "GLEE",
+      "FRIENDS",
+      "LOST",
+      "HOUSE",
+      "BONES",
+      "FARGO",
+      "CHEERS",
+      "SUCCESSION"
+    ]
+  },
+  {
+    "id": "fc-10",
+    "words": [
+      "GOLD",
+      "SILVER",
+      "ROSE",
+      "CORAL",
+      "SALMON",
+      "TAN",
+      "CREAM",
+      "PLUM"
+    ]
+  },
+  {
+    "id": "fc-11",
+    "words": [
+      "TIGER",
+      "LION",
+      "LEOPARD",
+      "JAGUAR",
+      "PUMA",
+      "PANTHER",
+      "LYNX",
+      "COUGAR"
+    ]
+  },
+  {
+    "id": "fc-12",
+    "words": [
+      "CHESS",
+      "GO",
+      "RISK",
+      "TROUBLE",
+      "CLUE",
+      "LIFE",
+      "SORRY",
+      "OPERATION"
+    ]
+  },
+  {
+    "id": "fc-13",
+    "words": [
+      "CRANE",
+      "SWIFT",
+      "SWALLOW",
+      "DUCK",
+      "HAWK",
+      "RAVEN",
+      "ROOK",
+      "KITE"
+    ]
+  },
+  {
+    "id": "fc-14",
+    "words": [
+      "CAST",
+      "SPELL",
+      "TRICK",
+      "CHARM",
+      "WAND",
+      "HEX",
+      "JINX",
+      "CURSE"
+    ]
+  },
+  {
+    "id": "fc-15",
+    "words": [
+      "PUMP",
+      "FLAT",
+      "WEDGE",
+      "MULE",
+      "CLOG",
+      "SLIDE",
+      "BOOT",
+      "LOAFER"
+    ]
+  }
+]

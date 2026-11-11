@@ -1,0 +1,78 @@
+{
+  "seed": 225,
+  "source": "Sorted distinct alphabetic input words in local data/processed/train.json; random.Random(225).sample four per family.",
+  "families": [
+    {
+      "id": "new-01",
+      "seed_words": [
+        "KICK",
+        "GAFFE",
+        "DUDE",
+        "GOLDILOCKS"
+      ]
+    },
+    {
+      "id": "new-02",
+      "seed_words": [
+        "REVOLUTION",
+        "ENGROSS",
+        "AMERICA",
+        "GEN"
+      ]
+    },
+    {
+      "id": "new-03",
+      "seed_words": [
+        "BANANA",
+        "MELT",
+        "ZERO",
+        "KINKY"
+      ]
+    },
+    {
+      "id": "new-04",
+      "seed_words": [
+        "HONDA",
+        "MUSSEL",
+        "MODERN",
+        "COTTAGE"
+      ]
+    },
+    {
+      "id": "new-05",
+      "seed_words": [
+        "STALE",
+        "SWITCH",
+        "EBB",
+        "BUILT"
+      ]
+    },
+    {
+      "id": "new-06",
+      "seed_words": [
+        "NEPO",
+        "SORRY",
+        "ROAM",
+        "DOWN"
+      ]
+    },
+    {
+      "id": "new-07",
+      "seed_words": [
+        "ROOT",
+        "PASS",
+        "ORIGAMI",
+        "LAVISH"
+      ]
+    },
+    {
+      "id": "new-08",
+      "seed_words": [
+        "CLAY",
+        "MUSTARD",
+        "BUG",
+        "RINGS"
+      ]
+    }
+  ]
+}
