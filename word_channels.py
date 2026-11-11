@@ -20,14 +20,24 @@ class WordTokenizer:
     Whole-phrase entries are preferred, otherwise component variants are combined.
     """
 
-    def __init__(self, pronunciation=False, dictionary=None):
+    def __init__(self, pronunciation=False, dictionary=None, strip_qualifiers=True,
+                 orthographic_features=False, homophone_cache=None):
+        self.strip_qualifiers = strip_qualifiers
+        self.orthographic_features = orthographic_features
+        self.homophone_cache = homophone_cache
         self.dictionary = dictionary
-        if pronunciation and dictionary is None:
+        if (pronunciation or orthographic_features or homophone_cache is not None) and dictionary is None:
             import cmudict
             self.dictionary = cmudict.dict()
 
-    def variants(self, word):
+    def pronunciation_word(self, word):
         word = word.lower().replace('’', "'")
+        if self.strip_qualifiers:
+            word = re.sub(r'\([^()]*\)', '', word)
+        return ' '.join(word.split())
+
+    def variants(self, word):
+        word = self.pronunciation_word(word)
         variants = self.dictionary.get(word) if self.dictionary is not None else None
         if not variants and self.dictionary is not None:
             parts = re.findall(r"[a-z]+(?:'[a-z]+)*|[0-9]+", word)
@@ -58,7 +68,14 @@ class WordTokenizer:
         for i, variants in enumerate(pronunciations):
             for j, tokens in enumerate(variants):
                 phonemes[i, j, :len(tokens)] = torch.tensor(tokens, dtype=torch.long)
-        return {'spelling': spelling.to(device), 'phonemes': phonemes.to(device)}
+        result = {'spelling': spelling.to(device), 'phonemes': phonemes.to(device)}
+        if self.orthographic_features:
+            from explicit_features import orthographic_inputs
+            nodes, edges = orthographic_inputs(words, pronunciations)
+            result.update(orthographic_nodes=nodes.to(device), orthographic_edges=edges.to(device))
+        if self.homophone_cache is not None:
+            result['homophone_edges'] = self.homophone_cache.edges(words).to(device)
+        return result
 
 
 class SequenceChannel(nn.Module):

@@ -1,5 +1,182 @@
 # CS224W-Project
 
+## Reproduce the word-feature experiments
+
+Run all commands from the repository root. These are the seed-42 CPU results on
+456 training puzzles and 98 validation puzzles, with all 1,820 quartets per puzzle,
+no curriculum, and no training-subset diagnostics. Test puzzles are not evaluated.
+The screening budget is eight epochs for every variant. The earlier baseline and
+CNN runs used a 100-epoch maximum with patience 15, but their best checkpoints were
+already within their first eight epochs; the commands below reproduce that common
+eight-epoch comparison rather than those longer training histories.
+
+### 1. Install the recorded environment
+
+The recorded environment is Python **3.11.3 on macOS ARM64**. For the closest
+reproduction, use the pinned dependencies rather than the broad version ranges
+in `requirements.txt`:
+
+```sh
+python3.11 -m venv .venv
+.venv/bin/python -m pip install -r requirements-reproduce.txt
+.venv/bin/python -m unittest test_curriculum.py test_word_channels.py
+```
+
+The tests should report **11 passing tests**. `requirements-reproduce.txt` records
+the installed package versions; it has not been tested in a second clean
+environment. Other operating systems, Python versions, or accelerator devices
+can produce different numerical results. The experiment commands use CPU and one
+training thread explicitly.
+
+### 2. Prepare and verify the data
+
+If the original `data/raw/connections.json` is already present, preserve it and
+skip the download command. Otherwise:
+
+```sh
+.venv/bin/python pull_data.py
+```
+
+Then prepare the splits and verify their hashes against the recorded snapshot:
+
+```sh
+.venv/bin/python prepare_data.py --seed 42
+.venv/bin/python verify_reproduction.py
+```
+
+Every file should print `OK`. The upstream download uses `main` and can change;
+if verification fails, use the original 652-puzzle snapshot rather than treating
+a changed dataset as a reproduction. Expected validation dates are September 10
+through December 16, 2024. Expected hashes are in `reproduction_manifest.json`.
+
+### 3. Prepare the frozen embeddings and homophone cache
+
+If the recorded embeddings, word mapping, model snapshot, and homophone cache
+are already present, reuse them. To build them from scratch, pin the MPNet commit:
+
+```sh
+.venv/bin/python embed_data.py --device cpu --batch-size 32 \
+  --revision e8c3b32edf5434bc2275fc9bab85f82640a19130
+.venv/bin/python build_homophone_cache.py --device cpu --batch-size 32
+```
+
+`embed_data.py` must run first: the homophone builder uses its locally cached
+MPNet snapshot. The recorded cache has **1,759 of 4,918 train/validation input
+words with alternative homophones**, and **3,289 distinct candidate words**.
+The original semantic embedding export encodes the words from all three splits
+without labels; homophone retrieval uses only train/validation words. Neither
+operation uses answer descriptions as features.
+
+To check whether cached arrays and mappings are byte-identical to the original:
+
+```sh
+.venv/bin/python verify_reproduction.py --check-embeddings
+```
+
+Regenerated vectors may differ across environments even with the same model
+commit. Reusing the original caches gives the closest comparison. The cache
+contains only features; answer groups remain training/evaluation supervision.
+
+### 4. Train the five comparison variants
+
+Use the fresh `runs/reproduce/` directories below to preserve previous runs.
+All five commands use the same seed, loss, model width, optimizer settings, and
+eight-epoch budget. Keep `--selection-metric groups`: it selects the checkpoint
+with the most recovered validation groups, breaking ties by exact puzzle accuracy.
+
+```sh
+# Baseline: original semantic vectors and cosine statistics.
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features --seed 42 --device cpu --threads 1 \
+  --hidden 128 --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
+  --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
+  --selection-metric groups --output-dir runs/reproduce/baseline
+
+# Earlier augmented model: four semantic projections plus spelling/phoneme CNNs.
+# The legacy qualifier flag is necessary to reproduce the earlier preprocessing.
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features --seed 42 --device cpu --threads 1 \
+  --hidden 128 --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
+  --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
+  --selection-metric groups --learned-relations 4 \
+  --spelling-features --pronunciation-features --keep-pronunciation-qualifiers \
+  --output-dir runs/reproduce/original_cnn
+
+# Explicit relationships only: spelling predicates and direct phonetic equality.
+# This was the best variant in the eight-epoch screening.
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features --seed 42 --device cpu --threads 1 \
+  --hidden 128 --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
+  --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
+  --selection-metric groups --orthographic-features \
+  --output-dir runs/reproduce/explicit
+
+# Semantic similarity between retrieved homophone candidates only.
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features --seed 42 --device cpu --threads 1 \
+  --hidden 128 --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
+  --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
+  --selection-metric groups --homophone-features \
+  --output-dir runs/reproduce/homophones
+
+# Both explicit relationships and homophone-candidate semantics.
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features --seed 42 --device cpu --threads 1 \
+  --hidden 128 --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
+  --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
+  --selection-metric groups --orthographic-features --homophone-features \
+  --output-dir runs/reproduce/combined
+```
+
+Each directory contains `config.json`, `history.json`, the selected `best.pt`, and
+`metrics.json` for that checkpoint. Compare **best checkpoints**, not epoch 8 alone.
+The explicit-feature branch includes an exact-pronunciation feature; this is not
+a pure spelling-only experiment. The last three variants omit the CNN channels
+and learned semantic projections.
+
+### 5. Check the expected outcomes
+
+| Variant | Best epoch | Correct groups / puzzle | Total groups / 392 | Exact puzzles / 98 | Matched words / 16 |
+|---|---:|---:|---:|---:|---:|
+| Baseline | 2 | 0.500 | 49 | 2 | 10.296 |
+| Earlier CNN augmentation | 1 | 0.367 | 36 | 1 | 9.969 |
+| Explicit relationships | 5 | **0.541** | **53** | **4** | 10.214 |
+| Homophone semantics | 3 | 0.500 | 49 | 2 | 10.173 |
+| Both new branches | 7 | 0.490 | 48 | 2 | 10.153 |
+
+The explicit variant recovered four more groups than baseline, but slightly fewer
+matched words. This is a small, single-seed validation result, not an established
+general improvement. The test split remains unevaluated.
+
+### 6. Recreate category reports and plots
+
+```sh
+for variant in original_cnn explicit homophones combined; do
+  .venv/bin/python analyze_failures.py \
+    --run-dir "runs/reproduce/$variant" \
+    --baseline-dir runs/reproduce/baseline \
+    --output-dir "runs/reproduce/$variant/failure_analysis"
+done
+
+.venv/bin/python plot_training.py runs/reproduce/baseline
+.venv/bin/python plot_training.py runs/reproduce/explicit
+```
+
+Each `failure_analysis/` directory contains `REPORT.md`, `summary.json`,
+`groups.csv`, `groups.json`, and `category_recovery.png`/`.pdf`. The CSV includes
+official words, the descriptive category tag, rank among all 1,820 quartets,
+closest predicted group, exact recovery, and missing pronunciations. Tags use
+answer descriptions only after model inference; they are not model inputs or
+official difficulty colors.
+
+For the explicit variant, expected category recoveries are **29/126 synonyms,
+22/193 thematic/knowledge, 0/41 phrase completion, 1/19 spelling/transformation,
+and 1/13 sound/pronunciation**. It recovers the “things that sound like T” group.
+The palindrome group ranks second but is still excluded from the chosen global
+partition. Earlier CNN ranks for those groups were 481 and 1,265 respectively.
+
+## Other training options
+
 Download the [NYT Connections dataset](https://huggingface.co/datasets/tm21cy/NYT-Connections):
 
 ```sh
@@ -136,6 +313,49 @@ pronunciation channel, not puzzle-conditioned pronunciation selection.
 [g2p_en](https://github.com/Kyubyong/g2p) is an existing neural grapheme-to-phoneme
 model that could supply an out-of-dictionary fallback; it is not enabled here.
 
+Pronunciation preprocessing now removes parenthetical disambiguators, so
+`TEE (GOLF)` is pronounced as `TEE`. The original string remains available to
+the character encoder. New runs record tokenization v2 in their configuration;
+`--keep-pronunciation-qualifiers` reproduces the old preprocessing, and the
+failure-analysis loader honors the version saved in older checkpoints.
+
+To use explicit relationships and semantic homophone candidates:
+
+```sh
+.venv/bin/python build_homophone_cache.py
+.venv/bin/python train_gnn.py \
+  --all-quartets --pairwise-features \
+  --orthographic-features --homophone-features \
+  --epochs 8 --patience 8 --diagnostic-puzzles 0 \
+  --output-dir runs/explicit_relationships
+```
+
+`--orthographic-features` supplies length, palindrome, vowel/repetition fractions,
+apostrophe and space indicators as node features. Pair features detect anagrams,
+reversals, shared prefixes/suffixes, a single edit, substrings, and identical
+pronunciations. Node features are projected into the GAT; both node and pair
+features are pooled by mean/min/max/std into the quartet scorer. In particular,
+the scorer can directly observe whether all four words are palindromes. Despite
+the flag name, this branch includes direct phonetic equality as well as spelling.
+
+`--homophone-features` retrieves alternative spellings with matching CMUdict
+pronunciations and compares their MPNet meanings. For example, INDY retrieves
+indie, METTLE retrieves metal, SEOUL includes soul, and WRAP includes rap. Each
+pair receives the maximum candidate semantic similarity and an availability
+indicator. This branch adds no new node encoder. Candidate meanings remain
+frozen, while the GAT and quartet scorer learn how to use their similarities.
+The maximum may select different alternatives for different pairs; it does not
+enforce a single consistent interpretation across the whole group.
+
+The builder uses only train/validation input words, the external dictionary, and
+the locally cached MPNet snapshot. It never reads answer groups or category
+descriptions. The cache records dictionary/model versions and input hashes;
+training rejects stale caches or missing input words. No test words are loaded.
+Each flag works independently and can also be combined with the CNN channels,
+but the screening command above avoids their additional parameters. Spelling
+predicates alone do not recover the meanings of hidden word fragments or solve
+all letter-transformation categories.
+
 For ablations, enable `--learned-relations 4`, `--spelling-features`, and
 `--pronunciation-features` independently, keeping the seed, loss, curriculum,
 epoch budget, and other settings identical. Omitting all three preserves the
@@ -145,6 +365,20 @@ output directory. Check the new channels and existing curriculum with:
 ```sh
 .venv/bin/python -m unittest test_curriculum.py test_word_channels.py
 ```
+
+Analyze validation failures for the saved baseline and augmented comparison runs:
+
+```sh
+.venv/bin/python analyze_failures.py
+```
+
+This writes `REPORT.md`, per-group CSV/JSON, summary JSON, and a category recovery
+chart to `runs/word_channels_failure_analysis/`. It compares exact group recovery,
+candidate ranks, nearest predicted groups, and pronunciation coverage. Category
+mechanisms are descriptive annotations from answer titles after inference, never
+model inputs; they are not NYT difficulty colors. The synonym annotations target
+the current 98-puzzle validation split. Use `--run-dir`, `--baseline-dir`, and
+`--output-dir` to select other checkpoints or destinations on that same split.
 
 Train on all 1,820 quartets per puzzle rather than sampling negatives:
 

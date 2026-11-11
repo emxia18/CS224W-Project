@@ -17,6 +17,7 @@ from torch_geometric.nn import GATv2Conv
 
 from curriculum import TASKS, compatible_quartets, sample_hints, task_probabilities
 from word_channels import WordChannels, WordTokenizer
+from explicit_features import NODE_FEATURES, EDGE_FEATURES, HomophoneCache
 
 
 ROOT = Path(__file__).resolve().parent
@@ -80,17 +81,32 @@ def quartet_cosine_stats(x, groups):
     ), dim=-1)
 
 
+def feature_stats(values):
+    """Pool members or distinct pair features without depending on word order."""
+    return torch.cat((values.mean(1), values.amin(1), values.amax(1),
+                      values.std(1, unbiased=False)), dim=-1)
+
+
+def quartet_edge_stats(edges, groups):
+    pairs = torch.triu_indices(4, 4, offset=1, device=groups.device)
+    return feature_stats(edges[groups[:, pairs[0]], groups[:, pairs[1]]])
+
+
 class QuartetGNN(nn.Module):
     def __init__(self, hidden=128, dropout=0.1, pairwise_features=False, hint_features=False,
-                 learned_relations=0, spelling_features=False, pronunciation_features=False):
+                 learned_relations=0, spelling_features=False, pronunciation_features=False,
+                 orthographic_features=False, homophone_features=False):
         super().__init__()
         self.pairwise_features = pairwise_features
         self.hint_features = hint_features
+        self.orthographic_features = orthographic_features
+        self.homophone_features = homophone_features
         self.project = nn.Linear(768, hidden)
         self.channels = WordChannels(hidden, spelling_features, pronunciation_features)
         channel_count = int(spelling_features) + int(pronunciation_features)
         self.relations = nn.ModuleList(nn.Linear(768, 32) for _ in range(learned_relations))
-        extra_edges = learned_relations + channel_count
+        explicit_edges = (len(EDGE_FEATURES) if orthographic_features else 0) + (2 if homophone_features else 0)
+        extra_edges = learned_relations + channel_count + explicit_edges
         self.gat = GATv2Conv(
             hidden, hidden, heads=1, edge_dim=1 + int(hint_features) + extra_edges, dropout=dropout,
             add_self_loops=False,
@@ -99,10 +115,12 @@ class QuartetGNN(nn.Module):
         self.dropout = nn.Dropout(dropout)
         self.phi = nn.Sequential(nn.Linear(hidden, hidden), nn.ReLU())
         self.rho = nn.Sequential(
-            nn.Linear(hidden * 2 + (4 if pairwise_features else 0) + extra_edges * 4, hidden),
+            nn.Linear(hidden * 2 + (4 if pairwise_features else 0) + extra_edges * 4
+                      + (len(NODE_FEATURES) * 4 if orthographic_features else 0), hidden),
             nn.GELU(), nn.Dropout(dropout),
             nn.Linear(hidden, 1),
         )
+        self.orthographic_project = nn.Linear(len(NODE_FEATURES), hidden) if orthographic_features else None
         self.register_buffer("edge_index", EDGE_INDEX.clone())
         self.register_buffer("quartets", torch.tensor(QUARTETS, dtype=torch.long))
 
@@ -110,7 +128,8 @@ class QuartetGNN(nn.Module):
         # Cached embeddings are unit length, so dot products are cosine similarities.
         source, target = self.edge_index
         edge_attr = (x[source] * x[target]).sum(dim=-1, keepdim=True)
-        if (self.channels.spelling is not None or self.channels.pronunciation is not None) and word_inputs is None:
+        if (self.channels.spelling is not None or self.channels.pronunciation is not None
+                or self.orthographic_features or self.homophone_features) and word_inputs is None:
             raise ValueError("Enabled word channels require tokenized word_inputs")
         channels = self.channels(word_inputs) if word_inputs is not None else []
         relationship_vectors = [F.normalize(layer(x), dim=-1) for layer in self.relations]
@@ -119,10 +138,20 @@ class QuartetGNN(nn.Module):
             edge_attr = torch.cat([edge_attr] + [
                 (z[source] * z[target]).sum(-1, keepdim=True) for z in relationship_vectors
             ], dim=-1)
+        explicit = []
+        if self.orthographic_features:
+            explicit.append(word_inputs['orthographic_edges'])
+        if self.homophone_features:
+            explicit.append(word_inputs['homophone_edges'])
+        if explicit:
+            edge_attr = torch.cat([edge_attr] + [values[source, target] for values in explicit], dim=-1)
         if self.hint_features:
             membership = torch.zeros_like(edge_attr[:, :1]) if hints is None else hints[source, target, None]
             edge_attr = torch.cat((edge_attr, membership), dim=-1)
-        h = F.relu(self.project(x) + sum(channels))
+        h = self.project(x) + sum(channels)
+        if self.orthographic_project is not None:
+            h = h + self.orthographic_project(word_inputs['orthographic_nodes'])
+        h = F.relu(h)
         h = self.norm(h + self.dropout(F.elu(self.gat(h, self.edge_index, edge_attr))))
         groups = self.quartets if quartet_ids is None else self.quartets[quartet_ids]
         members = self.phi(h)[groups]
@@ -134,6 +163,10 @@ class QuartetGNN(nn.Module):
         if relationship_vectors:
             pooled = torch.cat([pooled] + [quartet_cosine_stats(z, groups)
                                           for z in relationship_vectors], dim=-1)
+        if self.orthographic_features:
+            pooled = torch.cat((pooled, feature_stats(word_inputs['orthographic_nodes'][groups])), dim=-1)
+        if explicit:
+            pooled = torch.cat([pooled] + [quartet_edge_stats(values, groups) for values in explicit], dim=-1)
         return self.rho(pooled).squeeze(-1)
 
 
@@ -224,6 +257,10 @@ def main():
                         help="Number of trainable semantic similarity projections (try 4)")
     parser.add_argument("--spelling-features", action="store_true", help="Train a character CNN")
     parser.add_argument("--pronunciation-features", action="store_true", help="Train a CMUdict phoneme CNN")
+    parser.add_argument("--orthographic-features", action="store_true", help="Explicit spelling and phonetic relationships")
+    parser.add_argument("--homophone-features", action="store_true", help="Semantic similarity of retrieved homophone candidates")
+    parser.add_argument("--homophone-cache", type=Path, default=ROOT / "data/embeddings/homophones")
+    parser.add_argument("--keep-pronunciation-qualifiers", action="store_true", help="Legacy pronunciation preprocessing for comparisons")
     parser.add_argument("--lr", type=float, default=1e-3)
     parser.add_argument("--weight-decay", type=float, default=1e-4)
     parser.add_argument("--negatives", type=int, default=32)
@@ -271,8 +308,16 @@ def main():
     if not np.allclose(np.linalg.norm(vectors, axis=1), 1, atol=1e-5):
         parser.error("Cached embeddings must be normalized")
     mapping = json.loads((args.embedding_dir / "word_to_row.json").read_text())
-    tokenizer = (WordTokenizer(pronunciation=args.pronunciation_features)
-                 if args.spelling_features or args.pronunciation_features else None)
+    if args.homophone_features and args.keep_pronunciation_qualifiers:
+        parser.error("Homophone cache requires qualifier-stripping pronunciation preprocessing")
+    homophones = HomophoneCache(args.homophone_cache) if args.homophone_features else None
+    if homophones is not None:
+        homophones.validate_inputs(args.data_dir)
+    tokenizer = (WordTokenizer(pronunciation=args.pronunciation_features,
+                              strip_qualifiers=not args.keep_pronunciation_qualifiers,
+                              orthographic_features=args.orthographic_features, homophone_cache=homophones)
+                 if args.spelling_features or args.pronunciation_features or args.orthographic_features
+                 or args.homophone_features else None)
     train = load_puzzles(args.data_dir / "train.json", vectors, mapping, args.device, tokenizer)
     if args.overfit:
         train = train[:args.overfit]
@@ -288,14 +333,21 @@ def main():
     )
 
     model = QuartetGNN(args.hidden, args.dropout, args.pairwise_features, args.hint_features,
-                       args.learned_relations, args.spelling_features, args.pronunciation_features).to(args.device)
+                       args.learned_relations, args.spelling_features, args.pronunciation_features,
+                       args.orthographic_features, args.homophone_features).to(args.device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     args.output_dir.mkdir(parents=True, exist_ok=True)
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
-    if args.spelling_features or args.pronunciation_features:
-        config["word_channel_tokenization"] = "lowercase-utf8-cmudict-stressless-v1"
-    if args.pronunciation_features:
+    if tokenizer is not None:
+        config["word_channel_tokenization"] = ("lowercase-utf8-cmudict-stressless-v1"
+            if args.keep_pronunciation_qualifiers else "strip-parenthetical-stressless-v2")
+    if args.pronunciation_features or args.orthographic_features or args.homophone_features:
         config["cmudict_version"] = version("cmudict")
+    if homophones is not None:
+        config["homophone_cache_metadata"] = homophones.metadata
+    if args.orthographic_features:
+        config["orthographic_node_features"] = NODE_FEATURES
+        config["orthographic_edge_features"] = EDGE_FEATURES
     (args.output_dir / "config.json").write_text(json.dumps(config, indent=2) + "\n")
     (args.output_dir / "diagnostic_subset.json").write_text(json.dumps({
         "dates": [puzzle["record"]["date"] for puzzle in diagnostic_subset],

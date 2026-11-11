@@ -1,0 +1,19 @@
+{
+  "python": "3.11.3",
+  "platform": "Darwin",
+  "machine": "arm64",
+  "model": "sentence-transformers/all-mpnet-base-v2",
+  "model_revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+  "data_sha256": {
+    "data/raw/connections.json": "6230bdd4667b5fe6c510fb6352a5f80690a2b47aba6ae3fc35a340abfc035743",
+    "data/processed/train.json": "2d7aeeb6e70c9bd14b968c50ad6019355d0a73d880a54fa16156ccddc84cfea3",
+    "data/processed/val.json": "4ecc314d4ebac72425264086f9dd8affb674a3020ef3185bc873d2dd743fb38b",
+    "data/processed/test.json": "4502523876e08a93d1191971baf515dec2d42e830c62c984414a18fba57a3735"
+  },
+  "embedding_sha256": {
+    "data/embeddings/embeddings.npy": "2007942b2f1ca13e45eeff13cd6e7d53d542d7841566da23370c55f264634745",
+    "data/embeddings/word_to_row.json": "ecd7719ab87fef94a1dec9bf64050bd57e4b6e0604acb23cde45baa9d7923650",
+    "data/embeddings/homophones/vectors.npy": "2648fa07b45d5f1e25ffa8cf76e4dbe483e05f03274fda41b4e4d6e3e4027684",
+    "data/embeddings/homophones/words.json": "561a8a451ff450ad4f91205883f48e0119587b5132fb071da2698e20eef5f587"
+  }
+}

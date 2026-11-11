@@ -18,6 +18,7 @@ def main():
     parser.add_argument("--input-dir", type=Path, default=ROOT / "data/processed")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "data/embeddings")
     parser.add_argument("--batch-size", type=int, default=32)
+    parser.add_argument("--revision", help="Pin the Hugging Face model commit for reproduction")
     parser.add_argument("--device", default="cpu", help="cpu, mps, or cuda (default: cpu)")
     args = parser.parse_args()
     if args.batch_size < 1:
@@ -41,7 +42,7 @@ def main():
         parser.error("No words found in processed splits")
     print(f"Encoding {len(vocabulary)} unique words/phrases with {MODEL}", flush=True)
     model = SentenceTransformer(
-        MODEL, device=args.device, cache_folder=str(ROOT / "data/model_cache")
+        MODEL, device=args.device, cache_folder=str(ROOT / "data/model_cache"), revision=args.revision
     )
     model.eval()
     embeddings = model.encode(
@@ -63,6 +64,8 @@ def main():
         "model": MODEL, "normalized": True, "shape": list(embeddings.shape),
         "dtype": str(embeddings.dtype), "input_sha256": input_hashes,
     }
+    ref = ROOT / 'data/model_cache/models--sentence-transformers--all-mpnet-base-v2/refs/main'
+    metadata['revision'] = args.revision or (ref.read_text().strip() if ref.exists() else None)
     (args.output_dir / "metadata.json").write_text(
         json.dumps(metadata, indent=2) + "\n", encoding="utf-8"
     )
