@@ -1,0 +1,152 @@
+\documentclass{article}
+
+
+% if you need to pass options to natbib, use, e.g.:
+%     \PassOptionsToPackage{numbers, compress}{natbib}
+% before loading neurips_2022
+
+
+% ready for submission
+\usepackage[preprint]{neurips_2022}
+\usepackage{amsmath,amssymb,booktabs,microtype}
+
+% to compile a preprint version, e.g., for submission to arXiv, add add the
+% [preprint] option:
+%     \usepackage[preprint]{neurips_2022}
+
+
+% to compile a camera-ready version, add the [final] option, e.g.:
+%     \usepackage[final]{neurips_2022}
+
+
+% to avoid loading the natbib package, add option nonatbib:
+%    \usepackage[nonatbib]{neurips_2022}
+
+
+\usepackage[utf8]{inputenc} % allow utf-8 input
+\usepackage[T1]{fontenc}    % use 8-bit T1 fonts
+\usepackage{hyperref}       % hyperlinks
+\usepackage{url}            % simple URL typesetting
+\usepackage{booktabs}       % professional-quality tables
+\usepackage{amsfonts}       % blackboard math symbols
+\usepackage{nicefrac}       % compact symbols for 1/2, etc.
+\usepackage{microtype}      % microtypography
+\usepackage{xcolor}         % colors
+
+
+\title{CS 224W Project Proposal}
+
+
+% The \author macro works with any number of authors. There are two commands
+% used to separate the names and addresses of multiple authors: \And and \AND.
+%
+% Using \And between authors leaves it to LaTeX to determine where to break the
+% lines. Using \AND forces a line break at that point. So, if LaTeX puts 3 of 4
+% authors names on the first line, and the last on the second line, try using
+% \AND instead of \And before the third author name.
+
+
+\author{%
+  Emily Xia \\
+  Department of Computer Science\\
+  Stanford University\\
+  Stanford, CA 94305 \\
+  % examples of more authors
+  \And
+  Eric Chen \\
+  Department of Computer Science\\
+  Stanford University\\
+  Stanford, CA 94305 \\
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \AND
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+  % \And
+  % Coauthor \\
+  % Affiliation \\
+  % Address \\
+  % \texttt{email} \\
+}
+
+
+\begin{document}
+
+
+\maketitle
+
+
+\section{Application and motivation}
+We aim to build a bot for the New York Times \emph{Connections} game. Each of these puzzles contain 16 words that need to be split into four groups of four. Each of these groups have a hidden relationship such as synonyms, cultural references, shared phrases, or wordplay. This requires interpreting different definitions for a word. For example, a word such as \textsc{bass} could be suggesting either fish or music.
+
+Our research question is: \emph{does message passing across a puzzle improve grouping?} Existing work studies Connections as a reasoning benchmark \citep{connections}. For the \textbf{Real-world Applications} track, we will build an automated puzzle-solving assistant and compare graph representations and constrained decoding, emphasizing comprehensive analysis.
+
+\section{Public dataset and task}
+We will use the public \texttt{tm21cy/NYT-Connections} dataset on Hugging Face \citep{dataset}. The original paper describes 358 puzzles \citep{connections}, the current JSON release contains \textbf{652 distinct puzzles}, with real puzzles from June 12, 2023 to March 24, 2025. Each record contains 16 words, four answer groups, category descriptions, and an optional puzzle-difficulty rating. These real puzzles make it suitable for reproducible experiments.
+
+We will sort by date and use the earliest 456 puzzles for training, the next 98 for validation, and the final 98 for testing. Every derived quartet and permutation stays with its source puzzle. The stored words are grouped by answer in the inspected records: we will shuffle them and exclude positions, category descriptions, difficulty, and answer order from model inputs. Predictions are evaluated as unordered sets of groups. Our core task is one-shot partition prediction. On top of that, generating category names and using interactive feedback are potential extensions.
+
+\section{Graph representation and proposed model}
+\paragraph{Input graph.}
+Each puzzle becomes a 16-node graph, with one node per word or phrase. We will cache frozen 768-dimensional \texttt{all-mpnet-base-v2} embeddings \citep{encoder} and learn a projection to a smaller hidden space. The initial graph is fully connected, preserving potentially non-obvious associations. Edge features will encode cosine similarity and normalized common-prefix and common-suffix lengths, computed only from the input words. We will use a symmetric $k$-nearest-neighbor graph as an ablation.
+
+\paragraph{Contextualization.}
+We will implement a shallow, residual GATv2 \citep{gatv2} using PyG's \texttt{GATv2Conv} with edge features \citep{pyg}. Attention depends on both words and their edge features. Schematically,
+\begin{equation}
+h_i^{(\ell+1)}=h_i^{(\ell)}+
+\sigma\!\left(\sum_{j\in\mathcal N(i)\cup\{i\}}
+\alpha_{ij}^{(\ell)}W^{(\ell)}h_j^{(\ell)}\right).
+\end{equation}
+
+\subsection{Quartet scoring, training, and constrained decoding}
+For every four-word subset $S$, we will predict a compatibility score inspired by the Deep Sets-style architecture \citep{deepsets}:
+\begin{equation}
+s_\theta(S;G)=\rho_\theta\!\left(\sum_{i\in S}\phi_\theta(h_i^{(L)})\right),
+\end{equation}
+where $\phi_\theta$ and $\rho_\theta$ are small multilayer perceptrons. The readout is invariant to word order and models a group jointly.
+
+Each puzzle has $\binom{16}{4}=1{,}820$ candidate quartets, of which four are official answers. We will train with binary cross-entropy on all positive quartets and a mixture of sampled random negatives and hard negatives formed by replacing one word in a true group. Negative labels mean ``not an official group in this puzzle,'' not necessarily ``no conceivable relationship.'' The encoder stays frozen; dropout, weight decay, and early stopping on validation group recovery will limit overfitting.
+
+At inference, we score all quartets and select a valid partition:
+\begin{equation}
+\widehat{\mathcal P}=\underset{\mathcal P\in\Pi_4(V)}{\arg\max}
+\sum_{S\in\mathcal P}s_\theta(S;G),
+\end{equation}
+where $\Pi_4(V)$ contains partitions into four disjoint four-word groups. The algorithm scores each possible group once, then finds the best way to split all the words into groups of four, considering how each choice affects the remaining groups.
+
+\section{Experiments and evaluation}
+We will separate the effects of pretrained features, learned group scoring, graph context, and global decoding. All core models use the same frozen embeddings and data splits.
+
+\begin{center}
+\begin{tabular}{p{0.30\linewidth}p{0.62\linewidth}}
+\toprule
+\textbf{Comparison} & \textbf{Purpose} \\
+\midrule
+Cosine similarity & Sum the six pairwise similarities per quartet; use exact decoding. \\
+No-message-passing scorer & Use a nodewise MLP and the same quartet readout and decoder. \\
+GATv2 scorer & Add puzzle-wide message passing; approximately match parameter budgets. \\
+Greedy decoding & Select the best remaining quartet to isolate the benefit of joint partitioning. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The primary metric is \textbf{exact puzzle accuracy}: all four predicted groups match the official partition. We will also report mean correct groups per puzzle (0-4), recovery by annotated difficulty where available, and inference time.
+
+Our main ablations will remove edge features, compare complete and sparse graphs, and vary message-passing depth. Qualitative analysis will distinguish semantic associations and shared phrases, using answer descriptions only after prediction. The small number of independent puzzles and limited wordplay knowledge in frozen embeddings are the main risks. Chronological splitting prevents supervised future leakage but cannot establish that pretrained representations are free of prior exposure. We will report failures as well as successes, and avoid treating numerous derived quartets as independent puzzles.
+
+\section{Scope and deliverables}
+By the November 10 milestone, we plan to finish preprocessing, the similarity baseline, and an initial GNN. By December 10, we will finish comparisons and ablations and deliver a documented PyG Colab and blog post with example solutions and error analysis. As a demo, we will take in 16 words and return four groups. The core project requires no reinforcement learning or large-model fine-tuning.
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+
+
+\end{document}

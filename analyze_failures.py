@@ -70,7 +70,7 @@ def score_run(run_dir):
     model = QuartetGNN(**{key: config[key] for key in (
         'hidden', 'dropout', 'pairwise_features', 'hint_features', 'learned_relations',
         'spelling_features', 'pronunciation_features', 'orthographic_features',
-        'homophone_features') if key in config})
+        'homophone_features', 'graph') if key in config})
     model.load_state_dict(checkpoint['model_state'])
     model.eval()
     tokenizer = WordTokenizer(pronunciation=True,
