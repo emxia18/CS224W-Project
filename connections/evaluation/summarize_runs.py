@@ -1,7 +1,7 @@
 """Aggregate validation metrics over seeds into one Markdown comparison table.
 
 Example:
-  python summarize_runs.py \
+  python -m connections.evaluation.summarize_runs \
     --group "GATv2 (complete graph)=runs/compare/gat_seed*" \
     --group "No message passing=runs/compare/nomp_seed*"
 """
@@ -14,7 +14,7 @@ from pathlib import Path
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 
 
 def fmt(values, digits=3):

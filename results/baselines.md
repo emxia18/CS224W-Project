@@ -107,19 +107,19 @@ validation groups, with ties broken by exact accuracy.
 Commands:
 
 ```sh
-.venv/bin/python baselines.py
+.venv/bin/python -m connections.evaluation.baselines
 
 mkdir -p runs/compare
 for seed in 0 1 2 3 4; do for graph in complete none; do
   name=$([ $graph = complete ] && echo gat || echo nomp)
-  .venv/bin/python train_gnn.py --all-quartets --pairwise-features --seed $seed \
+  .venv/bin/python -m connections.model.train_gnn --all-quartets --pairwise-features --seed $seed \
     --device cpu --threads 1 --hidden 128 --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
     --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
     --selection-metric groups --graph $graph \
     --output-dir runs/compare/${name}_seed$seed > runs/compare/${name}_seed$seed.log 2>&1 &
 done; done; wait
 
-.venv/bin/python summarize_runs.py \
+.venv/bin/python -m connections.evaluation.summarize_runs \
   --group "GATv2 (complete graph)=runs/compare/gat_seed*" \
   --group "No message passing=runs/compare/nomp_seed*"
 ```

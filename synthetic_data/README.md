@@ -38,7 +38,7 @@ Validate structure and check exact answer-group reuse against the local historic
 dataset from the repository root:
 
 ```sh
-python3 'data generation/validate.py'
+python3 synthetic_data/validate.py
 ```
 
 The checker writes `validation_report.json`. Its historical comparison covers

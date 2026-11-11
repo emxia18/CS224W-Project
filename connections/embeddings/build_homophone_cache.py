@@ -14,8 +14,9 @@ import re
 import numpy as np
 import torch
 
-from embed_data import MODEL, ROOT
-from word_channels import WordTokenizer
+from connections.embeddings.embed_data import MODEL
+from connections.paths import ROOT
+from connections.features.word_channels import WordTokenizer
 
 
 def retrieve_candidates(tokenizer, words):

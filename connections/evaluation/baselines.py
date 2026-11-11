@@ -13,10 +13,11 @@ import time
 
 import numpy as np
 
-from train_gnn import DECODERS, QUARTETS, QUARTET_IDS, load_puzzles, matched_word_overlap
+from connections.model.decoding import DECODERS, QUARTET_IDS, QUARTETS
+from connections.model.train_gnn import load_puzzles, matched_word_overlap
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 PAIRS = np.array(list(combinations(range(4), 2)))
 QUARTET_ARRAY = np.array(QUARTETS)
 # A fixed 4-set is a block in 5,775 of the 2,627,625 partitions (those of the

@@ -1,6 +1,6 @@
 """Download the raw NYT Connections dataset from Hugging Face.
 
-Run: python3 pull_data.py
+Run from the repository root: python -m connections.data.pull_data
 """
 
 import argparse
@@ -9,12 +9,14 @@ from pathlib import Path
 from urllib.error import URLError
 from urllib.request import urlopen
 
+from connections.paths import RAW
+
 
 DATASET_URL = (
     "https://huggingface.co/datasets/tm21cy/NYT-Connections/"
     "resolve/main/ConnectionsFinalDataset.json"
 )
-DEFAULT_OUTPUT = Path(__file__).resolve().parent / "data/raw/connections.json"
+DEFAULT_OUTPUT = RAW / "connections.json"
 
 
 def main():

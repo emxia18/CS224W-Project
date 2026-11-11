@@ -21,7 +21,7 @@ import re
 import numpy as np
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 TOKEN = re.compile(r"[a-z0-9]+(?:'[a-z]+)?")
 
 

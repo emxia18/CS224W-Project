@@ -13,12 +13,14 @@ from pathlib import Path
 import numpy as np
 import torch
 
-from train_gnn import QuartetGNN, QUARTETS, QUARTET_IDS, decode, load_puzzles
-from word_channels import WordTokenizer
-from explicit_features import HomophoneCache
+from connections.model.decoding import QUARTET_IDS, QUARTETS, decode
+from connections.model.gnn import QuartetGNN
+from connections.model.train_gnn import load_puzzles
+from connections.features.word_channels import WordTokenizer
+from connections.features.explicit_features import HomophoneCache
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 TYPES = ('Semantic / synonyms', 'Thematic / knowledge', 'Phrase completion',
          'Spelling / transformation', 'Sound / pronunciation')
 
@@ -85,7 +87,7 @@ def score_run(run_dir):
     mapping = json.loads((Path(config['embedding_dir']) / 'word_to_row.json').read_text())
     contextual = None
     if config.get('contextual_dir'):
-        from contextual_embeddings import ContextualCache
+        from connections.embeddings.contextual_embeddings import ContextualCache
         contextual = ContextualCache(config['contextual_dir'])
         if contextual.metadata != config.get('contextual_metadata'):
             raise ValueError('Contextual cache differs from checkpoint metadata')

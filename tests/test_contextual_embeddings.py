@@ -8,7 +8,7 @@ import unittest
 import numpy as np
 import torch
 
-from contextual_embeddings import ContextualCache, pool_words, puzzle_key, puzzle_text
+from connections.embeddings.contextual_embeddings import ContextualCache, pool_words, puzzle_key, puzzle_text
 
 
 class ContextualTests(unittest.TestCase):

@@ -19,12 +19,13 @@ from pathlib import Path
 
 import numpy as np
 
-from analyze_failures import TYPES, category_type
-from baselines import cosine_sum_scores
-from train_gnn import QUARTETS, decode, load_puzzles, matched_word_overlap
+from connections.evaluation.analyze_failures import TYPES, category_type
+from connections.evaluation.baselines import cosine_sum_scores
+from connections.model.decoding import QUARTETS, decode
+from connections.model.train_gnn import load_puzzles, matched_word_overlap
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 MERGED = "Synonym or thematic"
 SHORT = {TYPES[0]: "Synonym", TYPES[1]: "Thematic", TYPES[2]: "Phrase compl.",
          TYPES[3]: "Spelling", TYPES[4]: "Sound", MERGED: "Syn.+thematic"}

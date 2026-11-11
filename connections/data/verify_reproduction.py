@@ -3,10 +3,9 @@
 import argparse
 import hashlib
 import json
-from pathlib import Path
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 
 
 def main():

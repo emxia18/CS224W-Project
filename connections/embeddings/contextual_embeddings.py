@@ -9,7 +9,7 @@ import numpy as np
 import torch
 from torch.nn import functional as F
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 
 
 def puzzle_key(words):

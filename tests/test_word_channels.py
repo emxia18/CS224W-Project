@@ -5,9 +5,9 @@ import unittest
 import torch
 from torch.nn import functional as F
 
-from train_gnn import QuartetGNN
-from word_channels import WordTokenizer, SequenceChannel
-from explicit_features import NODE_FEATURES, EDGE_FEATURES, one_edit_apart, HomophoneCache
+from connections.model.gnn import QuartetGNN
+from connections.features.word_channels import WordTokenizer, SequenceChannel
+from connections.features.explicit_features import NODE_FEATURES, EDGE_FEATURES, one_edit_apart, HomophoneCache
 
 
 class WordChannelTests(unittest.TestCase):
@@ -61,7 +61,7 @@ class WordChannelTests(unittest.TestCase):
         from pathlib import Path
         import tempfile
         import numpy as np
-        from build_homophone_cache import retrieve_candidates
+        from connections.embeddings.build_homophone_cache import retrieve_candidates
         tokenizer = WordTokenizer(dictionary={'indy': [['IH1', 'N', 'D', 'IY0']],
             'indie': [['IH1', 'N', 'D', 'IY0']]})
         self.assertEqual(retrieve_candidates(tokenizer, ['INDY', 'xyz']), {'INDY': ['indie'], 'xyz': []})

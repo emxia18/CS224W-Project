@@ -8,7 +8,7 @@ from pathlib import Path
 import random
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 SPLIT_SIZES = {"train": 456, "val": 98, "test": 98}
 
 

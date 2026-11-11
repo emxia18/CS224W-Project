@@ -3,8 +3,9 @@ import unittest
 import numpy as np
 import torch
 
-from baselines import cosine_sum_scores
-from train_gnn import QUARTET_IDS, QUARTETS, QuartetGNN, decode, decode_greedy
+from connections.evaluation.baselines import cosine_sum_scores
+from connections.model.decoding import QUARTET_IDS, QUARTETS, decode, decode_greedy
+from connections.model.gnn import QuartetGNN
 
 
 def covers_all_words(groups):

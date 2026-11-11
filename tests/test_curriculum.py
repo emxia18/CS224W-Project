@@ -6,8 +6,10 @@ import unittest
 import numpy as np
 import torch
 
-from curriculum import compatible_quartets, sample_hints, task_probabilities
-from train_gnn import QUARTETS, QUARTET_IDS, QuartetGNN, decode, training_diagnostics
+from connections.model.curriculum import compatible_quartets, sample_hints, task_probabilities
+from connections.model.decoding import QUARTET_IDS, QUARTETS, decode
+from connections.model.gnn import QuartetGNN
+from connections.model.train_gnn import training_diagnostics
 
 
 class CurriculumTests(unittest.TestCase):

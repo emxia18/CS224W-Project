@@ -109,8 +109,8 @@ the historical experiments.
 From the repository root, with the existing virtual environment and MPNet cache:
 
 ```sh
-.venv/bin/python -m unittest discover -s 'data generation/paper_v2' -p 'test_*.py'
-.venv/bin/python 'data generation/paper_v2/build.py' --finalize
+.venv/bin/python -m unittest discover -s synthetic_data/paper_v2 -p 'test_*.py'
+.venv/bin/python synthetic_data/paper_v2/build.py --finalize
 ```
 
 This reproduces scoring and assembly from saved creator outputs and independent

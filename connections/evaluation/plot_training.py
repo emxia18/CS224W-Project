@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 
 # Keep plotting caches local, and support machines without a display.
-os.environ.setdefault("MPLCONFIGDIR", str(Path(__file__).resolve().parent / "runs/.matplotlib"))
+os.environ.setdefault("MPLCONFIGDIR", str(Path(__file__).resolve().parents[2] / "runs/.matplotlib"))
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt

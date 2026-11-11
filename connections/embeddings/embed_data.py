@@ -14,7 +14,7 @@ from sentence_transformers import SentenceTransformer
 import torch
 
 
-ROOT = Path(__file__).resolve().parent
+from connections.paths import ROOT
 MODEL = "sentence-transformers/all-mpnet-base-v2"
 
 

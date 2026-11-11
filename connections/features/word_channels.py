@@ -70,7 +70,7 @@ class WordTokenizer:
                 phonemes[i, j, :len(tokens)] = torch.tensor(tokens, dtype=torch.long)
         result = {'spelling': spelling.to(device), 'phonemes': phonemes.to(device)}
         if self.orthographic_features:
-            from explicit_features import orthographic_inputs
+            from connections.features.explicit_features import orthographic_inputs
             nodes, edges = orthographic_inputs(words, pronunciations)
             result.update(orthographic_nodes=nodes.to(device), orthographic_edges=edges.to(device))
         if self.homophone_cache is not None:
