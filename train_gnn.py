@@ -27,6 +27,13 @@ FULL_MASK = (1 << 16) - 1
 EDGE_INDEX = torch.tensor(
     [(i, j) for i in range(16) for j in range(16)], dtype=torch.long
 ).t().contiguous()
+# "none" keeps only self-loops: every attention softmax has one entry, so the
+# GATv2 layer becomes a nodewise linear map with identical parameters and no
+# information flow between words (the no-message-passing control).
+GRAPHS = {
+    "complete": EDGE_INDEX,
+    "none": torch.arange(16, dtype=torch.long).repeat(2, 1),
+}
 
 
 @lru_cache(maxsize=None)
@@ -70,6 +77,32 @@ def decode(scores, allowed_ids=None):
     return groups
 
 
+def decode_greedy(scores, allowed_ids=None):
+    """Repeatedly take the highest-scoring quartet disjoint from earlier picks.
+
+    With revealed memberships, a greedy pick can strand words in a way no allowed
+    quartet completes; that raises, matching the exact decoder's failure mode.
+    """
+    scores = np.asarray(scores)
+    if scores.shape != (1820,) or not np.isfinite(scores).all():
+        raise ValueError("Decoder requires 1,820 finite scores")
+    allowed = None if allowed_ids is None else set(allowed_ids)
+    used, groups = 0, []
+    for index in np.argsort(-scores, kind="stable"):
+        if allowed is not None and index not in allowed:
+            continue
+        group_mask = sum(1 << i for i in QUARTETS[index])
+        if not used & group_mask:
+            used |= group_mask
+            groups.append(int(index))
+            if used == FULL_MASK:
+                return groups
+    raise ValueError("Greedy decoding could not complete a partition")
+
+
+DECODERS = {"exact": decode, "greedy": decode_greedy}
+
+
 def quartet_cosine_stats(x, groups):
     """Mean, minimum, maximum, and population std of six distinct pairs."""
     members = x[groups]
@@ -95,8 +128,10 @@ def quartet_edge_stats(edges, groups):
 class QuartetGNN(nn.Module):
     def __init__(self, hidden=128, dropout=0.1, pairwise_features=False, hint_features=False,
                  learned_relations=0, spelling_features=False, pronunciation_features=False,
-                 orthographic_features=False, homophone_features=False):
+                 orthographic_features=False, homophone_features=False, graph="complete"):
         super().__init__()
+        if graph not in GRAPHS:
+            raise ValueError(f"Unknown graph: {graph}")
         self.pairwise_features = pairwise_features
         self.hint_features = hint_features
         self.orthographic_features = orthographic_features
@@ -121,7 +156,7 @@ class QuartetGNN(nn.Module):
             nn.Linear(hidden, 1),
         )
         self.orthographic_project = nn.Linear(len(NODE_FEATURES), hidden) if orthographic_features else None
-        self.register_buffer("edge_index", EDGE_INDEX.clone())
+        self.register_buffer("edge_index", GRAPHS[graph].clone())
         self.register_buffer("quartets", torch.tensor(QUARTETS, dtype=torch.long))
 
     def forward(self, x, quartet_ids=None, hints=None, word_inputs=None):
@@ -207,9 +242,10 @@ def matched_word_overlap(predicted, official):
 
 
 @torch.no_grad()
-def evaluate(model, puzzles, hint_task="full", hint_seed=12345):
+def evaluate(model, puzzles, hint_task="full", hint_seed=12345, decoder="exact"):
     """Evaluate fixed hints when requested; default is always unassisted."""
     model.eval()
+    decode_fn = DECODERS[decoder]
     hint_rng = random.Random(hint_seed)
     correct_counts, overlaps, predictions = [], [], []
     start = time.perf_counter()
@@ -219,7 +255,7 @@ def evaluate(model, puzzles, hint_task="full", hint_seed=12345):
             official = [QUARTETS[index] for index in sorted(puzzle["positives"])]
             hints, revealed = sample_hints(official, hint_task, hint_rng, puzzle["x"].device)
             allowed = compatible_quartets(QUARTETS, revealed)
-        predicted = decode(model(puzzle["x"], hints=hints, word_inputs=puzzle.get("word_inputs")).cpu().numpy(), allowed)
+        predicted = decode_fn(model(puzzle["x"], hints=hints, word_inputs=puzzle.get("word_inputs")).cpu().numpy(), allowed)
         correct_counts.append(len(set(predicted) & puzzle["positives"]))
         overlaps.append(matched_word_overlap(predicted, puzzle["positives"]))
         predictions.append(predicted)
@@ -257,6 +293,9 @@ def main():
                         help="Number of trainable semantic similarity projections (try 4)")
     parser.add_argument("--spelling-features", action="store_true", help="Train a character CNN")
     parser.add_argument("--pronunciation-features", action="store_true", help="Train a CMUdict phoneme CNN")
+    parser.add_argument("--graph", choices=tuple(GRAPHS), default="complete",
+                        help="complete: message passing over all word pairs; "
+                             "none: self-loops only (no-message-passing control, same parameters)")
     parser.add_argument("--orthographic-features", action="store_true", help="Explicit spelling and phonetic relationships")
     parser.add_argument("--homophone-features", action="store_true", help="Semantic similarity of retrieved homophone candidates")
     parser.add_argument("--homophone-cache", type=Path, default=ROOT / "data/embeddings/homophones")
@@ -334,10 +373,12 @@ def main():
 
     model = QuartetGNN(args.hidden, args.dropout, args.pairwise_features, args.hint_features,
                        args.learned_relations, args.spelling_features, args.pronunciation_features,
-                       args.orthographic_features, args.homophone_features).to(args.device)
+                       args.orthographic_features, args.homophone_features, args.graph).to(args.device)
     optimizer = torch.optim.AdamW(model.parameters(), lr=args.lr, weight_decay=args.weight_decay)
     args.output_dir.mkdir(parents=True, exist_ok=True)
     config = {key: str(value) if isinstance(value, Path) else value for key, value in vars(args).items()}
+    config["parameters"] = sum(p.numel() for p in model.parameters())
+    print(f"Graph={args.graph}; parameters={config['parameters']:,}", flush=True)
     if tokenizer is not None:
         config["word_channel_tokenization"] = ("lowercase-utf8-cmudict-stressless-v1"
             if args.keep_pronunciation_qualifiers else "strip-parenthetical-stressless-v2")
@@ -443,6 +484,11 @@ def main():
     model.load_state_dict(checkpoint["model_state"])
     metrics, predictions = evaluate(model, validation)
     (args.output_dir / "metrics.json").write_text(json.dumps(metrics, indent=2) + "\n")
+    # Same checkpoint, greedy decoding: isolates the benefit of joint partitioning.
+    greedy_metrics, _ = evaluate(model, validation, decoder="greedy")
+    (args.output_dir / "metrics_greedy.json").write_text(json.dumps(greedy_metrics, indent=2) + "\n")
+    print(f"Greedy decoding: groups={greedy_metrics['mean_correct_groups']:.3f}/4 "
+          f"exact={greedy_metrics['exact_accuracy']:.1%}", flush=True)
     if diagnostic_subset:
         diagnostics = training_diagnostics(model, diagnostic_subset, args.seed + 3)
         (args.output_dir / "training_diagnostics.json").write_text(json.dumps({

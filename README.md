@@ -175,6 +175,75 @@ and 1/13 sound/pronunciation**. It recovers the “things that sound like T” g
 The palindrome group ranks second but is still excluded from the chosen global
 partition. Earlier CNN ranks for those groups were 481 and 1,265 respectively.
 
+## Baselines from the proposal
+
+These separate the contributions of pretrained similarity, learned scoring,
+message passing, and joint decoding. Zero-parameter baselines (no training):
+
+```sh
+.venv/bin/python baselines.py
+```
+
+This scores every quartet by the sum of its six pairwise MPNet cosines and
+decodes with both the exact partition decoder and a greedy decoder (repeatedly
+take the best remaining disjoint quartet). It also reports uniform random
+partitions (analytic chance: 4/455 groups per puzzle). Results go to
+`runs/baselines/metrics.json`; train and validation are evaluated, test only
+with `--splits test`.
+
+The no-message-passing control is `--graph none`: the GATv2 layer keeps only
+self-loops, so each attention softmax has a single entry and the layer becomes
+a nodewise linear map. Parameter count (182,145), readout, loss, and pairwise
+cosine statistics are identical to the complete-graph model; a quartet's score
+depends only on its own four words. Every training run now also writes
+`metrics_greedy.json`: the same best checkpoint decoded greedily.
+
+Five seeds of each, using the baseline configuration from the reproduction above:
+
+```sh
+mkdir -p runs/compare
+for seed in 0 1 2 3 4; do for graph in complete none; do
+  name=$([ $graph = complete ] && echo gat || echo nomp)
+  .venv/bin/python train_gnn.py --all-quartets --pairwise-features --seed $seed \
+    --device cpu --threads 1 --hidden 128 --dropout 0.1 --lr 0.001 --weight-decay 0.0001 \
+    --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
+    --selection-metric groups --graph $graph \
+    --output-dir runs/compare/${name}_seed$seed > runs/compare/${name}_seed$seed.log 2>&1 &
+done; done; wait
+
+.venv/bin/python summarize_runs.py \
+  --group "GATv2 (complete graph)=runs/compare/gat_seed*" \
+  --group "No message passing=runs/compare/nomp_seed*" \
+  --output runs/compare/summary.md
+```
+
+Validation results (98 puzzles; mean ± sample std over seeds 0–4). Embeddings
+were regenerated from the pinned MPNet revision rather than reused, so they are
+not byte-identical to the recorded cache; seed 42 of the baseline GAT gives
+0.439 groups here versus 0.500 in the table above.
+
+| Model | Decoder | Groups / puzzle | Groups / 392 | Exact / 98 | Matched words / 16 | Best epoch |
+|---|---|---:|---:|---:|---:|---:|
+| Random partition | — | 0.009 | 0.9 | 0.0 | 7.60 | — |
+| Cosine sum (no training) | exact | **0.561** | **55** | 2 | **10.41** | — |
+| Cosine sum (no training) | greedy | 0.520 | 51 | 1 | 10.04 | — |
+| GATv2, complete graph | exact | 0.516 ± 0.039 | 50.6 ± 3.8 | **2.4 ± 0.5** | 10.07 ± 0.09 | 3.2 ± 0.8 |
+| GATv2, complete graph | greedy | 0.508 ± 0.057 | 49.8 ± 5.6 | 2.2 ± 0.8 | 10.00 ± 0.15 | 3.2 ± 0.8 |
+| No message passing | exact | 0.424 ± 0.054 | 41.6 ± 5.3 | 1.0 ± 0.7 | 9.99 ± 0.08 | 2.4 ± 0.5 |
+| No message passing | greedy | 0.457 ± 0.030 | 44.8 ± 2.9 | 2.0 ± 0.7 | 9.88 ± 0.07 | 2.4 ± 0.5 |
+
+- **Message passing helps relative to its control.** GATv2 beats the
+  parameter-matched no-message-passing model on every seed (exact decoding).
+- **Neither trained model beats untrained cosine similarity**, even though the
+  trained rows are optimistic (their checkpoints were selected on these same
+  validation puzzles). Both receive the mean pairwise cosine in their readout, so
+  they could represent the cosine ranking; training makes them worse. Validation
+  groups peak by epoch 2–4 and then fall while training loss keeps decreasing.
+- **Exact decoding helps cosine scores** (+4 groups over greedy) but makes little
+  consistent difference for the trained scorers.
+- With 98 validation puzzles, one group is about 0.01 groups/puzzle; differences
+  of a few groups between single runs are within seed noise.
+
 ## Other training options
 
 Download the [NYT Connections dataset](https://huggingface.co/datasets/tm21cy/NYT-Connections):
