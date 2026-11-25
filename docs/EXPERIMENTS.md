@@ -636,3 +636,26 @@ Commands, expected values at every step and the 5-seed results are in
   is the one-time test evaluation.
 
 Results: `results/final_model.md`.
+
+### Thematic knowledge and heterogeneous graphs (development)
+
+- `features/build_neighbor_cache.py --source conceptnet|wiktionary` gives each
+  puzzle word its knowledge neighbors: concepts joined by a ConceptNet 5.7 edge
+  (relation-agnostic; morphological and negative relations skipped), or the
+  topical categories of its Wiktionary senses (kaikki.org extract; grammatical
+  and maintenance categories skipped). Same layout as phrase caches, so use it as
+  `--similarity NAME=phrase:DIR`.
+- `embeddings/build_sense_cache.py --source wiktionary --wiktionary FILE` uses
+  Wiktionary definitions as sense vectors (tested, not in the best model).
+- `similarity_channels.py` kind `puzzle:DIR`: precomputed 16x16 matrices per
+  puzzle (used for out-of-fold global-graph similarities).
+- `hetero/train_concepts.py`: QuartetGNN plus concept nodes (`--concept NAME=DIR`,
+  any neighbor cache; `--concept-min/--concept-max` in-puzzle counts, default
+  2/8, best 3/8; `--concept-hidden`). Mirrors `train_gnn.py --residual --loss crf`
+  and reproduces it exactly with no `--concept`.
+- `hetero/global_graph.py`: global word–concept graph with training same-group
+  edges, link prediction, out-of-fold matrices (`--folds K`), tuning mode on
+  held-out training puzzles (`--folds 0`), `--conv sage|gat`, `--chunks` steps
+  per epoch. Negative result.
+
+Results: `results/thematic_and_hetero.md`.

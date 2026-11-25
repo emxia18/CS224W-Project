@@ -10,6 +10,9 @@ A spec is KIND:DIR:
            words score 1 if they share a phrase partner that 3-5 of the
            puzzle's 16 words share (a "___ ROLL" group plus at most one red
            herring), else 0. Partners shared by many words are too generic.
+  puzzle:DIR  precomputed 16x16 matrices, one per puzzle (matrices.npy and
+           index.json keyed by the puzzle's word list in order), e.g. the
+           out-of-fold global-graph similarities of connections/hetero/global_graph.py
 
 Used as extra residual terms and edge features by train_gnn.py (--similarity)
 and compared without training by evaluation/combine_similarities.py.
@@ -29,7 +32,13 @@ class SimilarityChannel:
         kind, _, directory = spec.partition(":")
         directory = Path(directory)
         self.sparse = None
+        self.puzzle = None
         self.phrase = kind == "phrase"
+        if kind == "puzzle":
+            self.puzzle = np.load(directory / "matrices.npy", allow_pickle=False)
+            self.index = json.loads((directory / "index.json").read_text())
+            self.spec = spec
+            return
         if kind in ("sparse", "phrase"):
             from scipy import sparse
 
@@ -48,13 +57,18 @@ class SimilarityChannel:
             rows = json.loads((directory / "word_to_rows.json").read_text())
             self.groups = {word: vectors[indices] for word, indices in rows.items()}
         else:
-            raise ValueError(f"Unknown similarity kind {kind!r} in {spec!r}; use cos:, max: or sparse:DIR")
+            raise ValueError(f"Unknown similarity kind {kind!r} in {spec!r}; use cos:, max:, sparse:, phrase: or puzzle:DIR")
         if not all(np.allclose(np.linalg.norm(v, axis=1), 1, atol=1e-4) for v in self.groups.values()):
             raise ValueError(f"{spec}: vectors must be unit length")
         self.spec = spec
 
     def matrix(self, words):
         """16x16 similarities (diagonal 1): the max within each word-by-word block."""
+        if self.puzzle is not None:
+            key = "|".join(words)
+            if key not in self.index:
+                raise KeyError(f"{self.spec}: no matrix for this puzzle ({words[:3]}...)")
+            return self.puzzle[self.index[key]].astype(np.float32)
         if self.sparse is not None:
             missing = [word for word in words if word not in self.rows]
             if missing:

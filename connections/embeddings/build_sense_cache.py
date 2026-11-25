@@ -12,6 +12,9 @@ Sources (--source):
   wordnet        each WordNet definition, encoded as "<word>: <definition>" with
                  a sentence encoder, plus the word itself in a template. Words
                  WordNet does not know keep only the template vector.
+  wiktionary     the same with Wiktionary definitions from the kaikki.org
+                 English extract (--wiktionary), which also covers slang, brand
+                 names and proper nouns, all parts of speech.
 
 Output (--output-dir): senses.npy (unit rows), word_to_rows.json (word -> list of
 row indices; the first row is the word's default vector), labels.json (what each
@@ -19,6 +22,7 @@ row encodes) and metadata.json.
 """
 
 import argparse
+from collections import defaultdict
 import hashlib
 import json
 from pathlib import Path
@@ -66,11 +70,53 @@ def fasttext_case(words, args):
     return senses
 
 
+def wiktionary_glosses(path, words, limit):
+    """word -> list of (label, gloss) from a kaikki.org JSONL extract (optionally .gz)."""
+    import gzip
+    import re
+
+    def key(text):
+        return " ".join(re.findall(r"[a-z0-9]+", normalized(text).replace("'", "")))
+
+    wanted = defaultdict(list)
+    for word in words:
+        wanted[key(word)].append(word)
+    glosses = defaultdict(list)
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8", errors="replace") as stream:
+        for line in stream:
+            entry = json.loads(line)
+            matches = wanted.get(key(entry.get("word", "")))
+            if not matches or entry.get("lang_code", "en") != "en":
+                continue
+            for sense in entry.get("senses", []) or []:
+                for gloss in (sense.get("glosses") or [])[-1:]:  # most specific gloss
+                    for word in matches:
+                        if gloss not in [g for _, g in glosses[word]] and len(glosses[word]) < limit:
+                            glosses[word].append((f"{entry.get('pos', '?')}:{len(glosses[word])}", gloss))
+    return glosses
+
+
+def encode_senses(texts, args):
+    import torch
+    from sentence_transformers import SentenceTransformer
+
+    flat = [t for rows in texts.values() for _, t in rows]
+    model = SentenceTransformer(args.model, device=args.device,
+                                cache_folder=str(ROOT / "data/model_cache"),
+                                model_kwargs={"dtype": torch.float32})
+    vectors = model.encode(flat, batch_size=64, show_progress_bar=True,
+                           convert_to_numpy=True, normalize_embeddings=True).astype(np.float32)
+    senses, i = {}, 0
+    for word in texts:
+        senses[word] = [(label, vectors[i + k]) for k, (label, _) in enumerate(texts[word])]
+        i += len(texts[word])
+    return senses
+
+
 def wordnet(words, args):
     """WordNet definitions plus a template, encoded with a sentence encoder."""
     import nltk
-    import torch
-    from sentence_transformers import SentenceTransformer
 
     nltk.data.path.insert(0, str(ROOT / "data/model_cache/nltk_data"))
     from nltk.corpus import wordnet as wn
@@ -82,23 +128,26 @@ def wordnet(words, args):
         synsets = wn.synsets(lemma)[:args.max_senses]
         texts[word] = ([("template", args.template.replace("{word}", text))]
                        + [(s.name(), f"{text}: {s.definition()}") for s in synsets])
-    flat = [t for rows in texts.values() for _, t in rows]
-    model = SentenceTransformer(args.model, device=args.device,
-                                cache_folder=str(ROOT / "data/model_cache"),
-                                model_kwargs={"dtype": torch.float32})
-    vectors = model.encode(flat, batch_size=64, show_progress_bar=True,
-                           convert_to_numpy=True, normalize_embeddings=True).astype(np.float32)
-    senses, i = {}, 0
+    return encode_senses(texts, args)
+
+
+def wiktionary(words, args):
+    """Wiktionary definitions plus a template, encoded with a sentence encoder."""
+    glosses = wiktionary_glosses(args.wiktionary, words, args.max_senses)
+    texts = {}
     for word in words:
-        senses[word] = [(label, vectors[i + k]) for k, (label, _) in enumerate(texts[word])]
-        i += len(texts[word])
-    return senses
+        text = normalized(word)
+        texts[word] = ([("template", args.template.replace("{word}", text))]
+                       + [(label, f"{text}: {gloss}") for label, gloss in glosses.get(word, [])])
+    return encode_senses(texts, args)
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
-    parser.add_argument("--source", choices=("fasttext-case", "wordnet"), required=True)
+    parser.add_argument("--source", choices=("fasttext-case", "wordnet", "wiktionary"), required=True)
+    parser.add_argument("--wiktionary", type=Path,
+                        help="wiktionary: kaikki.org-dictionary-English.jsonl(.gz)")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--input-dir", type=Path, default=ROOT / "data/processed")
     parser.add_argument("--vectors", type=Path, help="fasttext-case: .vec file")
@@ -112,9 +161,11 @@ def main():
     args = parser.parse_args()
     if args.source == "fasttext-case" and args.vectors is None:
         parser.error("--source fasttext-case needs --vectors")
+    if args.source == "wiktionary" and args.wiktionary is None:
+        parser.error("--source wiktionary needs --wiktionary")
 
     words, hashes = vocabulary(args.input_dir)
-    senses = (fasttext_case if args.source == "fasttext-case" else wordnet)(words, args)
+    senses = {"fasttext-case": fasttext_case, "wordnet": wordnet, "wiktionary": wiktionary}[args.source](words, args)
 
     rows, labels, word_to_rows = [], [], {}
     for word in words:

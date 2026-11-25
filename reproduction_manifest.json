@@ -32,6 +32,14 @@
     "data/embeddings/phrases/wikipedia/word_to_row.json": "1086e8488c1861f5f2a4f388d02d6343c550b0484ab90c9edcb9b6dd15866469",
     "data/embeddings/phrases/wikipedia/partners.json": "51c6566323c3a3636ef20c9712e9aa772244f9a7ecb7b81330de77e0e1ee0e65",
     "data/embeddings/homophones-test/vectors.npy": "4f64335c1cb83df8673295d9a159cdf529e2fcf7079e237f3f869780e41c75a5",
-    "data/embeddings/homophones-test/words.json": "c1b2927e083dda102366bb1d8be505a5f92f00cf0262eae16402dec56437c378"
+    "data/embeddings/homophones-test/words.json": "c1b2927e083dda102366bb1d8be505a5f92f00cf0262eae16402dec56437c378",
+    "data/vectors/conceptnet-assertions-5.7.0.csv.gz": "accd65fe94038584295574ddc26e1500c1919c8c4532bf771811cafd0948af7e",
+    "data/vectors/kaikki.org-dictionary-English.jsonl.gz": "4d03b6cba283744756c57ff661c2c6cbfe34fcf8ff513a966576cf7d97e91a99",
+    "data/embeddings/neighbors/conceptnet/embeddings.npz": "4b589718b859bd4414f498e73da404c68bf01222de1d02436284e8d2dd2d2b66",
+    "data/embeddings/neighbors/conceptnet/partners.json": "7b7954b57ab01089eb43cdca8ad725f5e567f6a8062bf4b8b349dabb8e664704",
+    "data/embeddings/neighbors/conceptnet/word_to_row.json": "1086e8488c1861f5f2a4f388d02d6343c550b0484ab90c9edcb9b6dd15866469",
+    "data/embeddings/neighbors/wiktionary/embeddings.npz": "e9cb6be17560a4c7b8485b3936105b7b1288d7e96ba401eb6557a5e06fb681cf",
+    "data/embeddings/neighbors/wiktionary/partners.json": "bf162b2368ff3faa719aea207e776f126a4fe75eaa81df321a3c4da76a993dd4",
+    "data/embeddings/neighbors/wiktionary/word_to_row.json": "1086e8488c1861f5f2a4f388d02d6343c550b0484ab90c9edcb9b6dd15866469"
   }
 }

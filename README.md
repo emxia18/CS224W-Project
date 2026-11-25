@@ -19,6 +19,38 @@ residual + CRF. **Test split (evaluated once): 152.4 ± 1.9 of 392 groups
 untrained fastText cosine (+40.4, 95% CI [+19.0, +61.4]). Validation: 184.6 ±
 2.7 (47.1%). Exact steps and values: [`results/final_model.md`](results/final_model.md).
 
+**Development best (validation only, not test-evaluated):** the final model + a
+ConceptNet similarity + a **per-puzzle heterogeneous graph with concept nodes**:
+**198.2 ± 2.5 of 392 validation groups (50.6%), 28.6 of 98 solved.** See
+[`results/thematic_and_hetero.md`](results/thematic_and_hetero.md).
+
+---
+
+## What's new (for collaborators)
+
+Most recent first. Each round has a write-up in `results/` with exact commands,
+expected values and caveats.
+
+| Round | What was added | Result (validation unless noted) | Write-up |
+|---|---|---|---|
+| 5. Thematic knowledge + heterogeneous graphs | ConceptNet and Wiktionary neighbor caches (`features/build_neighbor_cache.py`); **Option 1:** per-puzzle graph with concept nodes (`hetero/train_concepts.py`); **Option 2:** one global word–concept graph trained by link prediction (`hetero/global_graph.py`) | Option 1: **198.2** (dev best). Option 2: **negative result**, no gain over its input features | [`thematic_and_hetero.md`](results/thematic_and_hetero.md) |
+| 4. Final model + test | Wikipedia-title phrases, wordplay features; seed ensembling (`evaluation/ensemble_runs.py`); synthetic data split (`data/add_synthetic.py`); `--holdout` | 184.6; **test 152.4 (38.9%)**, run once | [`final_model.md`](results/final_model.md) |
+| 3. Phrase completion | `features/build_phrase_cache.py`; `phrase:` similarities | 174.0 | [`similarity_sources.md`](results/similarity_sources.md) |
+| 2. Multiple similarity sources | WordNet senses (`embeddings/build_sense_cache.py`), Numberbatch, `--similarity` in `train_gnn.py` | 150.6 | [`similarity_sources.md`](results/similarity_sources.md) |
+| 1. Residual scorer + CRF | `--residual`, `--loss crf`, fastText | 116.8 | [`residual_crf_embeddings.md`](results/residual_crf_embeddings.md) |
+
+**Conventions:**
+- **The test split is spent.** It was used once, for the frozen final model.
+  Report anything new on validation, and treat small validation gains with
+  caution: validation has guided many decisions.
+- **New model families live in `connections/hetero/`,** separate from
+  `connections/model/`. `hetero/train_concepts.py` reproduces `train_gnn.py`
+  identically when given no concept sources.
+- **Every cache is checked by** `python -m connections.data.verify_reproduction
+  --check-embeddings` (hashes in `reproduction_manifest.json`). Two downloads
+  cannot be fetched again in the same version: the kaikki.org Wiktionary extract
+  and, if the dump expires, the Wikipedia title list. Copy them from a teammate.
+
 ---
 
 ## Where things stand
@@ -37,7 +69,12 @@ columns are the mean over seeds 0–4.
 | fastText | 106 groups (8 solved) | 116.8 (11.0) | 112.8 (9.4) |
 | fastText + WordNet senses + Numberbatch | 128 groups (12 solved) | 150.6 (14.8) | not run |
 | … + phrase completion (Numberbatch) | 139 groups (15 solved) | 174.0 (19.8) | 167.6 (18.6) |
-| **… + Wikipedia phrases + wordplay features (final)** | 153 groups (20 solved) | **184.6 (23.8)** | — |
+| … + Wikipedia phrases + wordplay features (final; test 152.4) | 153 groups (20 solved) | 184.6 (23.8) | — |
+| … + ConceptNet | 148 groups (17 solved)* | 190.2 (25.8) | — |
+| **… + concept nodes (per-puzzle heterogeneous graph; dev best)** | 148 groups (17 solved)* | **198.2 (28.6)** | — |
+
+\* The ConceptNet weights are fit on train, so the untrained score can drop
+slightly on validation (153 → 148) even though it rises on train (796 → 836).
 
 What we've learned so far:
 
@@ -64,6 +101,15 @@ What we've learned so far:
    +12.8]). Wikipedia-title phrases and the rule-based wordplay features add
    another 10.6 groups; a lower learning rate and 51 synthetic training puzzles
    did not help (see `results/final_model.md`).
+10. **Thematic groups need knowledge-graph facts.** ConceptNet neighbors lift
+    thematic groups from 70.6 to 78.8 and the model to 190.2 (+5.6, CI includes 0).
+11. **A per-puzzle heterogeneous graph beats a global one.** Concept nodes for
+    knowledge shared by 3–8 of a puzzle's words, with a readout that rewards
+    concepts covering all four words of a group, reach 198.2 (+8.0, CI [−4.2,
+    +20.2]; every seed above every base seed). A single global word–concept graph
+    with training-history edges learns nothing beyond its input features (pair
+    AUC 0.782 vs 0.780): a global embedding cannot express puzzle-specific context
+    (see `results/thematic_and_hetero.md`).
 
 The residual scorer, CRF loss and extra similarity sources are flags in
 `train_gnn.py` (`--residual`, `--loss crf`, `--similarity`), and any embedding
@@ -84,14 +130,15 @@ connections/                    all project code (a Python package)
   embeddings/
     embed_data.py               cache sentence-transformer vectors (MPNet by default)
     embed_static.py             cache static vectors from a fastText/GloVe/Numberbatch .vec file
-    build_sense_cache.py        several vectors per word (WordNet senses) for best-match similarity
+    build_sense_cache.py        several vectors per word (WordNet or Wiktionary senses) for best-match similarity
     contextual_embeddings.py    per-word MPNet vectors conditioned on the whole puzzle
     build_homophone_cache.py    CMUdict homophones + their MPNet meanings
   features/
     word_channels.py            spelling (bytes) and pronunciation (phoneme) inputs + CNNs
     explicit_features.py        rule-based word relations: anagram, palindrome, homophone...
-    similarity_channels.py      extra word-similarity sources for --similarity (cos:, max:, sparse:, phrase:)
+    similarity_channels.py      extra word-similarity sources for --similarity (cos:, max:, sparse:, phrase:, puzzle:)
     build_phrase_cache.py       phrase partners (drum_roll -> DRUM "followed by roll") for phrase completion
+    build_neighbor_cache.py     knowledge neighbors: ConceptNet concepts, Wiktionary categories
   model/
     decoding.py                 the 1,820 quartets; exact and greedy partition decoders
     gnn.py                      QuartetGNN: GATv2 layer + permutation-invariant quartet scorer
@@ -105,6 +152,11 @@ connections/                    all project code (a Python package)
     analyze_failures.py         which kinds of categories (synonym, phrase, sound...) we miss
     summarize_runs.py           aggregate multi-seed runs into a Markdown table
     plot_training.py            learning curves from a run's history.json
+  hetero/                       heterogeneous-graph models, kept separate from model/
+    concepts.py                 per-puzzle concept nodes from neighbor caches
+    model.py                    ConceptQuartetGNN: QuartetGNN + word<->concept message passing
+    train_concepts.py           training script for the concept-node model (dev best)
+    global_graph.py             one global word-concept graph, link prediction (negative result)
 tests/                          unit tests (python -m unittest)
 synthetic_data/                 LLM-generated extra puzzles (see synthetic_data/README.md)
 results/                        write-ups of finished experiments (read these!)
@@ -130,7 +182,7 @@ Run everything **from the repository root**. Scripts are modules, so use
 python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-reproduce.txt     # or requirements.txt for looser versions
-python -m unittest                            # should print: Ran 39 tests ... OK
+python -m unittest                            # should print: Ran 44 tests ... OK
 ```
 
 ### 2. Data
@@ -231,7 +283,7 @@ python -m connections.embeddings.build_sense_cache --source wordnet --device mps
   --output-dir data/embeddings/senses/wordnet-mpnet
 python -m connections.features.build_phrase_cache --vectors data/vectors/numberbatch-en-19.08.txt \
   --output-dir data/embeddings/phrases/numberbatch-open
-python -m connections.data.verify_reproduction --check-embeddings   # all 20 lines OK
+python -m connections.data.verify_reproduction --check-embeddings   # every line OK
 
 # 3. Train (one seed shown; seeds 0-4 for comparisons)
 python -m connections.model.train_gnn \
@@ -257,6 +309,12 @@ check fails on your machine, copy `data/embeddings/senses/wordnet-mpnet/` from
 ours instead of rebuilding (the other caches rebuild byte-identically). On Linux
 or other torch versions, the untrained score (139) and first epochs match, and later epochs drift by a few groups per seed;
 compare 5-seed means. If Hugging Face downloads stall, set `HF_HUB_DISABLE_XET=1`.
+
+### 7. Development best: concept-node graph
+
+Needs the final model's inputs plus ConceptNet and Wiktionary neighbor caches.
+Downloads, cache commands and the 5-seed training command, with expected values:
+[`results/thematic_and_hetero.md`](results/thematic_and_hetero.md#how-to-reproduce).
 
 ### Controls and outputs
 
@@ -331,9 +389,11 @@ puzzle-contextual embeddings (`--contextual-dir`), and a hint curriculum
 
 ## Next steps
 
-1. Thematic groups are the largest remaining gap. WordNet has no senses for 434
-   puzzle words (names, brands, slang); LLM-written meanings could fill it.
-2. Overfitting: validation still peaks at epoch 3–5. A larger, independent
-   selection set would allow honest early stopping.
-3. Deliverables: a PyG notebook, a blog post with error analysis, and a demo that
+1. **Get newer puzzles** (about 600 have been published since the dataset ends)
+   for a fresh test set; validation is too reused to confirm the 198.2 result.
+2. **Combine Options 1 and 2:** learn concept embeddings on the global graph and
+   use them as features for the per-puzzle concept nodes.
+3. Pop-culture groups (NBA legends, car models, HBO shows) are still mostly
+   missed; a local open-weight LLM could write word meanings without an API.
+4. Deliverables: a PyG notebook, a blog post with error analysis, and a demo that
    takes 16 words and returns 4 groups.

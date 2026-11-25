@@ -129,7 +129,7 @@ python -m connections.features.build_phrase_cache --format lines \
 # also covers test words, used only for the final test evaluation
 python -m connections.embeddings.build_homophone_cache
 python -m connections.embeddings.build_homophone_cache --include-test --output-dir data/embeddings/homophones-test
-python -m connections.data.verify_reproduction --check-embeddings    # 26 lines, all OK
+python -m connections.data.verify_reproduction --check-embeddings    # all lines OK
 ```
 
 **2. Train five seeds** (about 20 minutes in parallel on a 10-core CPU). Each log
