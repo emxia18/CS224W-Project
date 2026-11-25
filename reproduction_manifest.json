@@ -14,6 +14,15 @@
     "data/embeddings/embeddings.npy": "2007942b2f1ca13e45eeff13cd6e7d53d542d7841566da23370c55f264634745",
     "data/embeddings/word_to_row.json": "ecd7719ab87fef94a1dec9bf64050bd57e4b6e0604acb23cde45baa9d7923650",
     "data/embeddings/homophones/vectors.npy": "2648fa07b45d5f1e25ffa8cf76e4dbe483e05f03274fda41b4e4d6e3e4027684",
-    "data/embeddings/homophones/words.json": "561a8a451ff450ad4f91205883f48e0119587b5132fb071da2698e20eef5f587"
+    "data/embeddings/homophones/words.json": "561a8a451ff450ad4f91205883f48e0119587b5132fb071da2698e20eef5f587",
+    "data/vectors/crawl-300d-2M.vec.zip": "5bfffffbabdab299d4c9165c47275e8f982807a6eaca37ee1f71d3a79ddb544d",
+    "data/vectors/numberbatch-en-19.08.txt.gz": "90e57611eb71077ada9fd0b011fd0206de8ec13d035aced40b81b1a4d549c6a2",
+    "data/embeddings/fasttext-crawl/embeddings.npy": "e2ed178d9be5a100f0b0f83c45ce5188c883ba8a9480deb9cf657eba0d20b923",
+    "data/embeddings/fasttext-crawl/word_to_row.json": "ecd7719ab87fef94a1dec9bf64050bd57e4b6e0604acb23cde45baa9d7923650",
+    "data/embeddings/numberbatch/embeddings.npy": "2b939a9770a4dfe731c605718fea390dc5fafc7b6ff09341fea2fffaef5e583c",
+    "data/embeddings/numberbatch/word_to_row.json": "ecd7719ab87fef94a1dec9bf64050bd57e4b6e0604acb23cde45baa9d7923650",
+    "data/embeddings/senses/wordnet-mpnet/senses.npy": "0f98d40381575ce55f55ce5f9972460227d969485bb6e124d4916d23ae794a65",
+    "data/embeddings/senses/wordnet-mpnet/word_to_rows.json": "d3d200dcb44e58bc8b203dbe5fcefe1db258f18a295fe813d9875c75c2d6f35a",
+    "data/embeddings/senses/wordnet-mpnet/labels.json": "752b841e0826a042ecee1bd6e8a8bae82999631e9db4f7b36f8cbf1197b629b9"
   }
 }

@@ -2,6 +2,11 @@
 
 The default model is MPNet; pass --model to try another embedder and write it to
 its own --output-dir so caches for different models do not overwrite each other.
+
+Sentence encoders are trained on sentences, not bare words. --template wraps each
+word in a phrase ("{word}" is replaced by the word); give it several times to
+encode every word under each template and average the unit vectors. --prefix is
+prepended to the result, e.g. an instruction for models that expect one.
 """
 
 import argparse
@@ -28,6 +33,9 @@ def main():
     parser.add_argument("--model", default=MODEL, help=f"Hugging Face model id (default: {MODEL})")
     parser.add_argument("--prefix", default="",
                         help="Text prepended to every word, e.g. 'query: ' for E5 models")
+    parser.add_argument("--template", action="append", default=None,
+                        help="Phrase containing {word}; repeat to average over several "
+                             "(default: the bare word)")
     parser.add_argument("--lowercase", action="store_true",
                         help="Lowercase words before encoding (puzzle words are all caps; "
                              "matters only for cased models)")
@@ -35,6 +43,9 @@ def main():
     args = parser.parse_args()
     if args.batch_size < 1:
         parser.error("--batch-size must be positive")
+    templates = args.template or ["{word}"]
+    if any("{word}" not in t for t in templates):
+        parser.error("every --template must contain {word}")
 
     words = set()
     input_hashes = {}
@@ -60,11 +71,15 @@ def main():
         model_kwargs={"dtype": torch.float32},
     )
     model.eval()
-    texts = [args.prefix + (word.lower() if args.lowercase else word) for word in vocabulary]
-    embeddings = model.encode(
-        texts, batch_size=args.batch_size, show_progress_bar=True,
-        convert_to_numpy=True, normalize_embeddings=True,
-    ).astype(np.float32)
+    forms = [word.lower() if args.lowercase else word for word in vocabulary]
+    total = np.zeros((len(vocabulary), model.get_sentence_embedding_dimension()), np.float64)
+    for template in templates:
+        texts = [args.prefix + template.replace("{word}", form) for form in forms]
+        total += model.encode(
+            texts, batch_size=args.batch_size, show_progress_bar=True,
+            convert_to_numpy=True, normalize_embeddings=True,
+        )
+    embeddings = (total / np.linalg.norm(total, axis=1, keepdims=True)).astype(np.float32)
     if (embeddings.ndim != 2 or embeddings.shape[0] != len(vocabulary)
             or not np.isfinite(embeddings).all()
             or not np.allclose(np.linalg.norm(embeddings, axis=1), 1, atol=1e-5)):
@@ -77,7 +92,7 @@ def main():
         json.dumps(word_to_row, indent=2, ensure_ascii=False) + "\n", encoding="utf-8"
     )
     metadata = {
-        "model": args.model, "prefix": args.prefix, "lowercase": args.lowercase, "normalized": True, "shape": list(embeddings.shape),
+        "model": args.model, "prefix": args.prefix, "templates": templates, "lowercase": args.lowercase, "normalized": True, "shape": list(embeddings.shape),
         "dtype": str(embeddings.dtype), "input_sha256": input_hashes,
     }
     ref = ROOT / "data/model_cache" / f"models--{args.model.replace('/', '--')}" / "refs/main"

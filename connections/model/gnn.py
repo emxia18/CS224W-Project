@@ -5,6 +5,15 @@ embeddings; edge features are their cosine similarities (plus optional learned,
 spelling, pronunciation, hint and explicit-relationship channels). One residual
 GATv2 layer mixes information across the puzzle, then a permutation-invariant
 readout scores each candidate quartet from the mean/variance of its members.
+
+With residual=True the readout learns a correction g on top of the cosine
+baseline: score = a * cosine_sum + g, where g starts at zero and a is learnable.
+
+With extra_similarities=K, each puzzle also supplies K precomputed 16x16 word
+similarity matrices (e.g. ConceptNet Numberbatch, best-matching WordNet senses).
+Each is an extra GATv2 edge feature and extra pair statistics for the readout,
+and with residual=True an extra baseline term: score = a * cosine_sum
++ sum_k b_k * similarity_sum_k + g.
 """
 
 import torch
@@ -41,10 +50,23 @@ def quartet_cosine_stats(x, groups):
     ), dim=-1)
 
 
+def quartet_cosine_sum(x, groups):
+    """Sum of the six pairwise cosines per quartet: the zero-parameter baseline score."""
+    members = x[groups]
+    pairs = torch.triu_indices(4, 4, offset=1, device=x.device)
+    return (members[:, pairs[0]] * members[:, pairs[1]]).sum(dim=-1).sum(dim=-1)
+
+
 def feature_stats(values):
     """Pool members or distinct pair features without depending on word order."""
     return torch.cat((values.mean(1), values.amin(1), values.amax(1),
                       values.std(1, unbiased=False)), dim=-1)
+
+
+def quartet_pair_sum(values, groups):
+    """Sum of a 16x16 pair matrix over each quartet's six distinct pairs."""
+    pairs = torch.triu_indices(4, 4, offset=1, device=groups.device)
+    return values[groups[:, pairs[0]], groups[:, pairs[1]]].sum(dim=-1)
 
 
 def quartet_edge_stats(edges, groups):
@@ -55,20 +77,23 @@ def quartet_edge_stats(edges, groups):
 class QuartetGNN(nn.Module):
     def __init__(self, hidden=128, dropout=0.1, pairwise_features=False, hint_features=False,
                  learned_relations=0, spelling_features=False, pronunciation_features=False,
-                 orthographic_features=False, homophone_features=False, graph="complete"):
+                 orthographic_features=False, homophone_features=False, graph="complete",
+                 input_dim=768, residual=False, extra_similarities=0):
         super().__init__()
         if graph not in GRAPHS:
             raise ValueError(f"Unknown graph: {graph}")
+        self.residual = residual
+        self.extra_similarities = extra_similarities
         self.pairwise_features = pairwise_features
         self.hint_features = hint_features
         self.orthographic_features = orthographic_features
         self.homophone_features = homophone_features
-        self.project = nn.Linear(768, hidden)
+        self.project = nn.Linear(input_dim, hidden)
         self.channels = WordChannels(hidden, spelling_features, pronunciation_features)
         channel_count = int(spelling_features) + int(pronunciation_features)
-        self.relations = nn.ModuleList(nn.Linear(768, 32) for _ in range(learned_relations))
+        self.relations = nn.ModuleList(nn.Linear(input_dim, 32) for _ in range(learned_relations))
         explicit_edges = (len(EDGE_FEATURES) if orthographic_features else 0) + (2 if homophone_features else 0)
-        extra_edges = learned_relations + channel_count + explicit_edges
+        extra_edges = learned_relations + channel_count + explicit_edges + extra_similarities
         self.gat = GATv2Conv(
             hidden, hidden, heads=1, edge_dim=1 + int(hint_features) + extra_edges, dropout=dropout,
             add_self_loops=False,
@@ -83,10 +108,18 @@ class QuartetGNN(nn.Module):
             nn.Linear(hidden, 1),
         )
         self.orthographic_project = nn.Linear(len(NODE_FEATURES), hidden) if orthographic_features else None
+        if residual:
+            # score = a * cosine_sum + g. With g's last layer at zero, the untrained
+            # model ranks quartets exactly like the cosine baseline.
+            nn.init.zeros_(self.rho[-1].weight)
+            nn.init.zeros_(self.rho[-1].bias)
+            self.residual_scale = nn.Parameter(torch.tensor(1.0))
+            if extra_similarities:
+                self.similarity_scales = nn.Parameter(torch.ones(extra_similarities))
         self.register_buffer("edge_index", GRAPHS[graph].clone())
         self.register_buffer("quartets", torch.tensor(QUARTETS, dtype=torch.long))
 
-    def forward(self, x, quartet_ids=None, hints=None, word_inputs=None):
+    def forward(self, x, quartet_ids=None, hints=None, word_inputs=None, similarities=None):
         # Cached embeddings are unit length, so dot products are cosine similarities.
         source, target = self.edge_index
         edge_attr = (x[source] * x[target]).sum(dim=-1, keepdim=True)
@@ -105,6 +138,10 @@ class QuartetGNN(nn.Module):
             explicit.append(word_inputs['orthographic_edges'])
         if self.homophone_features:
             explicit.append(word_inputs['homophone_edges'])
+        if self.extra_similarities:
+            if similarities is None or similarities.shape != (self.extra_similarities, 16, 16):
+                raise ValueError(f"Expected {self.extra_similarities} similarity matrices of shape 16x16")
+            explicit.extend(values.unsqueeze(-1) for values in similarities)
         if explicit:
             edge_attr = torch.cat([edge_attr] + [values[source, target] for values in explicit], dim=-1)
         if self.hint_features:
@@ -129,4 +166,10 @@ class QuartetGNN(nn.Module):
             pooled = torch.cat((pooled, feature_stats(word_inputs['orthographic_nodes'][groups])), dim=-1)
         if explicit:
             pooled = torch.cat([pooled] + [quartet_edge_stats(values, groups) for values in explicit], dim=-1)
-        return self.rho(pooled).squeeze(-1)
+        scores = self.rho(pooled).squeeze(-1)
+        if self.residual:
+            scores = scores + self.residual_scale * quartet_cosine_sum(x, groups)
+            if self.extra_similarities:
+                scores = scores + sum(scale * quartet_pair_sum(values, groups)
+                                      for scale, values in zip(self.similarity_scales, similarities))
+        return scores

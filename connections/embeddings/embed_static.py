@@ -5,7 +5,9 @@ embed_data.py, so baselines.py and compare_embeddings.py read it unchanged.
 
 Lookup per puzzle word, all case-insensitive in effect:
   1. the whole string (lowercase, then Title, then UPPER), which catches
-     hyphenated entries such as "flip-flop";
+     hyphenated entries such as "flip-flop"; with --phrase-joiner, also the
+     string with spaces and hyphens joined by it (ConceptNet Numberbatch stores
+     "deck of cards" as "deck_of_cards");
   2. otherwise the mean of its tokens' vectors, each token tried in the same
      three casings (a possessive "'s" falls back to the bare word).
 Words with no known token get a seeded random unit vector (cosine ~0 to all
@@ -29,12 +31,15 @@ def casings(text):
     return (text, text.title(), text.upper())
 
 
-def plan(word):
-    """Candidate lookups: one whole-string option, then per-token options."""
+def plan(word, joiner=None):
+    """Candidate lookups: whole-string options, then per-token options."""
     text = word.lower().replace("’", "'").replace("‘", "'")
     tokens = [[*casings(t), *(casings(t.split("'")[0]) if "'" in t else ())]
               for t in TOKEN.findall(text)]
-    return list(casings(text)), tokens
+    whole = list(casings(text))
+    if joiner and len(tokens) > 1:
+        whole += [c for c in casings(joiner.join(TOKEN.findall(text))) if c not in whole]
+    return whole, tokens
 
 
 def main():
@@ -44,6 +49,8 @@ def main():
     parser.add_argument("--input-dir", type=Path, default=ROOT / "data/processed")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--seed", type=int, default=0, help="Seed for OOV random vectors")
+    parser.add_argument("--phrase-joiner", default=None,
+                        help="Also look up multi-word entries joined by this, e.g. _ for Numberbatch")
     args = parser.parse_args()
 
     words, input_hashes = set(), {}
@@ -52,7 +59,7 @@ def main():
         words.update(w for record in json.loads(raw) for w in record["words"])
         input_hashes[split] = hashlib.sha256(raw).hexdigest()
     vocabulary = sorted(words)
-    plans = {word: plan(word) for word in vocabulary}
+    plans = {word: plan(word, args.phrase_joiner) for word in vocabulary}
     needed = {c for whole, tokens in plans.values() for c in whole + [x for t in tokens for x in t]}
 
     table = {}
@@ -98,7 +105,7 @@ def main():
         {word: index for index, word in enumerate(vocabulary)}, indent=2, ensure_ascii=False) + "\n",
         encoding="utf-8")
     (args.output_dir / "metadata.json").write_text(json.dumps({
-        "model": args.name, "vectors_file": args.vectors.name, "lowercase": True, "prefix": "",
+        "model": args.name, "vectors_file": args.vectors.name, "lowercase": True, "prefix": "", "phrase_joiner": args.phrase_joiner,
         "normalized": True, "shape": list(embeddings.shape), "dtype": str(embeddings.dtype),
         "lookup": sources, "oov": oov, "partial_token_coverage": partial,
         "input_sha256": input_hashes,

@@ -584,3 +584,29 @@ under matching settings. Check cache alignment and pooling with:
 ```sh
 .venv/bin/python -m unittest
 ```
+
+### Extra similarity sources (current best)
+
+`--similarity NAME=KIND:DIR` (repeatable) adds a precomputed 16x16 word-similarity
+matrix per puzzle. `cos:DIR` reads a single-vector cache (`embed_data.py`,
+`embed_static.py`); `max:DIR` reads a sense cache from `build_sense_cache.py` and
+scores two words by their best-matching pair of senses. Each source becomes a
+GATv2 edge feature and adds pair statistics to the quartet readout. With
+`--residual` (which then requires `--loss crf`) it also adds a baseline term, and
+all baseline weights are fit jointly on training puzzles with the CRF loss before
+training, so epoch 0 equals the no-training combined score.
+
+Related options:
+
+- `embed_static.py --phrase-joiner _` looks multi-word answers up as phrases
+  (ConceptNet Numberbatch stores "deck of cards" as `deck_of_cards`).
+- `embed_data.py --template '...{word}...'` wraps each word in a phrase before a
+  sentence encoder; repeat it to average over several templates.
+- `build_sense_cache.py --source wordnet` encodes every WordNet definition of a
+  word (`"<word>: <definition>"`) plus `the word "<word>"`; `--source
+  fasttext-case` keeps a vector per casing (tested, did not help).
+- `evaluation/combine_similarities.py` scores sources and weighted combinations
+  without training (weights CRF-fit on train, 2-fold CV train numbers).
+
+Commands, expected values at every step and the 5-seed results are in
+`results/similarity_sources.md`.

@@ -3,5 +3,6 @@ data/raw/
 data/processed/
 data/embeddings/
 data/model_cache/
+data/vectors/
 .venv/
 runs/
