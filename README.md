@@ -12,18 +12,20 @@ The pipeline in one line:
 16 words ─► frozen word embeddings ─► GATv2 over the 16-word graph ─► score all 1,820 quartets ─► pick the best 4 disjoint quartets
 ```
 
-**Current best:** fastText + WordNet senses + ConceptNet Numberbatch + phrase
-completion, GATv2 + residual + CRF: **174.0 ± 3.5 of 392 validation groups
-(44.4%), 19.8 of 98 puzzles solved** (5 seeds). Exact steps and values:
-[`results/similarity_sources.md`](results/similarity_sources.md).
+**Final model:** fastText + WordNet senses + ConceptNet Numberbatch + phrase
+completion (Numberbatch and Wikipedia titles) + wordplay features, GATv2 +
+residual + CRF. **Test split (evaluated once): 152.4 ± 1.9 of 392 groups
+(38.9%), 21.2 of 98 puzzles solved** (5 seeds), vs 112 groups (28.6%) for
+untrained fastText cosine (+40.4, 95% CI [+19.0, +61.4]). Validation: 184.6 ±
+2.7 (47.1%). Exact steps and values: [`results/final_model.md`](results/final_model.md).
 
 ---
 
 ## Where things stand
 
 Validation numbers below (98 puzzles, 392 groups) come from `results/`. The test
-split has **not** been evaluated yet. Do not run on test until the final
-configuration is frozen.
+split was evaluated **once**, for the frozen final model only
+(`results/final_model.md`). Do not tune anything on test.
 
 Groups recovered out of 392 (puzzles solved out of 98 in parentheses); trained
 columns are the mean over seeds 0–4.
@@ -34,7 +36,8 @@ columns are the mean over seeds 0–4.
 | mxbai    | 68 groups (3 solved)  | 68.0 (3.0)  | 68.0 (3.0) |
 | fastText | 106 groups (8 solved) | 116.8 (11.0) | 112.8 (9.4) |
 | fastText + WordNet senses + Numberbatch | 128 groups (12 solved) | 150.6 (14.8) | not run |
-| **… + phrase completion** | 139 groups (15 solved) | **174.0 (19.8)** | not run |
+| … + phrase completion (Numberbatch) | 139 groups (15 solved) | 174.0 (19.8) | 167.6 (18.6) |
+| **… + Wikipedia phrases + wordplay features (final)** | 153 groups (20 solved) | **184.6 (23.8)** | — |
 
 What we've learned so far:
 
@@ -57,6 +60,10 @@ What we've learned so far:
    phrase partner within the puzzle ("___ ROLL": DRUM, EGG, HONOR) doubles
    recovered phrase-completion groups and lifts the trained model from 150.6 to
    174.0 groups (95% CI [+8.2, +40.0]). The rule is fixed, not learned.
+9. **Message passing helps on the strong model** (+6.4 groups, 95% CI [+0.4,
+   +12.8]). Wikipedia-title phrases and the rule-based wordplay features add
+   another 10.6 groups; a lower learning rate and 51 synthetic training puzzles
+   did not help (see `results/final_model.md`).
 
 The residual scorer, CRF loss and extra similarity sources are flags in
 `train_gnn.py` (`--residual`, `--loss crf`, `--similarity`), and any embedding
@@ -72,6 +79,7 @@ connections/                    all project code (a Python package)
   data/
     pull_data.py                download the raw dataset from Hugging Face
     prepare_data.py             validate, split chronologically (456/98/98), shuffle words
+    add_synthetic.py            training split with synthetic puzzles appended (leak-checked)
     verify_reproduction.py      check data files against reproduction_manifest.json
   embeddings/
     embed_data.py               cache sentence-transformer vectors (MPNet by default)
@@ -93,6 +101,7 @@ connections/                    all project code (a Python package)
     baselines.py                zero-training baselines: random and cosine-sum
     compare_embeddings.py       rank embedding caches by cosine baseline, per category
     combine_similarities.py     no-training check of similarity sources and weighted combinations
+    ensemble_runs.py            score runs per seed and averaged; the one-time test evaluation
     analyze_failures.py         which kinds of categories (synonym, phrase, sound...) we miss
     summarize_runs.py           aggregate multi-seed runs into a Markdown table
     plot_training.py            learning curves from a run's history.json
@@ -121,7 +130,7 @@ Run everything **from the repository root**. Scripts are modules, so use
 python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-reproduce.txt     # or requirements.txt for looser versions
-python -m unittest                            # should print: Ran 36 tests ... OK
+python -m unittest                            # should print: Ran 39 tests ... OK
 ```
 
 ### 2. Data
@@ -191,7 +200,13 @@ Targets from `results/residual_crf_embeddings.md` (5 seeds, validation):
 fastText 116.8 ± 3.3 groups, MPNet 59.8 ± 3.6. With `--residual`, the log line
 `Epoch 000 (untrained)` must equal the cosine baseline (106 for fastText, 55 for MPNet).
 
-### 6. Current best model: extra similarity sources
+### 6. Final model
+
+The final model adds Wikipedia-title phrases and the wordplay features to the
+model below; its commands, expected values and the test evaluation are in
+[`results/final_model.md`](results/final_model.md#how-to-reproduce). The steps
+below build the inputs it shares with the previous best.
+
 
 This needs fastText, ConceptNet Numberbatch, a WordNet sense cache and a phrase
 cache built from Numberbatch's phrase list. The full
@@ -304,7 +319,8 @@ puzzle-contextual embeddings (`--contextual-dir`), and a hint curriculum
 
 ## Ground rules for experiments
 
-- **Never load the test split** until the final config and checkpoint rule are frozen.
+- **The test split has been used once** (2026-11-24, `results/final_model.md`). Further test runs
+  would no longer give an unbiased estimate; report any new model on validation.
   The scripts skip test by default.
 - **Report validation as "development" numbers.** Checkpoints are selected on the same
   98 validation puzzles we report on.
@@ -315,13 +331,9 @@ puzzle-contextual embeddings (`--contextual-dir`), and a hint curriculum
 
 ## Next steps
 
-1. Run the no-message-passing control (`--graph none`) for the current best
-   configuration, to measure what the GNN adds on top of the richer similarities.
-2. Reduce early overfitting (validation peaks at epoch 2–3): a smaller model,
-   more dropout, or choosing the epoch on held-out training puzzles.
-3. Wordplay is still mostly missed: phrase completion is at 12 of 41 groups
-   without training, spelling and sound at 3 of 19 and 4 of 13. More phrase
-   sources (e.g. Wikipedia titles for "MAGIC KINGDOM") and spelling features.
-4. Freeze the config and evaluate the test split once, with paired bootstrap CIs.
-5. Deliverables: a PyG notebook, a blog post with error analysis, and a demo that
+1. Thematic groups are the largest remaining gap. WordNet has no senses for 434
+   puzzle words (names, brands, slang); LLM-written meanings could fill it.
+2. Overfitting: validation still peaks at epoch 3–5. A larger, independent
+   selection set would allow honest early stopping.
+3. Deliverables: a PyG notebook, a blog post with error analysis, and a demo that
    takes 16 words and returns 4 groups.

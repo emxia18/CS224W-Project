@@ -12,6 +12,11 @@ word a set of partners:
 With --closed, single-word compounds split into two known words count too
 (fireball: FIRE gets "R:ball", BALL gets "L:fire").
 
+--format lines reads a plain or gzipped list with one phrase per line instead,
+such as Wikipedia article titles (enwiki-latest-all-titles-in-ns0.gz): keys are
+lowercased, a trailing disambiguation like "_(film)" is dropped, and punctuation
+is removed ("Magic_Kingdom_(film)" -> magic_kingdom).
+
 Each word becomes a sparse vector over partners, weighted by inverse document
 frequency over the puzzle vocabulary (a partner shared by few words says more),
 then L2-normalized. Cosine between two words is then their weighted share of
@@ -26,6 +31,7 @@ as --similarity NAME=sparse:DIR.
 
 import argparse
 from collections import defaultdict
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -45,6 +51,22 @@ def form(word):
     return "_".join(TOKEN.findall(text))
 
 
+DISAMBIGUATION = re.compile(r"_\([^)]*\)$")
+
+
+def read_lines(path):
+    """One phrase per line (optionally gzipped), normalized to lowercase_tokens."""
+    keys = set()
+    opener = gzip.open if path.suffix == ".gz" else open
+    with opener(path, "rt", encoding="utf-8", errors="replace") as stream:
+        for line in stream:
+            text = DISAMBIGUATION.sub("", line.strip()).lower().replace("'", "").replace("’", "")
+            tokens = TOKEN.findall(text.replace("_", " "))
+            if tokens:
+                keys.add("_".join(tokens))
+    return sorted(keys)
+
+
 def read_keys(path):
     keys = []
     with path.open(encoding="utf-8", errors="replace") as stream:
@@ -60,7 +82,9 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--vectors", type=Path, required=True,
-                        help="Phrase vocabulary in .vec text format (only the keys are read)")
+                        help="Phrase vocabulary: .vec text format (only the keys are read), "
+                             "or with --format lines one phrase per line")
+    parser.add_argument("--format", choices=("vec", "lines"), default="vec")
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--input-dir", type=Path, default=ROOT / "data/processed")
     parser.add_argument("--closed", action="store_true",
@@ -81,7 +105,7 @@ def main():
         if form(word):
             forms[form(word)].append(word)
 
-    keys = read_keys(args.vectors)
+    keys = read_lines(args.vectors) if args.format == "lines" else read_keys(args.vectors)
     singles = {key for key in keys if "_" not in key}
     partners = defaultdict(set)  # puzzle word -> partner labels
     open_links = closed_links = 0

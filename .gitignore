@@ -1,6 +1,7 @@
 __pycache__/
 data/raw/
 data/processed/
+data/processed_syn/
 data/embeddings/
 data/model_cache/
 data/vectors/

@@ -108,5 +108,54 @@ class ExtraSimilarityModelTest(unittest.TestCase):
             model(torch.nn.functional.normalize(torch.randn(16, 8), dim=-1))
 
 
+class TitleListTest(unittest.TestCase):
+    def test_lines_format_lowercases_and_drops_disambiguation(self):
+        import gzip
+        from connections.features.build_phrase_cache import read_lines
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "titles.gz"
+            with gzip.open(path, "wt", encoding="utf-8") as stream:
+                stream.write("page_title\nMagic_Kingdom_(film)\nMagic_Kingdom\nRock'n'Roll\n!!!\n")
+            keys = read_lines(path)
+        self.assertIn("magic_kingdom", keys)
+        self.assertEqual(keys.count("magic_kingdom"), 1)
+        self.assertIn("rocknroll", keys)
+        self.assertNotIn("!!!", keys)
+
+
+class SyntheticSplitTest(unittest.TestCase):
+    def _run(self, synthetic_answers):
+        root = Path(tempfile.mkdtemp())
+        real = [{"words": [f"R{i}" for i in range(16)],
+                 "answers": [{"answerDescription": "x", "words": [f"R{i}" for i in range(k, k + 4)]}
+                             for k in range(0, 16, 4)]}]
+        val = [{"words": [f"V{i}" for i in range(16)],
+                "answers": [{"answerDescription": "v", "words": [f"V{i}" for i in range(k, k + 4)]}
+                            for k in range(0, 16, 4)]}]
+        (root / "train.json").write_text(json.dumps(real))
+        (root / "val.json").write_text(json.dumps(val))
+        (root / "test.json").write_text(json.dumps([]))
+        words = [w for group in synthetic_answers for w in group]
+        (root / "syn.json").write_text(json.dumps([{"id": "s1", "tree_id": "s1", "words": words,
+            "answers": [{"answerDescription": "s", "words": g} for g in synthetic_answers]}]))
+        return subprocess.run([sys.executable, "-m", "connections.data.add_synthetic", "--input-dir", str(root),
+                               "--output-dir", str(root / "out"), "--sources", str(root / "syn.json")],
+                              cwd=ROOT, capture_output=True, text=True), root
+
+    def test_appends_synthetic_after_real_puzzles(self):
+        groups = [[f"S{i}" for i in range(k, k + 4)] for k in range(0, 16, 4)]
+        result, root = self._run(groups)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        train = json.loads((root / "out/train.json").read_text())
+        self.assertEqual([p.get("synthetic", False) for p in train], [False, True])
+        self.assertEqual((root / "out/val.json").read_bytes(), (root / "val.json").read_bytes())
+
+    def test_rejects_a_group_equal_to_a_validation_group(self):
+        groups = [[f"V{i}" for i in range(4)]] + [[f"S{i}" for i in range(k, k + 4)] for k in range(4, 16, 4)]
+        result, _ = self._run(groups)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("validation/test group", result.stderr)
+
+
 if __name__ == "__main__":
     unittest.main()

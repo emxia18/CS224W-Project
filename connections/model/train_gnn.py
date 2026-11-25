@@ -263,6 +263,9 @@ def main():
     parser.add_argument("--device", default="cpu")
     parser.add_argument("--threads", type=int, default=1, help="CPU threads; small graphs favor few threads")
     parser.add_argument("--train-limit", type=int, help="Use only the first N training puzzles")
+    parser.add_argument("--holdout", type=int, default=0,
+                        help="Hold out the last N real (non-synthetic) training puzzles, never train on "
+                             "them, and choose the best epoch on them instead of on validation")
     parser.add_argument("--val-limit", type=int, help="Use only the first N validation puzzles")
     parser.add_argument("--diagnostic-puzzles", type=int, default=16,
                         help="Fixed training subset for full/triplet/pair diagnostics; 0 disables")
@@ -323,11 +326,23 @@ def main():
     else:
         train = train[:args.train_limit]
         validation = load_puzzles(args.data_dir / "val.json", vectors, mapping, args.device, tokenizer, contextual)[:args.val_limit]
+    holdout = []
+    if args.holdout:
+        if args.overfit:
+            parser.error("--holdout cannot be combined with --overfit")
+        real = [i for i, p in enumerate(train) if not p["record"].get("synthetic")]
+        if args.holdout >= len(real):
+            parser.error("--holdout must be smaller than the number of real training puzzles")
+        held = set(real[-args.holdout:])
+        holdout = [p for i, p in enumerate(train) if i in held]
+        train = [p for i, p in enumerate(train) if i not in held]
+        print(f"Holding out {len(holdout)} training puzzles for checkpoint selection "
+              f"({holdout[0]['record'].get('date')} to {holdout[-1]['record'].get('date')})", flush=True)
     if not train or not validation:
         parser.error("Training and evaluation sets must be nonempty")
     similarity_channels = parse_similarities(args.similarity)
     if similarity_channels:
-        for puzzle in train + ([] if args.overfit else validation):
+        for puzzle in train + holdout + ([] if args.overfit else validation):
             words = puzzle["record"]["words"]
             puzzle["similarities"] = torch.tensor(
                 np.stack([channel.matrix(words) for channel in similarity_channels.values()]),
@@ -454,9 +469,12 @@ def main():
             task_counts[task] += 1
             task_losses[task].append(loss.item())
         metrics, _ = evaluate(model, validation)
+        holdout_metrics = evaluate(model, holdout)[0] if holdout else None
         diagnostics = (training_diagnostics(model, diagnostic_subset, args.seed + 3)
                        if diagnostic_subset else {})
         history.append({"epoch": epoch, "loss": float(np.mean(losses)), **metrics,
+                        "holdout": ({k: v for k, v in holdout_metrics.items() if k != "correct_per_puzzle"}
+                                    if holdout_metrics else None),
                         "residual_scale": model.residual_scale.item() if args.residual else None,
                         "similarity_scales": (dict(zip(similarity_channels, model.similarity_scales.tolist()))
                                               if args.residual and similarity_channels else None),
@@ -469,7 +487,9 @@ def main():
               f"exact={metrics['exact_accuracy']:.1%}"
               + (f" a={model.residual_scale.item():.3f}" if args.residual else "")
               + ("".join(f" {name}={w:.3f}" for name, w in zip(similarity_channels, model.similarity_scales.tolist()))
-                 if args.residual and similarity_channels else ""), flush=True)
+                 if args.residual and similarity_channels else "")
+              + (f" holdout_groups={holdout_metrics['mean_correct_groups']:.3f}/4" if holdout_metrics else ""),
+              flush=True)
         if args.curriculum != "none":
             print(f"  Training tasks: {task_counts}", flush=True)
         for task, diagnostic in diagnostics.items():
@@ -477,7 +497,8 @@ def main():
                   f"overlap={diagnostic['mean_matched_words']:.2f}/16 "
                   f"exact={diagnostic['exact_accuracy']:.1%}", flush=True)
         primary = "mean_matched_words" if args.selection_metric == "overlap" else "mean_correct_groups"
-        key = (metrics[primary], metrics["exact_accuracy"])
+        chosen = holdout_metrics or metrics  # select on held-out training puzzles when given
+        key = (chosen[primary], chosen["exact_accuracy"])
         if key > best:
             best, stale = key, 0
             torch.save({"model_state": model.state_dict(), "config": config,

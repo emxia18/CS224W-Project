@@ -26,6 +26,12 @@
     "data/embeddings/senses/wordnet-mpnet/labels.json": "752b841e0826a042ecee1bd6e8a8bae82999631e9db4f7b36f8cbf1197b629b9",
     "data/embeddings/phrases/numberbatch-open/embeddings.npz": "b0d9b7aece7815a35a124a3a388a59954db63b560273ddd207c1dcb4c4687956",
     "data/embeddings/phrases/numberbatch-open/word_to_row.json": "1086e8488c1861f5f2a4f388d02d6343c550b0484ab90c9edcb9b6dd15866469",
-    "data/embeddings/phrases/numberbatch-open/partners.json": "2fc66b88c5088b3f1481e37ed932aa3ad103f5e4bad6df66ec491545913b069a"
+    "data/embeddings/phrases/numberbatch-open/partners.json": "2fc66b88c5088b3f1481e37ed932aa3ad103f5e4bad6df66ec491545913b069a",
+    "data/vectors/enwiki-latest-all-titles-in-ns0.gz": "045c5561399d3947e02eb014f6f8889498681b3a949ba2c66248efaa1c2ace46",
+    "data/embeddings/phrases/wikipedia/embeddings.npz": "bf19386bb4732835be21187cf3a2bb62379695ed37b88c1b4ee373b0bc37889b",
+    "data/embeddings/phrases/wikipedia/word_to_row.json": "1086e8488c1861f5f2a4f388d02d6343c550b0484ab90c9edcb9b6dd15866469",
+    "data/embeddings/phrases/wikipedia/partners.json": "51c6566323c3a3636ef20c9712e9aa772244f9a7ecb7b81330de77e0e1ee0e65",
+    "data/embeddings/homophones-test/vectors.npy": "4f64335c1cb83df8673295d9a159cdf529e2fcf7079e237f3f869780e41c75a5",
+    "data/embeddings/homophones-test/words.json": "c1b2927e083dda102366bb1d8be505a5f92f00cf0262eae16402dec56437c378"
   }
 }

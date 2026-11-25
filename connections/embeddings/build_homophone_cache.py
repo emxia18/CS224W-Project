@@ -1,6 +1,8 @@
 """Retrieve CMUdict homophones and encode their meanings with the cached MPNet.
 
 Reads only input words from train/validation, never answers or category labels.
+--include-test also reads the test split's input words, for the final one-time test
+evaluation; write that cache to its own --output-dir.
 """
 
 import argparse
@@ -42,13 +44,15 @@ def main():
     parser.add_argument('--embedding-dir', type=Path, default=ROOT / 'data/embeddings')
     parser.add_argument('--device', default='cpu')
     parser.add_argument('--batch-size', type=int, default=32)
+    parser.add_argument('--include-test', action='store_true',
+                        help="Also cover the test split's words (final evaluation only)")
     args = parser.parse_args()
     if args.batch_size < 1:
         parser.error('--batch-size must be positive')
     torch.set_num_threads(2)
     tokenizer = WordTokenizer(pronunciation=True)
     words, hashes = set(), {}
-    for split in ('train', 'val'):
+    for split in ('train', 'val') + (('test',) if args.include_test else ()):
         raw = (args.input_dir / f'{split}.json').read_bytes()
         hashes[split] = hashlib.sha256(raw).hexdigest()
         words.update(w for puzzle in json.loads(raw) for w in puzzle['words'])

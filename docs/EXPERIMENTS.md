@@ -617,3 +617,22 @@ Related options:
 
 Commands, expected values at every step and the 5-seed results are in
 `results/similarity_sources.md`.
+
+### Final-round options
+
+- `build_phrase_cache.py --format lines` reads one phrase per line (plain or
+  gzipped), e.g. Wikipedia titles: lowercased, "_(film)"-style suffixes dropped.
+- `train_gnn.py --holdout N` holds out the last N real training puzzles and picks
+  the best epoch on them instead of validation (tested; not used for the final
+  model).
+- `data/add_synthetic.py` writes `data/processed_syn/` with synthetic boards
+  appended after the real training puzzles and leak checks against validation
+  and test; train on it with `--data-dir data/processed_syn` and caches rebuilt
+  with `--input-dir data/processed_syn` (`--train-limit 456` for the control).
+- `build_homophone_cache.py --include-test` covers test words, for the final
+  evaluation only.
+- `evaluation/ensemble_runs.py` scores runs per seed and averaged, checking each
+  reproduces its recorded validation score; `--split test --confirm-final-test`
+  is the one-time test evaluation.
+
+Results: `results/final_model.md`.
