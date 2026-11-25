@@ -585,7 +585,7 @@ under matching settings. Check cache alignment and pooling with:
 .venv/bin/python -m unittest
 ```
 
-### Extra similarity sources (current best)
+### Extra similarity sources and phrase completion (current best)
 
 `--similarity NAME=KIND:DIR` (repeatable) adds a precomputed 16x16 word-similarity
 matrix per puzzle. `cos:DIR` reads a single-vector cache (`embed_data.py`,
@@ -605,6 +605,13 @@ Related options:
 - `build_sense_cache.py --source wordnet` encodes every WordNet definition of a
   word (`"<word>: <definition>"`) plus `the word "<word>"`; `--source
   fasttext-case` keeps a vector per casing (tested, did not help).
+- `features/build_phrase_cache.py` gives each puzzle word its phrase partners
+  from a phrase vocabulary (Numberbatch keys such as `drum_roll`: DRUM gets
+  "followed by roll", ROLL gets "preceded by drum"). Use it as
+  `phrase:DIR`, which links two words if they share a partner with 3–5 of the
+  puzzle's 16 words (a fixed rule, nothing learned), or `sparse:DIR`, plain
+  cosine of IDF-weighted partner vectors. `--closed` also splits single-word
+  compounds (fire|ball); it added too many false links and is not used.
 - `evaluation/combine_similarities.py` scores sources and weighted combinations
   without training (weights CRF-fit on train, 2-fold CV train numbers).
 

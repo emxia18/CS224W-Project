@@ -12,9 +12,9 @@ The pipeline in one line:
 16 words ─► frozen word embeddings ─► GATv2 over the 16-word graph ─► score all 1,820 quartets ─► pick the best 4 disjoint quartets
 ```
 
-**Current best:** fastText + WordNet senses + ConceptNet Numberbatch, GATv2 +
-residual + CRF: **150.6 ± 5.0 of 392 validation groups (38.4%), 14.8 of 98
-puzzles solved** (5 seeds). Exact steps and values:
+**Current best:** fastText + WordNet senses + ConceptNet Numberbatch + phrase
+completion, GATv2 + residual + CRF: **174.0 ± 3.5 of 392 validation groups
+(44.4%), 19.8 of 98 puzzles solved** (5 seeds). Exact steps and values:
 [`results/similarity_sources.md`](results/similarity_sources.md).
 
 ---
@@ -33,7 +33,8 @@ columns are the mean over seeds 0–4.
 | MPNet    | 55 groups (2 solved)  | 59.8 (3.8)  | 58.6 (2.4) |
 | mxbai    | 68 groups (3 solved)  | 68.0 (3.0)  | 68.0 (3.0) |
 | fastText | 106 groups (8 solved) | 116.8 (11.0) | 112.8 (9.4) |
-| **fastText + WordNet senses + Numberbatch** | 128 groups (12 solved) | **150.6 (14.8)** | not run |
+| fastText + WordNet senses + Numberbatch | 128 groups (12 solved) | 150.6 (14.8) | not run |
+| **… + phrase completion** | 139 groups (15 solved) | **174.0 (19.8)** | not run |
 
 What we've learned so far:
 
@@ -52,6 +53,10 @@ What we've learned so far:
    knowledge, raises the untrained score from 106 to 128 groups. Training on top
    adds another 22.6 (95% CI [+5.6, +39.8]), about three times what it added on
    fastText alone (see `results/similarity_sources.md`).
+8. **Fill-in-the-blank groups need their own signal.** Linking words that share a
+   phrase partner within the puzzle ("___ ROLL": DRUM, EGG, HONOR) doubles
+   recovered phrase-completion groups and lifts the trained model from 150.6 to
+   174.0 groups (95% CI [+8.2, +40.0]). The rule is fixed, not learned.
 
 The residual scorer, CRF loss and extra similarity sources are flags in
 `train_gnn.py` (`--residual`, `--loss crf`, `--similarity`), and any embedding
@@ -77,7 +82,8 @@ connections/                    all project code (a Python package)
   features/
     word_channels.py            spelling (bytes) and pronunciation (phoneme) inputs + CNNs
     explicit_features.py        rule-based word relations: anagram, palindrome, homophone...
-    similarity_channels.py      extra word-similarity sources for --similarity (cos:DIR, max:DIR)
+    similarity_channels.py      extra word-similarity sources for --similarity (cos:, max:, sparse:, phrase:)
+    build_phrase_cache.py       phrase partners (drum_roll -> DRUM "followed by roll") for phrase completion
   model/
     decoding.py                 the 1,820 quartets; exact and greedy partition decoders
     gnn.py                      QuartetGNN: GATv2 layer + permutation-invariant quartet scorer
@@ -115,7 +121,7 @@ Run everything **from the repository root**. Scripts are modules, so use
 python3.11 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements-reproduce.txt     # or requirements.txt for looser versions
-python -m unittest                            # should print: Ran 29 tests ... OK
+python -m unittest                            # should print: Ran 36 tests ... OK
 ```
 
 ### 2. Data
@@ -187,7 +193,8 @@ fastText 116.8 ± 3.3 groups, MPNet 59.8 ± 3.6. With `--residual`, the log line
 
 ### 6. Current best model: extra similarity sources
 
-This needs fastText, ConceptNet Numberbatch and a WordNet sense cache. The full
+This needs fastText, ConceptNet Numberbatch, a WordNet sense cache and a phrase
+cache built from Numberbatch's phrase list. The full
 walkthrough, with expected values at each step, is in
 [`results/similarity_sources.md`](results/similarity_sources.md#how-to-reproduce).
 In short:
@@ -207,29 +214,33 @@ python -m connections.embeddings.embed_static --vectors data/vectors/numberbatch
 python -c "import nltk; nltk.download('wordnet', download_dir='data/model_cache/nltk_data')"
 python -m connections.embeddings.build_sense_cache --source wordnet --device mps \
   --output-dir data/embeddings/senses/wordnet-mpnet
-python -m connections.data.verify_reproduction --check-embeddings   # every line OK
+python -m connections.features.build_phrase_cache --vectors data/vectors/numberbatch-en-19.08.txt \
+  --output-dir data/embeddings/phrases/numberbatch-open
+python -m connections.data.verify_reproduction --check-embeddings   # all 20 lines OK
 
 # 3. Train (one seed shown; seeds 0-4 for comparisons)
 python -m connections.model.train_gnn \
   --embedding-dir data/embeddings/fasttext-crawl --pairwise-features --residual --loss crf \
   --similarity wn=max:data/embeddings/senses/wordnet-mpnet \
   --similarity nb=cos:data/embeddings/numberbatch \
+  --similarity pc=phrase:data/embeddings/phrases/numberbatch-open \
   --seed 0 --device cpu --threads 1 --hidden 128 --dropout 0.1 --lr 0.001 \
   --weight-decay 0.0001 --epochs 8 --patience 8 --curriculum none --diagnostic-puzzles 0 \
-  --selection-metric groups --output-dir runs/residual_crf_sim/ft_wn_nb_seed0
+  --selection-metric groups --output-dir runs/residual_crf_sim/ft_wn_nb_pc_seed0
 ```
 
-Expected: the log prints `a=2.485 wn=4.580 nb=1.299` and `Epoch 000 (untrained)
-... (128 groups)`; seeds 0–4 reach 146, 150, 150, 159, 148 validation groups
-(mean 150.6 ± 5.0).
+Expected: the log prints `a=2.170 wn=4.593 nb=1.349 pc=0.865` and `Epoch 000
+(untrained) ... (139 groups)`; seeds 0–4 reach 171, 174, 172, 173, 180 validation
+groups (mean 174.0 ± 3.5). Without the `pc` line you get the previous step
+(128 untrained; 146, 150, 150, 159, 148 trained).
 
 **Which numbers will match.** Our runs used macOS on Apple silicon with the pinned
 environment. All training ran on CPU; only the WordNet sense cache was encoded on
 the Apple GPU (`--device mps`). On the same kind of machine, results should match
 exactly (training is deterministic: reruns are identical). If the sense-cache hash
 check fails on your machine, copy `data/embeddings/senses/wordnet-mpnet/` from
-ours instead of rebuilding. On Linux or other torch versions, the untrained score
-(128) and first epochs match, and later epochs drift by a few groups per seed;
+ours instead of rebuilding (the other caches rebuild byte-identically). On Linux
+or other torch versions, the untrained score (139) and first epochs match, and later epochs drift by a few groups per seed;
 compare 5-seed means. If Hugging Face downloads stall, set `HF_HUB_DISABLE_XET=1`.
 
 ### Controls and outputs
@@ -273,7 +284,10 @@ like `decoding.QUARTETS` (all 4-subsets of `range(16)`, lexicographic).
 
 **Extra similarity sources** (`--similarity NAME=KIND:DIR`, repeatable). Each
 source gives a 16×16 word-similarity matrix per puzzle: `cos:DIR` is cosine from
-a single-vector cache, `max:DIR` is the best cosine over two words' sense vectors.
+a single-vector cache, `max:DIR` is the best cosine over two words' sense vectors,
+and `phrase:DIR` links two words that share a phrase partner with 3–5 of the
+puzzle's 16 words (`sparse:DIR`, plain cosine of partner vectors, was tried and
+not used).
 Each one is an extra GATv2 edge feature, adds pair statistics to the quartet
 readout and, with `--residual`, adds a baseline term: score = a · cosine sum +
 Σ b_k · similarity sum_k + correction. The weights are fit jointly on training
@@ -305,8 +319,9 @@ puzzle-contextual embeddings (`--contextual-dir`), and a hint curriculum
    configuration, to measure what the GNN adds on top of the richer similarities.
 2. Reduce early overfitting (validation peaks at epoch 2–3): a smaller model,
    more dropout, or choosing the epoch on held-out training puzzles.
-3. Wordplay categories (phrase completion, spelling, sound) are still mostly
-   missed; they need dedicated features rather than word similarity.
+3. Wordplay is still mostly missed: phrase completion is at 12 of 41 groups
+   without training, spelling and sound at 3 of 19 and 4 of 13. More phrase
+   sources (e.g. Wikipedia titles for "MAGIC KINGDOM") and spelling features.
 4. Freeze the config and evaluate the test split once, with paired bootstrap CIs.
 5. Deliverables: a PyG notebook, a blog post with error analysis, and a demo that
    takes 16 words and returns 4 groups.

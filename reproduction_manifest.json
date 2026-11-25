@@ -23,6 +23,9 @@
     "data/embeddings/numberbatch/word_to_row.json": "ecd7719ab87fef94a1dec9bf64050bd57e4b6e0604acb23cde45baa9d7923650",
     "data/embeddings/senses/wordnet-mpnet/senses.npy": "0f98d40381575ce55f55ce5f9972460227d969485bb6e124d4916d23ae794a65",
     "data/embeddings/senses/wordnet-mpnet/word_to_rows.json": "d3d200dcb44e58bc8b203dbe5fcefe1db258f18a295fe813d9875c75c2d6f35a",
-    "data/embeddings/senses/wordnet-mpnet/labels.json": "752b841e0826a042ecee1bd6e8a8bae82999631e9db4f7b36f8cbf1197b629b9"
+    "data/embeddings/senses/wordnet-mpnet/labels.json": "752b841e0826a042ecee1bd6e8a8bae82999631e9db4f7b36f8cbf1197b629b9",
+    "data/embeddings/phrases/numberbatch-open/embeddings.npz": "b0d9b7aece7815a35a124a3a388a59954db63b560273ddd207c1dcb4c4687956",
+    "data/embeddings/phrases/numberbatch-open/word_to_row.json": "1086e8488c1861f5f2a4f388d02d6343c550b0484ab90c9edcb9b6dd15866469",
+    "data/embeddings/phrases/numberbatch-open/partners.json": "2fc66b88c5088b3f1481e37ed932aa3ad103f5e4bad6df66ec491545913b069a"
   }
 }
